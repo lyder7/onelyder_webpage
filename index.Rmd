@@ -1,7 +1,15 @@
 ---
-title: "Onelyder_webpage"
-description: |
-  Welcome to the website. I hope you enjoy it!
+title: "Personal Portfolio"
+image: "lyder.jpg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/lyderaleksander/"
+  - label: Twitter
+    url: "https://twitter.com/Pier_Lyder"
+  - label: GitHub
+    url: "https://github.com/lyder7"
+output:
+  postcards::trestles
 site: distill::distill_website
 ---
 
@@ -12,4 +20,23 @@ knitr::opts_chunk$set(echo = FALSE)
 # https://rstudio.github.io/distill/website.html
 
 ```
+
+
+
+Lyder Aleksander Mathisen
+
+Associate | Audit and Assurance
+
+Deloitte AS
+
+## Bio
+
+From my Studies in Finance, my key professional strength, and niche-competence, are combing Data Sience and Finance together. I personally recognized this relationship having Data Science classes in my final semester. And I love it.
+
+Real Estate, and Optimal Portfolios are my Financial themes of choice. These are of huge professional interest. I am exited about learning more about these subjects from an audit perspective.
+Code Languages I use daily: R and Python.
+
+(Btw I like Chess, hmu if you also like to play chess.)
+
+As a results of coding and analyzing real-estate related problems with virus data,Dynamic and Reproducible Report Documenting are a part of my #toolbox. Text formatting languages such as Markdown, Latex or HTML are example of tools i have used.
 

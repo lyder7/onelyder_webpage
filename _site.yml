@@ -1,7 +1,8 @@
-name: "onelyder_webpage"
-title: "Onelyder_webpage"
+name: "Personal Portfolio"
+title: "Lyder Aleksander Mathisen"
+theme: onelyder_theme.css
 description: |
-  Onelyder_webpage
+  My personal portfolio 
 output_dir: "_site"
 navbar:
   right:
