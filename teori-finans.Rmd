@@ -1,0 +1,159 @@
+---
+title: "Metode Finanateori om porteføljer"
+description: |
+ Metodisk litteratur rundt porteflljer fra finansiell litteratur. 
+author:
+  - name: Lyder Aleksader Mathisen
+date: "`r Sys.Date()`"
+output: distill::distill_article
+#bibliography: [references.bib]
+---
+
+# Metode
+
+
+I denne seksjonen utleder jeg den generelle formuleringen for portefølje optimalisering. I hovedsak består analysen av minimalisering av risiko for et gitt mål for avkastning og betingelser. Først presenteres $mean-variance$ porteføljen hvor risiko er målt basert fra data-sample kovarians matrise. I den andre delen utvider vi det generelle rammeverket fra @markowitz1959 [@markowitz1959], og går gjennom @cambell2005a metode som estimeres en dynamisk VAR modell [@cambell2005a]. I tillegg til risiko og mål for avkastning er betingelsene og rammene rundt portefølje optimaliseringen viktig. [@rmetrics2009p].
+
+## Portefølje Allokering 
+
+Analysen starter med en investor som tar en avgjørelse for porteføljen over en investerings horisont som er $k$ perioder i lengde. Investoren velger en *mean-variance* optimal portefølje, hvor portefølje momenter er estimert for horisontene. $R0t$ er avkastningen til kontanter i periode $t$, og $Rit$ er avkastningen til aktiva $i$ for periode $t$.
+
+I modellen brukes avkastning i *reelle termer*. La $r0t=ln(1+R0t)–ln(1+\pi)$ være *real-avkastningen* til kontanter, hvor $\pi$ er $inflasjon$. Avkastning for aktiva $i$ er definert som *mer-avkastningen* over kontanter, $xt=ln(1+Rit)–ln(1+\pi)–r0t=rit–r0t$. 
+$xit$ er *mer-avkastningen* til aktiva $i$ både i *reelle* og *nominelle termer*.
+
+Alle variablene i analysen er satt sammen i en $m \times 1$ vektor $zt$, hvor fet-skrift indikerer vektor eller matrise. $xt$ er en $n \times 1$ vektor med *mer-avkastning* fra $n$ *aktiva-klasser* med i analysen. Inkludert *kontanter*, velger investor optimal portefølje mellom $n + 1$ risikable eiendeler. $St$ er en vektor av $m-n-1$ *faktor variabler* brukt til å predikere aktiva avkastning.
+
+
+## Mean-Variance Portfolio
+
+Første del av analysen presenterer en minimum varians (MV) portefølje med `longonly` betingelser. @markowitz1959 introduserte MV portefølje rammeverket i 1953, og er i dag mer enn 60 år siden fortsatt rammeverket og grunnpilaren i porteføljeteori og optimalisering [@markowitz1959]. Analysen kan i utgangspunktet gjøres på måter: 
+
+- **1)** maksimere avkastning for en gitt risiko mål 
+
+- **2)** minimere risiko for en gitt mål for avkasting. 
+
+Denne oppgaven tar for seg tilnærming nr to i analysen.
+
+Forutsetninger som generelt antas i en MV-modell er *(i)* porteføljen består av både risikable- og risikofrie eiendeler; *(ii)* prisene på aktiva klassene er eksogene og gitt; *(iii)* investorer er pris takere og påvirker ikke prisingen av aktiva; *(iv)* avkastningen har en kovarians matrise.
+
+Momenter for portefølje optimaliseringen er en vektet kovarians matrise, $w^T \Sigma$ , hvor $\Sigma$ er kovarians matrisen og $w$ er vektene. Optimaliseringen er løst ved å definere et mål for avkastning, $r$ og betingelsen om *longonly* og *fullt investert*. 
+
+
+Vektoren, $\mu$ , består av forventet avkastning (årlig), $\mu_{i}$ , for $N$ aktiva klasser med i analysen. En $NxN$ matrise danner kovariansen, $\sigma_{ij}$ , og variansen til avkastningen. Antagelse om normal fordeling, uavhengig og identisk distribusjon legges til grunn. 
+
+
+## Global Minimums Portefølje
+
+Den *globale minimums porteføljen* er løsningen på den porteføljen med *lavest varians*, gitt kovarians matrisen, $\Sigma$. 
+
+
+Den nedre grensen for varians, $\sigma$ , kan løses kun dersom kovarians matrisen, $\Sigma$ , er kjent. I realiteten er ikke denne kjent, og vi må derfor estimere den basert på data fra finans markedene. Løsningen som typisk blir brukt til å estimere, $\Sigma$ , er å belage seg på historisk data. Det er også gjeldene for denne analysen også. 
+
+
+
+### Betingelser 
+
+Et sett med regler(*constraints*) legges inn i modellen som løser optimaliseringa-problemene. Disse forutsetningene er hva vi antar om investor, og er rammene rundt modellen.
+
+-   **Mål for avkastning** Den første betingelsen er definert med mål om å nå mål for avkastning. Verdien er basert på gjennomsnittet av en likevektet portefølje sin avkastning. Ved å regne ut forventet avkastning av en portefølje bestående av $n$ risikable aktiva klasser, hvor hver aktiva har en $w$ = $1/n$.
+
+-   **Fullt Investert:** Investor må være fullt investert. Det innebærer at vi antar investor velger å investere all sin kapital mellom alternativene gitt i analysen. Summen av alle vekter må derfor bli 1 (100%).
+
+-   **Lange Posisjoner**: Investeringene som foretas kan bare være *long*. Det vil si at investor ikke har mulighet til å *shorte*. Kun lange posisjoner er tilgjengelig, og vektene fra modellen vil også vise positive vekter.
+
+$X$ er aktiva avkastning, $wT \Sigma \mu = x$ er portefølje mål for avkasting, $\Sigma$ er kovarians estimatet. Det er mange måter å teste funksjonen. Vi velger å optimalisere vektene som minimaliserer risikoen ved å bruke avkastningen fra likevektet portefølje som mål for avkastning og betingelser slik at:
+
+
+
+`Optimal Portefølje Problemløsning:`
+
+
+
+**minimaliser** $w^T \Sigma$ , Covariance Risk
+
+
+**subjekt til (gitt betingelsene)** 
+
+    
+1) $w = (w_{1}, w_{2}, …, w_{N})^T > 0$ Lange Posisjoner.
+
+2) $\sum_{i=1}^{N}w_{i} = 1$, Fullt investert.
+   
+3) $wT \Sigma \mu = x$, Mål avkastning.  
+    
+    
+
+
+
+## Eiendoms spesifikke hensyn
+
+Denne analysen har særlig fokus rettet mot eiendom som finansiell aktiva,  Av den grunn ønsker vi å bygge modellen slik at vi kan svare på sentrale spørsmål om eiendom. Som allerede kunngjort i litteratur delen lenger oppe, er likvidere en av de mest sentrale faktorene for løsningen av portefølje-vekt. Av den grunn har vi fokus mot å modellere porteføljevekter over lenger tidshorisonter, enn hva standard fremgangsmåte vil være. Formålet er å avdekke hvordan anbefalingene til vekter optimaliseringa algoritmen gir oss, når vi legger til grunn horisonter over 1 år. 
+
+På kort sikt er det stor sannsynlighet for at standard årlig avkastning og ett års horisont vil gi skjeve resultater. Resultatene i denne analysen viser derfor optimale porteføljevekter som en funksjon av konstanten $k$, som betegner antall horisonter for investeringen. 
+
+
+
+## Momenter
+
+### Dynamisk VAR modell
+
+La oss starte med en dynamisk metodikk for å estimere momenter til bruk i portefølje optimalisering. Sammen med $n+1$ risikable aktiva klasser og kontanter, tar vi med 3 ekstra *state-variabler* godt egnet til å predikere avkastning. Estimeringen gjennomføres i programmeringsspråket `R` ved bruk av pakken `vars` som har de funksjonene som er nødvendig. Tekniske spesifikasjoner og informasjon spesifikt rundt algoritmen finnes detaljert beskrevet i @varsR sitt paper, og i syntaks referansen for påfølgende pakke [@varsR2; @varsR].[^1]
+
+@cambell2005a antar en *kjøp-hold* investor som er opptatt av *real avkastning*. La $zt+1$ være en vektor som inkluderer log-avkastning for aktiva klassene og *faktor variabler* som predikerer avkastning. Anta en VAR(1) modell som fanger opp det dynamiske forholdet mellom aktiva avkastning og *faktor variabler*:
+Løsningen av optimale porteføljer er gjort med samme oppsett og struktur for momenter og portefølje-forutsetninger. Forskjellen er hvordan estimeringen foretas, og hvordan man tolker kovarians matrisen. Ved bruk av variabler egnet til R for aktiva klassene $n + 1$ elementer, estimerer vi en VAR modell [@cambell2005a]. 
+
+Sentralt rundt VAR estimering er hvilket forhold investor har til risiko, og hvilke forutsetninger som legges til grunn ved bruk av denne metoden. Det er stor forskjell sammenlignet ved å estimere gjennomsnitt fra sample. For det første vet investor det at risikoen fortsatt vil være konstant over tid, men den vil være annerledes over langere tidshorisonter. 
+Det medfører også at risikoen kan forandre seg, og det betyr da at risikoen kan være større, men også mindre basert på resultatene. Med andre ord, risikoen er ikke gitt. Den er ikke flat, slik som den ofte fremstilles ved å skalere kun opp til årlig basis. 
+
+Samtidig ønsker vi å understreke at det kun er risikoen, altså variansen, vi modellerer som betinget. Forventet avkastning lar vi være ubetinget, og setter derfor gjennomsnittet av inngående data som avkastning mål + at vi skalerer den opp med antall horisonter $k$. 
+
+Basert på estimert VAR(1) modell, og predikere av avkastning k horisonter frem i tid, kan vi på bakgrunn av disse resultatene modellere utviklingen i risiko målt i varians gitt horisonten k, og dermed løse optimale porteføljer over flere horisonter [@cambell2005a]. 
+
+[^1]: Analysen bruker programmeringsspråket R, med tilhørende pakker/funksjoner tilgjengelig gratis for alle. Andre detaljer, dokumentasjon og informasjon av materiale brukt til å løse denne analysen finnes i Appendiks. Du kan også besøke adressen [onelyder](onelyder.com) for detaljert kode drøfting fra forfatter av denne teksten.
+
+Til input i modellen definerer vi en data-matrise $z$, bestående av $n+1$ aktiva klasser og $m$ *state-variabler.* I dette tilfellet er $n+1 = 4$, og $m=3$. Som betyr at vi har totalt $k$ *endogene variabler* i **VAR modellen**. I dette tilfellet er $k=8$.
+
+# Resultater 
+
+Variabler valgt til å predikere er `T-BILL YIELD`, `TERM SPREAD` og `DIVIDEND YIELD`.[^2] Variablene er valgt med utgangspunkt i @Mac2009 sitt paper, hvor det også her estimeres en VAR(1) modell ved bruk av samme variabler. @Rehring2012 og @Delfim141 estimerer også en VAR(1) i sammenhengen eiendomsinvesteringer og portefølje optimalisering, men har i tillegg til nevnte variabler til brukes i denne modellen, også med andre variabler til å supplere med. Til felles har alle nevnte artikler lagt til grunn @cambell2005a sitt generelle rammeverk for estimering av VAR(1) modeller til bruk for portefølje optimalisering bandt finansielle aktiva klasser [@cambell2005a; @Mac2009; @Rehring2012; @Delfim141].
+
+[^2]: Andre variabler som M2, IP og UNRATE ble også testet, men på grunn av ønske om modell simpel het ble disse ikke valgt med i den endelige variabelen "z".
+
+
+Basert på VAR-resultatene gir modellen oss en kovariansmatrise som inneholder informasjon om variansen og kovariansen mellom aktiva klassene. Vi er i utgangspunktet kun interessert i aktiva klassene, og vil derfor bare hente matrisene til de totalt 5 variablene. De 3 andre variablene som representerer state er ikke av interesse etter estimering. 
+
+Rå-resultatene fra VAR estimeringen, gjør at vi kan beregne standardavviket. For å sammenlike mellom klassene ønsker vi anualiserte verdier. Det finner vi ved å skalere med antall kvartaler $k$, deretter multiplisere med anualisert faktor $4$. Kvadratroten av dette blir årlig standardavvik. [^3] 
+
+Vi deler altså variansen med $k$ antall kvartaler i horisonten, deretter ganger vi ut med fire slik at vi får årlig varians. Kvadratroten av dette er årlig standard avvik. Inngående data er oppgitt i kvartals frekvens. For å sammenligne porteføljemomentene avkastning og risiko, skaleres ofte verdiene opp til årlige frekvenser. AV den grunn blir det lettere å avgjøre hvordan avkastninga fordelingen skiller seg ut mellom aktiva klassene. 
+
+[^3]: Følger @Mac2009 sin beskrivelse for å finne annualisert standardavvik fra VAR(1) estimatene. Se s.126.
+
+
+\clearpage
+
+**"VAR RESULTATER HER"**
+
+\clearpage
+
+
+\clearpage
+
+## Termin Struktr Risiko 
+
+**"PLOT ÅRLIG STD:AVVIK HER"**
+
+\clearpage
+
+
+Resultatene viser hvordan den årlige risikoen, målt i standardavvik utvikler seg ettersom $k$ blir større. For hvert punkt $k$ i grafen, vises den årlige risikoen. Den regner vi om fra rådata VAR modellen gir oss. Vi deler altså variansen med $k$ antall kvartaler i horisonten, deretter ganger vi ut med *fire* slik at vi får årlig varians. Kvadratroten av dette er årlig standard avvik.
+
+
+
+
+$$
+sett opp formel her
+$
+
+
+
+

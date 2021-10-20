@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "Hva putter vi her da?",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-10-20T21:38:17+02:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Mitt Studie av R",
+      "author": [],
+      "contents": "\nTittel nummer 1\ndfhdihgdflbofdbfgb\ndsgvdgbdhoidfhbodpfjbpdjbpdøjbådbkd g g\nngggggggggggg\nHva skjer nå?\nshgdfohgdb f b fg f g\n\n\n\n",
+      "last_modified": "2021-10-20T21:38:17+02:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

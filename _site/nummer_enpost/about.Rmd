@@ -1,0 +1,9 @@
+---
+title: "About this blog"
+description: |
+  Hva putter vi her da?
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```

@@ -21,7 +21,19 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+# Velkommen 
 
+Ulike prosjekter jeg deler outputs fra. **`Onelyder.com`** er dome-nenavn jeg eier og forvalter. Styrer innholdet på denne kanalen fritt og vil i hovedsak publisere uten forpliketelser. Jobber for Deloitte AS og har mitt første år som Associate nå. Revisjon- og revisjonsmessige problemstillinger vil derfor være fokus- og læringsområdet mye av matriale vil ta stilling til ved bruk av R kode og andre programmeringsrpråk.
+
+### Kontakt privat
+
+
+`lyder@onelyder.com` privat epost-adresse. 
+
+
+### Kontakt Deloitte AS
+
+```
 
 Lyder Aleksander Mathisen
 
@@ -29,7 +41,9 @@ Associate | Audit and Assurance
 
 Deloitte AS
 
-## Info
+```
+
+
 
 
 

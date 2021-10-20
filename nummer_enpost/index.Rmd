@@ -1,0 +1,27 @@
+---
+title: "Mitt Studie av R"
+site: distill::distill_website
+listing: posts
+---
+
+# Tittel nummer 1
+dfhdihgdflbofdbfgb
+
+dsgvdgbdhoidfhbodpfjbpdjbpdøjbådbkd
+g
+g
+
+ngggggggggggg
+
+
+## Hva skjer nå?
+
+
+
+shgdfohgdb
+f
+b
+fg
+f
+g
+

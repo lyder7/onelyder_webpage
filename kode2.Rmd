@@ -1,0 +1,173 @@
+---
+title: "R oversikt mere (2)"
+description: |
+ Tidyverse fenomentet og gramtatikken for dats manipulering. R for datascience boken til Hardley er tema. 
+author:
+  - name: Lyder Aleksader Mathisen
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+
+
+
+
+
+
+
+
+I dag har jeg endelig fått tak i en bok som tar for seg R programmering. Har ventet lenge. Boken jeg har lånt fra universitets biblioteket NTNU i Gjøvik er skrevet av @wickham2016r, og heter `R for Data Science` [@wickham2016r]. 
+
+Jeg kan referere til boken via **`references.bib`** dokumentet mitt, så dette notatet tar for seg @wickham2016r sin R bok. Her er formålet å lære om **`tidyverse`** og **`tidy`** prinsippene. I tillegg går man litt mer i dybden på funksjoner og mer "avanserte" temaer. Leser som sagt denne boken i ekte format, da jeg har fått lånt meg den på fra NTNU sitt universitetsbibliotek i Gjøvik. Tar notater underveis når jeg har tid, og bruker tid på de temaene jeg synes er spennende og som jeg vet fra før av jeg vil lære mer om. Eller som jeg trenger trening på [@wickham2016r]. 
+
+Mest sannsynlig har jeg lest, eller mer presist skummet over boken i digital versjon fra tidligere. Men jeg synes det er noe eget å ha innholdet i en ekte bok. Tror det er bra å tilnærme seg innhold slik, så ikke alt skjerm på PC skjermen. For det kan bli litt mye noen ganger. 
+
+Oppdaterer referanse dokumentet underveis som jeg kommer over litteratur som er relevant spesifikt for notatene fra denne boken. 
+
+[Link til digital versjon her](https://r4ds.had.co.nz/)
+
+## Forventninger 
+
+Føler meg egentlig ganske spent og nysgjerrig på å ta fatt i boken. Det jeg håper å lære er å knekke "koden" til å beherske dette med funksjoner. Altså det å ha ferdigheten til å kunne lage funksjoner helt fra bunn og prosessen ved å lage den fra start til slutt. Og ikke minst evnen til å identifisere når man trenger å lage sin egen funksjon, og deretter designe funksjonen til å løse problemet. 
+
+I hovedsak tar jeg notatene mine inne i dette dokumentet for å samle alt under "ett sted". Men jeg har også laget et R.script lagret i en mappe kalt `R` hvor jeg tester ut funksjoner + div jeg prøver meg på underveis. Det vil da være supplement til dette hoveddokumentet. 
+
+
+# **1**
+
+
+`Tidy data ` og rammeverket rundt fokuserer i hovedsak på det som går under kategorien "small, in-memory datasets". Men allikevel så vill metodikken, strukturen og rammeverket rundt Tidy data, fortsatt klare å håndtere flere hundre megabite data. Faktisk et sted mellom 1-2 GB når man blir skikkelig god. 
+For data større enn 10GB-100GB vil `data.table` være et bedre alternativ.
+
+Det man bemerke seg i den forbindelse, er det faktum at det er forskjellige rammeverk avhengig av dataene du jobber med. `Tidy` er for den minste delen, som passer for de aller fleste oppgaver. `data.table` er for neste steg hvor vi begynner snakke Big data. 
+
+Disse rammeverkene har ulike prinsipper og "regler", så det kan være forvirrende og lære seg begge to samtidig. `data.table` er f.eks vanskeligere å lære enn `tidy`. Mye på grunn av at strukturen må være mer direkte, og mindre rom for frihet å behandle data mer effektivt. Til motsetning fra `Tidy` som har rom for mer frihet, men allikevel kan håndtere relativt sett store mengder med data effektivt. 
+`Tidy` regnes som en effektiv måte å kode på, gitt at man bruker til data sett som er egnet. Det til forskjell fra f.eks bruke basic funksjonene. 
+
+`Tidy` fokuserer på rektangulær data. Det vil si verdier som er assosiert med en *variabel* og en *observasjon*. 
+Data som ikke er slik er f.eks *bilder*, *lyder* eller *tekst.* 
+
+# **2**
+
+Laster inn `tidyverse` pakken her under. Prøver meg litt frem sammen med eksempler fra boken, og leker meg litt med data for å bli endra tryggere på `tidy` syntaksen. Har gjort store steg allerede, og mener selv at jeg forstår logikken. Men tror jeg allikevel har mulighet til å fange opp noe nytt. 
+ˆ
+```{r}
+library(tidyverse)
+```
+
+
+Viktig å legge merke til disse forskjellene det refereres til kode: 
+
+* *Funksjoner* har kodetekst etterfulgt med parentes: `mean()` eller `sum()`
+
+* *Objekter* har bare kodetekst uten parentes: `data` eller `x`
+
+* Dersom det er nødvendig å spesifisere hvilken pakke en funksjon skal brukes fra betegnes det med pakken sitt navn etterfulgt av dobbel kolon: `dplyr::mutate()`
+
+In R intruction words are a group of `terms` used `for` giving instructions to the termninal of what is comming. For exmaple `function`, `for` and `if / else` are the most commonly used instruction words. They defines that there is going to be instructions the terminal need to consider when evaluationg the code. Other defoult keyword for instruction words are: 
+`if else repeat while function for in next break TRUE FALSE NULL NA Inf NaN`
+
+Next we have `base words`. 
+
+
+
+# **3**
+
+`ggplot2`
+
+
+- geom 
+  - + geom_point
+  - + geom_smooth
+  
+Et *geometrisk objekt* som brukes for å representere data. Avhengig om det er et *bar-chart*, *line-chart*, *boxplot* eller *scatterplot.* De bruker ulik *geom.* 
+
+
+**4**
+
+
+`pryr::object_size`
+
+
+
+
+# FUNKSJONER
+
+
+Ting jeg må sjekke ut:
+
+* `switch()` 
+  + Indeksering, kan jeg bruke til matriser? 
+  
+  
+
+Som det kommer frem i boka, den gyldne regelen for funksjoner i R er at det siste argumentet, eller den siste linjen, er det som returenes. Sjekk @wickham2016r s.286. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Appendiks
+
+```{r}
+sessioninfo::session_info()
+Sys.time()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Referanser 
+
+  
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+---
+title: "R 3"
+description: |
+  Data import i R.
+author:
+  - name: Lyder  
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+## Load data
+
+I dette kapittelet går jeg gjennom sentrale, men også viktige måter å laste inn data til R. Selv om det høres "usexy" ut, og kanskje en smule fundamentalt, kan jeg allerede fortelle at innlasting av data er et eget fag. Og en kunst i seg selv. Personlig er dette et område jeg savner opplæring i fra universitetet. Satt i perspektiv lærte vi vel faktisk ingenting om et tilsynelatende viktig tema...
+
+## Text, csv
+De aller fleste av oss er kjent med filtyper som slutter med ".csv". Mest sannsynlig har du kjennskap til notasjonen fra excel ark vil jeg anta. csv betyr enkelt sagt at data er lagret som tekst, og at kolonnene er er separert med ",". 
+Slik klarer R, PC din og andre verktøy å lese dataene, og laste den inn "riktig". 
+
+Sentralt rundt nettopp csv filer er at de er også leselige for mennesker. Strukturen data er lagret med har samme logikk om du vil, slik som vi ser for oss kolonner og rader. Det er dog viktig at du endrer desimalskille tegn på pc du bruker, slik at tall med desimaler bruker ".". 
+
+I R kan du laste inn dataene med funksjonen `read.csv()` som er den generiske base funksjonen allerede installert. 
+
+Det anbefales at du bruker `read_csv()` funksjonen fra `readr` pakken. Årsaken er at sistnevnte metode er mer effektiv og gjør prosessen med å laste inn data, samt behandle den mer "smud". I tillegg blir data lastet inn i `tibble` format, som også er kjekt.  
+
+## .rda filer, binare data strukturer
+
+
+`saveRDS()` og `readRDS()` er to funksjoner som lagrer R-objekter. Disse blir lagret som binomisk filer. I istedenfor at dataen blir lagret som en tekst objekt, slik som ved csv, kan du med `.rda` filer lagre spesifikke R-objekter. Den tar vare på strukturen, så dersom du vil lagre et data sett i en spesiell class, f.eks som `xts` er dette måten å gjøre det på. 
+
+Når du laster inn objektet på et senere tidspunkt, vil dataene bli lastet inn eksakt slik som den ble lagret. 
+
+Forskjellen er at disse filene går under kategorien "ikke leselige for mennesker". De blir lagret på en mer effektiv måte, som går på bekosting av enkelhet.
+
+
+## Pipe
+
+I R brukes ofte syntaksen `%>%`, og kanskje er det noe kjent med dette symbolet når du ser det? I isåfall er det en grunn til det. Det er en relativt ny "oppfinnelse" som gjøre koden mye mer effektiv, og forhindrer at maskinen blir utmattet. Koden blir raskere. 
+
+Før man setter seg ned for å faktisk forstå hva denne %>% greia er, så er den egt bare et hinder og *helvette* i starten. Den ser bare rar ut, og hvis du mot formodning forsøker å ta den inn i egen kode så funker det ihvertfall ikke. Og alle bruker den i mauler du ser på. Den er bare som et vei bom. Slik har jeg opplevd den. 
+
+Men den faktiske jobben til denne karen, som vi kaller for `pipe` og referer til som ` %>% `, det er å transformere resultatet av en funksjon over til neste. Unngå mellom kjøringer og unødvendige objekter, for å gjøre koden mer "*dry*" og "*clean*". Det gir raskere kode, som gir bedre ytelse som igjen gjør alt bare bedre. 
+
+Utfordringen med nettopp pipe er å sette seg inn i strukturen, og tilpasse seg endringene det medfører. Fra slik du kanskje er vant til fra før. I utgangspunktet gjør koden akkurat det samme, men syntaksen blir ganske betydelig annerledes, med tanke på hvordan du referer til forskjellige ting. Den gode nyheten er at når du først forstår strukturen (som alt annet), så blir scriptet du har laget enda mer logisk og den åpner ideer g muligheter som du kanskje ikke har "klart" enda. Men som plutselig lar seg gjøre nå.
+
+
+RSQLite?
+
+# Rio, alle filtyper og formater 
+
+
+
+Rio pakken har effektive funksjoner vi kan bruke til å laste inn (importere) data til R. Fordelen med denne pakken er at omtrent alle filtyper er mulig slik at man i prinsippet kan analysre data for de fleste formål. Det gjør R til en unik statistisk data plattform. Det som ytterligere gjør denne pakken enestående er måten den er bygget på. Koden til funksjonene vi bruker er skrevet på en effektiv og elegant struktur, så RAM og PC du jobber med ikke skal bruke unødvendig ressurser når det ikke trengs. Dette er en del av tidy prinsippene og sett og vis gramatikken for datasett på størrelse opp til 2 GB i R miljøet [@rio; @rioformat; @tidyverse; @wickham2016r]
+
+
+
+
+
+<https://datacarpentry.org/R-ecology-lesson/03-dplyr.html#Challenge>

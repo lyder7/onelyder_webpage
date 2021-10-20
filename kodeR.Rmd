@@ -1,0 +1,43 @@
+---
+title: "R oversikt"
+description: |
+ Metodisk litteratur rundt porteflljer fra finansiell litteratur. 
+author:
+  - name: Lyder Aleksader Mathisen
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+
+# Programmerings språk: En oversikt 
+
+Min preferanse er rettet spesifikt mot R og R Studio sitt ramme verk for håndering av syntax gjennom R terminalen. Dette var det første språket jeg ble introdusert til via Data Science fag i mitt studie, og har siden vært språket jeg har fortsatt og utvikle meg. Av den grunn vil jeg alltid ha et spessielt forhold til R. 
+
+[R Wikipedia](https://en.wikipedia.org/wiki/R_(programming_language))
+
+Men det er mange andre programmeringspråk. R sammenenlignet med disse er bare en liten nisje i forhold, og er på mange måter vidre utviklet basert på de eldste gutta i klassen. I denne delen er hensikten å presentere noen av språkene som er mest kjent, og diskutere samt poengtere hva de kan brukes til og hva som vil være nærliggende og bygge videre på. 
+
+Til inspirasjon har jeg lest @mikke14 sin artikkel hvor han tar for seg 14 språk og deres funksjonaliteter. Denne artikkelen er basisen for innholdet [@mikke14]. 
+
+Det finnes også flere kode språk som man burde nevne i en debatt som denne. @tobeindex er en index som viser de mest brukte programmeringspråkene i verden, med løpende oppdatering. Denne kan være til nytte dersom du er nysgjerrig og vil vite mer om hvilket gigantisk hav av muligheter som finnes der ute [@tobeindex].
+
+
+### Veien videre fra R og R Studio 
+
+
+Selv om man har forkjærlighet for en struktur, et miljø og et felleskap for hvordan ting kan gjøres er det naturlig å ta steget videre og utforske de andre språkene. Når man har lært seg grunnleggende sammenhenger og virkelig funnet interessen, samt forstått hva kode egentlig kan brukes til, samt omfanget det kan brukes til, er dette utentvil den riktige veien å gå.
+
+For det er slik at koding har vært utviklet over en ganske lengere periode enn hva vi først tenker. Hvertfall var det slik for meg. Relativt sett er det ikke snakk om lang tid, men jeg vil anta en person som ikke kan noe om koding vil tippe starten av 2000-tallet som tidligst start for utvikling av slike språk. 
+
+
+
+
+[Link Personlig Nettside](https://mikkegoes.com/portfolio-site-on-wordpress/)
+
+
+
+
+
+
+
+# Referanser 

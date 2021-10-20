@@ -1,0 +1,23 @@
+---
+title: "Welcome to Mitt Studie av R"
+description: |
+  Velkommen til bloggen hvor jeg deler mine tanker og refleksjoner rundt R og bruk av R-kode. 
+author:
+  - name: Lyder Aleksander Mathisen
+    url: onelyder.com
+date: `r Sys.Date()`
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+
+Vi må bare putte masse tekst inn her og be om det beste!
