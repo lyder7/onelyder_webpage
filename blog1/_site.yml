@@ -1,8 +1,8 @@
-name: "Blog_1"
+name: "blog1"
 title: "My Blog"
 description: |
   My Blog
-output_dir: "docs"
+output_dir: "_site"
 navbar:
   right:
     - text: "Home"

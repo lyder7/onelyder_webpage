@@ -1,8 +1,9 @@
+```
 name: "Personal Portfolio"
 title: "Lyder Aleksander Mathisen"
 theme: onelyder_theme.css
 description: |
-  My personal portfolio 
+  Onelyder.com 
 output_dir: "_site"
 navbar:
   right:
@@ -23,3 +24,4 @@ navbar:
     - text: "Flere løsninger"
       href: teori-finans.html     
 output: distill::distill_article
+```
