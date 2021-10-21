@@ -1,39 +1,30 @@
-name: "Personal Portfolio"
+name: "distill_blog"
 title: "Lyder Aleksander Mathisen"
-theme: onelyder_theme.css
+description: |
+  onelyder.com 
 output_dir: "_site"
+base_url: https://onelyder.com
+repository_url: https://github.com/lyder7/onelyder_webpage.git
+google_analytics: "UA-52682113-1"
+exclude: "README.md"
 navbar:
   right:
     - text: "Home"
-      href: index.html
+      href: https://onelyder.com
     - text: "About"
       href: about.html
-    - text: "Linker & Referanser"
-      href: linker.html
-    - text: "Kode 1"
-      href: kodeR.html 
-    - text: "Kode 2"
-      href: kode2.html
-    - text: "Kode 3"
-      href: kode3.html
-    - text: "Kode 4"
-      href: kode4.html
-    - text: "Flere løsninger"
-      href: teori-finans.html     
-output: distill::distill_article
+    # - text: "Resume"
+    #   href: resume.html      
+    - icon: fa fa-github
+      href: https://github.com/lyder7
+    - icon: fa fa-twitter
+      href: https://twitter.com/Pierre_Lyder
+collections:
+  posts:
+    share: [twitter, facebook, linkedin]
+    # disqus: data-mrworthington
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+output:
+  distill::distill_article:
+    css: styles.css
+    toc_depth: 2
