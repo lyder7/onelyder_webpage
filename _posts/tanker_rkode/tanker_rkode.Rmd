@@ -1,0 +1,255 @@
+---
+title: "Tanker & Ideer om Koding i R"
+description: |
+  Utkast fra et større prosjekt jeg driver med angående koding og bruk av R. Deler biter av noe av innholdet jeg har skrevet så langt.  
+author:
+  - name: Lyder Aleksander Mathisen 
+    url: https://onelyder.com/about
+    affiliation: Me, Myself, and I
+    affiliation_url: https://onelyder.com
+date: 10-21-2021
+creative_commons: CC BY-NC
+output:
+  distill::distill_article:
+    css: hospital_header.css
+    self_contained: false
+preview: sander-joe.jpg
+categories:
+  - Teori
+  - Portefølje
+  - Børs
+  - Investeringer
+  - Finans
+  - Eiendom
+---
+
+
+# Mitt Studie av R
+
+## Tidyverse og tidy strukturen
+
+
+I dag har jeg endelig fått tak i en bok som tar for seg R programmering. Har ventet lenge. Boken jeg har lånt fra universitets biblioteket NTNU i Gjøvik er skrevet av @wickham2016r, og heter `R for Data Science` [@wickham2016r]. 
+
+Jeg kan referere til boken via **`references.bib`** dokumentet mitt, så dette notatet tar for seg @wickham2016r sin R bok. Her er formålet å lære om **`tidyverse`** og **`tidy`** prinsippene. I tillegg går man litt mer i dybden på funksjoner og mer "avanserte" temaer. Leser som sagt denne boken i ekte format, da jeg har fått lånt meg den på fra NTNU sitt universitetsbibliotek i Gjøvik. Tar notater underveis når jeg har tid, og bruker tid på de temaene jeg synes er spennende og som jeg vet fra før av jeg vil lære mer om. Eller som jeg trenger trening på [@wickham2016r]. 
+
+Mest sannsynlig har jeg lest, eller mer presist skummet over boken i digital versjon fra tidligere. Men jeg synes det er noe eget å ha innholdet i en ekte bok. Tror det er bra å tilnærme seg innhold slik, så ikke alt skjerm på PC skjermen. For det kan bli litt mye noen ganger. 
+
+Oppdaterer referanse dokumentet underveis som jeg kommer over litteratur som er relevant spesifikt for notatene fra denne boken. 
+
+[Link til digital versjon her](https://r4ds.had.co.nz/)
+
+## Forventninger 
+
+Føler meg egentlig ganske spent og nysgjerrig på å ta fatt i boken. Det jeg håper å lære er å knekke "koden" til å beherske dette med funksjoner. Altså det å ha ferdigheten til å kunne lage funksjoner helt fra bunn og prosessen ved å lage den fra start til slutt. Og ikke minst evnen til å identifisere når man trenger å lage sin egen funksjon, og deretter designe funksjonen til å løse problemet. 
+
+I hovedsak tar jeg notatene mine inne i dette dokumentet for å samle alt under "ett sted". Men jeg har også laget et R.script lagret i en mappe kalt `R` hvor jeg tester ut funksjoner + div jeg prøver meg på underveis. Det vil da være supplement til dette hoveddokumentet. 
+
+
+# **1**
+
+
+`Tidy data ` og rammeverket rundt fokuserer i hovedsak på det som går under kategorien "small, in-memory datasets". Men allikevel så vill metodikken, strukturen og rammeverket rundt Tidy data, fortsatt klare å håndtere flere hundre megabite data. Faktisk et sted mellom 1-2 GB når man blir skikkelig god. 
+For data større enn 10GB-100GB vil `data.table` være et bedre alternativ.
+
+Det man bemerke seg i den forbindelse, er det faktum at det er forskjellige rammeverk avhengig av dataene du jobber med. `Tidy` er for den minste delen, som passer for de aller fleste oppgaver. `data.table` er for neste steg hvor vi begynner snakke Big data. 
+
+Disse rammeverkene har ulike prinsipper og "regler", så det kan være forvirrende og lære seg begge to samtidig. `data.table` er f.eks vanskeligere å lære enn `tidy`. Mye på grunn av at strukturen må være mer direkte, og mindre rom for frihet å behandle data mer effektivt. Til motsetning fra `Tidy` som har rom for mer frihet, men allikevel kan håndtere relativt sett store mengder med data effektivt. 
+`Tidy` regnes som en effektiv måte å kode på, gitt at man bruker til data sett som er egnet. Det til forskjell fra f.eks bruke basic funksjonene. 
+
+`Tidy` fokuserer på rektangulær data. Det vil si verdier som er assosiert med en *variabel* og en *observasjon*. 
+Data som ikke er slik er f.eks *bilder*, *lyder* eller *tekst.* 
+
+# **2**
+
+Laster inn `tidyverse` pakken her under. Prøver meg litt frem sammen med eksempler fra boken, og leker meg litt med data for å bli endra tryggere på `tidy` syntaksen. Har gjort store steg allerede, og mener selv at jeg forstår logikken. Men tror jeg allikevel har mulighet til å fange opp noe nytt. 
+ˆ
+```{r include=FALSE}
+library(tidyverse)
+```
+
+
+Viktig å legge merke til disse forskjellene det refereres til kode: 
+
+* *Funksjoner* har kodetekst etterfulgt med parentes: `mean()` eller `sum()`
+
+* *Objekter* har bare kodetekst uten parentes: `data` eller `x`
+
+* Dersom det er nødvendig å spesifisere hvilken pakke en funksjon skal brukes fra betegnes det med pakken sitt navn etterfulgt av dobbel kolon: `dplyr::mutate()`
+
+In R intruction words are a group of `terms` used `for` giving instructions to the termninal of what is comming. For exmaple `function`, `for` and `if / else` are the most commonly used instruction words. They defines that there is going to be instructions the terminal need to consider when evaluationg the code. Other defoult keyword for instruction words are: 
+`if else repeat while function for in next break TRUE FALSE NULL NA Inf NaN`
+
+Next we have `base words`. 
+
+
+
+# **3**
+
+`ggplot2`
+
+
+- geom 
+  - + geom_point
+  - + geom_smooth
+  
+Et *geometrisk objekt* som brukes for å representere data. Avhengig om det er et *bar-chart*, *line-chart*, *boxplot* eller *scatterplot.* De bruker ulik *geom.* 
+
+
+**4**
+
+
+`pryr::object_size`
+
+
+
+
+# FUNKSJONER
+
+
+Ting jeg må sjekke ut:
+
+* `switch()` 
+  + Indeksering, kan jeg bruke til matriser? 
+  
+  
+
+Som det kommer frem i boka, den gyldne regelen for funksjoner i R er at det siste argumentet, eller den siste linjen, er det som returenes. Sjekk @wickham2016r s.286. 
+
+I dette kapittelet går jeg gjennom sentrale, men også viktige måter å laste inn data til R. Selv om det høres "usexy" ut, og kanskje en smule fundamentalt, kan jeg allerede fortelle at innlasting av data er et eget fag. Og en kunst i seg selv. Personlig er dette et område jeg savner opplæring i fra universitetet. Satt i perspektiv lærte vi vel faktisk ingenting om et tilsynelatende viktig tema...
+
+## Text, csv
+De aller fleste av oss er kjent med filtyper som slutter med ".csv". Mest sannsynlig har du kjennskap til notasjonen fra excel ark vil jeg anta. csv betyr enkelt sagt at data er lagret som tekst, og at kolonnene er er separert med ",". 
+Slik klarer R, PC din og andre verktøy å lese dataene, og laste den inn "riktig". 
+
+Sentralt rundt nettopp csv filer er at de er også leselige for mennesker. Strukturen data er lagret med har samme logikk om du vil, slik som vi ser for oss kolonner og rader. Det er dog viktig at du endrer desimalskille tegn på pc du bruker, slik at tall med desimaler bruker ".". 
+
+I R kan du laste inn dataene med funksjonen `read.csv()` som er den generiske base funksjonen allerede installert. 
+
+Det anbefales at du bruker `read_csv()` funksjonen fra `readr` pakken. Årsaken er at sistnevnte metode er mer effektiv og gjør prosessen med å laste inn data, samt behandle den mer "smud". I tillegg blir data lastet inn i `tibble` format, som også er kjekt.  
+
+## .rda filer, binare data strukturer
+
+
+`saveRDS()` og `readRDS()` er to funksjoner som lagrer R-objekter. Disse blir lagret som binomisk filer. I istedenfor at dataen blir lagret som en tekst objekt, slik som ved csv, kan du med `.rda` filer lagre spesifikke R-objekter. Den tar vare på strukturen, så dersom du vil lagre et data sett i en spesiell class, f.eks som `xts` er dette måten å gjøre det på. 
+
+Når du laster inn objektet på et senere tidspunkt, vil dataene bli lastet inn eksakt slik som den ble lagret. 
+
+Forskjellen er at disse filene går under kategorien "ikke leselige for mennesker". De blir lagret på en mer effektiv måte, som går på bekosting av enkelhet.
+
+
+## Pipe
+
+I R brukes ofte syntaksen `%>%`, og kanskje er det noe kjent med dette symbolet når du ser det? I isåfall er det en grunn til det. Det er en relativt ny "oppfinnelse" som gjøre koden mye mer effektiv, og forhindrer at maskinen blir utmattet. Koden blir raskere. 
+
+Før man setter seg ned for å faktisk forstå hva denne %>% greia er, så er den egt bare et hinder og *helvette* i starten. Den ser bare rar ut, og hvis du mot formodning forsøker å ta den inn i egen kode så funker det ihvertfall ikke. Og alle bruker den i mauler du ser på. Den er bare som et vei bom. Slik har jeg opplevd den. 
+
+Men den faktiske jobben til denne karen, som vi kaller for `pipe` og referer til som ` %>% `, det er å transformere resultatet av en funksjon over til neste. Unngå mellom kjøringer og unødvendige objekter, for å gjøre koden mer "*dry*" og "*clean*". Det gir raskere kode, som gir bedre ytelse som igjen gjør alt bare bedre. 
+
+Utfordringen med nettopp pipe er å sette seg inn i strukturen, og tilpasse seg endringene det medfører. Fra slik du kanskje er vant til fra før. I utgangspunktet gjør koden akkurat det samme, men syntaksen blir ganske betydelig annerledes, med tanke på hvordan du referer til forskjellige ting. Den gode nyheten er at når du først forstår strukturen (som alt annet), så blir scriptet du har laget enda mer logisk og den åpner ideer g muligheter som du kanskje ikke har "klart" enda. Men som plutselig lar seg gjøre nå.
+
+
+
+
+# Rio, alle filtyper og formater 
+
+
+
+Rio pakken har effektive funksjoner vi kan bruke til å laste inn (importere) data til R. Fordelen med denne pakken er at omtrent alle filtyper er mulig slik at man i prinsippet kan analysre data for de fleste formål. Det gjør R til en unik statistisk data plattform. Det som ytterligere gjør denne pakken enestående er måten den er bygget på. Koden til funksjonene vi bruker er skrevet på en effektiv og elegant struktur, så RAM og PC du jobber med ikke skal bruke unødvendig ressurser når det ikke trengs. Dette er en del av tidy prinsippene og sett og vis gramatikken for datasett på størrelse opp til 2 GB i R miljøet [@rio; @rioformat; @tidyverse; @wickham2016r]
+
+
+
+
+
+<https://datacarpentry.org/R-ecology-lesson/03-dplyr.html#Challenge>
+
+
+
+
+
+# Programmerings språk: En oversikt 
+
+Min preferanse er rettet spesifikt mot R og R Studio sitt ramme verk for håndering av syntax gjennom R terminalen. Dette var det første språket jeg ble introdusert til via Data Science fag i mitt studie, og har siden vært språket jeg har fortsatt og utvikle meg. Av den grunn vil jeg alltid ha et spessielt forhold til R. 
+
+[R Wikipedia](https://en.wikipedia.org/wiki/R_(programming_language))
+
+Men det er mange andre programmeringspråk. R sammenenlignet med disse er bare en liten nisje i forhold, og er på mange måter vidre utviklet basert på de eldste gutta i klassen. I denne delen er hensikten å presentere noen av språkene som er mest kjent, og diskutere samt poengtere hva de kan brukes til og hva som vil være nærliggende og bygge videre på. 
+
+Til inspirasjon har jeg lest @mikke14 sin artikkel hvor han tar for seg 14 språk og deres funksjonaliteter. Denne artikkelen er basisen for innholdet [@mikke14]. 
+
+Det finnes også flere kode språk som man burde nevne i en debatt som denne. @tobeindex er en index som viser de mest brukte programmeringspråkene i verden, med løpende oppdatering. Denne kan være til nytte dersom du er nysgjerrig og vil vite mer om hvilket gigantisk hav av muligheter som finnes der ute [@tobeindex].
+
+
+### Veien videre fra R og R Studio 
+
+
+Selv om man har forkjærlighet for en struktur, et miljø og et felleskap for hvordan ting kan gjøres er det naturlig å ta steget videre og utforske de andre språkene. Når man har lært seg grunnleggende sammenhenger og virkelig funnet interessen, samt forstått hva kode egentlig kan brukes til, samt omfanget det kan brukes til, er dette utentvil den riktige veien å gå.
+
+For det er slik at koding har vært utviklet over en ganske lengere periode enn hva vi først tenker. Hvertfall var det slik for meg. Relativt sett er det ikke snakk om lang tid, men jeg vil anta en person som ikke kan noe om koding vil tippe starten av 2000-tallet som tidligst start for utvikling av slike språk. 
+
+
+
+
+[Link Personlig Nettside](https://mikkegoes.com/portfolio-site-on-wordpress/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Appendiks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Referanser 
+
+  
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
