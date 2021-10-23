@@ -1,5 +1,5 @@
 ---
-title: "Nylige publiseringer fra onelyder.com"
+title: "onelyder.com"
 site: distill::distill_website
 listing: posts
 ---

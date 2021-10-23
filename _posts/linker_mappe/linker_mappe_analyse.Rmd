@@ -13,7 +13,7 @@ output:
   distill::distill_article:
     css: hospital_header.css
     self_contained: false
-preview: simon-sjakk.jpg
+#preview: simon-sjakk.jpg
 categories:
   - R
   - R-studio
