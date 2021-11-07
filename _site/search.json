@@ -4,15 +4,15 @@
       "path": "about.html",
       "title": "About",
       "author": [],
-      "contents": "\nOnelyder.com er et dome-navn jeg eier og forvalter på egenhånd. Jeg styrer alt innholdet som blir publisert her, og må ikke forveksels med andre engasjement og forpliktelser jeg har. Denne siden er ment til å være et sted hvor jeg deler innsikt og output/resultater fra prosjekter jeg driver med.\n\n\n\n",
-      "last_modified": "2021-10-23T18:45:36+02:00"
+      "contents": "\r\nOnelyder.com er et dome-navn jeg eier og forvalter på egenhånd. Jeg styrer alt innholdet som blir publisert her, og må ikke forveksels med andre engasjement og forpliktelser jeg har. Denne siden er ment til å være et sted hvor jeg deler innsikt og output/resultater fra prosjekter jeg driver med.\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-10-26T00:27:18+02:00"
     },
     {
       "path": "index.html",
       "title": "onelyder.com",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2021-10-23T18:45:36+02:00"
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-10-26T00:27:19+02:00"
     }
   ],
   "collections": ["posts/posts.json"]
