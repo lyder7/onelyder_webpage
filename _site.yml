@@ -19,9 +19,9 @@ navbar:
       href: https://github.com/lyder7
     - icon: fa fa-twitter
       href: https://twitter.com/Pierre_Lyder
-collections:
-  posts:
-    share: [twitter, facebook, linkedin]
+#collections:
+#  posts:
+#    share: [twitter, facebook, linkedin]
     # disqus: data-mrworthington
 
 output:

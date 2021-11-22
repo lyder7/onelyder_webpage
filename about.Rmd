@@ -9,5 +9,5 @@ output:
 
 **`Onelyder.com`** er et dome-navn jeg eier og forvalter på egenhånd. Jeg styrer alt innholdet som blir publisert her, og må ikke forveksels med andre engasjement og forpliktelser jeg har. Denne siden er ment til å være et sted hvor jeg deler innsikt og output/resultater fra prosjekter jeg driver med.  
 
-![]("lyder.jpg")
+![]("RMarkdownFlow.png")
 
