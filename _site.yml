@@ -13,6 +13,8 @@ navbar:
       href: https://onelyder.com
     - text: "About"
       href: about.html
+    - text: "Linux"
+      href: Linux.html
     # - text: "Resume"
     #   href: resume.html      
     - icon: fa fa-github
