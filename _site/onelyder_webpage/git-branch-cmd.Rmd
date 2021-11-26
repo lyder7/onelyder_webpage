@@ -1,0 +1,25 @@
+---
+title: "dev"
+output:
+  distill::distill_article:
+    css: onelyder_theme.css
+    self_contained: false
+# creative_commons: CC BY-NC
+---
+## git bash cmd
+
+```
+# Lager ny branch 
+git branch from_startC dfed6bbc35053063a9b999d08170bb7b8c124504
+
+# Åpne branch 
+git checkout from_startC 
+
+# print ut hvilken bracnh
+
+git symbolic-ref HEAD
+
+# Push til branchen 
+git push --set-upstream origin from_startC
+
+```

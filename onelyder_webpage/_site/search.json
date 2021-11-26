@@ -5,16 +5,23 @@
       "title": "About this site",
       "description": "Some additional details about the website",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-10-13T21:13:00+02:00"
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-11-26T20:37:55+01:00"
+    },
+    {
+      "path": "git-branch-cmd.html",
+      "title": "dev",
+      "author": [],
+      "contents": "\ngit bash cmd\n# Lager ny branch \ngit branch from_startC dfed6bbc35053063a9b999d08170bb7b8c124504\n\n# Åpne branch \ngit checkout from_startC \n\n# print ut hvilken bracnh\n\ngit symbolic-ref HEAD\n\n# Push til branchen \ngit push --set-upstream origin from_startC\n\n\n\n\n",
+      "last_modified": "2021-11-26T21:08:27+01:00"
     },
     {
       "path": "index.html",
       "title": "Onelyder_webpage",
       "description": "Welcome to the website. I hope you enjoy it!\n",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-10-13T21:13:02+02:00"
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-11-26T20:37:55+01:00"
     }
   ],
   "collections": []
