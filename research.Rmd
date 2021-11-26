@@ -1,0 +1,101 @@
+---
+title: "Research"
+description: I study how consumers, firms, markets, and policy affect technological change, with a goal of facilitating transitions to sustainable, low-carbon technologies.
+output:
+  distill::distill_article:
+    toc: true
+    css:
+      - css/jhelvy.css
+      - css/small-spacing.css
+twitter:
+  creator: "@JohnHelveston"
+base_url: https://www.jhelvy.com
+preview: images/helveston.png
+---
+
+<!-- Remove margin under list items -->
+<style>
+d-article ol {
+    margin-bottom: 5px;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source(file.path("R", "functions.R"))
+library(distilltools)
+pubs <- get_pubs()
+pubs <- make_citations(pubs)
+```
+
+<center>
+`r gscholar_stats("https://scholar.google.com/citations?user=DY2D56IAAAAJ")`
+</center>
+
+`r aside_center("Source: Google Scholar")`
+
+<center>
+```{r, echo=FALSE}
+icon_link(
+    icon = "ai ai-google-scholar",
+    text = "Google Scholar",
+    url  = "https://scholar.google.com/citations?user=DY2D56IAAAAJ"
+)
+icon_link(
+    icon = "ai ai-orcid",
+    text = "ORCID",
+    url  = "https://orcid.org/0000-0002-2657-9191"
+)
+icon_link(
+    icon = "ai ai-researchgate",
+    text = "Research Gate",
+    url  = "https://www.researchgate.net/profile/John_Helveston"
+)
+```
+</center>
+
+<br>
+
+(^†^indicates student advised by Helveston)
+
+## Publications in Peer Reviewed Journals
+
+`r make_pub_list(pubs, "peer_reviewed")`
+
+## Working Papers & Papers Under Review
+
+`r make_pub_list(pubs, "working")`
+
+## Conference Publications
+
+`r make_pub_list(pubs, "conference")`
+
+## Magazine Publications
+
+`r make_pub_list(pubs, "magazine")`
+
+## Books / Book Chapters
+
+`r make_pub_list(pubs, "book")`
+
+## Theses
+
+`r make_pub_list(pubs, "theses")`
+
+## Reports, Articles for Non-Academic Audiences, and Other Publications
+
+`r make_pub_list(pubs, "other")`
+
+## Software
+
+`r make_pub_list(pubs, "software")`
+
+## Media Coverage
+
+- May 30, 2021 - The Wire China, quoted in ["The Competition Conundrum"](https://www.thewirechina.com/2021/05/30/the-competition-conundrum/)
+- Apr. 23, 2021 - CNN Climate Town Hall, asked question to U.S. Secretary of State John Kerry [Watch](http://u.pc.cd/YTlctalK)
+- Jul. 25, 2020 - Forbes, ["This Is A Big Reason Electric Cars Still Aren’t Popular With Americans: Study"](https://www.forbes.com/sites/brookecrothers/2020/07/25/one-huge-reason-electric-cars-still-arent-popular-with-americans-with-the-exception-of-the-tesla-model-3/#55c48a4955c1)
+- Nov. 21, 2019 - NPR Climate Cast, ["Trade dispute with China could slow transition to low-carbon power"](https://www.mprnews.org/episode/2019/11/21/trade-dispute-with-china-could-slow-transition-to-lowcarbon-power)
+- Nov. 15, 2019 - Xinhua news, ["美能源专家呼吁美加强与中国合作以实现减排目标"](http://www.xinhuanet.com/world/2019-11/15/c_1125235667.htm)
+- Nov. 15, 2019 - Interview with GW Today, ["Collaboration with China Is Critical to Achieving Climate Goals"](https://gwtoday.gwu.edu/collaboration-china-critical-achieving-climate-goals)
+- Oct. 28, 2019 - Physics World, ["US motorists prepared to pay more for fuel to lower emissions"](https://physicsworld.com/a/us-motorists-prepared-to-pay-more-for-fuel-to-lower-emissions/)
