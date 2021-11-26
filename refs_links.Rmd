@@ -1,0 +1,27 @@
+---
+title: "referanser og linker"
+output:
+  distill::distill_article:
+    css: onelyder_theme.css
+    self_contained: false
+# creative_commons: CC BY-NC
+---
+
+# Referanser og linker
+
+## Web
+
+[Destill Github Guide](https://github.com/jhelvy/distillery){.uri}
+
+- https://distillery.rbind.io/
+
+- https://www.jhelvy.com/
+
+Denne Githuben er sykt bra!
+
+https://ellakaye.github.io/distilltools/
+https://github.com/seankross/postcards
+
+[epirhandbook R bok](https://epirhandbook.com/en/index.html)
+
+Legendarisk bok om alt rundt R kode.

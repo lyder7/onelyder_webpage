@@ -12,6 +12,10 @@ git checkout from_startC
 
 git symbolic-ref HEAD
 
+git add .
+
+git commit -m "commit text"
+
 # Push til branchen 
 git push --set-upstream origin from_startC
 
