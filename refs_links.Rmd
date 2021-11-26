@@ -13,15 +13,20 @@ output:
 
 [Destill Github Guide](https://github.com/jhelvy/distillery){.uri}
 
-- https://distillery.rbind.io/
+-   <https://distillery.rbind.io/>
 
-- https://www.jhelvy.com/
+-   <https://www.jhelvy.com/>
 
 Denne Githuben er sykt bra!
 
-https://ellakaye.github.io/distilltools/
-https://github.com/seankross/postcards
+<https://ellakaye.github.io/distilltools/> <https://github.com/seankross/postcards>
 
 [epirhandbook R bok](https://epirhandbook.com/en/index.html)
 
 Legendarisk bok om alt rundt R kode.
+
+<https://user2021.r-project.org/>
+
+## Div
+
+vimeo.com/lyder7

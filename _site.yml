@@ -1,17 +1,57 @@
-name: "Personal Portfolio"
-title: "Lyder Aleksander Mathisen"
-theme: onelyder_theme.css
+name: "jhelvy.com"
+title: "jhelvy.com"
+theme: css/jhelvy.css
+output_dir: _site
 description: |
-  Welcome to onelyder.com 
-output_dir: "_site"
+  The personal website of John Paul Helveston
+base_url: https://www.jhelvy.com
+twitter:
+  site: "@JohnHelveston"
+repository_url: https://github.com/jhelvy/jhelvy.com
+creative_commons: CC BY-SA
+favicon: images/favicon.ico
+collections:
+  posts:
+    categories: true
+    categories_metadata: true
+    authors_metadata: false
+    feed_items_max: 20 # default
+  talks:
+    categories: true
+    categories_metadata: false
+    authors_metadata: false
+    feed_iems_max: 20 # default
 navbar:
+  search: false
   right:
-    - text: "Home"
-      href: index.html
     - text: "About"
       href: about.html
-    - text: "dev"
-      href: git-branch-cdm.html
-#    - text: "About"
-#      href: about.html
-output: distill::distill_article
+    - text: "devLab"
+      href: lab.html
+#    - text: "Research"
+#      href: research.html
+#    - text: "Teaching"
+#      href: teaching.html
+#    - text: "Talks"
+#      href: talks.html
+    - text: "Projects"
+      href: projects.html
+    - text: "Blog"
+      href: lyderblog.html
+ #   - text: "CV"
+ #     href: content/docs/Helveston_CV.pdf
+    - icon: fab fa-github
+      href: https://github.com/lyder7
+    - icon: fab fa-twitter
+      href: https://twitter.com/Pierre_Lyder
+    - icon: fa fa-linkedin
+      href: https://www.linkedin.com/in/lyderaleksander
+#    - icon: fa fa-rss
+#      href: blog.xml
+
+output:
+  distill::distill_article:
+    includes:
+      in_header:
+      - _includes/header.html
+      - _includes/utterances.html
