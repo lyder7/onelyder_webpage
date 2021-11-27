@@ -1,18 +1,4 @@
 ---
-title: "Technology Change Lab"
-description: I study relationships between technological change and consumers, firms, markets, and policy, with a goal of accelerating  transitions to environmentally sustainable and energy-saving technologies.
-output:
-  distill::distill_article:
-    toc: true
-    toc_depth: 2
-    css:
-      - css/jhelvy.css
-      - css/small-spacing.css
-twitter:
-  creator: "@JohnHelveston"
-base_url: https://www.jhelvy.com
-preview: images/helveston.png
----
 
 ```{r setup, echo=FALSE}
 knitr::opts_chunk$set(echo = FALSE)

@@ -1,16 +1,13 @@
 ---
 title: "Teaching"
-description: I teach undergraduate and graduate courses on data analysis in R in the [Department of Engineering Management and Systems Engineering](http://emse.seas.gwu.edu/) at The George Washington University.
+description: "I teach undergraduate and graduate courses on data analysis in R in the [Department of Engineering Management and Systems Engineering](http://emse.seas.gwu.edu/) at The George Washington University."
 output:
   distill::distill_article:
     toc: false
     css:
       - css/jhelvy.css
       - css/small-spacing.css
-twitter:
-  creator: "@JohnHelveston"
-base_url: https://www.jhelvy.com
-preview: images/helveston.png
+
 ---
 
 ```{r setup, echo=FALSE}

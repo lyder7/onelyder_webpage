@@ -9,9 +9,9 @@ links:
   - label: '<i class="fab fa-linkedin"></i> LinkedIn'
     url: "https://www.linkedin.com/in/lyderaleksander/"
 base_url: https://www.onelyder.com
-site: distill::distill_website
-output:
-  postcards::Onofre
+site: distill::distill_website:
+  output:
+  postcards:: 
 ---
 ###HUSK legge inn alle mapper klare
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
@@ -36,51 +36,6 @@ meta() %>%
   )
 ```
 
----
-title: "John Paul Helveston"
-image: "images/helveston.png"
-links:
-  - label: '<i class="fab fa-github"></i> GitHub'
-    url: "https://github.com/jhelvy"
-  - label: '<i class="fab fa-twitter"></i> Twitter'
-    url: "https://twitter.com/JohnHelveston"
-  - label: '<i class="fab fa-linkedin"></i> LinkedIn'
-    url: "https://www.linkedin.com/in/jhelvy/"
-  - label: '<i class="ai ai-orcid"></i> ORCID'
-    url: "https://orcid.org/0000-0002-2657-9191"
-base_url: https://www.jhelvy.com
-preview: images/helveston.png
-favicon: images/favicon.ico
-twitter:
-  creator: "@JohnHelveston"
-  site: "@JohnHelveston"
-site: distill::distill_website
-output:
-  postcards::trestles
----
-
-```{r setup, message=FALSE, warning=FALSE, include=FALSE}
-source(file.path("R", "functions.R"))
-library(distilltools)
-library(metathis)
-meta() %>%
-  meta_description(
-    "The personal website of John Paul Helveston"
-  ) %>%
-  meta_name("github-repo" = "jhelvy/jhelvy.com") %>%
-  meta_viewport() %>%
-  meta_social(
-    title = "jhelvy.com",
-    url = "https://jhelvy.com/",
-    image = "https://jhelvy.com/images/helveston.png",
-    image_alt = "A photo of John Paul Helveston",
-    og_type = "website",
-    og_author = c("John Paul Helveston"),
-    twitter_card_type = "summary",
-    twitter_creator = "@JohnHelveston"
-  )
-```
-
 ### Welcome to my personal website!
 
 I am a researcher, engineer, musician, swing dancer, [`r make_icon("fab fa-r-project")`](https://www.r-project.org/about.html) enthusiast, and an Assistant Professor at George Washington University in the [Department of Engineering Management and Systems Engineering](http://emse.seas.gwu.edu/). I study technological change, with a focus on accelerating the transition to environmentally sustainable and energy-saving technologies.
@@ -93,22 +48,4 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-
-
-Lyder Aleksander Mathisen
-
-Associate | Audit and Assurance
-
-Deloitte AS
-
-## Bio
-
-From my Studies in Finance, my key professional strength, and niche-competence, are combing Data Sience and Finance together. I personally recognized this relationship having Data Science classes in my final semester. And I love it.
-
-Real Estate, and Optimal Portfolios are my Financial themes of choice. These are of huge professional interest. I am exited about learning more about these subjects from an audit perspective.
-Code Languages I use daily: R and Python.
-
-(Btw I like Chess, hmu if you also like to play chess.)
-
-As a results of coding and analyzing real-estate related problems with virus data,Dynamic and Reproducible Report Documenting are a part of my #toolbox. Text formatting languages such as Markdown, Latex or HTML are example of tools i have used.
 

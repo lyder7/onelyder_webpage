@@ -1,8 +1,10 @@
 ---
-title: "About this site"
-description: |
-  Personal Portfolio Web Page hosted with my domain @onelyder
+title: "About me"
+output:
+  distill::distill_article:
+    toc: true
+twitter:
+  creator: "@onelyder"
+base_url: https://www.onelyder.com
+preview: images/codingpics/programming.jpg
 ---
-
-```{}
-```
