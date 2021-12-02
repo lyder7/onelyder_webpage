@@ -1,5 +1,5 @@
 ---
 title: "Blog"
-preview: images/lyder7.jpg
-listing: posts
+preview: lyder7.jpg
+listing: _posts
 ---

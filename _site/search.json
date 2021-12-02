@@ -2,25 +2,48 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this site",
-      "description": "Personal Portfolio Web Page hosted with my domain @onelyder",
+      "title": "About me",
       "author": [],
-      "contents": "\nMy Professional competence are mainly within academic finance- and economy literature and theory, but I have based upon this knowledge, build serious experience, competence and knowledge within the field of Data Science. I personally believe combining these two disciplines are very natural and field that belong- and share many common elements.\nI use daily code and various programming languages solving mainly analytically problems or/and project assignments. Some of the langues i commonly use are: R & Python. (R = Preferred Language).\nBased on the code-syntax knowledge I also master text- and document formatting languages/tools such as Rmarkdown, Latex, Pandoc, HTML and Markdown. Any type of output-format for the final-project report are within my “competence tool-box”, and I really understand the importance of generating the optimal- and a professional looking report.\nI use GitHub (terminal git bash) for project admin and version control. Folder structure and working directory are elements I think are essential. I can deliver the same quality and results working on a Windows computer or a Mac. I know how to optimize the workflow on both operating systems.\nPlease contact me if you want to see any former work and material I have been a part of from my personal portfolio. I would be happy to share it with you and get valuable feedback and perspectives.\n\n\n\n",
-      "last_modified": "2021-11-26T21:09:46+01:00"
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-12-02T21:18:42+01:00"
     },
     {
-      "path": "git-branch-cmd.html",
+      "path": "blog.html",
+      "title": "Blog",
       "author": [],
-      "contents": "\ngit bash cmd\n# Lager ny branch \ngit branch from_startC dfed6bbc35053063a9b999d08170bb7b8c124504\n\n# Åpne branch \ngit checkout from_startC \n\n# print ut hvilken bracnh\n\ngit symbolic-ref HEAD\n\n# Push til branchen \ngit push --set-upstream origin from_startC\n\n\n\n\n",
-      "last_modified": "2021-11-26T21:09:47+01:00"
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-12-02T21:18:43+01:00"
     },
     {
       "path": "index.html",
       "title": "Personal Portfolio",
       "author": [],
-      "contents": "\n\n          \n          \n          Lyder Aleksander Mathisen\n          \n          \n          Home\n          About\n          dev\n          ☰\n          \n          \n      \n        \n          \n            \n              \n            \n              Personal Portfolio\n            \n            \n              \n                \n                    \n                      \n                        LinkedIn\n                      \n                    \n                  \n                                    \n                    \n                      \n                        Twitter\n                      \n                    \n                  \n                                    \n                    \n                      \n                        GitHub\n                      \n                    \n                  \n                                  \n            \n          \n        \n        \n        \n          \n            Lyder Aleksander Mathisen\n            Associate | Audit and Assurance\n            Deloitte AS\n            \n            Bio\n            From my Studies in Finance, my key professional strength, and niche-competence, are combing Data Sience and Finance together. I personally recognized this relationship having Data Science classes in my final semester. And I love it.\n            Real Estate, and Optimal Portfolios are my Financial themes of choice. These are of huge professional interest. I am exited about learning more about these subjects from an audit perspective. Code Languages I use daily: R and Python.\n            (Btw I like Chess, hmu if you also like to play chess.)\n            As a results of coding and analyzing real-estate related problems with virus data,Dynamic and Reproducible Report Documenting are a part of my #toolbox. Text formatting languages such as Markdown, Latex or HTML are example of tools i have used.\n            \n          \n        \n      \n    \n\n    \n      \n        \n          \n            \n              \n            \n              Personal Portfolio\n            \n            \n              \n                \n                                    \n                    \n                      LinkedIn\n                    \n                  \n                                    \n                    \n                      Twitter\n                    \n                  \n                                    \n                    \n                      GitHub\n                    \n                  \n                                  \n              \n            \n            \n              Lyder Aleksander Mathisen\n              Associate | Audit and Assurance\n              Deloitte AS\n              \n              Bio\n              From my Studies in Finance, my key professional strength, and niche-competence, are combing Data Sience and Finance together. I personally recognized this relationship having Data Science classes in my final semester. And I love it.\n              Real Estate, and Optimal Portfolios are my Financial themes of choice. These are of huge professional interest. I am exited about learning more about these subjects from an audit perspective. Code Languages I use daily: R and Python.\n              (Btw I like Chess, hmu if you also like to play chess.)\n              As a results of coding and analyzing real-estate related problems with virus data,Dynamic and Reproducible Report Documenting are a part of my #toolbox. Text formatting languages such as Markdown, Latex or HTML are example of tools i have used.\n              \n            \n        \n      \n    \n\n    \n    \n    ",
-      "last_modified": "2021-11-26T21:09:47+01:00"
+      "contents": "\nWelcome to my personal website!\nVelkommen skal du være hit til nettsiden.\n\n\n\n",
+      "last_modified": "2021-12-02T21:18:44+01:00"
+    },
+    {
+      "path": "projects.html",
+      "title": "Projects",
+      "description": "Overaskelse fra meg til deg.",
+      "author": [],
+      "contents": "\n\n\nd-article img {\n  margin-bottom: 0px;\n}\n\n.btn-primary {\n    background-color: #74a08a;\n    color: #FFFFFF;\n    padding: 3px 5px 3px 5px;\n    margin: 0 2px 0 2px;\n    border-radius: 5px; /* Rounded edges */\n    border: 0px;\n}\n\n.btn-primary:hover {\n    background-color: #8a74a0;\n    color: #FFFFFF;\n}\n\n\n\n",
+      "last_modified": "2021-12-02T21:18:44+01:00"
+    },
+    {
+      "path": "refs_links.html",
+      "title": "referanser og linker",
+      "author": [],
+      "contents": "\nReferanser og linker\nWeb\nDestill Github Guide\nhttps://distillery.rbind.io/\nhttps://www.jhelvy.com/\nDenne Githuben er sykt bra!\nhttps://ellakaye.github.io/distilltools/ https://github.com/seankross/postcards\nepirhandbook R bok\nLegendarisk bok om alt rundt R kode.\nhttps://user2021.r-project.org/\nDiv\nvimeo.com/lyder7\n\n\n\n",
+      "last_modified": "2021-12-02T21:18:45+01:00"
+    },
+    {
+      "path": "research.html",
+      "title": "Research",
+      "description": "Her kommer det en besrivelse av hva jeg holder på med. Ettr jeg har renderet siden min og sett dette avsnitte på web, skal jeg skrive interessante avsnitt her som forklarer.",
+      "author": [],
+      "contents": "\n\nContents\nPublications in Peer Reviewed Journals\nWorking Papers & Papers Under Review\nConference Publications\nMagazine Publications\nBooks / Book Chapters\nTheses\nReports, Articles for Non-Academic Audiences, and Other Publications\nSoftware\n\n\n\nd-article ol {\n    margin-bottom: 5px;\n}\nPublications in Peer Reviewed Journals\nWorking Papers & Papers Under Review\nConference Publications\nMagazine Publications\nBooks / Book Chapters\nTheses\nReports, Articles for Non-Academic Audiences, and Other Publications\nSoftware\n\n\n\n",
+      "last_modified": "2021-12-02T21:18:46+01:00"
     }
   ],
-  "collections": []
+  "collections": ["talks/talks.json", "_posts/_posts.json"]
 }

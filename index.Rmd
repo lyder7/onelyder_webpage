@@ -1,51 +1,19 @@
 ---
 title: "Personal Portfolio"
-image: "lyder.jpg"
+image: lyder.jpg
 links:
-  - label: '<i class="fab fa-github"></i> GitHub'
-    url: "https://www.github.com/lyder7"
-  - label: '<i class="fab fa-twitter"></i> Twitter'
-    url: "https://twitter.com/Pier_Lyder"
-  - label: '<i class="fab fa-linkedin"></i> LinkedIn'
-    url: "https://www.linkedin.com/in/lyderaleksander/"
+- label: <i class="fab fa-github"></i> GitHub
+  url: https://www.github.com/lyder7
+- label: <i class="fab fa-twitter"></i> Twitter
+  url: https://twitter.com/Pier_Lyder
+- label: <i class="fab fa-linkedin"></i> LinkedIn
+  url: https://www.linkedin.com/in/lyderaleksander/
 base_url: https://www.onelyder.com
-site: distill::distill_website:
-  output:
-  postcards:: 
+site: distill::distill_website
 ---
-###HUSK legge inn alle mapper klare
-```{r setup, message=FALSE, warning=FALSE, include=FALSE}
-source(file.path("R", "functions.R"))
-library(distilltools)
-library(metathis)
-meta() %>%
-  meta_description(
-    " onelyder ~ Lyder Aleksander Mathisen "
-  ) %>%
-  meta_name("github-repo" = "lyder7/onelyder_webpage.com") %>%
-  meta_viewport() %>%
-  meta_social(
-    title = "onelyder.com",
-    url = "https://onelyder.com/",
-    image = "https://onelyder.com/images/lyderimage.png",
-    image_alt = "A photo of Lyer Aleksander Mathisen",
-    og_type = "website",
-    og_author = c("Lyder Aleksander Mathisen"),
-    twitter_card_type = "summary",
-    twitter_creator = "@Pierre_Lyder"
-  )
-```
 
-### Welcome to my personal website!
 
-I am a researcher, engineer, musician, swing dancer, [`r make_icon("fab fa-r-project")`](https://www.r-project.org/about.html) enthusiast, and an Assistant Professor at George Washington University in the [Department of Engineering Management and Systems Engineering](http://emse.seas.gwu.edu/). I study technological change, with a focus on accelerating the transition to environmentally sustainable and energy-saving technologies.
+## Welcome to my personal website!
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
-```
-
+Velkommen skal du være hit til nettsiden. 
 

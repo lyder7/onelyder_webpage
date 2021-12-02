@@ -6,5 +6,5 @@ output:
 twitter:
   creator: "@onelyder"
 base_url: https://www.onelyder.com
-preview: images/codingpics/programming.jpg
+#preview: images/codingpics/programming.jpg
 ---

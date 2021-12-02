@@ -1,16 +1,14 @@
 ---
 title: "Projects"
-description: A collection of some projects that may or may not be related to my research.
+description: Overaskelse fra meg til deg.
 output:
   distill::distill_article:
     toc: false
     css:
       - css/jhelvy.css
       - css/strapless.css
-twitter:
-  creator: "@JohnHelveston"
-base_url: https://www.jhelvy.com
-preview: images/helveston.png
+base_url: https://www.onelyder.com
+#preview: images/helveston.png
 ---
 
 <!-- Remove margin under images -->
@@ -34,26 +32,4 @@ d-article img {
 }
 </style>
 
-```{r setup, echo=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-source(file.path("R", "functions.R"))
-library(distilltools)
-library(tidyverse)
 
-# Read in projects csv file 
-projects <- readr::read_csv(here::here("content", "projects.csv"))
-```
-
-```{r projects, echo=FALSE, layout="l-body-outset"}
-projects %>% 
-  bs4cards::cards(
-    title = title,
-    text = description,
-    link = url,
-    image = src,
-    label_colour = "#ffffff",
-    tags = paste("All;", tags),
-    footer = tags,
-    border_radius = 5
-  )
-```
