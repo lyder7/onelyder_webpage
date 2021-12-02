@@ -7,7 +7,7 @@ output:
 # creative_commons: CC BY-NC
 ---
 
-# Referanser og linker
+## 
 
 ## Web
 
@@ -30,3 +30,5 @@ Legendarisk bok om alt rundt R kode.
 ## Div
 
 vimeo.com/lyder7
+
+![](images/codingpics/computer-g996f217c3_640.png){style="css/small-spacing.css" width="10cm"}

@@ -8,10 +8,12 @@ output:
       - css/jhelvy.css
       - css/strapless.css
 base_url: https://www.onelyder.com
-#preview: images/helveston.png
+preview: images/codingpics/RMarkdownFlow.png
 ---
 
 <!-- Remove margin under images -->
+
+```{=html}
 <style>
 d-article img {
   margin-bottom: 0px;
@@ -31,5 +33,7 @@ d-article img {
     color: #FFFFFF;
 }
 </style>
+```
+**`Coming soon. Loading in….`**
 
-
+![](images/codingpics/RMarkdownFlow.png)

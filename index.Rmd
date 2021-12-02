@@ -1,5 +1,5 @@
 ---
-title: "Personal Portfolio"
+title: "Lyder @ onelyder.com"
 image: lyder.jpg
 links:
 - label: <i class="fab fa-github"></i> GitHub
@@ -12,8 +12,10 @@ base_url: https://www.onelyder.com
 site: distill::distill_website
 ---
 
+`Loading….`
 
-## Welcome to my personal website!
+![](images/codingpics/analytics-g0e4d234f7_640.jpg){width="10cm"}
 
-Velkommen skal du være hit til nettsiden. 
+`….the matrix?`
 
+![](images/codingpics/programming.jpg){width="10cm"}

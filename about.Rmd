@@ -6,5 +6,13 @@ output:
 twitter:
   creator: "@onelyder"
 base_url: https://www.onelyder.com
-#preview: images/codingpics/programming.jpg
+preview: images/codingpics/programming.jpg
 ---
+
+## Lyder - onelyder.com
+
+Lyder Aleksander Mathisen
+
+Norway
+
+![](images/lyderpics/profilepick.jpg){width="5cm" height="5cm"}

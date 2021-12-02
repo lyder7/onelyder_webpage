@@ -8,60 +8,38 @@ output:
       - css/jhelvy.css
       - css/small-spacing.css
 base_url: https://www.onelyder.com
-#preview: images/helveston.png
+preview: images/codingpics/source-g27406f53c_640.jpg
 ---
 
 <!-- Remove margin under list items -->
+
+```{=html}
 <style>
 d-article ol {
     margin-bottom: 5px;
 }
 </style>
-
+```
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 #source(file.path("R", "functions.R"))
 library(distilltools)
 ```
 
-
-
-
-
-
-
-
-
 ## Publications in Peer Reviewed Journals
-
-
 
 ## Working Papers & Papers Under Review
 
-
-
 ## Conference Publications
-
-
 
 ## Magazine Publications
 
-
-
 ## Books / Book Chapters
-
-
 
 ## Theses
 
-
-
 ## Reports, Articles for Non-Academic Audiences, and Other Publications
-
-
 
 ## Software
 
-
-
-
+![](images/codingpics/source-g27406f53c_640.jpg){width="15cm"}
