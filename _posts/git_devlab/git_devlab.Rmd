@@ -1,0 +1,32 @@
+---
+title: "Gitlab"
+description: |
+  Bash scripting 
+author:
+  - name: Lyder Aleksander Mathisen 
+    url: https://onelyder.com/about
+#    affiliation: Me, Myself, and I
+    affiliation_url: https://onelyder.com
+output:
+  distill::distill_article:
+    css: small-spacing.css
+    self_contained: false
+---
+
+
+
+
+## git bash cmd
+
+```
+# Lager ny branch 
+git branch from_startC dfed6bbc35053063a9b999d08170bb7b8c124504
+# Åpne branch 
+git checkout from_startC 
+# print ut hvilken bracnh
+git symbolic-ref HEAD
+git add .
+git commit -m "commit text"
+# Push til branchen 
+git push --set-upstream origin from_startC
+```

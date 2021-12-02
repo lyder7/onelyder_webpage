@@ -5,21 +5,21 @@
       "title": "About me",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-12-02T21:18:42+01:00"
+      "last_modified": "2021-12-02T21:31:46+01:00"
     },
     {
       "path": "blog.html",
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-12-02T21:18:43+01:00"
+      "last_modified": "2021-12-02T21:31:47+01:00"
     },
     {
       "path": "index.html",
       "title": "Personal Portfolio",
       "author": [],
       "contents": "\nWelcome to my personal website!\nVelkommen skal du være hit til nettsiden.\n\n\n\n",
-      "last_modified": "2021-12-02T21:18:44+01:00"
+      "last_modified": "2021-12-02T21:31:48+01:00"
     },
     {
       "path": "projects.html",
@@ -27,14 +27,14 @@
       "description": "Overaskelse fra meg til deg.",
       "author": [],
       "contents": "\n\n\nd-article img {\n  margin-bottom: 0px;\n}\n\n.btn-primary {\n    background-color: #74a08a;\n    color: #FFFFFF;\n    padding: 3px 5px 3px 5px;\n    margin: 0 2px 0 2px;\n    border-radius: 5px; /* Rounded edges */\n    border: 0px;\n}\n\n.btn-primary:hover {\n    background-color: #8a74a0;\n    color: #FFFFFF;\n}\n\n\n\n",
-      "last_modified": "2021-12-02T21:18:44+01:00"
+      "last_modified": "2021-12-02T21:31:49+01:00"
     },
     {
       "path": "refs_links.html",
       "title": "referanser og linker",
       "author": [],
       "contents": "\nReferanser og linker\nWeb\nDestill Github Guide\nhttps://distillery.rbind.io/\nhttps://www.jhelvy.com/\nDenne Githuben er sykt bra!\nhttps://ellakaye.github.io/distilltools/ https://github.com/seankross/postcards\nepirhandbook R bok\nLegendarisk bok om alt rundt R kode.\nhttps://user2021.r-project.org/\nDiv\nvimeo.com/lyder7\n\n\n\n",
-      "last_modified": "2021-12-02T21:18:45+01:00"
+      "last_modified": "2021-12-02T21:31:50+01:00"
     },
     {
       "path": "research.html",
@@ -42,8 +42,8 @@
       "description": "Her kommer det en besrivelse av hva jeg holder på med. Ettr jeg har renderet siden min og sett dette avsnitte på web, skal jeg skrive interessante avsnitt her som forklarer.",
       "author": [],
       "contents": "\n\nContents\nPublications in Peer Reviewed Journals\nWorking Papers & Papers Under Review\nConference Publications\nMagazine Publications\nBooks / Book Chapters\nTheses\nReports, Articles for Non-Academic Audiences, and Other Publications\nSoftware\n\n\n\nd-article ol {\n    margin-bottom: 5px;\n}\nPublications in Peer Reviewed Journals\nWorking Papers & Papers Under Review\nConference Publications\nMagazine Publications\nBooks / Book Chapters\nTheses\nReports, Articles for Non-Academic Audiences, and Other Publications\nSoftware\n\n\n\n",
-      "last_modified": "2021-12-02T21:18:46+01:00"
+      "last_modified": "2021-12-02T21:31:51+01:00"
     }
   ],
-  "collections": ["talks/talks.json", "_posts/_posts.json"]
+  "collections": ["posts/posts.json", "talks/talks.json"]
 }
