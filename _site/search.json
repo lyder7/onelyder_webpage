@@ -2,6 +2,7 @@
   "articles": [
     {
       "path": "about.html",
+<<<<<<< HEAD
       "title": "About me",
       "author": [],
       "contents": "\n\nContents\nLyder - onelyder.com\n\nLyder - onelyder.com\nLyder Aleksander Mathisen\nNorway\n\n\n\n\n",
@@ -46,4 +47,27 @@
     }
   ],
   "collections": ["posts/posts.json", "talks/talks.json"]
+=======
+      "title": "About",
+      "author": [],
+      "contents": "\nOnelyder.com er et domene-navn jeg eier og forvalter på egenhånd. Jeg styrer alt innholdet som blir publisert her, og må ikke forveksels med andre engasjement og forpliktelser jeg har. Denne siden er ment til å være et sted hvor jeg deler innsikt og output/resultater fra prosjekter jeg driver med.\n\n\n\n\n",
+      "last_modified": "2021-11-25T22:53:47+01:00"
+    },
+    {
+      "path": "index.html",
+      "title": "onelyder.com",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-11-25T22:53:48+01:00"
+    },
+    {
+      "path": "Linux.html",
+      "title": "Linux",
+      "author": [],
+      "contents": "\nVelkommen!\nHer skal jeg skrive masse om Linux og veien min videre.\nBlir spennede.\n\n\n\n",
+      "last_modified": "2021-11-25T22:53:49+01:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+>>>>>>> main
 }

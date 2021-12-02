@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "About me"
 output:
   distill::distill_article:
@@ -16,3 +17,16 @@ Lyder Aleksander Mathisen
 Norway
 
 ![](images/lyderpics/profilepick.jpg){width="5cm" height="5cm"}
+=======
+title: "About"
+output:
+  distill::distill_article:
+    css: bio_header.css
+    self_contained: false
+# creative_commons: CC BY-NC
+---
+
+**`Onelyder.com`** er et domene-navn jeg eier og forvalter på egenhånd. Jeg styrer alt innholdet som blir publisert her, og må ikke forveksels med andre engasjement og forpliktelser jeg har. Denne siden er ment til å være et sted hvor jeg deler innsikt og output/resultater fra prosjekter jeg driver med.
+
+![](figures/RMarkdownFlow.png)
+>>>>>>> main
