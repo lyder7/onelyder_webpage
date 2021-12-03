@@ -1,5 +1,29 @@
 ---
+<<<<<<< HEAD
+title: "Lyder @ onelyder.com"
+image: lyder.jpg
+links:
+- label: <i class="fab fa-github"></i> GitHub
+  url: https://www.github.com/lyder7
+- label: <i class="fab fa-twitter"></i> Twitter
+  url: https://twitter.com/Pier_Lyder
+- label: <i class="fab fa-linkedin"></i> LinkedIn
+  url: https://www.linkedin.com/in/lyderaleksander/
+base_url: https://www.onelyder.com
+=======
 title: "onelyder.com"
+>>>>>>> main
 site: distill::distill_website
 #listing: posts
 ---
+<<<<<<< HEAD
+
+`Loading….`
+
+![](images/codingpics/analytics-g0e4d234f7_640.jpg){width="10cm"}
+
+`….the matrix?`
+
+![](images/codingpics/programming.jpg){width="10cm"}
+=======
+>>>>>>> main

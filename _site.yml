@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+name: "onelyder.com"
+title: "onelyder.com"
+theme: css/jhelvy.css
+output_dir: _site
+description: |
+  The personal website of Lyder Aleksander Mathisen
+base_url: https://www.onelyder.com
+#creative_commons: CC BY-SA
+favicon: images/favicon.ico
+collections:
+  posts:
+    categories: false
+    categories_metadata: true
+    authors_metadata: false
+    feed_items_max: 20 # default
+  talks:
+    categories: false
+    categories_metadata: false
+    authors_metadata: false
+    feed_iems_max: 20 # default
+=======
 name: "distill_blog"
 title: "Lyder Aleksander Mathisen"
 description: |
@@ -7,8 +29,29 @@ base_url: https://onelyder.com
 repository_url: https://github.com/lyder7/onelyder_webpage.git
 google_analytics: "UA-52682113-1"
 exclude: "README.md"
+>>>>>>> main
 navbar:
+  search: false
   right:
+<<<<<<< HEAD
+    - text: "About"
+      href: about.html
+    - text: "Refs"
+      href: refs_links.html
+    - text: "Projects"
+      href: projects.html
+    - text: "Blog"
+      href: blog.html
+    - icon: fab fa-github
+      href: https://github.com/lyder7
+    - icon: fab fa-twitter
+      href: https://twitter.com/Pierre_Lyder
+    - icon: fa fa-linkedin
+      href: https://www.linkedin.com/in/lyderaleksander
+output:
+  distill::distill_article:
+
+=======
     - text: "Home"
       href: https://onelyder.com
     - text: "About"
@@ -30,3 +73,4 @@ output:
   distill::distill_article:
     css: styles.css
     toc_depth: 2
+>>>>>>> main

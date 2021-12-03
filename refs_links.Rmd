@@ -1,0 +1,34 @@
+---
+title: "referanser og linker"
+output:
+  distill::distill_article:
+    css: css/small-spacing.css
+    self_contained: false
+# creative_commons: CC BY-NC
+---
+
+## 
+
+## Web
+
+[Destill Github Guide](https://github.com/jhelvy/distillery){.uri}
+
+-   <https://distillery.rbind.io/>
+
+-   <https://www.jhelvy.com/>
+
+Denne Githuben er sykt bra!
+
+<https://ellakaye.github.io/distilltools/> <https://github.com/seankross/postcards>
+
+[epirhandbook R bok](https://epirhandbook.com/en/index.html)
+
+Legendarisk bok om alt rundt R kode.
+
+<https://user2021.r-project.org/>
+
+## Div
+
+vimeo.com/lyder7
+
+![](images/codingpics/computer-g996f217c3_640.png){style="css/small-spacing.css" width="10cm"}

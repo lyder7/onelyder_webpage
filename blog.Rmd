@@ -1,0 +1,7 @@
+---
+title: "Blog"
+preview: lyder7.jpg
+listing: posts
+---
+
+![](images/codingpics/programming.jpg){width="204"}

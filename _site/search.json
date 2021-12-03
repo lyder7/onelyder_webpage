@@ -2,6 +2,52 @@
   "articles": [
     {
       "path": "about.html",
+<<<<<<< HEAD
+      "title": "About me",
+      "author": [],
+      "contents": "\n\nContents\nLyder - onelyder.com\n\nLyder - onelyder.com\nLyder Aleksander Mathisen\nNorway\n\n\n\n\n",
+      "last_modified": "2021-12-02T22:11:22+01:00"
+    },
+    {
+      "path": "blog.html",
+      "title": "Blog",
+      "author": [],
+      "contents": "\n\n\n\n\n",
+      "last_modified": "2021-12-02T22:11:23+01:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Lyder @ onelyder.com",
+      "author": [],
+      "contents": "\nLoading….\n\n….the matrix?\n\n\n\n\n",
+      "last_modified": "2021-12-02T22:11:23+01:00"
+    },
+    {
+      "path": "projects.html",
+      "title": "Projects",
+      "description": "Overaskelse fra meg til deg.",
+      "author": [],
+      "contents": "\n\n\nd-article img {\n  margin-bottom: 0px;\n}\n\n.btn-primary {\n    background-color: #74a08a;\n    color: #FFFFFF;\n    padding: 3px 5px 3px 5px;\n    margin: 0 2px 0 2px;\n    border-radius: 5px; /* Rounded edges */\n    border: 0px;\n}\n\n.btn-primary:hover {\n    background-color: #8a74a0;\n    color: #FFFFFF;\n}\nComing soon. Loading in….\n\n\n\n\n",
+      "last_modified": "2021-12-02T22:11:24+01:00"
+    },
+    {
+      "path": "refs_links.html",
+      "title": "referanser og linker",
+      "author": [],
+      "contents": "\n\nWeb\nDestill Github Guide\nhttps://distillery.rbind.io/\nhttps://www.jhelvy.com/\nDenne Githuben er sykt bra!\nhttps://ellakaye.github.io/distilltools/ https://github.com/seankross/postcards\nepirhandbook R bok\nLegendarisk bok om alt rundt R kode.\nhttps://user2021.r-project.org/\nDiv\nvimeo.com/lyder7\n\n\n\n\n",
+      "last_modified": "2021-12-02T22:11:25+01:00"
+    },
+    {
+      "path": "research.html",
+      "title": "Research",
+      "description": "Her kommer det en besrivelse av hva jeg holder på med. Ettr jeg har renderet siden min og sett dette avsnitte på web, skal jeg skrive interessante avsnitt her som forklarer.",
+      "author": [],
+      "contents": "\n\nContents\nPublications in Peer Reviewed Journals\nWorking Papers & Papers Under Review\nConference Publications\nMagazine Publications\nBooks / Book Chapters\nTheses\nReports, Articles for Non-Academic Audiences, and Other Publications\nSoftware\n\n\n\nd-article ol {\n    margin-bottom: 5px;\n}\nPublications in Peer Reviewed Journals\nWorking Papers & Papers Under Review\nConference Publications\nMagazine Publications\nBooks / Book Chapters\nTheses\nReports, Articles for Non-Academic Audiences, and Other Publications\nSoftware\n\n\n\n\n",
+      "last_modified": "2021-12-02T22:11:26+01:00"
+    }
+  ],
+  "collections": ["posts/posts.json", "talks/talks.json"]
+=======
       "title": "About",
       "author": [],
       "contents": "\nOnelyder.com er et domene-navn jeg eier og forvalter på egenhånd. Jeg styrer alt innholdet som blir publisert her, og må ikke forveksels med andre engasjement og forpliktelser jeg har. Denne siden er ment til å være et sted hvor jeg deler innsikt og output/resultater fra prosjekter jeg driver med.\n\n\n\n\n",
@@ -23,4 +69,5 @@
     }
   ],
   "collections": ["posts/posts.json"]
+>>>>>>> main
 }

@@ -1,0 +1,39 @@
+---
+title: "Projects"
+description: Overaskelse fra meg til deg.
+output:
+  distill::distill_article:
+    toc: false
+    css:
+      - css/jhelvy.css
+      - css/strapless.css
+base_url: https://www.onelyder.com
+preview: images/codingpics/RMarkdownFlow.png
+---
+
+<!-- Remove margin under images -->
+
+```{=html}
+<style>
+d-article img {
+  margin-bottom: 0px;
+}
+
+.btn-primary {
+    background-color: #74a08a;
+    color: #FFFFFF;
+    padding: 3px 5px 3px 5px;
+    margin: 0 2px 0 2px;
+    border-radius: 5px; /* Rounded edges */
+    border: 0px;
+}
+
+.btn-primary:hover {
+    background-color: #8a74a0;
+    color: #FFFFFF;
+}
+</style>
+```
+**`Coming soon. Loading in….`**
+
+![](images/codingpics/RMarkdownFlow.png)
