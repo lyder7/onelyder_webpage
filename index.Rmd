@@ -1,6 +1,5 @@
 ---
-<<<<<<< HEAD
-title: "Lyder @ onelyder.com"
+title: "Lyder - onelyder.com"
 image: lyder.jpg
 links:
 - label: <i class="fab fa-github"></i> GitHub
@@ -10,20 +9,23 @@ links:
 - label: <i class="fab fa-linkedin"></i> LinkedIn
   url: https://www.linkedin.com/in/lyderaleksander/
 base_url: https://www.onelyder.com
-=======
-title: "onelyder.com"
->>>>>>> main
 site: distill::distill_website
-#listing: posts
 ---
-<<<<<<< HEAD
 
-`Loading….`
+# Under construction. Coming Soon
+
+**Shhh... don't tell anyone.**
+
+`3,2,1... Loading...`
 
 ![](images/codingpics/analytics-g0e4d234f7_640.jpg){width="10cm"}
 
-`….the matrix?`
+`…the matrix?`
 
 ![](images/codingpics/programming.jpg){width="10cm"}
-=======
->>>>>>> main
+
+In the meantime see the [blog section](onelyder.com/blog.html).
+
+Contact? Click [here](onelyder.com/about.html)
+
+Lyder Aleksander

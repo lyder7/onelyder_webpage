@@ -26,6 +26,8 @@ knitr::opts_chunk$set(echo = FALSE)
 library(distilltools)
 ```
 
+![](images/codingpics/source-g27406f53c_640.jpg){width="6.7cm"}
+
 ## Publications in Peer Reviewed Journals
 
 ## Working Papers & Papers Under Review
@@ -42,4 +44,4 @@ library(distilltools)
 
 ## Software
 
-![](images/codingpics/source-g27406f53c_640.jpg){width="15cm"}
+![](images/temapics/teori_finans.jpg){width="7cm"}

@@ -4,4 +4,4 @@ preview: lyder7.jpg
 listing: posts
 ---
 
-![](images/codingpics/programming.jpg){width="204"}
+![](images/codingpics/programming.jpg){width="100"}

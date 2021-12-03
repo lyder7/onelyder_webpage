@@ -1,5 +1,5 @@
 ---
-title: "referanser og linker"
+title: "Referanser til syke ting"
 output:
   distill::distill_article:
     css: css/small-spacing.css
@@ -27,8 +27,6 @@ Legendarisk bok om alt rundt R kode.
 
 <https://user2021.r-project.org/>
 
-## Div
-
-vimeo.com/lyder7
+## 
 
 ![](images/codingpics/computer-g996f217c3_640.png){style="css/small-spacing.css" width="10cm"}
