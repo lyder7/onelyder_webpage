@@ -1,7 +1,7 @@
 ---
-title: "Fagressurser & Lenker til matriale"
+title: "Oppbevaring av sykt matriale"
 description: |
-  Personlig samling avressurser jeg har kommet over underveis.   
+  Hmmmmm.   
 author:
   - name: Lyder Aleksander Mathisen 
     url: https://onelyder.com/about
