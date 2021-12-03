@@ -22,20 +22,6 @@
       <pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Finans Teori Porteføjer</title>
-      <dc:creator>Lyder Aleksander Mathisen</dc:creator>
-      <link>https://www.onelyder.com/posts/finans_teori</link>
-      <description>Samling av notater fra mitt studie av finansiell litteratur og forskning rundt optimale portefølje-valg for institusjonelle investorer, hovedsaklig for det amerikanske markedet. Denne teksten er skrevet i akademisk stilart og fremstår som et dokument bestående av flere seperate utgaver/versjoner, og tekster jeg har skrevet tidligere om samme tema.</description>
-      <category>Teori</category>
-      <category>Portefølje</category>
-      <category>Børs</category>
-      <category>Investeringer</category>
-      <category>Finans</category>
-      <category>Eiendom</category>
-      <guid>https://www.onelyder.com/posts/finans_teori</guid>
-      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Fagressurser &amp; Lenker til matriale</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
       <link>https://www.onelyder.com/posts/linker_mappe</link>
@@ -45,20 +31,6 @@
       <category>Referanser</category>
       <category>Fag</category>
       <guid>https://www.onelyder.com/posts/linker_mappe</guid>
-      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tanker &amp; Ideer om Koding i R</title>
-      <dc:creator>Lyder Aleksander Mathisen</dc:creator>
-      <link>https://www.onelyder.com/posts/tanker_rkode</link>
-      <description>Utkast fra et større prosjekt jeg driver med angående koding og bruk av R. Deler biter av noe av innholdet jeg har skrevet så langt.</description>
-      <category>Teori</category>
-      <category>Portefølje</category>
-      <category>Børs</category>
-      <category>Investeringer</category>
-      <category>Finans</category>
-      <category>Eiendom</category>
-      <guid>https://www.onelyder.com/posts/tanker_rkode</guid>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
     </item>
   </channel>

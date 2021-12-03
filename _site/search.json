@@ -5,21 +5,21 @@
       "title": "About me",
       "author": [],
       "contents": "\n\nContents\n\n\n\nLyder Aleksander Mathisen.\nNorway\n\nOnelyder.com = my own personal web domain.\n\n\n\n\n",
-      "last_modified": "2021-12-03T21:57:47+01:00"
+      "last_modified": "2021-12-03T22:04:00+01:00"
     },
     {
       "path": "blog.html",
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n\n",
-      "last_modified": "2021-12-03T21:57:48+01:00"
+      "last_modified": "2021-12-03T22:04:01+01:00"
     },
     {
       "path": "index.html",
       "title": "Lyder - onelyder.com",
       "author": [],
       "contents": "\nUnder construction. Coming Soon\nShhh… don’t tell anyone.\n3,2,1... Loading...\n\n…the matrix?\n\nIn the meantime see the blog section.\nContact? Click here\nLyder Aleksander\n\n\n\n",
-      "last_modified": "2021-12-03T21:57:49+01:00"
+      "last_modified": "2021-12-03T22:04:02+01:00"
     },
     {
       "path": "projects.html",
@@ -27,14 +27,14 @@
       "description": "Overaskelse fra meg til deg.",
       "author": [],
       "contents": "\n\n\nd-article img {\n  margin-bottom: 0px;\n}\n\n.btn-primary {\n    background-color: #74a08a;\n    color: #FFFFFF;\n    padding: 3px 5px 3px 5px;\n    margin: 0 2px 0 2px;\n    border-radius: 5px; /* Rounded edges */\n    border: 0px;\n}\n\n.btn-primary:hover {\n    background-color: #8a74a0;\n    color: #FFFFFF;\n}\nComing soon. Loading in….\n\n\n\n\n",
-      "last_modified": "2021-12-03T21:57:50+01:00"
+      "last_modified": "2021-12-03T22:04:03+01:00"
     },
     {
       "path": "refs_links.html",
       "title": "Referanser til syke ting",
       "author": [],
       "contents": "\n\nWeb\nDestill Github Guide\nhttps://distillery.rbind.io/\nhttps://www.jhelvy.com/\nDenne Githuben er sykt bra!\nhttps://ellakaye.github.io/distilltools/ https://github.com/seankross/postcards\nepirhandbook R bok\nLegendarisk bok om alt rundt R kode.\nhttps://user2021.r-project.org/\n\n\n\n\n\n",
-      "last_modified": "2021-12-03T21:57:51+01:00"
+      "last_modified": "2021-12-03T22:04:04+01:00"
     },
     {
       "path": "research.html",
@@ -42,7 +42,7 @@
       "description": "Her kommer det en besrivelse av hva jeg holder på med. Ettr jeg har renderet siden min og sett dette avsnitte på web, skal jeg skrive interessante avsnitt her som forklarer.",
       "author": [],
       "contents": "\n\nContents\nPublications in Peer Reviewed Journals\nWorking Papers & Papers Under Review\nConference Publications\nMagazine Publications\nBooks / Book Chapters\nTheses\nReports, Articles for Non-Academic Audiences, and Other Publications\nSoftware\n\n\n\nd-article ol {\n    margin-bottom: 5px;\n}\n\nPublications in Peer Reviewed Journals\nWorking Papers & Papers Under Review\nConference Publications\nMagazine Publications\nBooks / Book Chapters\nTheses\nReports, Articles for Non-Academic Audiences, and Other Publications\nSoftware\n\n\n\n\n",
-      "last_modified": "2021-12-03T21:57:52+01:00"
+      "last_modified": "2021-12-03T22:04:05+01:00"
     }
   ],
   "collections": ["posts/posts.json", "talks/talks.json"]
