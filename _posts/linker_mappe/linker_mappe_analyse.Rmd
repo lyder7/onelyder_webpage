@@ -11,23 +11,13 @@ date: 10-21-2021
 creative_commons: CC BY-NC
 output:
   distill::distill_article:
-    css: hospital_header.css
+    css: bio_header.css
     self_contained: false
-#preview: simon-sjakk.jpg
-categories:
-  - R
-  - R-studio
-  - Referanser
-  - Fag
+preview: codingpics.jpg
 ---
 
 # R-code & Packages
 
-In this section I will storage material useful for R-studio and R-code.
-References will be somewhat related to R, but mainly will these links be
-brought about academic writing, workflow and project management. It
-also const of Github users, thereabout frameworks and rich content
-regarding *modelling, time series, data* and *analysis.*
 
 <!--# break -->
 
