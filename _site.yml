@@ -28,7 +28,7 @@ navbar:
     - text: "Projects"
       href: projects.html
     - text: "Documento"
-      href: projects.html
+      href: research.html
     - text: "Blog"
       href: blog.html
     - icon: fab fa-github
