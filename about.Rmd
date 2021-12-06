@@ -9,14 +9,7 @@ base_url: https://www.onelyder.com
 preview: images/codingpics/programming.jpg
 ---
 
-## 
 
-`Lyder Aleksander Mathisen.`
-
-Norway
-
-![](images/lyderpics/profilepick.jpg){width="5cm" height="5cm"}
-
-**`Onelyder.com`** = my own personal web domain.
+**`onelyder`** 
 
 ![](figures/RMarkdownFlow.png)
