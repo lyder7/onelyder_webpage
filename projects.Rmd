@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: Overaskelse fra meg til deg.
+description: Overraskelse fra meg til deg.
 output:
   distill::distill_article:
     toc: false
