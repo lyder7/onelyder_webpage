@@ -9,7 +9,6 @@ base_url: https://www.onelyder.com
 preview: images/codingpics/programming.jpg
 ---
 
-
-**`onelyder`** 
+**`onelyder`**
 
 ![](figures/RMarkdownFlow.png)

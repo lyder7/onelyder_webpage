@@ -16,6 +16,9 @@ output:
 preview: codingpics.jpg
 ---
 
+
+
+```{r, eval=FALSE}
 # Pakker jeg bruker 
 
 ##########################################
@@ -139,7 +142,7 @@ pacman::p_load(
   treeio            # to visualize phylogenetic files
   
 )
-
+```
 # R-code & Packages
 
 

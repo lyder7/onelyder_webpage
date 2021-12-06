@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://www.onelyder.com/about.html</loc>
-    <lastmod>2021-12-03T21:49:37+01:00</lastmod>
+    <lastmod>2021-12-06T03:25:35+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/blog.html</loc>
-    <lastmod>2021-12-04T18:49:29+01:00</lastmod>
+    <lastmod>2021-12-06T03:26:12+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/</loc>
-    <lastmod>2021-12-03T22:03:49+01:00</lastmod>
+    <lastmod>2021-12-06T03:26:46+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/projects.html</loc>
-    <lastmod>2021-12-03T20:53:35+01:00</lastmod>
+    <lastmod>2021-12-06T03:24:48+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/refs_links.html</loc>
@@ -26,10 +26,10 @@
   </url>
   <url>
     <loc>https://www.onelyder.com/posts/git_devlab/</loc>
-    <lastmod>2021-12-04T21:18:05+01:00</lastmod>
+    <lastmod>2021-12-06T03:32:21+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/posts/linker_mappe/</loc>
-    <lastmod>2021-12-04T21:17:38+01:00</lastmod>
+    <lastmod>2021-12-06T03:31:40+01:00</lastmod>
   </url>
 </urlset>

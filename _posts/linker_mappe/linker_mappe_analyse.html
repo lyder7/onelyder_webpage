@@ -1484,6 +1484,134 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Pakker jeg bruker </span>
+
+<span class='co'>##########################################</span>
+<span class='co'># List of useful epidemiology R packages #</span>
+<span class='co'>##########################################</span>
+
+<span class='co'># This script uses the p_load() function from pacman R package, </span>
+<span class='co'># which installs if package is absent, and loads for use if already installed</span>
+
+
+<span class='co'># Ensures the package "pacman" is installed</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='st'><a href='https://github.com/trinker/pacman'>"pacman"</a></span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"pacman"</span><span class='op'>)</span>
+
+
+<span class='co'># Packages available from CRAN</span>
+<span class='co'>##############################</span>
+<span class='fu'>pacman</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/pacman/man/p_load.html'>p_load</a></span><span class='op'>(</span>
+  
+  <span class='co'># learning R</span>
+  <span class='co'>############</span>
+  <span class='va'>learnr</span>,   <span class='co'># interactive tutorials in RStudio Tutorial pane</span>
+  <span class='va'>swirl</span>,    <span class='co'># interactive tutorials in R console</span>
+  
+  <span class='co'># project and file management</span>
+  <span class='co'>#############################</span>
+  <span class='va'>here</span>,     <span class='co'># file paths relative to R project root folder</span>
+  <span class='va'>rio</span>,      <span class='co'># import/export of many types of data</span>
+  <span class='va'>openxlsx</span>, <span class='co'># import/export of multi-sheet Excel workbooks </span>
+  
+  <span class='co'># package install and management</span>
+  <span class='co'>################################</span>
+  <span class='va'>pacman</span>,   <span class='co'># package install/load</span>
+  <span class='va'>renv</span>,     <span class='co'># managing versions of packages when working in collaborative groups</span>
+  <span class='va'>remotes</span>,  <span class='co'># install from github</span>
+  
+  <span class='co'># General data management</span>
+  <span class='co'>#########################</span>
+  <span class='va'>tidyverse</span>,    <span class='co'># includes many packages for tidy data wrangling and presentation</span>
+  <span class='co'>#dplyr,      # data management</span>
+  <span class='co'>#tidyr,      # data management</span>
+  <span class='co'>#ggplot2,    # data visualization</span>
+  <span class='co'>#stringr,    # work with strings and characters</span>
+  <span class='co'>#forcats,    # work with factors </span>
+  <span class='co'>#lubridate,  # work with dates</span>
+  <span class='co'>#purrr       # iteration and working with lists</span>
+  <span class='va'>linelist</span>,     <span class='co'># cleaning linelists</span>
+  <span class='va'>naniar</span>,       <span class='co'># assessing missing data</span>
+  
+  <span class='co'># statistics  </span>
+  <span class='co'>############</span>
+  <span class='va'>janitor</span>,      <span class='co'># tables and data cleaning</span>
+  <span class='va'>gtsummary</span>,    <span class='co'># making descriptive and statistical tables</span>
+  <span class='va'>rstatix</span>,      <span class='co'># quickly run statistical tests and summaries</span>
+  <span class='va'>broom</span>,        <span class='co'># tidy up results from regressions</span>
+  <span class='va'>lmtest</span>,       <span class='co'># likelihood-ratio tests</span>
+  <span class='va'>easystats</span>,
+  <span class='co'># parameters, # alternative to tidy up results from regressions</span>
+  <span class='co'># see,        # alternative to visualise forest plots </span>
+  
+  <span class='co'># epidemic modeling</span>
+  <span class='co'>###################</span>
+  <span class='va'>epicontacts</span>,  <span class='co'># Analysing transmission networks</span>
+  <span class='va'>EpiNow2</span>,      <span class='co'># Rt estimation</span>
+  <span class='va'>EpiEstim</span>,     <span class='co'># Rt estimation</span>
+  <span class='va'>projections</span>,  <span class='co'># Incidence projections</span>
+  <span class='va'>incidence2</span>,   <span class='co'># Make epicurves and handle incidence data</span>
+  <span class='va'>i2extras</span>,     <span class='co'># Extra functions for the incidence2 package</span>
+  <span class='va'>epitrix</span>,      <span class='co'># Useful epi functions</span>
+  <span class='va'>distcrete</span>,    <span class='co'># Discrete delay distributions</span>
+  
+  
+  <span class='co'># plots - general</span>
+  <span class='co'>#################</span>
+  <span class='co'>#ggplot2,         # included in tidyverse</span>
+  <span class='va'>cowplot</span>,          <span class='co'># combining plots  </span>
+  <span class='co'># patchwork,      # combining plots (alternative)     </span>
+  <span class='va'>RColorBrewer</span>,     <span class='co'># color scales</span>
+  <span class='va'>ggnewscale</span>,       <span class='co'># to add additional layers of color schemes</span>
+  
+  
+  <span class='co'># plots - specific types</span>
+  <span class='co'>########################</span>
+  <span class='va'>DiagrammeR</span>,       <span class='co'># diagrams using DOT language</span>
+  <span class='va'>incidence2</span>,       <span class='co'># epidemic curves</span>
+  <span class='va'>gghighlight</span>,      <span class='co'># highlight a subset</span>
+  <span class='va'>ggrepel</span>,          <span class='co'># smart labels</span>
+  <span class='va'>plotly</span>,           <span class='co'># interactive graphics</span>
+  <span class='va'>gganimate</span>,        <span class='co'># animated graphics </span>
+  
+  
+  <span class='co'># gis</span>
+  <span class='co'>######</span>
+  <span class='va'>sf</span>,               <span class='co'># to manage spatial data using a Simple Feature format</span>
+  <span class='va'>tmap</span>,             <span class='co'># to produce simple maps, works for both interactive and static maps</span>
+  <span class='va'>OpenStreetMap</span>,    <span class='co'># to add OSM basemap in ggplot map</span>
+  <span class='va'>spdep</span>,            <span class='co'># spatial statistics </span>
+  
+  <span class='co'># routine reports</span>
+  <span class='co'>#################</span>
+  <span class='va'>rmarkdown</span>,        <span class='co'># produce PDFs, Word Documents, Powerpoints, and HTML files</span>
+  <span class='va'>reportfactory</span>,    <span class='co'># auto-organization of R Markdown outputs</span>
+  <span class='va'>officer</span>,          <span class='co'># powerpoints</span>
+  
+  <span class='co'># dashboards</span>
+  <span class='co'>############</span>
+  <span class='va'>flexdashboard</span>,    <span class='co'># convert an R Markdown script into a dashboard</span>
+  <span class='va'>shiny</span>,            <span class='co'># interactive web apps</span>
+  
+  <span class='co'># tables for presentation</span>
+  <span class='co'>#########################</span>
+  <span class='va'>knitr</span>,            <span class='co'># R Markdown report generation and html tables</span>
+  <span class='va'>flextable</span>,        <span class='co'># HTML tables</span>
+  <span class='co'>#DT,              # HTML tables (alternative)</span>
+  <span class='co'>#gt,              # HTML tables (alternative)</span>
+  <span class='co'>#huxtable,        # HTML tables (alternative) </span>
+  
+  <span class='co'># phylogenetics</span>
+  <span class='co'>###############</span>
+  <span class='va'>ggtree</span>,           <span class='co'># visualization and annotation of trees</span>
+  <span class='va'>ape</span>,              <span class='co'># analysis of phylogenetics and evolution</span>
+  <span class='va'>treeio</span>            <span class='co'># to visualize phylogenetic files</span>
+  
+<span class='op'>)</span>
+</code></pre>
+</div>
+</div>
 <h1 id="r-code-packages">R-code &amp; Packages</h1>
 <!--# break -->
 <ul>
