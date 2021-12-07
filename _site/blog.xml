@@ -12,15 +12,14 @@
       <link>https://www.onelyder.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 06 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Dec 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Gitlab</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
       <link>https://www.onelyder.com/posts/git_devlab</link>
       <description>Bash scripting</description>
       <guid>https://www.onelyder.com/posts/git_devlab</guid>
-      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://www.onelyder.com/posts/git_devlab/programming.jpg" medium="image" type="image/jpeg"/>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Oppbevaring av sykt matriale</title>
@@ -29,7 +28,6 @@
       <description>Hmmmmm.</description>
       <guid>https://www.onelyder.com/posts/linker_mappe</guid>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://www.onelyder.com/posts/linker_mappe/codingpics.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

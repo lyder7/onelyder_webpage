@@ -13,7 +13,7 @@ output:
   distill::distill_article:
     css: bio_header.css
     self_contained: false
-preview: codingpics.jpg
+#preview: codingpics.png
 ---
 
 
