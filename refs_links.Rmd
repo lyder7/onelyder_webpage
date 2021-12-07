@@ -9,6 +9,113 @@ output:
 
 ## 
 
+# myweblibrary 4later
+
+## Podcasts - Coding/Programming 
+
+* **Coder Radio**
+  - Google podcast
+
+* **Command-line Heroes**
+  - Redhat radio
+  
+* **r-weekly**
+  -Apple
+  
+* **Shiny developer Series**
+  - Apple
+
+  
+  [Codingblocks Resources ](https://www.codingblocks.net/resources/)
+
+[brew](https://brew.sh/){.uri}
+
+## R in General
+
+[HADLEY WICKHAM](http://hadley.nz/g/, "Founder tidyverse package"){.uri}
+
+[rweekly](https://rweekly.org/){.uri}
+
+[rladies](https://rladies.org/)
+
+[shinydevseries.com](https://shinydevseries.com/){.uri}
+
+[unleash-shiny.rinterface.com](https://unleash-shiny.rinterface.com/web-dependencies.html "book"){.uri}
+
+[https://](https://peertube.linuxrocks.online/videos/trending){.uri}[peertube.linuxrocks](https://peertube.linuxrocks.online/videos/trending "web linux tv"){.uri}[.online/videos/trending](https://peertube.linuxrocks.online/videos/trending){.uri}
+
+[emilhvitfeldt.com](https://www.emilhvitfeldt.com "blog"){.uri}
+
+### Web
+
+[Destill Github Guide](https://github.com/jhelvy/distillery){.uri}
+
+-   <https://distillery.rbind.io/>
+
+-   <https://www.jhelvy.com/>
+
+Denne Githuben er sykt bra!
+
+<https://ellakaye.github.io/distilltools/>
+
+<https://github.com/seankross/postcards>
+
+[Hugo Web Page](https://gohugo.io/hugo-modules/use-modules/)
+
+[ep](https://epirhandbook.com/en/index.html)[irhandbook R
+bok](https://epirhandbook.com/en/index.html "bok")
+
+Legendarisk bok om alt rundt R kode.
+
+<https://user2021.r-project.org/>
+
+[Rstudio Cloud](https://rstudio.cloud/, "Rstudio Cloud"){.uri}
+
+## Pakker
+
+[cheatsheets R
+pakker](https://www.rstudio.com/resources/cheatsheets/, "cheetsheets pakker"){.uri}
+
+### Generelle standard
+
+here fs git2r Tidyverse devtools pacman remotes renv
+
+### Data Manipulation/Formatting
+
+dplyr lubridate stringr purrr tidyr
+
+readr readxl opsenxlsx vroom \# import csv or tsv tidyxl rio \# import
+all type of files janitor \# ename collums
+
+### rmarkdown i R:
+
+bookdown blogdown knitr rmarkdown bs4 \# bootstrap theme bslib \# themes
+reprex \# downlit \# themes destill/rmkardown web tidytex \# latex pack
+for R articls \# article templates rmarkdown postcards \# themes
+destill/web R distill \# webpage rmarkdown kableExtra \# kable print
+rmakrdown flextable \# rmarkdown dashboard vtable \# summary tables
+
+### Shiny
+
+shinyWidgets, dreamRs/shinyWidgets shinyjs, daattali/shinyjs
+shinydashboard, rstudio/shinydashboard shinydashboardPlus,
+RinteRface/shinydashboardPlus shinythemes, rstudio/shinythemes plotly,
+ploty/ploty dygraphs, rstudio/dygraphs highcharter, jbkunst/highcharter
+
+#### web/html-output helpers:
+
+jsonlite
+
+### workflow i R:
+
+targets
+
+drake
+
+### API
+
+plumbr
+
 ## Web
 
 [Destill Github Guide](https://github.com/jhelvy/distillery){.uri}
