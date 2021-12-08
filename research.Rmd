@@ -1,6 +1,7 @@
 ---
 title: "Research"
-description: Her kommer det en besrivelse av hva jeg holder på med. Ettr jeg har renderet siden min og sett dette avsnitte på web, skal jeg skrive interessante avsnitt her som forklarer. 
+description: "Her kommer det en besrivelse a
+er. Hmmmm" 
 output:
   distill::distill_article:
     toc: true

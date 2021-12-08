@@ -1,5 +1,5 @@
 ---
-title: "Lyder - onelyder.com"
+title: "onelyder"
 image: lyder.jpg
 links:
 - label: <i class="fab fa-github"></i> GitHub
@@ -24,6 +24,6 @@ site: distill::distill_website
 
 ![](images/codingpics/programming.jpg){width="10cm"}
 
-In the meantime see the [blog section](https://onelyder.com/blog.html).
+In the meantime see the [this section](https://onelyder.com/blog.html).
 
 Contact? Click [here](https://onelyder.com/about.html)
