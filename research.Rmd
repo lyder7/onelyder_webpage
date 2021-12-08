@@ -1,7 +1,6 @@
 ---
 title: "Research"
-description: "Her kommer det en besrivelse a
-er. Hmmmm" 
+description: Her kommer det en besrivelseHmmmm
 output:
   distill::distill_article:
     toc: true
@@ -21,13 +20,7 @@ d-article ol {
 }
 </style>
 ```
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-#source(file.path("R", "functions.R"))
-library(distilltools)
-```
 
-![](images/codingpics/source-g27406f53c_640.jpg){width="6.7cm"}
 
 ## Publications in Peer Reviewed Journals
 
