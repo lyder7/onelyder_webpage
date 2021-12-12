@@ -11,8 +11,6 @@ base_url: https://www.onelyder.com
 preview: images/codingpics/RMarkdownFlow.png
 ---
 
-![](GIF/Linux%20Setup%20-%20Kubunto%20-%20New%20Recording%20-%2012_5_2021,%202_29_05%20AM-low.gif)
-
 <!-- Remove margin under images -->
 
 ```{=html}
@@ -39,3 +37,5 @@ d-article img {
 **`Coming soon. Loading in….`**
 
 ![](images/codingpics/RMarkdownFlow.png)
+
+![](GIF/Linux%20Setup%20-%20Kubunto%20-%20New%20Recording%20-%2012_5_2021,%202_29_05%20AM-low%20(1).gif)

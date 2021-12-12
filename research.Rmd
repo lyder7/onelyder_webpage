@@ -20,7 +20,9 @@ d-article ol {
 }
 </style>
 ```
+## 
 
+![](images/temapics/teori_finans.jpg){width="7cm"}
 
 ## Publications in Peer Reviewed Journals
 
@@ -38,4 +40,4 @@ d-article ol {
 
 ## Software
 
-![](images/temapics/teori_finans.jpg){width="7cm"}
+![](Rstdio%20fail%20record%20-%20first%20installed%20-%2012_6_2021,%208_30_37%20PM-high.gif)

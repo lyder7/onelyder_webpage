@@ -18,11 +18,11 @@ site: distill::distill_website
 
 `3,2,1... Loading...`
 
-![](images/codingpics/analytics-g0e4d234f7_640.jpg){width="10cm"}
+![](images/analytics-g0e4d234f7_640.png)
 
 `…the matrix?`
 
-![](images/codingpics/programming.jpg){width="10cm"}
+![](images/programming.png)
 
 In the meantime see [this section](https://onelyder.com/blog.html).
 
