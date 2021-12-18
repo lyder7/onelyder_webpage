@@ -9,12 +9,12 @@
         "url": "https://onelyder.com/about"
       }
     ],
-    "date": "2021-12-07",
+    "date": "2021-12-18",
     "categories": [],
-    "contents": "\ngit bash cmd\n# Lager ny branch \ngit branch from_startC dfed6bbc35053063a9b999d08170bb7b8c124504\n# Åpne branch \ngit checkout from_startC \n# print ut hvilken bracnh\ngit symbolic-ref HEAD\ngit add .\ngit commit -m \"commit text\"\n# Push til branchen \ngit push --set-upstream origin from_startC\n\n\n\n",
+    "contents": "\ngit kommandoer\nTerminal kommandor for git. Under er nyttig kommandoer i forbindelse med branching av et prosjekt. Det vil si at det er en developer gren (branch) som parralelt med main (hoved) grenen av prosjektet foretar endringer til nye tilskudd/endringer.\n\n# Lager ny branch \ngit branch from_startC dfed6bbc35053063a9b999d08170bb7b8c124504\n# Åpne branch \ngit checkout from_startC \n# print ut hvilken bracnh\ngit symbolic-ref HEAD\ngit add .\ngit commit -m \"commit text\"\n# Push til branchen \ngit push --set-upstream origin from_startC\n\n\n# Oversikt over commits\ngit log --graph \n#avslutt log modus \nshift + Q\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-12-07T23:14:27+01:00",
-    "input_file": {}
+    "last_modified": "2021-12-18T19:42:27+01:00",
+    "input_file": "git_devlab.knit.md"
   },
   {
     "path": "posts/linker_mappe/",

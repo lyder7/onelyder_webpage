@@ -8,7 +8,7 @@ output:
       - css/jhelvy.css
       - css/small-spacing.css
 base_url: https://www.onelyder.com
-preview: images/codingpics/source-g27406f53c_640.jpg
+preview: images/png/source-g27406f53c_640.png
 ---
 
 <!-- Remove margin under list items -->
@@ -22,7 +22,7 @@ d-article ol {
 ```
 ## 
 
-![](images/temapics/teori_finans.jpg){width="7cm"}
+![](images/png/teori_finans.png)
 
 ## Publications in Peer Reviewed Journals
 

@@ -93,8 +93,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-12-07"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-12-07"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-12-18"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-12-18"/>
   <meta name="article:author" content="Lyder Aleksander Mathisen"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -112,7 +112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output","date"]}},"value":[{"type":"character","attributes":{},"value":["Gitlab"]},{"type":"character","attributes":{},"value":["Bash scripting \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Lyder Aleksander Mathisen"]},{"type":"character","attributes":{},"value":["https://onelyder.com/about"]},{"type":"character","attributes":{},"value":["https://onelyder.com"]}]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css","self_contained"]}},"value":[{"type":"character","attributes":{},"value":["small-spacing.css"]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["12-07-2021"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output","date"]}},"value":[{"type":"character","attributes":{},"value":["Gitlab"]},{"type":"character","attributes":{},"value":["Bash scripting \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Lyder Aleksander Mathisen"]},{"type":"character","attributes":{},"value":["https://onelyder.com/about"]},{"type":"character","attributes":{},"value":["https://onelyder.com"]}]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css","self_contained"]}},"value":[{"type":"character","attributes":{},"value":["small-spacing.css"]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["12-18-2021"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1460,7 +1460,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Gitlab","description":"Bash scripting","authors":[{"author":"Lyder Aleksander Mathisen","authorURL":"https://onelyder.com/about","affiliation":"https://onelyder.com","affiliationURL":"https://onelyder.com","orcidID":""}],"publishedDate":"2021-12-07T00:00:00.000+01:00","citationText":"Mathisen, 2021"}
+{"title":"Gitlab","description":"Bash scripting","authors":[{"author":"Lyder Aleksander Mathisen","authorURL":"https://onelyder.com/about","affiliation":"https://onelyder.com","affiliationURL":"https://onelyder.com","orcidID":""}],"publishedDate":"2021-12-18T00:00:00.000+01:00","citationText":"Mathisen, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1479,22 +1479,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-byline">
   Lyder Aleksander Mathisen <a href="https://onelyder.com/about" class="uri">https://onelyder.com/about</a> 
   
-<br/>12-07-2021
+<br/>12-18-2021
 </div>
 
 <div class="d-article">
-<h2 id="git-bash-cmd">git bash cmd</h2>
-<pre><code># Lager ny branch 
-git branch from_startC dfed6bbc35053063a9b999d08170bb7b8c124504
-# Åpne branch 
-git checkout from_startC 
-# print ut hvilken bracnh
-git symbolic-ref HEAD
-git add .
-git commit -m &quot;commit text&quot;
-# Push til branchen 
-git push --set-upstream origin from_startC</code></pre>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h2 id="git-kommandoer">git kommandoer</h2>
+<p>Terminal kommandor for git. Under er nyttig kommandoer i forbindelse med <code>branching</code> av et prosjekt. Det vil si at det er en <em>developer</em> gren (branch) som parralelt med main (hoved) grenen av prosjektet foretar endringer til nye tilskudd/endringer.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lager ny branch </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch from_startC dfed6bbc35053063a9b999d08170bb7b8c124504</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Åpne branch </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout from_startC </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print ut hvilken bracnh</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> symbolic-ref HEAD</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;commit text&quot;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Push til branchen </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--set-upstream</span> origin from_startC</span></code></pre></div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Oversikt over commits</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--graph</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#avslutt log modus </span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">shift</span> + Q</span></code></pre></div>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

@@ -8,7 +8,7 @@ output:
       - css/jhelvy.css
       - css/strapless.css
 base_url: https://www.onelyder.com
-preview: images/codingpics/RMarkdownFlow.png
+preview: images/png/RMarkdownFlow.png
 ---
 
 <!-- Remove margin under images -->
@@ -36,6 +36,6 @@ d-article img {
 ```
 **`Coming soon. Loading in….`**
 
-![](images/codingpics/RMarkdownFlow.png)
+![](images/png/RMarkdownFlow.png)
 
-![](GIF/Linux%20Setup%20-%20Kubunto%20-%20New%20Recording%20-%2012_5_2021,%202_29_05%20AM-low%20(1).gif)
+![](images/gif/663d7815-4bfc-4dc5-89c1-d692854a2418.gif).gif)

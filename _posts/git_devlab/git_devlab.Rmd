@@ -17,9 +17,11 @@ output:
 
 
 
-## git bash cmd
+## git kommandoer 
 
-```
+Terminal kommandor for git. Under er nyttig kommandoer i forbindelse med `branching` av et prosjekt. Det vil si at det er en *developer* gren (branch) som parralelt med main (hoved) grenen av prosjektet foretar endringer til nye tilskudd/endringer.
+
+```{bash eval=FALSE}
 # Lager ny branch 
 git branch from_startC dfed6bbc35053063a9b999d08170bb7b8c124504
 # Åpne branch 
@@ -30,4 +32,14 @@ git add .
 git commit -m "commit text"
 # Push til branchen 
 git push --set-upstream origin from_startC
+```
+
+
+```{bash eval=FALSE}
+# Oversikt over commits
+git log --graph 
+#avslutt log modus 
+shift + Q
+
+
 ```
