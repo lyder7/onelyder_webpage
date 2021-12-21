@@ -3,12 +3,11 @@ title: "Research"
 description: Her kommer det en besrivelseHmmmm
 output:
   distill::distill_article:
-    toc: true
     css:
       - css/jhelvy.css
       - css/small-spacing.css
 base_url: https://www.onelyder.com
-preview: images/png/source-g27406f53c_640.png
+#preview: images/png/source-g27406f53c_640.png
 ---
 
 <!-- Remove margin under list items -->
@@ -36,8 +35,7 @@ d-article ol {
 
 ## Theses
 
-## Reports, Articles for Non-Academic Audiences, and Other Publications
+## Reports, Articles for Non-Academic Audiences, and 
 
 ## Software
 
-![](Rstdio%20fail%20record%20-%20first%20installed%20-%2012_6_2021,%208_30_37%20PM-high.gif)
