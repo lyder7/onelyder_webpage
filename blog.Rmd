@@ -1,5 +1,4 @@
 ---
 title: "Posts"
-#preview: lyder7.jpg
 listing: posts
 ---

@@ -6,9 +6,11 @@ output:
 twitter:
   creator: "@onelyder"
 base_url: https://www.onelyder.com
-preview: images/codingpics/programming.jpg
+#preview: images/png/programming.png
 ---
 
 Lyder - **`onelyder`**?
 
-![](figures/RMarkdownFlow.png)
+![](images/png/RMarkdownFlow.png)
+
+![](images/gif/Rstdio fail record - first installed - 12_6_2021, 8_30_37 PM-high.gif)

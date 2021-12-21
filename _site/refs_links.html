@@ -107,7 +107,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Referanser til syke ting"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css","self_contained"]}},"value":[{"type":"character","attributes":{},"value":["css/small-spacing.css"]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Referanser til syke ting"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","css","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["css/small-spacing.css"]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2291,6 +2291,47 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#myweblibrary-4later">myweblibrary 4later</a>
+<ul>
+<li><a href="#podcasts---codingprogramming">Podcasts - Coding/Programming</a></li>
+<li><a href="#r-in-general">R in General</a>
+<ul>
+<li><a href="#web">Web</a></li>
+</ul></li>
+<li><a href="#pakker">Pakker</a>
+<ul>
+<li><a href="#generelle-standard">Generelle standard</a></li>
+<li><a href="#data-manipulationformatting">Data Manipulation/Formatting</a></li>
+<li><a href="#rmarkdown-i-r">rmarkdown i R:</a></li>
+<li><a href="#shiny">Shiny</a></li>
+<li><a href="#workflow-i-r">workflow i R:</a></li>
+<li><a href="#api">API</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#r-code-packages">R-code &amp; Packages</a>
+<ul>
+<li><a href="#packages-functions-librarys-available-in-r">Packages, functions &amp; librarys available in R</a></li>
+<li><a href="#r-markdown-reproducable-reasearch">R-Markdown &amp; Reproducable Reasearch</a></li>
+<li><a href="#data-wrangeling">Data Wrangeling</a></li>
+<li><a href="#statisticaleconometric-models">Statistical/Econometric models</a></li>
+<li><a href="#finance-risk-timeseries-optimization-functions">Finance, Risk, Timeseries, Optimization functions</a></li>
+<li><a href="#blogroll-finance-r-code">Blogroll: Finance &amp; R-code</a></li>
+</ul></li>
+<li><a href="#generelle-notes">Generelle Notes</a>
+<ul>
+<li><a href="#file-types-how-to-store-them-and-key-differences">File types, how to store them and key differences</a></li>
+</ul></li>
+<li><a href="#intro-start">Intro (START)</a>
+<ul>
+<li><a href="#refs-to-my-own-work-stored-some_where">Refs to my own work stored <em>some_where</em></a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
 <h1 id="myweblibrary-4later">myweblibrary 4later</h1>
 <h2 id="podcasts---codingprogramming">Podcasts - Coding/Programming</h2>
 <ul>
@@ -2362,7 +2403,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='st'><a href='https://github.com/trinker/pacman'>"pacman"</a></span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"pacman"</span><span class='op'>)</span>
 <span class='co'># Packages available from CRAN</span>
 <span class='co'>##############################</span>
-<span class='fu'>pacman</span><span class='fu'>::</span><span class='fu'>p_load</span><span class='op'>(</span>
+<span class='fu'>pacman</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/pacman/man/p_load.html'>p_load</a></span><span class='op'>(</span>
   
   <span class='co'># learning R</span>
   <span class='co'>############</span>

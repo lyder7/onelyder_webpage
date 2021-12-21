@@ -3,12 +3,11 @@ title: "Research"
 description: Her kommer det en besrivelseHmmmm
 output:
   distill::distill_article:
-    toc: true
     css:
       - css/jhelvy.css
       - css/small-spacing.css
 base_url: https://www.onelyder.com
-preview: images/codingpics/source-g27406f53c_640.jpg
+#preview: images/png/source-g27406f53c_640.png
 ---
 
 <!-- Remove margin under list items -->
@@ -20,7 +19,9 @@ d-article ol {
 }
 </style>
 ```
+## 
 
+![](images/png/teori_finans.png)
 
 ## Publications in Peer Reviewed Journals
 
@@ -34,8 +35,7 @@ d-article ol {
 
 ## Theses
 
-## Reports, Articles for Non-Academic Audiences, and Other Publications
+## Reports, Articles for Non-Academic Audiences, and 
 
 ## Software
 
-![](images/temapics/teori_finans.jpg){width="7cm"}
