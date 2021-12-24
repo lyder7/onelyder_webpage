@@ -19,7 +19,6 @@ d-article ol {
 }
 </style>
 ```
-## 
 
 ![](images/png/teori_finans.png)
 

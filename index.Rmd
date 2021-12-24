@@ -1,6 +1,5 @@
 ---
 title: "onelyder"
-image: lyder.jpg
 links:
 - label: <i class="fab fa-github"></i> GitHub
   url: https://www.github.com/lyder7
