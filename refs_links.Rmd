@@ -10,6 +10,17 @@ output:
 
 # myweblibrary 4later
 
+## Linux 
+- `bash scripting lang`. manual
+  * https://www.gnu.org/software/bash/manual/bash.html#Basic-Shell-Features
+  
+- `brukerveileding for linux generelt`
+  * http://linuxcommand.org/lc3_man_page_index.php#shell
+
+
+http://linuxcommand.org/lc3_man_page_index.php#shell
+
+
 ## Podcasts - Coding/Programming 
 
 * **Coder Radio**
