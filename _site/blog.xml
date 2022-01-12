@@ -12,7 +12,15 @@
       <link>https://www.onelyder.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Loops, map og funksjoner i R</title>
+      <dc:creator>Lyder Aleksander Mathisen</dc:creator>
+      <link>https://www.onelyder.com/posts/loops-r</link>
+      <description>Denne teksten tar for seg Excel-relaterte problemstillinger, som blir løst med R kode. Funksjoner, loops og map blir disktuert og vist eksempler fra.</description>
+      <guid>https://www.onelyder.com/posts/loops-r</guid>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Gitlab</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>

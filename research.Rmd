@@ -1,40 +1,28 @@
 ---
-title: "Research"
-description: Her kommer det en besrivelseHmmmm
+title: "Projects"
+description: From me, to you. Select category carefully, it`s up to you…or?
 output:
   distill::distill_article:
     css:
       - css/jhelvy.css
       - css/small-spacing.css
 base_url: https://www.onelyder.com
-#preview: images/png/source-g27406f53c_640.png
+preview: images/png/teori_finans.png
 ---
 
-<!-- Remove margin under list items -->
+Still producing...just wait.
+It will be worth it.
 
-```{=html}
-<style>
-d-article ol {
-    margin-bottom: 5px;
-}
-</style>
-```
+## Publications
 
-![](images/png/teori_finans.png)
-
-## Publications in Peer Reviewed Journals
-
-## Working Papers & Papers Under Review
-
-## Conference Publications
-
-## Magazine Publications
+## Ideas, Working Papers & Papers Under Review
 
 ## Books / Book Chapters
 
 ## Theses
 
-## Reports, Articles for Non-Academic Audiences, and 
+## Reports, Articles for Non-Academic Audiences
 
-## Software
+![](images/png/teori_finans.png){width="200"}
 
+## 

@@ -1,0 +1,22 @@
+---
+title: "CONTACT"
+description: Get in touch
+output:
+  distill::distill_article:
+    css:
+      - css/jhelvy.css
+      - css/small-spacing.css
+base_url: https://www.onelyder.com
+preview: images/png/teori_finans.png
+---
+
+You will find me on social platforms.
+I will not mention which, but I have only two usernames:
+
+`onelyder`
+
+`lyder7`
+
+Unless its not me.
+
+~If\ it's\ related\ to\ business\ outside\ my\ `onelyder`\ or\ anything\ associated\ by\ me\ as\ a\ private\ person/investor,\ please\ contact\ my\ office.\ For\ contact\ information\ see\ my\ LinkedIn\ profile.~
