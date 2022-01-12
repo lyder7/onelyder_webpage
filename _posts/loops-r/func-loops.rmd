@@ -1,20 +1,26 @@
 ---
 title: "Loops, map og funksjoner i R"
 description: | 
-  Denne teksten tar for seg Excel-relaterte problemstillinger, som blir løst med R kode. Funksjoner, loops og map blir disktuert og vist eksempler fra.
+  Excel-relaterte problemstillinger, som blir løst med R kode. Funksjoner, loops og map blir disktuert og vist eksempler fra.
 author: 
   - name: Lyder Aleksander Mathisen
     url: https://onelyder.com/posts/func-loops/
 date: "`r Sys.Date()`"
-output: 
+output:
   distill::distill_article:
-  toc: true
-  theme: styles.css
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    css: small-spacing.css
 ---
 
 # Notater fra Bruno Rodriges
 
-[Don't write loops in R](https://www.youtube.com/watch?v=3xIKZbZKCWQ&t=0s)
+Denne lille spalten er inspirert av Bruno Rodriguez sin video [Don't write loops in R](https://www.youtube.com/watch?v=3xIKZbZKCWQ&t=0s).
+
+Videre har jeg fylt på med noen ideer og tanker jeg har om temaet.
+Men først laster jeg inn pakkene som trengs for å kjøre igjennom det jeg har tenkt å vise frem.
+Kode-snippen under laster inn det som trengs, hvor spesielt `tidyxl`, `openxlsx` og `readxl` har unike funksjoner tilpasset for excel.
 
 ```{r library, warning=FALSE, message=FALSE}
 library(tidyverse)
@@ -22,39 +28,60 @@ library(tidyxl)
 library(openxlsx)
 library(purrr)
 library(dplyr)
+library(readxl)
+library(here)
 ```
 
-## Basies
+De andre pakkene som `purrr` og `dplyr` er spesielt egnet for det funksjonelle operasjonene som skal foretas, etter data-filene er lastet inn og formatert.
+Den siste pakken `here` er alltid kjekk, fordi den hjelper til med å si ifra til konsollen hvor arbeids mappen vår er, slik at vi kan bruke relative referanser underveis.
+Altså `~/`.
+`Tidyverse` gir totalen, den laster inn alle pakkene, som består av totalt 30 pakker utviklet av *Hadley Wickham*.
+[Se mer om tidyverse her](https://tidyverse.tidyverse.org/articles/paper.html)
 
-Noen basis ting som er nyttig:
+## Noen basis ting først
 
-**"."** ---> betyr i dette området.
+Noen "basis" ting som er nyttig:
+
+**`"."`** ---> betyr i "dette området".
+Altså mappen PCen din befinner seg i.
+Arbeids mappen.
 
 Her ser dere et eksempel hvor jeg bruker en funksjon `list.files` og bruker "." som argument for hvilken path den skal lete i.
-I tilegg spesifiserer jeg hvilken filtype jeg ønsker å lete etter.
+I tillegg spesifiserer jeg hvilken filtype jeg ønsker å lete etter.
 
-```{r list.files1, eval=FALSE}
+```{r list.files1}
 list.files(".", pattern = ".xlsx")
 ```
 
-Men jeg kan også spesifere at jeg vil lete i et spesifikt område i mappen min.
-Jeg har laget en egen mappe data, og der ligger det flere excelfiler.
+Men jeg kunne også spesifisert at jeg vil lete i et spesifikt område i arbeidsmappen min.
+For eksempel hvis jeg har en mappe som heter "data" hvor jeg har alle data-filene mine inne i.
+For eksempel excel ark.
 
-```{r list.files2, eval=FALSE}
-list.files("data", pattern = ".xlsx")
+```{r list.files2}
+list_data <- list.files(".", pattern = ".xlsx")
+list_sheets <- paste0("sheet_", seq(1, length(list_data)))
+
+my_excel_workbook <- createWorkbook()
 ```
 
-## Funksjonell programmering i R
+# Funksjonell programmering i R
 
-## walk og map
+## `walk` og `map`
 
-Hva er forskjellen mellom walk og map?
+Hva er forskjellen mellom `walk` og `map`?
 Og når skal man bruke dem?
 
 `walk` gjør noe utenfor sitt scope --> ikke noe objekt som blir lagret.
-Eller vil vise noe.
+Den gir altså ikke et objekt som man kan referer til senere.
+Slik man feks kan gjøre dersom man skriver for eksempel a \<- "objekt".
+Etter å ha kjørt igjennom den kommandoen, vil "objekt" bli printet ut i konsollen hvis jeg skriver bare a.
 
-```{r walk, eval=FALSE}
+Slik er det altså ikke med `walk.` Den utfører operasjoner som resulterer i typiske outputs som vil vise noe.
+Ett plot eller som under ett excel ark, som vi senere kan skrive ut som en `.xlsx`fil for eksmepel.
+Men før vi gjør noe med det, kan vi ikke "se" det nødvendigvis.
+
+```{r walk}
+
 list_sheets %>% 
   walk(~addWorksheet(my_excel_workbook, sheetName = .))
 ```
@@ -64,7 +91,7 @@ Den kalles `walk2`, og er fra samme pakke `purrr.`
 
 `walk2` brukes når vi trenger ta inn flere objekter.
 
-```{r walk2, eval=FALSE}
+```{r walk2}
 walk2(.x = list_sheets,
       .y = list_data,
       ~writeData(my_excel_workbook,
@@ -77,8 +104,8 @@ walk2(.x = list_sheets,
 Et nytt eksempel er for å undersøke antall formler som finnes i et excel dokument, eller dokumenter vi ønsker å jobbe med.
 Det kan være jobb/skole relaterte Excel-filer.
 
-```{r listfiles-objekt, eval=FALSE}
-list_xlsx <- list.files("/home/lyder/dev_lyder/github_lyder7/onelyder_webpage/_posts/loops-r", pattern = ".xlsx")
+```{r listfiles-objekt}
+list_xlsx <- list.files(".", pattern = ".xlsx")
 ```
 
 Først kan jeg sjekke en spesifikk Excel ark.
@@ -89,7 +116,7 @@ Det som videre skjer er at vi tar i bruk noen nyttige funksjoner fra `tidyxl` pa
 `xlsx_cells` sammen med filter, og !i
 s.na gjør at denne kodenippen gir oss tilbake formler.
 
-```{r xlsx_cells, eval=FALSE}
+```{r xlsx_cells}
 xlsx_cells(list_xlsx[3]) %>%
   filter(!is.na(formula)) %>% 
   head() %>% 
@@ -99,13 +126,13 @@ xlsx_cells(list_xlsx[3]) %>%
 Over ser dere hvile former som er aktuelle.
 Nå har jeg brukt head(), så da vises bare de første elementene.
 Men her får vi et eksempel på hvilke formler.
-I denne går det i VLOOKUP som dere ser over.
+I denne går det i `VLOOKUP` som dere ser over.
 
 Noe annet nyttig er å finne ut hvor mange formler det er snakk om.
 Altså hvor mange celler i Excel arket vi jobber med består av formler.
 Kodesnippen under er bare en listen justering fra den forrige, ved at vi nå sier `nrow()` som gir antall rader.
 
-```{r xlsx_cells2, eval=FALSE}
+```{r xlsx_cells2}
 xlsx_cells(list_xlsx[3]) %>%
   filter(!is.na(formula)) %>% 
  nrow()
@@ -120,7 +147,7 @@ Når man skal lage loops på den *klassiske måten*, er det viktig å først hus
 Her lager jeg objektet `results` som er en numerisk vektor bestående av 0, og har samme lenge som objektet vi tar inn `list_xlsx.` Som forøvrig i dette tilfellet er 7.
 Altså 7 filnavn.
 
-```{r loop1, eval=FALSE}
+```{r loop1}
 results <- rep(0, length(list_xlsx))
 
 
@@ -142,7 +169,7 @@ Det kan vi fikse.
 Vi må bare gjøre en liten justering, trikse og mikse litt.
 Se under
 
-```{r loop2, eval=FALSE}
+```{r loop2}
 results <- cbind(rep(0, length(list_xlsx)), 0)
 
 for(i in seq_along(list_xlsx)){
@@ -152,7 +179,7 @@ for(i in seq_along(list_xlsx)){
     nrow()
 }
 
-print(results)
+results
 
 ```
 
@@ -165,7 +192,7 @@ Videre tar jeg bare å bruker funksjonen `rename` for å endre kolonnenavn.
 Det er akkurat samme svar, bare presentert på en annen måte.
 Mer ryddig og ordentlig.
 
-```{r data.frame-loop, eval=FALSE}
+```{r data.frame-loop}
 data.frame(results) %>% 
   rename("Excel fil"=X1,
          "Antall formler"=X2) %>% 
@@ -183,7 +210,7 @@ Så den tar inn `seq(1,10)`, som er det samme som et int-objekt.
 Det ville sett slik ut: `int [1:10] 1 2 3 4 5 6 7 8 9 10` Videre utfører den funksjonen `sqrt`, som er en innebygget funksjon for kvadratrot.
 `x, √{x}.`
 
-```{r map, eval=FALSE}
+```{r map}
 map(seq(1, 10), sqrt)
 ```
 
@@ -193,7 +220,7 @@ Vi må definere en formel.
 Dette er en generell formel, og kan brukes i realiteten for alle Excel ark videre.
 Den lagrer vi globalt i systemet våres.
 
-```{r count_formulas, eval=FALSE}
+```{r count_formulas}
 count_formulas <- function(workbook_name){
   n_formulas <- xlsx_cells(workbook_name) %>%
     filter(!is.na(formula)) %>% 
@@ -210,7 +237,7 @@ Det neste vi gjør er å bruke `map`.
 Jeg skal vise dere to måter.
 Den første er standard, men den gir en liste tilbake, som noen ganger er konrglete å jobbe med.
 
-```{r maplist, eval=FALSE}
+```{r maplist}
 map(list_xlsx, count_formulas)
 ```
 
@@ -218,7 +245,7 @@ Derfor finnes det en utgave av `map` som heter `map_dfr`.
 Den gir oss eksakt det samme svaret som vi gjorde over, til og med har den fiksa kolonnenavnene for oss.
 Det er fordi jeg spesifiserte i funksjonen vi lagde over at kallenavnene skal være *workbook* og *n_formules.* Det kan endres til hva enn som passer hvis man ønsker det.
 
-```{r map_dfr, eval=FALSE}
+```{r map_dfr}
 map_dfr(list_xlsx, count_formulas)
 ```
 
@@ -227,7 +254,7 @@ Feks ønsker vi å vite hvilke filer har null formler i seg.
 Under legger jeg til en liten ekstra linje.
 Og sier gi meg svarer hvor det er null formler.
 
-```{r mapfilter, eval=FALSE}
+```{r mapfilter}
 map_dfr(list_xlsx, count_formulas) %>% 
   filter(n_formulas == 0)
 ```
