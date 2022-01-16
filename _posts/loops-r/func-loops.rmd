@@ -1,7 +1,7 @@
 ---
 title: "Loops, map og funksjoner i R"
 description: | 
-  Excel-relaterte problemstillinger, som blir løst med R kode. Funksjoner, loops og map blir disktuert og vist eksempler fra.
+  Excel-relaterte problemstillinger løst med R i R studio. `Funksjoner`, `loops` og `map` blir disktuert og vist eksempler fra.
 author: 
   - name: Lyder Aleksander Mathisen
     url: https://onelyder.com/posts/func-loops/
@@ -20,7 +20,7 @@ Denne lille spalten er inspirert av Bruno Rodriguez sin video [Don't write loops
 
 Videre har jeg fylt på med noen ideer og tanker jeg har om temaet.
 Men først laster jeg inn pakkene som trengs for å kjøre igjennom det jeg har tenkt å vise frem.
-Kode-snippen under laster inn det som trengs, hvor spesielt `tidyxl`, `openxlsx` og `readxl` har unike funksjoner tilpasset for excel.
+Kode-snippen under laster inn det som trengs, hvor spesielt `tidyxl`, `openxlsx` og `readxl` har unike funksjoner tilpasset for Excel.
 
 ```{r library, warning=FALSE, message=FALSE}
 library(tidyverse)
