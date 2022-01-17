@@ -12,14 +12,14 @@
       <link>https://www.onelyder.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Ny tiitel</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
       <link>https://www.onelyder.com/posts/new-post-r</link>
       <description>Beskrivelse av tekst her.</description>
       <guid>https://www.onelyder.com/posts/new-post-r</guid>
-      <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Loops, map og funksjoner i R</title>
