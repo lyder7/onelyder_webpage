@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/new-post-r/",
+    "title": "Ny tiitel",
+    "description": "Beskrivelse av tekst her.",
+    "author": [
+      {
+        "name": "Lyder Aleksander Mathisen",
+        "url": "https://onelyder.com"
+      }
+    ],
+    "date": "2022-01-16",
+    "categories": [],
+    "contents": "\n\nContents\nIntro\nTema 1\nUnder tema\n\nTema 2\nUnder tema\n\n\nReferanser\n\nIntro\nTema 1\nUnder tema\nTema 2\nUnder tema\nReferanser\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-01-16T02:46:31+01:00",
+    "input_file": "new-post-r.knit.md"
+  },
+  {
     "path": "posts/loops-r/",
     "title": "Loops, map og funksjoner i R",
     "description": "Excel-relaterte problemstillinger, som blir løst med R kode. Funksjoner, loops og map blir disktuert og vist eksempler fra.",

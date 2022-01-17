@@ -1,0 +1,46 @@
+---
+title: "Ny tiitel"
+description: |
+  Beskrivelse av tekst her. 
+author:
+  - name: Lyder Aleksander Mathisen  
+    url: https://onelyder.com
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    css: small-spacing.css
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+library(readr)
+library(here)
+library(dplyr)
+library(vtable)
+library(knitr)
+library(kableExtra)
+library(prettydoc)
+library(bibtex)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Intro
+
+Denne teksten tar for seg noen ideer ang.
+xxx.
+
+Jeg vil også tipse om YouTube kanalen [R4DS Online Learning Community](https://www.youtube.com/channel/UCCaChdLMTYMxyawR_Qf-kYA).
+Den tar for seg videoer for bøkene skrevet av *Hadley Whickham*.
+
+## Tema 1
+
+### Under tema
+
+## Tema 2
+
+### Under tema
+
+# Referanser
