@@ -23,10 +23,10 @@ navbar:
   right:
     - text: "ABOUT ME"
       href: about.html
-    - text: "PROJECTS"
-      href: projects.html
     - text: "BLOG"
       href: blog.html
+    - text: "PROJECTS"
+      href: projects.html
     - text: "DIRECTION"
       href: refs_links.html
     - text: "CONTACT"
