@@ -93,8 +93,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2022-01-18" />
-  <meta property="article:created" itemprop="dateCreated" content="2022-01-18" />
+  <meta property="article:published" itemprop="datePublished" content="2022-01-19" />
+  <meta property="article:created" itemprop="dateCreated" content="2022-01-19" />
   <meta name="article:author" content="Lyder Aleksander Mathisen" />
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -112,7 +112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["R MUST KNOW!"]},{"type":"character","attributes":{},"value":["Dette må du vite om R! ELler bør..\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Lyder Aleksander Mathisen"]}]}]},{"type":"character","attributes":{},"value":["2022-01-18"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["R MUST KNOW!"]},{"type":"character","attributes":{},"value":["Dette må du vite om R! ELler bør..\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Lyder Aleksander Mathisen"]}]}]},{"type":"character","attributes":{},"value":["2022-01-19"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1459,7 +1459,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"R MUST KNOW!","description":"Dette må du vite om R! ELler bør..","authors":[{"author":"Lyder Aleksander Mathisen","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-01-18T00:00:00.000+01:00","citationText":"Mathisen, 2022"}
+{"title":"R MUST KNOW!","description":"Dette må du vite om R! ELler bør..","authors":[{"author":"Lyder Aleksander Mathisen","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-01-19T00:00:00.000+01:00","citationText":"Mathisen, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1478,7 +1478,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-byline">
   Lyder Aleksander Mathisen  
   
-<br />2022-01-18
+<br />2022-01-19
 </div>
 
 <div class="d-article">
@@ -1487,9 +1487,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><strong><code>Tidyverse</code></strong> er det første.</p>
 <p>Pakken <strong><code>tidyverse</code></strong> består av totalt <em>30 pakker</em> relevant for <em>data science</em>. Funksjoer innnenfor alle området viktig, og dekker det meste du vil gjøre med R kode. De mest kjente pakkene er muligens <strong><code>dplyr</code></strong> og <strong><code>purrr</code></strong>, som brukes til data manipulering og funksjonell programmering i R.</p>
 <p><a href="https://hadley.nz/">Hadley Whickham</a> fra R studio er sjefen av ingeniørteamet som har bygget, utvivklet og står nå for dokumentasjonen av pakken. På bare noen få år, har teamet laget flere tiltalls pakker som har endret R og R kode enormt, samt kvalitet på dokumentasjon tilgjenglig.</p>
-<p>Noen av nøkkel funskjonene er <strong><code>C++</code></strong> bridge mange av pakkene bruker. Dette åpner for en del <em>“under the hood</em>” saker skjer, som eksempelvis at oppgaver som er klart med effektivt å løse i en <strong><code>C++</code></strong> compeiler, blir nettopp det. Uten at vi trenger å åpne en ny <em>IDE</em> og skrive delen av scriptet i en annen fil, for og tilslutt lage et script som har i oppgave å sy i sammen <strong><code>R scriptet</code></strong> og <strong><code>C++</code></strong> fila så de tilsammen blir et helt scipt. Neida..</p>
-<p>Alt dette er bygget inn automatisk, på en effektiv måte slik at større opgpaver og raskere utførelse har blitt mulig. Generelt kan vi si at R har utviklet seg til å komme i kontantk med mange programmeringspråk. Av den grunn tar den nytte av, og bruker de beste løsnignene der mulig, ved å kommunisere og være tilgjenglig til kommunikasjon med andre programmerings språk.</p>
-<p>Under lager jeg en data.frame bestående av pakkene, same en rad med nummereringenen.</p>
+<h2 id="tidyverse">Tidyverse</h2>
+<p>Under lager jeg en data.frame bestående av pakkene som inngår i tidyverse. I tilegg lager jeg en kolonne som viser indeksen til pakken. Under kjøres det kode som lager denne tabellen for oss. Her får du en oversikt over alle pakkene:¨</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tidyverse.tidyverse.org/reference/tidyverse_packages.html">tidyverse_packages</a></span><span class="op">(</span><span class="op">)</span>
@@ -1531,7 +1530,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 30     tidyverse       30</code></pre>
 </div>
 <p><strong><code>xml2</code></strong>, <strong><code>jsonlite</code></strong>, <strong><code>rstudioapi.</code></strong></p>
+<p>Noen av nøkkel funskjonene er <strong><code>C++</code></strong> bridge mange av pakkene bruker. Dette åpner for en del <em>“under the hood</em>” saker skjer, som eksempelvis at oppgaver som er klart med effektivt å løse i en <strong><code>C++</code></strong> compeiler, blir nettopp det. Uten at vi trenger å åpne en ny <em>IDE</em> og skrive delen av scriptet i en annen fil, for og tilslutt lage et script som har i oppgave å sy i sammen <strong><code>R scriptet</code></strong> og <strong><code>C++</code></strong> fila så de tilsammen blir et helt scipt. Neida..</p>
+<p>Alt dette er bygget inn automatisk, på en effektiv måte slik at større opgpaver og raskere utførelse har blitt mulig. Generelt kan vi si at R har utviklet seg til å komme i kontantk med mange programmeringspråk. Av den grunn tar den nytte av, og bruker de beste løsnignene der mulig, ved å kommunisere og være tilgjenglig til kommunikasjon med andre programmerings språk.</p>
 <h2 id="shiny">Shiny</h2>
+<p>Shiny er ett av de nyere hoved-varemerkene R-studio fronter. Shiny er et rammeverk som gjør det mulig å programmere applikasjoner, altså apper, med R kode. I prinsippet kan disse appene ha alle mulig formål og funksjonaliteter. Det er sterke forbindelser til CSS, Java, HTML og andre vertkøy for å gi Shiny appen en UI man forventer.</p>
+<p>Under lager jeg en liste bestående av alle funksjonene i de 5 størte pakkene i R. Disse tilsammen gjør R om til et sterkt og riktig språk. ¨</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/trinker/pacman">pacman</a></span><span class="op">)</span>
@@ -1553,39 +1556,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
  $ base     : chr [1:1370] &quot;-&quot; &quot;-.Date&quot; &quot;-.POSIXt&quot; &quot;:&quot; ...
  $ shiny    : chr [1:276] &quot;..stacktraceoff..&quot; &quot;..stacktraceon..&quot; &quot;a&quot; &quot;absolutePanel&quot; ...</code></pre>
 </div>
-<p>Outputen viser en liste bestående av alle pakkene til 5 største, valgt ut av meg selv. Disse er grunnstenene. Hver pakke representerer en del av data science hver, hvor knitr og rmarkdown til sammen står for <strong><code>markdown</code></strong> og <strong><code>HTML</code></strong> mulighetene.</p>
-<ol type="1">
-<li><div>
-
-</div></li>
-</ol>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/paulhendricks/anonymizer">anonymizer</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://CenterForAssessment.github.io/randomNames">randomNames</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/richfitz/ids">ids</a></span><span class="op">)</span>
-<span class="co"># v &lt;- hash(letters, .algo = &quot;sha256&quot;)</span>
-
-<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ids/man/random_id.html">random_id</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">200</span>, bytes <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  random <span class="op">=</span> <span class="va">v</span>,
-  names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/randomNames/man/randomNames.html">randomNames</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span>, 
-                      which.names <span class="op">=</span> <span class="st">&quot;both&quot;</span><span class="op">)</span>,
-  pascal <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/ids/man/sentence.html">sentence</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">200</span>, style <span class="op">=</span> <span class="st">&quot;Pascal&quot;</span>, 
-                    past <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span>
-</code></pre>
-</div>
-<pre><code>  random               names                                pascal
-1 a3cf2b Jackson Jr, Tajinae       29DapperWalrusesGallopingBoldly
-2 52760e    el-Masri, Qaasim           27BurlyFrogsTwistingOutside
-3 3f10d8    Gustafson, Frank   10BurlyFlamingosSpyingReproachfully
-4 8c5ebd    Maxey-Bell, Earl 28EmbarrassedBunniesSpyingObnoxiously
-5 232990    al-Mowad, Waseem      22MajesticSlugsRunningYouthfully
-6 da3d81       Mims, Tobenna       10AmazingYaksTrudgingSheepishly</code></pre>
-</div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Outputen viser en liste bestående av alle pakkene til 5 største, valgt ut av meg selv. Disse er grunnstenene. Hver pakke representerer en del av Data Science, hvor <code>knitr</code> og <code>rmarkdown</code> til sammen står for <strong><code>markdown</code></strong> og <strong><code>HTML</code></strong> mulighetene. I praksis gjør det R om til en komplett løsning i R studio. Programmering, analyse og rapportering i alle formater kan gjøres ett og samme sted.</p>
+<p>Nå har jeg en data.frame tilgjenglig med kolonner av undersøkelser jeg kan bruke. Funker koden på disse dataene, vil det funke uansett.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

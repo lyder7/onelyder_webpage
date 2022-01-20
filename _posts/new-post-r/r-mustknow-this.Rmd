@@ -26,17 +26,14 @@ De mest kjente pakkene er muligens **`dplyr`** og **`purrr`**, som brukes til da
 [Hadley Whickham](https://hadley.nz/) fra R studio er sjefen av ingeniørteamet som har bygget, utvivklet og står nå for dokumentasjonen av pakken.
 På bare noen få år, har teamet laget flere tiltalls pakker som har endret R og R kode enormt, samt kvalitet på dokumentasjon tilgjenglig.
 
-Noen av nøkkel funskjonene er **`C++`** bridge mange av pakkene bruker.
-Dette åpner for en del *"under the hood*" saker skjer, som eksempelvis at oppgaver som er klart med effektivt å løse i en **`C++`** compeiler, blir nettopp det. Uten at vi trenger å åpne en ny *IDE* og skrive delen av scriptet i en annen fil, for og tilslutt lage et script som har i oppgave å sy i sammen **`R scriptet`** og **`C++`** fila så de tilsammen blir et helt scipt.
-Neida..
+## Tidyverse
 
-Alt dette er bygget inn automatisk, på en effektiv måte slik at større opgpaver og raskere utførelse har blitt mulig.
-Generelt kan vi si at R har utviklet seg til å komme i kontantk med mange programmeringspråk.
-Av den grunn tar den nytte av, og bruker de beste løsnignene der mulig, ved å kommunisere og være tilgjenglig til kommunikasjon med andre programmerings språk.
+Under lager jeg en data.frame bestående av pakkene som inngår i tidyverse.
+I tilegg lager jeg en kolonne som viser indeksen til pakken.
+Under kjøres det kode som lager denne tabellen for oss.
+Her får du en oversikt over alle pakkene:¨
 
-Under lager jeg en data.frame bestående av pakkene, same en rad med nummereringenen.
-
-```{r }
+```{r tidyverse}
 
 v <- tidyverse_packages()
 df <- data.frame(package = v,
@@ -46,7 +43,24 @@ df
 
 **`xml2`**, **`jsonlite`**, **`rstudioapi.`**
 
+Noen av nøkkel funskjonene er **`C++`** bridge mange av pakkene bruker.
+Dette åpner for en del *"under the hood*" saker skjer, som eksempelvis at oppgaver som er klart med effektivt å løse i en **`C++`** compeiler, blir nettopp det. Uten at vi trenger å åpne en ny *IDE* og skrive delen av scriptet i en annen fil, for og tilslutt lage et script som har i oppgave å sy i sammen **`R scriptet`** og **`C++`** fila så de tilsammen blir et helt scipt.
+Neida..
+
+Alt dette er bygget inn automatisk, på en effektiv måte slik at større opgpaver og raskere utførelse har blitt mulig.
+Generelt kan vi si at R har utviklet seg til å komme i kontantk med mange programmeringspråk.
+Av den grunn tar den nytte av, og bruker de beste løsnignene der mulig, ved å kommunisere og være tilgjenglig til kommunikasjon med andre programmerings språk.
+
 ## Shiny
+
+Shiny er ett av de nyere hoved-varemerkene R-studio fronter.
+Shiny er et rammeverk som gjør det mulig å programmere applikasjoner, altså apper, med R kode.
+I prinsippet kan disse appene ha alle mulig formål og funksjonaliteter.
+Det er sterke forbindelser til CSS, Java, HTML og andre vertkøy for å gi Shiny appen en UI man forventer.
+
+Under lager jeg en liste bestående av alle funksjonene i de 5 størte pakkene i R.
+Disse tilsammen gjør R om til et sterkt og riktig språk.
+¨
 
 ```{r list}
 library(pacman)
@@ -67,13 +81,11 @@ list %>%
 
 Outputen viser en liste bestående av alle pakkene til 5 største, valgt ut av meg selv.
 Disse er grunnstenene.
-Hver pakke representerer en del av data science hver, hvor knitr og rmarkdown til sammen står for **`markdown`** og **`HTML`** mulighetene.
+Hver pakke representerer en del av Data Science, hvor `knitr` og `rmarkdown` til sammen står for **`markdown`** og **`HTML`** mulighetene.
+I praksis gjør det R om til en komplett løsning i R studio.
+Programmering, analyse og rapportering i alle formater kan gjøres ett og samme sted.
 
-1.  <div>
-
-    </div>
-
-```{r randomDF}
+```{r randomDF, eval=FALSE, include=FALSE}
 library(anonymizer)
 library(randomNames)
 library(ids)

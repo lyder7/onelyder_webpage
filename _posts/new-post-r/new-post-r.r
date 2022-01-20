@@ -24,3 +24,14 @@ df <- data.frame(Date = as.Date("2022-01-10") + 0:4,
                  TinyNumber = runif(5)/1e+09, 
                  stringsAsFactors = FALSE)
 
+klienter <- as.vector(read.csv("data_raw/klientliste.csv"))
+
+klienter %>% 
+  filter(manager == "Name 1") %>% 
+  arrange(hours)
+
+
+felles <- data.frame(
+  klienter = klienter, 
+  Status = paste("$")
+)
