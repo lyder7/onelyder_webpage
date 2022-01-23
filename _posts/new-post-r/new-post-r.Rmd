@@ -1,0 +1,150 @@
+---
+title: "Sammendrag Funksjoner i R"
+author: "Lyder @ onelyder"
+output: 
+  html_document: 
+    toc: yes
+    highlight: tango
+    css: strapless.css
+    df_print: kable
+bibliography: bib/references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Oversikt over sentrale tidyverse pakker. Kartlegge bruksområder.
+
+### Basis: Vektorer & strukturer i R
+
+Konsepter du må forstå eller akseptere for å beherske funksjoner, loops og representative opperasjoner med R kode.
+Uansett hvor kompleks en funksjon eller script fremstår, vil det i bunn og grunn bestå av mange sekvenser av relativt simple og "enkle" argumenter og funksjoner fra basisen.
+De absolutt viktigste og mest kritiske tar vi for oss nå.
+Lær dem!
+
+[jennybc.github.io/purrr-tutorial](https://jennybc.github.io/purrr-tutorial/)
+
+-   **Vector\
+    **~Samme klasse, en eller flere.~
+
+-   **Data.frame\
+    **~Samling av flere vektorer, som vi kaller kollonner, bestående av samme eller ulike type klasser i hver vetkor/kolonne.~
+
+-   **List\
+    **~Flere eller samme klasse i vektorene, kompleks.~
+
+### Basis: String funksjoner sentrale{.ul}[^1]
+
+[^1]: Brukes inne i funksjoner gjennom å printe feks navnet til en funksjon, opperasjon eller indeks som referanse.
+
+Brukes ofte i funksjoner til å printe feks navnet til en funksjon, operasjon eller indeks som referanse.
+Lek litt med disse og forstå hva slags type output paste og past0 lager.
+[^2]
+
+[^2]: String manipulator.
+    Typiske oppgaver som slå sammen to navn, separere ett ord til to ord, skille to ord med en valgt symbol "\\ " etc. er eksempel på scenarioer disse brukes.
+
+`paste()`
+
+`paste0()`
+
+## Loops
+
+[Eksempel purrr](https://www.r4epi.com/using-the-purrr-package.html)
+
+Eksempelet under viser et vanlig scenario hvor loops vil være naturlig å bruke.
+Målet er å telle antall bokstaver i hvert navn i vektoren "names".\
+Videre følger vi god praksis ved å gjøre klar objektet resultatene skal lagres i.
+I dette tilfellet er det antall bokstaver i hvert navn.
+
+```{r eval=FALSE}
+navn <- c("Lyder", "Aleksander", "Mathisen")
+n_ord <- vector("double", length(navn)) # Expecting double
+```
+
+Videre lager vi en loop som utfører opperasjonen i en bolk.
+Årsaken til at man bruker loops er fordi man ønsker å unngå repitasjon.
+Det er ikke bra å gjenta seg selv.
+Derfor skriver man heller en loop som gjør alt vi ønsker i en bolk slik som under.
+
+```{r eval=FALSE}
+for(i in seq_along(navn)) {
+  n_ord[[i]] <- stringr::str_extract(navn[[i]], "\\w") # Returns character
+}
+
+n_ord
+```
+
+For hvert element `i`, i antall sekvenser i vektoren $`navn`$, utfør funksjonen `str_extraxt()` på objektet `navn[]`indeks `i`, lagre resultatet i objektet $`n_ord`$ indeks $`i`$.
+
+Resultatet er altså: vi får et objekt n_ord bestående av antall bokstaver (resultatet) for hvert navn.
+I dette tilfellet er det 3 navn, som bestyr 3 resultater.
+
+**OBS FEIL I EKSEMPLET**
+
+### purrr::map
+
+Eksemplet over viser hvordan loops kan utføres.
+Dette er den tradisjonelle måten å gjøre det på.
+Man kaller det ofte "basis R forloops".
+
+Konseptet loops[^3] innenfor programmering generelt sett er et viktig og veletablert tema eller konsept.
+For språk som C, C# og C++ eller Python er loops spessielt "the way" og på mange måter en del av flowen i spåket for de som bruker det som deres nummer1 språk.
+
+[^3]: loops, foreloops, whileloops, nestetloops etc.
+
+C++ er feks kjent som det aller raskeste og effektive språket.
+Særlig for oppgaver hvor loops er nyttig.
+For R derimot er det spesielt for kritikere av R, et godt etablert sannhet at loops går treigt.
+Sammenlignet med da feks C++.
+
+Så klart har det i realiteten ingenting å si for små prosjekter eller analyser.
+Men satt i perspektiv; det er ikke effektivt å skrive loops i R.
+
+Årsaken er kompleks og mer sammensatt til å forklare det enkelt og intuitivt.
+Men det har rot i hvordan syn-tak-strukturen i R er bygget opp, og antall linjer/bokstaver, samt objekter som er nødvendig å skrive for å utføre funksjoner eller representative operasjoner.
+
+Løsningen på dette problemet er `purrr` fra `tidyverse` pakken for R.
+
+purrr er en pakke som tar for seg funksjonell programmering spesifikt med R-kode.
+Pakken har utviklet konsepter og metoder som gjør at vi faktisk kan utføre oppgaver og operasjoner hvor loops i utgangspunktet hadde vært en del av løsningen.
+Du kan betrakte det som en måte å gjøre loops på, uten å skrive loops.
+Merkelig nok..
+
+Det du isteden burde gjøre for å forstå dette konseptet er å tenkte på representative operasjoner som skal gjøres for alle elementene i objektet.
+Altså at noe skal utføres flere ganger på flere ulike elementer innenfor et objekt vi undersøker/analyserer.
+[^4]
+
+[^4]: Prøv å unngå vrangforestillinger og missforståelser rundt ordet "loops".
+    Tenk på det som noe vi skal utføre flere ganger på forskjellige enheter.
+
+### map: forskjeller
+
+`i in seq_along(object)` erstattes med `.x`
+
+map utfører loopen med hensyn til hva slags class .x er.
+
+-   Vektor, data.frame eller liste er derfor av betydning!
+
+`{ body }`erstattes med `.f`
+
+-   funksjonen eller oppgaven som skal utføres
+
+`map()`er hovedfunksjonen.
+
+Men det er noen hjelpere for å garantere/kontrollere output:
+
+`map_dbl()`
+
+`map_chr()`
+
+`map_int()`
+
+`map_dfr()`
+
+`walk()`
+
+# Appendix
+
+# Refernaser
