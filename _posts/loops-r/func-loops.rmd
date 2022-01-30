@@ -1,7 +1,7 @@
 ---
 title: "Loops, map og funksjoner i R"
 description: | 
-  Excel-relaterte problemstillinger med R i R-studio. 
+  Excel relaterte problemstillinger med R i R-studio. 
 author: 
   - name: Lyder Aleksander Mathisen
     url: https://onelyder.com/posts/func-loops/
