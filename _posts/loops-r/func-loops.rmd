@@ -1,22 +1,22 @@
 ---
-title: "Loops, map og funksjoner i R"
+title: "Loops i F"
 description: | 
-  Excel relaterte problemstillinger med R i R-studio. 
+  Purrr::map(). 
 author: 
   - name: Lyder Aleksander Mathisen
-    url: https://onelyder.com/posts/func-loops/
+    url: https://onelyder.com/posts/loops-in-r/
 date: "`r Sys.Date()`"
 output:
   distill::distill_article:
     toc: true
     toc_depth: 3
     toc_float: true
-    css: small-spacing.css
+    css: strapless.css
 ---
 
-# Notater fra Bruno Rodriges
+# Funksjonell programmering i R (?) 
 
-Denne lille spalten er inspirert av Bruno Rodriguez sin video [Don't write loops in R](https://www.youtube.com/watch?v=3xIKZbZKCWQ&t=0s).
+Inspirert av Bruno Rodriguez sin video [Don't write loops in R](https://www.youtube.com/watch?v=3xIKZbZKCWQ&t=0s).
 
 Videre har jeg fylt på med noen ideer og tanker jeg har om temaet.
 Men først laster jeg inn pakkene som trengs for å kjøre igjennom det jeg har tenkt å vise frem.

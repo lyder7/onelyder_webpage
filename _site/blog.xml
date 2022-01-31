@@ -12,14 +12,22 @@
       <link>https://www.onelyder.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 30 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Jan 2022 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Loops, map og funksjoner i R</title>
+      <title>Docker i R</title>
+      <dc:creator>Lyder Aleksander Mathisen</dc:creator>
+      <link>https://www.onelyder.com/posts/docker-input </link>
+      <description>Ja du hørte rikig.</description>
+      <guid>https://www.onelyder.com/posts/docker-input </guid>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Loops i F</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
       <link>https://www.onelyder.com/posts/loops-r</link>
-      <description>Excel-relaterte problemstillinger med R i R-studio.</description>
+      <description>Purrr::map().</description>
       <guid>https://www.onelyder.com/posts/loops-r</guid>
-      <pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Gitlab</title>
