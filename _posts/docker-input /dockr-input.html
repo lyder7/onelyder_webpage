@@ -89,30 +89,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>Docker i R</title>
 
-  <meta property="description" itemprop="description" content="Ja du hørte rikig." />
+  <meta property="description" itemprop="description" content="Docker container config. Linux Kubuntu env." />
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2022-01-31" />
-  <meta property="article:created" itemprop="dateCreated" content="2022-01-31" />
+  <meta property="article:published" itemprop="datePublished" content="2022-02-01" />
+  <meta property="article:created" itemprop="dateCreated" content="2022-02-01" />
   <meta name="article:author" content="Lyder Aleksander Mathisen" />
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Docker i R" />
   <meta property="og:type" content="article" />
-  <meta property="og:description" content="Ja du hørte rikig." />
+  <meta property="og:description" content="Docker container config. Linux Kubuntu env." />
   <meta property="og:locale" content="en_US" />
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary" />
   <meta property="twitter:title" content="Docker i R" />
-  <meta property="twitter:description" content="Ja du hørte rikig." />
+  <meta property="twitter:description" content="Docker container config. Linux Kubuntu env." />
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Docker i R"]},{"type":"character","attributes":{},"value":["Ja du hørte rikig. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Lyder Aleksander Mathisen"]},{"type":"character","attributes":{},"value":["https://onelyder.com/posts/docker-input/"]}]}]},{"type":"character","attributes":{},"value":["2022-01-31"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["small-spacing.css"]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Docker i R"]},{"type":"character","attributes":{},"value":["Docker container config. Linux Kubuntu env. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Lyder Aleksander Mathisen"]},{"type":"character","attributes":{},"value":["https://onelyder.com/posts/docker-input/"]}]}]},{"type":"character","attributes":{},"value":["2022-02-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["small-spacing.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1460,7 +1460,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Docker i R","description":"Ja du hørte rikig.","authors":[{"author":"Lyder Aleksander Mathisen","authorURL":"https://onelyder.com/posts/docker-input/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-01-31T00:00:00.000+01:00","citationText":"Mathisen, 2022"}
+{"title":"Docker i R","description":"Docker container config. Linux Kubuntu env.","authors":[{"author":"Lyder Aleksander Mathisen","authorURL":"https://onelyder.com/posts/docker-input/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-02-01T00:00:00.000+01:00","citationText":"Mathisen, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1473,13 +1473,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Docker i R</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Ja du hørte rikig.</p></p>
+<p><p>Docker container config. Linux Kubuntu env.</p></p>
 </div>
 
 <div class="d-byline">
   Lyder Aleksander Mathisen <a href="https://onelyder.com/posts/docker-input/" class="uri">https://onelyder.com/posts/docker-input/</a> 
   
-<br />2022-01-31
+<br />2022-02-01
 </div>
 
 <div class="d-article">
@@ -1502,24 +1502,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </code></pre>
 </div>
 </div>
+<h1 id="docker">Docker</h1>
+<p><strong>NB</strong> <em>Artikkel ikke fullstendig versjon. Denne versjonen er kun utkast.</em></p>
+<p>I dette dokumentet vil jeg fortelle om hvordan jeg kom i gang med <code>Docker</code>. Fra en utrolig bra skrevet vignette som tar for seg hele installasjonen via terminalen på en Linux Ubuntu maskin. Resultatet er at jeg nå har <code>Docker</code> tilgjengelig, jeg kan de aller mest nødvendige kommandoene og jeg har laget en <code>Docker</code> Header bestående av en Ubuntu Distribusjon med <code>node.js</code>. Alt dette har jeg også klart å pushe til repoen på min <code>Docker</code> Hub konto.</p>
+<p>Artikkelen jeg fulgte, <a href="https://linuxhint.com/install_configure_docker_ubuntu/">install configure docker ubuntu</a>, er skrevet av linuxhint.com som forøvrig har utrolig bra artikler og veiledninger. Ganske ofte foretrekker jeg lese disse enn å se en Youtube video.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://fs.r-lib.org">fs</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/trinker/pacman">pacman</a></span><span class="op">)</span>
-<span class="co">#library(arrow)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://reprex.tidyverse.org">reprex</a></span><span class="op">)</span>
 </code></pre>
 </div>
 </div>
-<h1 id="docker">Docker</h1>
-<p><strong>NB</strong> <em>Artikkel ikke fullstendig versjon. Denne versjonen er kun utkast.</em></p>
-<p>I dette dokumentet vil jeg fortelle om hvordan jeg kom i gang med <code>Docker</code>. Fra en utrolig bra skrevet vignette som tar for seg hele installasjonen via terminalen på en Linux Ubuntu maskin. Resultatet er at jeg nå har <code>Docker</code> tilgjengelig, jeg kan de aller mest nødvendige kommandoene og jeg har laget en <code>Docker</code> Header bestående av en Ubuntu Distribusjon med <code>node.js</code>. Alt dette har jeg også klart å pushe til repoen på min <code>Docker</code> Hub konto.</p>
-<p>Artikkelen jeg fulgte, <a href="https://linuxhint.com/install_configure_docker_ubuntu/">install configure docker ubuntu</a>, er skrevet av linuxhint.com som forøvrig har utrolig bra artikler og veiledninger. Ganske ofte foretrekker jeg lese disse enn å se en Youtube video.</p>
 <h2 id="hvorfor-docker">Hvorfor Docker?</h2>
-<p>Årsaken til at jeg lastet ned <code>Docker</code> er fordi jeg leser en bok hvor forfatteren eksplisitt ber alle som leser boka om å bruke <code>Docker</code>. Det er fordi <code>Docker</code> bringer noen helt unike egenskaper, som gjør miljøet du koder i, og alle elementene som filer, programmer, mapper etc. nødvendig for prosjektet ditt tilgjengelig. Det virker på mange måter som en <code>viritual box machine</code>.</p>
-<p>Uten at jeg skal dra den for langt med å uttale meg om relativt komplekse temaer, vil jeg heller fokusere på hvordan jeg lastet <code>Docker</code> ned, hvilke fordeler jeg spesifikt vil ha nytte for med <code>Docker</code>, og påpeke hva jeg personlig oppfatter som viktig i installasjons prosessen.</p>
+<p>Årsaken til at jeg lastet ned <code>Docker</code> er fordi jeg leser en bok hvor forfatteren eksplisitt ber alle som leser boka om å bruke <code>Docker</code>. Det er fordi <code>Docker</code> bringer noen helt unike egenskaper, som gjør miljøet man koder i, og alle elementene optimale. Som blant annet filer, programmer, mapper etc. Det virker på mange måter som en <code>viritual box machine</code>.</p>
+<p>Jeg skal ikke dra den for langt med å uttale meg om relativt komplekse temaer, vil jeg heller fokusere på hvordan jeg lastet <code>Docker</code> ned, hvilke fordeler jeg spesifikt vil ha nytte for med <code>Docker</code>, og påpeke hva jeg personlig oppfatter som viktig i installasjons prosessen.</p>
 <p>Min anbefaling er å bruke artikkelen til å gjennomføre de første stegene i starten. Det er i utgangspunktet rett frem og simpelt.</p>
 <h2 id="hva-jeg-mener-er-viktig">Hva jeg mener er viktig</h2>
 <p>Når du har lastet ned <code>Docker</code>, og den er tilgjengelig så er det et par ting du kan gjøre.</p>
@@ -1537,7 +1536,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> COMMAND <span class="at">--help</span></span></code></pre></div>
 </div>
 <p><strong>Viktig presisering:</strong> Etter man har lastet ned <code>Docker</code> og skal bruke det fremover, så må du logge den inn som admin i systemet.</p>
-<p>Du må bli en <code>Sudu.</code> Du kan enkelt gjøre det med <code>su - {\$USER}</code> eller <code>su - \${USER}</code> avhengig om du bruker <code>fish</code> eller ikke som shell.</p>
+<p>Du må være/bli en <code>Sudu.</code> Du kan enkelt gjøre det med <code>su - {\$USER}</code> eller <code>su - \${USER}</code> avhengig om du bruker <code>fish</code> eller ikke som shell.</p>
 <p>Da vil kommandoer som dette fungere:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ducker</span> search ubuntu </span></code></pre></div>
@@ -1562,7 +1561,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       Europe/Oslo
- date     2022-01-31
+ date     2022-02-01
  pandoc   2.14.0.3 @ /usr/lib/rstudio/bin/pandoc/ (via rmarkdown)
 
 ─ Packages ─────────────────────────────────────────────────────────

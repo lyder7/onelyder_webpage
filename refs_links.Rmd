@@ -1,15 +1,12 @@
 ---
 title: "Referanser til syke ting"
+author:
+  - name: Lyder Aleksander Mathisen
+date: 10-21-2021
 output:
   distill::distill_article:
-    toc: true
     toc_depth: 3
-    css: css/small-spacing.css
-    self_contained: false
-# creative_commons: CC BY-NC
-editor_options: 
-  markdown: 
-    wrap: 72
+    toc_float: true
 ---
 
 # myweblibrary 4later
@@ -178,21 +175,21 @@ editor_options:
 
 ##### **Andre rapport/nettside relaterte pakker**
 
--   `bs4 # bootstrap theme bslib # themes`
+-   `bs4 bootstrap theme bslib themes`
 
--   `reprex # downlit # themes destill/`
+-   `reprex  downlit  themes destill/`
 
 -   `rmkardown`
 
--   `web tidytex # latex pack`
+-   `web tidytex  latex pack`
 
--   `for R articls # article templates`
+-   `for R articls  article templates`
 
 -   `rmarkdown`
 
--   `postcards # themes`
+-   `postcards themes`
 
--   `destill/ ### convert an R Markdown script into a dashboard`
+-   `destill convert an R Markdown script into a dashboard`
 
 -   `shiny`
 
@@ -242,7 +239,7 @@ editor_options:
     -   R-workbooks:
         [\<https://sites.google.com/view/davidgabauer/use-rpython>](https://sites.google.com/view/davidgabauer/use-rpython){.uri}
 
-        ~**Notes:** I have testet some of the source files and scripts, and it looks very nice! I finally have found a script that cointains functions and setups necesssary for forcasting matrix\`s over differant time-periods. I have stored the files on my mac-PC. `ConnectednessApproach-master` & `firefox_files` & `dy2012_copi` are foldes containing source code on my desktop.~
+
 
 -   **`ropensci`**
 
@@ -275,7 +272,6 @@ editor_options:
     -   R-workbooks:
         <https://sites.google.com/view/davidgabauer/use-rpython>
 
-        ~**Notes:** I have testet some of the source files and scripts, and it looks very nice! I finally have found a script that cointains functions and setups necesssary for forcasting matrix\`s over differant time-periods. I have stored the files on my mac-PC. `ConnectednessApproach-master` & `firefox_files` & `dy2012_copi` are foldes containing source code on my desktop.~
 
 -   **`ropensci`**
 
@@ -286,7 +282,6 @@ editor_options:
 
     <!--# break -->
 
-    ~Here I will store packages I personally find usefull. These packages will in general relate to datasience, finance and time seres modelling. But also r-markdown and *reproducable reaserch document* packages.~
 
     **Material**
 
@@ -583,4 +578,4 @@ pacman::p_load(
 )
 ```
 
-# 
+

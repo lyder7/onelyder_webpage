@@ -1,7 +1,7 @@
 ---
 title: "Docker i R"
 description: | 
-  Ja du hørte rikig. 
+  Docker container config. Linux Kubuntu env. 
 author: 
   - name: Lyder Aleksander Mathisen
     url: https://onelyder.com/posts/docker-input/
