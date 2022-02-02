@@ -1,17 +1,24 @@
 ---
 title: "Sammendrag Funksjoner i R"
 author: "Lyder @ onelyder"
+title: "Oppbevaring av sykt matriale"
+description: |
+  Vektorer, lister, loops og purrr. En oversikt over sentrale emner.  
+author:
+ - name: Lyder Aleksander Mathisen 
 output: 
-  html_document: 
-    toc: yes
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
     highlight: tango
     css: strapless.css
-    df_print: kable
-bibliography: bib/references.bib
+#bibliography: bib/references.bib
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo=TRUE, 
+                      eval=FALSE)
 ```
 
 ## Oversikt over sentrale tidyverse pakker. Kartlegge bruksområder.
@@ -25,14 +32,17 @@ Lær dem!
 
 [jennybc.github.io/purrr-tutorial](https://jennybc.github.io/purrr-tutorial/)
 
--   **Vector\
-    **~Samme klasse, en eller flere.~
+-   **Vector
 
--   **Data.frame\
-    **~Samling av flere vektorer, som vi kaller kollonner, bestående av samme eller ulike type klasser i hver vetkor/kolonne.~
+    **~Samme klasse, en eller flere.
 
--   **List\
-    **~Flere eller samme klasse i vektorene, kompleks.~
+-   **Data.frame
+
+    **~Samling av flere vektorer, som vi kaller kollonner, bestående av samme eller ulike type klasser i hver vetkor/kolonne.
+
+-   **List
+
+    **Flere eller samme klasse i vektorene, kompleks.
 
 ### Basis: String funksjoner sentrale{.ul}[^1]
 
@@ -72,7 +82,6 @@ Derfor skriver man heller en loop som gjør alt vi ønsker i en bolk slik som un
 for(i in seq_along(navn)) {
   n_ord[[i]] <- stringr::str_extract(navn[[i]], "\\w") # Returns character
 }
-
 n_ord
 ```
 
