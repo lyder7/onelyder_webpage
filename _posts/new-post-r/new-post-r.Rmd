@@ -1,6 +1,4 @@
 ---
-title: "Sammendrag Funksjoner i R"
-author: "Lyder @ onelyder"
 title: "Oppbevaring av sykt matriale"
 description: |
   Vektorer, lister, loops og purrr. En oversikt over sentrale emner.  
