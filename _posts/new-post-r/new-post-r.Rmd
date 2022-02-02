@@ -1,17 +1,22 @@
 ---
 title: "Sammendrag Funksjoner i R"
-author: "Lyder @ onelyder"
+description: |
+  Vektorer, lister, loops og purrr. En oversikt over sentrale emner.  
+author:
+ - name: Lyder ~ onelyder
 output: 
-  html_document: 
-    toc: yes
-    highlight: tango
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    highlight: kate
     css: strapless.css
-    df_print: kable
-bibliography: bib/references.bib
+#bibliography: bib/references.bib
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo=TRUE, 
+                      eval=FALSE)
 ```
 
 ## Oversikt over sentrale tidyverse pakker. Kartlegge bruksområder.
@@ -19,22 +24,27 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Basis: Vektorer & strukturer i R
 
 Konsepter du må forstå eller akseptere for å beherske funksjoner, loops og representative opperasjoner med R kode.
+
 Uansett hvor kompleks en funksjon eller script fremstår, vil det i bunn og grunn bestå av mange sekvenser av relativt simple og "enkle" argumenter og funksjoner fra basisen.
 De absolutt viktigste og mest kritiske tar vi for oss nå.
+
 Lær dem!
 
 [jennybc.github.io/purrr-tutorial](https://jennybc.github.io/purrr-tutorial/)
 
--   **Vector\
-    **~Samme klasse, en eller flere.~
+-   **Vector**
 
--   **Data.frame\
-    **~Samling av flere vektorer, som vi kaller kollonner, bestående av samme eller ulike type klasser i hver vetkor/kolonne.~
+    Samme klasse, en eller flere.
 
--   **List\
-    **~Flere eller samme klasse i vektorene, kompleks.~
+-   **Data.frame**
 
-### Basis: String funksjoner sentrale{.ul}[^1]
+    Samling av flere vektorer, som vi kaller kollonner, bestående av samme eller ulike type klasser i hver vetkor/kolonne.
+
+-   **Liste**
+
+    Flere eller samme klasse i vektorene, kompleks.
+
+### Basis: String funksjoner sentrale[^1]
 
 [^1]: Brukes inne i funksjoner gjennom å printe feks navnet til en funksjon, opperasjon eller indeks som referanse.
 
@@ -48,6 +58,152 @@ Lek litt med disse og forstå hva slags type output paste og past0 lager.
 `paste()`
 
 `paste0()`
+
+## Topics
+
+-   Basis Konsepter
+-   Viktige basis konsepter
+-   Symboler
+-   Logiske sjekk-punkter
+
+## Viktige basis konsepter
+
+Selv om `tidyverse` og alle dens fantastiske hjelpemidler til R brukere, er det alikevel etter min mening viktig å lære de fundamentale rammene.
+Dette kalles "**base R**".
+
+Funksjonene er standard og tilgjengelig for alle som laster ned R.
+Det er ikke behov for å laste ned base R, slik man må gjøre med andre pakker.
+For base R er kommandoene allerede tilgjengelig og kan brukes.
+
+Det er forøvrig flere standard-pakker som følger med. `utils`, `stats`, `methods`, `grDevices`, `graphics` og `datasets`.
+
+Fra `R-studio` kan man få en oversikt over pakkene, og se hva dem inneholder.
+Hvis man går til vinduet og klikker på menyen som heter "Enviroment".
+Der vil det stå "*Global Enviorment*".
+Trykk på rull-gardinen og det vil komme frem en oversikt over pakkene jeg nevnte over.
+Velg feks `base`.
+
+Det er mulig å redigere hvordan informasjonen vises.
+Helt til høyre i vinduet er det en ny rullegardin med en pil som peker ned, siden av oppdater-symbolet.
+Grid og List er alternativene.
+Personlig foretrekker jeg den første, fordi den viser informasjon over flere kolonner.
+
+Fra oversikten kan du undersøke hvilke funksjoner som er tilgjengelig.
+Man kan også se kilde-koden.
+Muligheten til å se hvordan funksjonene er bygget opp er utrloig nyttig når man utvikler ferdighetene innenfor programmering.
+Kilde koden gir muligens svaret man trenger for å konkretisere eller gi en klar definisjon på hvordan funksjonen/kommandoen fungerer.
+
+[Link Base R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html)
+
+Inne i R-studio, finn pakken `library`.
+Åpne funksjonen.
+
+Det gir et perspektiv om hva som ligger bak funksjonene som brukes regelmessig.
+
+## Symboler
+
+Dette er notasjoner og syboler det er nyttig å lære.
+Bruken av disse kan potensielt gjøre funksjonene du skriver enda mer dynamiske og sterke.
+Her er noen av de symbolene jeg personlig ønsker å lære mer om:
+
+do.call(function_name, object_name)
+
+-   `%>%` --> margitrrr.
+    Chain-operator.
+
+-   `%in%`
+
+-   `\n`
+
+-   `\t`
+
+-   `[[ ]]` --> vector
+
+-   `[ ]` --> list
+
+## Logiske sjekk-punkter
+
+`ifelse` base
+
+`if_else` dplyr
+
+`all()` base.
+Kan brukes på flere måter:
+
+alene all(logical0==)) if(all(0)) --> Hvis alle verdiene definert av funksjonenen så skjer:
+
+```{r #if(all)}
+object_a = NULL
+object_b = NULL
+if(all(object_a == object_b)){
+print("the objects are the same")
+} else {
+ peint("they are not true")
+}
+```
+
+NB!!
+Husk at vi kan tweake funksjonen ved
+
+```{r if(!all}
+object_a = NULL
+object_b = NULL
+if(!all(object_a == object_b)){
+print("hello worlf")
+} else {
+ print("statemant not true")
+}
+```
+
+Det er også mulig å gjøre flere essesnielle justeringer av funksjonen.
+Over skrev vi kun `else`, som vil si at hvis if-statementen først resulterer i `FALSE`, så vil den gå over til neste oppgave som er definert etter
+
+else {
+
+} \`\`
+
+Hvis vi legger inn bare en liten endring og skriver `else if ()` gjør vi slik at programmet vurderer en ny logisk test før den utfører en spesiell type oppgave.
+Dette er for å kontrollere funksjonens rute.
+Ofte er det nødvendig med avklaringer, og dersom noe aviker (som det testest for i if utsagnene) vil programmet rettet det opp.
+
+Dette kalles control flow innenfor funksjonell programmering.
+Her er noen snipps som viser `else if` varianten:
+
+```{r else if, eval=FALSE}
+object_a = NULL
+object_b = NULL
+# 1
+if(all(object_a == object_b)){
+print("the objects are the same")
+} else if{
+ print("they are not true")
+}
+object_a = NULL
+object_b = TRUE
+# 2
+ if(!all(object_a == object_b)){
+print("hello worlf")
+} else if( {
+ print("statemant not true")
+}
+```
+
+NB else må vøre på samme linje som den siste brakken { for at R skal kunne avaluere den.
+Hvis du skriver
+
+[Logic checkpoints](https://stackoverflow.com/questions/25640161/r-how-to-test-for-character0-in-if-statement)
+
+Bygge funksjoner er alfa-omega med koding.
+Det å kunne lage- og bygge opp sine egne funksjoner er en superkraft.
+I utgangspunktet kan man fint bruke funksjoner som allerede finnes i pakker.
+Som regel er de aller fleste pakkene innenfor ulike fagfelt/emner store i omfang, slik at de dekker de fleste verktøyene man vil trenge for en analyse feks.
+
+Men sannsynligheten for at et problem som ikke helt kan løses med pakken du bruker, er funksjonsbygging løsningen!
+
+Konseptet om at det er mulig å gi et obejekt `x` `<-` `"hva_som_helst"`.
+Altså, vi kan lagre tekst, tall eller funksjoner etc. inne i en sytste-variabel vi kaller `x`.
+Det som gjør det kanskje enda mer forvirrende er at hvis vi lagrer variabelen som en funksjon, så kan den funksjonen i prinsippet bestå av hva som helst.
+Det er dette som gjør det fantastisk.
 
 ## Loops
 
@@ -72,7 +228,6 @@ Derfor skriver man heller en loop som gjør alt vi ønsker i en bolk slik som un
 for(i in seq_along(navn)) {
   n_ord[[i]] <- stringr::str_extract(navn[[i]], "\\w") # Returns character
 }
-
 n_ord
 ```
 
@@ -83,7 +238,7 @@ I dette tilfellet er det 3 navn, som bestyr 3 resultater.
 
 **OBS FEIL I EKSEMPLET**
 
-### purrr::map
+### `purrr::map`
 
 Eksemplet over viser hvordan loops kan utføres.
 Dette er den tradisjonelle måten å gjøre det på.
@@ -119,7 +274,7 @@ Altså at noe skal utføres flere ganger på flere ulike elementer innenfor et o
 [^4]: Prøv å unngå vrangforestillinger og missforståelser rundt ordet "loops".
     Tenk på det som noe vi skal utføre flere ganger på forskjellige enheter.
 
-### map: forskjeller
+### `purrr::map`: *forskjeller*
 
 `i in seq_along(object)` erstattes med `.x`
 
@@ -144,6 +299,334 @@ Men det er noen hjelpere for å garantere/kontrollere output:
 `map_dfr()`
 
 `walk()`
+
+# Funksjonell programmering i R
+
+## Tidyverse
+
+Purrr er en pakke fra Tidyverse paradigme som hjelper til med funksjonelle operasjoner.
+Ved bruk av *tidy* prinsippene hjelper purrr oss med å utføre operasjoner på en effektiv måte.
+Alternativet er å skrive egne funksjoner.
+Risikoen ved egne funksjoner er at outputen er kanskje riktig for den spesifikke settingen funksjonen lages.
+Men over tid og ved gjenbruk på andre data sett kan den gi resultater som muligens er feil.
+I dette kapittelet er formålet å bli bedre kjent med purrr og se på scenarioer hvor purrr kan være et nyttig hjelpemiddel.
+
+### Oppsett
+
+Til å starte med laster vi inn tidyverse.
+Alternativ er det også mulig å laste inn purrr ved `library(purrr)`.
+
+```{r message=FALSE, warning=FALSE, echo=TRUE}
+library(tidyverse)
+```
+
+Videre trenger vi et datasett som vi kan bruke underveis.
+I `tidyverse` pakken finnes et datasett som heter *iris*.
+Dersom tidyverse er lastet inn er det mulig å referere til datasettet.
+Det har vi allerede gjort, og av den grunn lagrer jeg iris under navnet `data_iris`.
+Se kodesnipp under:
+
+```{r iris, message=FALSE, warning=FALSE, echo=TRUE}
+data_name <- iris %>% 
+  as_tibble()
+data_name 
+```
+
+Koden over viser hvordan data-settet "iris" kan refereres til etter at tidyverse er lastet inn.
+Videre ser vi at iris blir lagret i en variabel vi kaller *data_name*.
+I prinsippet kunne vi valgt å "døpe" datasettet til noe annet.
+Og til slutt ser vi at de 10 første radene i datasettet kommer frem når vi skiver `data_name` til konsollen.
+Her er formålet å få et kjapt overblikk over hvordan datan ser ut.
+
+## Purrr
+
+### map
+
+For å bli kjent med data er det fra `base R` vanlig å utføre funksjonen `class()`.
+Den gir tilbake informasjon om hvilke klasser datasettet består av.
+Dersom vi utfører `class(data_name)` får vi som output *data.frame*.
+Det er fordi class() funksjonen kjøres på objektet *data_name* som helhet.
+Noen ganger kan det være nyttig å få informasjon om hver variabel, som blir det samme som hver kolonne i et data sett.
+
+En løsning er å gjøre slik:
+
+`class(class(data_name$Sepal.Length))` eller `class(data_name[,1])`.
+Ulempen med denne måten er at den er treg og lite effektiv.
+For å sjekke neste kolonne må vi skrive `class(data_name[,2])` etc. helt frem til vi har testet alle variablene vi er interessert i.
+I praksis vil det være alle kolonnene i et datasett.
+
+Med purrr pakken kan vi sjekke alle kolonne med en funksjon og en linje med kode.
+Tilbake gir den oss en vektor med resultatet fra alle variablene/ kolonnene i datasettet som vi har lagret som "data_name".
+Se under:
+
+```{r map_chr, echo=TRUE}
+map_chr(data_name, class)
+```
+
+Årsaken til at vi bruker `map_chr` er fordi outputen blir fremvist i et objekt lagret som "character" class.
+Til vanlig og som defoult lagres output fra map() funksjoner i lister.
+Det vil si at vi kan gjøre akkurat det samme med denne syntaksen:
+
+```{r map, echo=TRUE}
+map(data_name, class)
+```
+
+Men her får vi resultatet lagret i en liste.
+Lister er mer komplisert å jobbe med, og er generelt vanskeligere å referere til i etterkant.
+Derfor ønsker vi å gjøre det så enkelt som mulig, å dermed bruke `map_chr()` som lagrer det for oss i en `character` class.
+
+Vi kan også lagre outputen og referere til den i etterkant hvis vi trenger det. Under gjør vi eksakt samme operasjon, utfører *class()* funksjonen til alle variablene i datasettet *data_name*.
+Vi lagrer resultatet i *data_name_classes*.
+Videre bruker vi *pipe* fra *magrittr* til å utføre funksjonen `glimpse()` som gir oss en oppsummering-tabell av innholdet.
+Se under:
+
+```{r data_name_classes, echo=TRUE}
+data_name_classes <- map_chr(data_name, class)
+data_name_classes %>% 
+  glimpse()
+```
+
+Logikken med `map` er at den tar inn noen viktige input i funksjonen.
+Den etterspør `.x` og `.f`
+
+**.x** = en vektor som en funksjon skal utføres på
+
+**.f** = funksjonen som skal utføres.
+
+I vårt tilfelle er `.x = data_name` og `.f = class` .
+
+### imap, pmap
+
+### Funksjoner jeg har laget selv
+
+I denne delen tar jeg for meg egne funksjoner og skisser skrevet av meg selv.
+Målet er å videre uvikle dem og sette de til verks.
+
+```{r eval=FALSE}
+#Info om hvilken mappe data ligger i + navn p? sheets 
+path <- "data_raw/mussample_Hias_How2o_interim.xlsx"
+sheets <- readxl::excel_sheets(path)
+## Alle sheets i excelark er data.frames
+purrr::walk(
+  .x = excel_sheets(path),
+  .f = function(x) {
+    new_nm <- tolower(x)
+    assign(new_nm, read_excel(path, sheet = x), envir = .GlobalEnv)
+  }
+)
+```
+
+Bryte ned til flere deler er nok lurt å gjøre.\
+\
+1 består av data inn.
+Det kan være et excel ark med flere sheets som er aktuelt.
+Fra mitt eksempel kan det være regnskapsdata bestående av kolonner med tall, tekst og dato.
+Ofte er disse filene store for selskaper i en visse størrelser.
+Vi ønsker derfor å laste inn data slik at hver flik blir ett data.frame objekt i R, som kan brukes videre.
+
+```{r eval=FALSE}
+# nest kan være neste steg. HVer data.frame er ett element i samme liste. Bruke det til å refere til for en loop-opperasjon. 
+# Her er hva jeg tenker vist med en for looop:
+for(i in seq(walk_object)){
+  
+  df[[i]] <- walk_object[[i]]
+  
+  a <- df
+  
+  if(!class(df)){
+    
+    # Data formattering starter
+    a <- a %>% 
+      
+      
+      # Data frame class
+      tidyr::as_tibble()
+    
+      if(is.na(NA) = TRUE){
+        
+        drop_na(a)
+      }
+    
+    else{
+      
+      
+      
+      
+      
+    }
+      return(a)
+    
+  }
+  # freq antall varaibler/kolonner
+  if(count_(names(a)) == freq){
+    
+      kolonne_nanv <- names(a)
+      
+      # Velg kolonner 
+      select(all_of(kolonne_navn)) %>% 
+        
+      arrange(desc(.x)) %>% 
+      
+      ##lage kolonne med diff 
+      mutate(endring_periodeV = (sb2021 - sb2020))
+  }
+      if(desc(.x)) {
+        drop_na(NA %==% .x) %>%
+          else {
+            return(navn_her)
+            
+          }
+          mutate()
+      }
+      
+      drop_na(NA %==% .x) %>% 
+      
+      
+      ## Regnskapskontoer i SB
+      
+    mutate(str_glue(konto_navn) == filter(vroom::starts_with(kolonne_navn)))
+      
+  }
+}
+# Dette kan gjøres med purrr og tidyr 
+tidyr::nest()
+```
+
+Neste steg er å generalisere opperasjonene som skal gjøres excell arkene.
+Første spørsmål: *er opperasjonen lik for alle data-sett og alle kolonner?*
+
+`purrr` ersatter loops laget selv
+
+`dplyr` for manipulering
+
+`stringr` for tekst
+
+`tidyr` for modellering, spesseilt lister
+
+## Sideeffetcs
+
+Walk funksjonen til `purrr` er en variant som brukes når funksjonen implementert har/ikke en output type som kalles *sideeffekt.* Output generelt kan beskrives i form av utsende; tabell, tall og annen tekst som er resultatet fra en operasjon utført via en funksjon som i sum utfører en rekke betinget rekkefølge med kommandoer og andre underliggende funksjoner som skaper objekter eller resultater, som printes ut i sin form i konsollen.
+Det betyr at vi kan se hva resultatet er, i form av konsoll-tekst.
+
+Motsetningen er at vi har funksjoner som gir output uten side effekter.
+Her gjør funksjon operasjoner som er utenfor dens "scope".
+Eksempler er ploter eller genereringen av *excel-sheets* til en ny arbeidsbok som lages i R.
+
+Disse resultatene, fra ikke siden-effekt funksjons typer er at man ikke kan lagre resultatet i et objekt som kan refereres til i etterkant.
+Output er til motsetning slik at den vises frem i konsollen i en mer fysisk form.
+Enten som en graf, plot.
+
+Årsaken til at dette er viktig å få med seg, er fordi output og hva funksjoner vi faktisk bruker, er utrolig viktig for å programmere effektivt.
+
+F.eks med funksjonen `addWorksheet` funksjonen, så gir den ingenting av output.
+Den endrer noe "utenfor scopet".
+
+## Egne funksjoner
+
+I dette kapittelet tar vi et steg videre.
+Jeg vil forsøke å vise- og lære hvordan man kan lage sine helt egne funksjoner.
+I prinsippet er alle funksjoner mulig å lage.
+Funksjoner har en fast form som vi skal se nærmere på her.
+Hvis denne formen følges, er det som et utgangspunkt opp til deg som forfatteren av funksjonen, hva den skal bestå av.
+
+I de første kapitalene var vi innom det grunnleggende konseptet hvor man ved bruk av `<-` eller `=` kan "lagre" data i objektet som vi selv velger hva skal hete.
+a \<- 1 feks.
+Det vil si at a representerer tallet 1, og hver gang vi bruker a, vil det bli lest og tolket som 1.
+
+### Lage
+
+I utgangspunktet er det flere tusen funksjoner tilgjengelig som kan brukes.
+Som regel vil man komme langt med disse.
+Men som regel er det noen særtrekk med akkurat ditt problem, som funksjonen i pakken ikke evaluerer slik du ønsker.
+Det kan være flere grunner til det, men en typisk årsak til å skrive egne funksjoner kontra bruke andre sine, er for å tilpasse funksjonaliteten til problemet som du skal løse.
+Det er mest sans behov for noen tweaks og små justeringer.
+Men det kan også være tilfellet hvor det ikke finnes noe fra før, så man skriver hele funksjonen- og kanskje en hel pakke, for å løse problemet.
+
+Jeg tar derfor først for meg standariserte funksjoner som er spesielle og egnet til å bruke i nye funksjoner også.
+
+## rlang
+
+For å gå litt dybere til verks for å forstå hva salgs hjelpemiddler og funksjoner som er i pakkene jeg personlig bruker til funksjoner og funksjonell prgrammering i R.
+I kodesnippen under tar jeg å henter ut funksjonsnavnene i pakken rlang, margitr, og purrr.
+Jeg lagrer disse i et objekt, og sammenligner dem mot hverandre.
+
+```{r}
+pac <- pacman::p_functions(package = "rlang") %>% 
+  as_vector() 
+ 
+pur <- pacman::p_functions(package = "purrr") %>% 
+  as_vector()
+mag <- pacman::p_functions(package = "magrittr") %>% 
+  as_vector()
+```
+
+```{r}
+df <- cbind(pac, pur, mag) %>% 
+  as_tibble() %>% 
+  glimpse()
+```
+
+Årsaken til denne sammenligningnen er for å indentifisere nyttige kontroll-funksjoner vi kan bruke når vi bygger opp våre egne.
+Logiske funksjoner som er TRUE eller FALSE er et velkjent konsept for programmerere.
+Det brukes til å kontrollere flownen og det som skjer inne i {}.
+
+Som nevnt tidligere er R og andre språk avhengig av rekkefølgen på hvordan ting gjøres.
+Resultatet av noe, vil påvirke et objekt, som vil ha konsekvenser for videre flyt.
+For å hindre at feil objekter, eller data typer taes inn videre, gjør man derfor `if statement`.
+
+Det vil si at inne i funksjonen vil det være en egen if evaluering.
+Dersom den logiske testen = TRUE vil den slippe inn i brakke t4egenne.
+Dersom FALSE hopper den over denne delen.
+
+```{r eval=FALSE}
+function(x){
+  if(is.character(x)){
+  
+  }
+  return(x)
+}
+```
+
+Som kode snippen viser over, er det altså en egen seksjon som er betinget av if testen.
+
+### Noen tips
+
+```{r}
+# Lager en vektor med elemtener
+vector <- c("Lyder", "Aleksander", "Mathisen")
+# Lønsing 1 
+"Lyder" %in% vector
+#Løsning 2
+any(vector == "Lyder")
+any(vector == "Henrik")
+```
+
+Kode snippen viser et typisk scenario hvor vi ønsker å sjekke om en vector består av en spesifikk verdi.
+I tilfellet jeg skrev over laget jeg bare en vektor bestående av navnet mitt.
+Det vil si det er tre separate elementer i vektoren.
+Under, løsning 1, tester jeg om "Lyder" er i vektor.
+Svaret er TRUE.
+Men et tips er å bruke løsning 2.
+Den gjør det samme, men er mer effektiv og standardisert.
+Det er derfor best practice å ta i bruk denne.
+Resultatet blir TRUE her også.
+Nederst tok jeg med evaluering av et element som ikke er en del, bare for å vise at denne resulterer FALSE.
+
+## C++ og R?
+
+Noen spesifikke operasjoner er mer effektivt å gjøre med C++.
+R har gode løsninger som kobler språkene sammen, slik at det mest nødvendige oppgavene kan kjøres i C++ program, men hvor det allikevel skrives i R studio slik du er vant til.
+Pakken `Rcpp`fikser dette for oss.
+Under trekker jeg ut funksjoner:
+
+```{r}
+library(Rcpp)
+pacman::p_functions(package = "Rcpp")
+```
+
+### Nest
+
+tidyr::nest()
 
 # Appendix
 
