@@ -23,7 +23,8 @@ site: distill::distill_website
 
 ![](images/png/programming.png)
 
-In the meantime see [this section](https://onelyder.com/blog.html).
+In the meantime...[click here](https://onelyder.com/blog.html).
 
-Contact?
-Click [here](https://onelyder.com/about.html)
+**Contact?**
+
+[Click here](https://www.linkedin.com/in/lyderaleksander)

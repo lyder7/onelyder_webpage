@@ -1,0 +1,26 @@
+
+# Prereview mode
+
+
+## Wow 
+
+
+Denne funksjonen i vs code er helt rå. Jeg kan se outputen i vinduet til høyre dynamisk. Teksten vises slik jeg formatterer den med vanlig tekst i venstre felt. 
+Sammenlignet med R studio må det gjøres en rendering for å se resultatet. Altså outputen. 
+
+Aldri brukt denne før, så dette er første gang. Førsteintrykket er at det virker ganske godt å bruke Preivew funksjonen. 
+
+
+**Lyder Invest AS**
+
+*Lyder Aleksander Mathisen*
+
+
+[] a-packer 
+
+[] 
+
+
+# Hva er regular expressios? 
+
+
