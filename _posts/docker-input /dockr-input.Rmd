@@ -1,7 +1,7 @@
 ---
-title: "Docker i R"
+title: "Docker - Linux Setup"
 description: | 
-  Docker container config. Linux Kubuntu env. 
+  Docker container config. Linux Kubuntu envir. 
 author: 
   - name: Lyder Aleksander Mathisen
     url: https://onelyder.com/posts/docker-input/

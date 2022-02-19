@@ -1,5 +1,5 @@
 ---
-title: "Sammendrag Funksjoner i R"
+title: "Funksjoner i R"
 description: |
   Vektorer, lister, loops og purrr. En oversikt over sentrale emner.  
 author:

@@ -1,7 +1,7 @@
 ---
-title: "Gitlab"
+title: "Git & Github: Branching"
 description: |
-  Bash scripting 
+  Bash scripting and commands.  
 author:
   - name: Lyder Aleksander Mathisen 
     url: https://onelyder.com/about

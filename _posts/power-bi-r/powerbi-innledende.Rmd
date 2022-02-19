@@ -1,7 +1,7 @@
 ---
 title: "Power BI i R"
 description: |
-  Hvilke muligheter åpner seg når R kode blir en del av Power BI? Dette dokumentet har som formål å undersøke hvilke muligheter powerbi oppgaver løses med R.
+  Hvilke muligheter åpner seg når R kode blir en del av Power BI? Dette dokumentet har som formål å undersøke hvordan powerbi oppgaver løses med R.
 author:
   - name: onelyder 
     url: https://onelyder.com

@@ -1,5 +1,5 @@
 ---
-title: "Loops i F"
+title: "Loops i R"
 description: | 
   Purrr::map(). 
 author: 

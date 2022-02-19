@@ -1,14 +1,13 @@
 ---
-title: "Oppbevaring av sykt matriale"
+title: "Sykt matriale"
 description: |
-  Gammelt versjon, se Refs seksjonen.   
+  Samling og oppbevaring av ressurser oppdaget underveis.   
 author:
   - name: Lyder Aleksander Mathisen 
     url: https://onelyder.com/about
     affiliation: onelyder
     affiliation_url: https://onelyder.com
 date: 10-21-2021
-creative_commons: L.A.M NW-EU
 output:
   distill::distill_article:
     toc_depth: 3
