@@ -21,15 +21,15 @@ collections:
 navbar:
   search: false
   right:
-    - text: "ABOUT ME"
+    - text: "About"
       href: about.html
-    - text: "PROJECTS"
+    - text: "Projects"
       href: projects.html
-    - text: "BLOG"
+    - text: "Blog"
       href: blog.html
-    - text: "DIRECTION"
+    - text: "Refs"
       href: refs_links.html
-    - text: "CONTACT"
+    - text: "Contact"
       href: contact.html
     - icon: fab fa-github
       href: https://github.com/lyder7

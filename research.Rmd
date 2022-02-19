@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: From me, to you. Select category carefully, it`s up to you…or?
+description: Yup.
 output:
   distill::distill_article:
     css:
@@ -10,19 +10,16 @@ base_url: https://www.onelyder.com
 preview: images/png/teori_finans.png
 ---
 
-Still producing...just wait.
-It will be worth it.
+Still producing...soon to be finished. 
 
 ## Publications
 
-## Ideas, Working Papers & Papers Under Review
+## Ideas & Learing 
 
-## Books / Book Chapters
+## Working Papers 
 
 ## Theses
 
-## Reports, Articles for Non-Academic Audiences
 
 ![](images/png/teori_finans.png){width="200"}
-
-## 
+ 
