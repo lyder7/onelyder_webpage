@@ -12,44 +12,52 @@
       <link>https://www.onelyder.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 01 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Feb 2022 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Docker i R</title>
+      <title>Docker - Linux Setup</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
       <link>https://www.onelyder.com/posts/docker-input </link>
-      <description>Docker container config. Linux Kubuntu env.</description>
+      <description>Docker container config. Linux Kubuntu envir.</description>
       <guid>https://www.onelyder.com/posts/docker-input </guid>
-      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Loops i F</title>
+      <title>Git &amp; Github: Branching</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
-      <link>https://www.onelyder.com/posts/loops-r</link>
-      <description>Purrr::map().</description>
-      <guid>https://www.onelyder.com/posts/loops-r</guid>
-      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <link>https://www.onelyder.com/posts/git_devlab</link>
+      <description>Bash scripting and commands.</description>
+      <guid>https://www.onelyder.com/posts/git_devlab</guid>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sammendrag Funksjoner i R</title>
+      <title>Funksjoner i R</title>
       <dc:creator>Lyder ~ onelyder</dc:creator>
       <link>https://www.onelyder.com/posts/loops-purrr</link>
       <description>Vektorer, lister, loops og purrr. En oversikt over sentrale emner.</description>
       <guid>https://www.onelyder.com/posts/loops-purrr</guid>
-      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Gitlab</title>
+      <title>Loops i R</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
-      <link>https://www.onelyder.com/posts/git_devlab</link>
-      <description>Bash scripting</description>
-      <guid>https://www.onelyder.com/posts/git_devlab</guid>
-      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
+      <link>https://www.onelyder.com/posts/loops-r</link>
+      <description>Purrr::map().</description>
+      <guid>https://www.onelyder.com/posts/loops-r</guid>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Oppbevaring av sykt matriale</title>
+      <title>Power BI i R</title>
+      <dc:creator>onelyder</dc:creator>
+      <link>https://www.onelyder.com/posts/power-bi-r</link>
+      <description>Hvilke muligheter åpner seg når R kode blir en del av Power BI? Dette dokumentet har som formål å undersøke hvordan powerbi oppgaver løses med R.</description>
+      <guid>https://www.onelyder.com/posts/power-bi-r</guid>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sykt matriale</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
       <link>https://www.onelyder.com/posts/linker_mappe</link>
-      <description>Gammelt versjon, se Refs seksjonen.</description>
+      <description>Samling og oppbevaring av ressurser oppdaget underveis.</description>
       <guid>https://www.onelyder.com/posts/linker_mappe</guid>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
     </item>
