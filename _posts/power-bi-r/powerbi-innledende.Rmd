@@ -1,0 +1,103 @@
+---
+title: "Power BI i R"
+description: |
+  Hvilke muligheter åpner seg når R kode blir en del av Power BI? Dette dokumentet har som formål å undersøke hvilke muligheter powerbi oppgaver løses med R.
+author:
+  - name: onelyder 
+    url: https://onelyder.com
+    affiliation: Private
+date: "`r Sys.Date()`"
+bibliography: powerbi-refs.bib
+output: distill::distill_article
+toc: true
+---
+
+
+
+
+# Innledning
+
+Til å starte med laster jeg inn noen standard pakker jeg trenger for å generere rapporten i sin helhet. Alt fra hvordan rapporten skal se ut, til spesfikke funksjoner som brukes til f.eks analyse. Dette er fint å gjøre i starten av dokumentet, så de blir aktivert og er tilgjenglig gjennom genereringsfasen. 
+
+```{r test, echo=TRUE, eval=FALSE}
+pacman::p_load(knitr, bibtex, tidyverse, pbixr, ggplot2, fs)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Koden ovenfor viser hvordan man enkelt kan sette rammene for økta. Ofte klarerer man her generelle strukturer her, som ofte vil være likt eller konstant. Spesfikke tilpassninger kan alikevell gjøre underveis, men da er det bedre å gjøre disse for dem det faktrisk gjelder. Derfor starter vi som her med det generelle. 
+
+## R pakker som kan brukes med Power BI
+
+I skrivende stund er dagens versjon av R og R-studio 4.1.0. For å vise relevante delatjer kan jeg bruke R kode til å printe ut informasjon om miljøet jeg skriver i fra. @r-packages er microsoft sine egne sider med oversikt over hvilke pakker, samt hvilken versjon som kan brukes med Power BI [@r-packages].@r-powerbi blallb [@r-powerbi].
+
+```{r session, echo=TRUE}
+suppressMessages(library(knitr))
+suppressMessages(library(tidyverse))
+
+a <- sessioninfo::session_info() 
+
+print(a$platform) %>% 
+  data.frame %>% 
+  kable()
+
+```
+
+
+### CRAN 
+
+En av de åpenbare svakhetene er at det stilles ganske strenge krav til hva som er lov å bruke. Dersom noe avviker fra listen jeg presenterte kort ovenfor avviker, vil ikke analysen kunne gjennomføres. Ofte er det relativt "gamle versjoner" av pakkene som kan brukes, som har flere nye versjoner. Du kan se alle pakker, og tilhørende versjoner på @CRAN nettside [@CRAN].
+
+Det jeg reagerer mest på er at mange av de viktigste pakkene R-miljøet har utviklet de siste årene ikke er med, eller redusert kraftig. Tidyverse med sine tilhørende dplyr, tidyr osv er enten ikke med, eller har gamle versjoner som mangler kritiske oppdateringer. Nettopp disse utviklingene og tidyverse generelt har vært med på å lage en struktur, og et felles rammeverk for data analyse [@tidyverse].
+
+
+### Tidyverse
+
+[Tidyverse 1.2.1 Info-Link](https://rdocumentation.org/packages/tidyverse/versions/1.2.1)
+
+[Dplyr versjoner liste](https://cran.r-project.org/src/contrib/Archive/dplyr/)
+
+For å ta et eksempel tenkte jeg å vise hvordan man kan gå frem. Dplyr er en av de viktiste pakkene for data manipulering og analyse, så tar for meg den i eksmeplelet. Prossesen vil være lik for andre pakker også. 
+
+```{r Tidyverse-121, echo=TRUE, eval=FALSE}
+
+#https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_3.2.0.tar.gz
+#https://cran.r-project.org/src/contrib/Archive/magrittr/magrittr_1.5.tar.gz
+#https://cran.r-project.org/src/contrib/Archive/PerformanceAnalytics/PerformanceAnalytics_1.5.2.tar.gz
+#https://cran.r-project.org/src/contrib/Archive/purrr/purrr_0.2.4.tar.gz
+#https://cran.r-project.org/src/contrib/Archive/readxl/readxl_1.0.0.tar.gz
+#https://cran.r-project.org/src/contrib/Archive/readr/readr_1.1.1.tar.gz
+#https://cran.r-project.org/src/contrib/Archive/rmarkdown/rmarkdown_1.9.tar.gz
+#https://cran.r-project.org/src/contrib/Archive/tidyverse/tidyverse_1.2.1.tar.gz
+
+url <- "https://cran.r-project.org/src/contrib/Archive/dplyr/dplyr_0.8.0.1.tar.gz"
+
+install.packages(dplyr, url)
+
+```
+
+
+
+## I praksis
+
+[Eksempel R script i PowerBI](https://thebipower.fr/index.php/2019/02/09/export-data-to-excel/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Referanser
+
+
+
