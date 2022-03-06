@@ -12,6 +12,10 @@ output:
     toc_depth: 3
     toc_float: true
     css: small-spacing.css
+  bibliography: references.bib
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
 
 ```{r reprex-options, include = FALSE}
@@ -40,7 +44,9 @@ Hvordan jeg kom i gang med `Docker`.
 Fra en bra skrevet vignette som tar for seg installasjonen via terminalen med Linux Ubuntu.
 Resultatet er at `Docker` tilgjengelig, Jeg har laget en `Docker` Header bestående av en Ubuntu Distribusjon med `node.js` konfigurert i Dockeren.
 
-Artikkelen jeg fulgte, [install configure docker ubuntu](https://linuxhint.com/install_configure_docker_ubuntu/), skrevet av linuxhint.com som også har amdre bra artikler og veiledninger. Personlig foretrekker jeg ofte å lese disse, enn å se Youtube videoer.
+Artikkelen jeg fulgte, [install configure docker ubuntu](https://linuxhint.com/install_configure_docker_ubuntu/), skrevet av linuxhint.com som også har amdre bra artikler og veiledninger.
+Personlig foretrekker jeg ofte å lese disse, enn å se Youtube videoer.
+[@hameed_how_nodate].
 
 ```{r, eval = requireNamespace("tidyverse", quietly = TRUE)}
 library(tidyverse)
@@ -56,7 +62,7 @@ pacman)
 
 ## Hvorfor Docker?
 
-`Docker` bringer noen interessange egenskaper, som gjør miljøet man programmerer i mer optimalt.
+`Docker` bringer noen spennende egenskaper som gjør miljøet man programmerer i mer optimalt.
 Min anbefaling er å bruke artikkelen til å gjennomføre de første stegene i starten.
 I utgangspunktet rett frem og simpelt.
 
@@ -73,8 +79,7 @@ sudo usermod -aG docker {$USER} # fish
 
 ```
 
-Her viser jeg hvordan du kan få nyttig info om hvordan du skal bruke `Docker.`
-Det holder å skrive bare `Docker` i terminalen, men jeg har under skrevet den fullstendige.
+Her viser jeg hvordan du kan få nyttig info om hvordan du skal bruke `Docker.` Det holder å skrive bare `Docker` i terminalen, men jeg har under skrevet den fullstendige.
 
 ```{bash}
 
@@ -99,6 +104,8 @@ Eksempelvis kan du skrive `docker search r-studio` og få en output med informas
 Outputen i terminalen har en struktur hvor det er 5 kolonner;
 
 **`NAME DESCRIPTION STARS OFFICIAL AUTOMATED`**
+
+# Referanser
 
 <summary>
 

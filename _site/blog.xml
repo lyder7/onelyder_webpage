@@ -12,22 +12,22 @@
       <link>https://www.onelyder.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 23 Feb 2022 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>Function review 01</title>
-      <dc:creator>onelyder</dc:creator>
-      <link>https://www.onelyder.com/posts/function-review</link>
-      <description>Deler noen funksjoner jeg har laget.</description>
-      <guid>https://www.onelyder.com/posts/function-review</guid>
-      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Docker - Linux Setup</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
       <link>https://www.onelyder.com/posts/docker-input </link>
       <description>Docker container config. Linux Kubuntu envir.</description>
       <guid>https://www.onelyder.com/posts/docker-input </guid>
-      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Function review 01</title>
+      <dc:creator>onelyder</dc:creator>
+      <link>https://www.onelyder.com/posts/function-review</link>
+      <description>Deler noen funksjoner jeg har laget.</description>
+      <guid>https://www.onelyder.com/posts/function-review</guid>
+      <pubDate>Thu, 24 Feb 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Git &amp; Github: Branching</title>
