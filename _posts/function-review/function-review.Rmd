@@ -1,0 +1,63 @@
+---
+title: "Function review 01"
+description: |
+  Deler noen funksjoner jeg har laget. 
+author:
+  - name: onelyder 
+    url: https://onelyder.com
+    affiliation: Private
+date: "`r Sys.Date()`"
+bibliography: function-review.bib
+output: distill::distill_article
+toc: true
+---
+
+# Innledning
+
+Jeg har gått igjennom scripts fra prosjekter. Fra dem har jeg tatt ut det beste og skrevet om litt. Formålet med å skrive om er for å standarisere koden slik at det kan brukes som en funksjon. 
+
+I dette innlegget deler jeg noen av dem. 
+
+```{r}
+packages <- c("pacman")
+# checks if the package name is isntalled, if not it will be. ANd opsite. 
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE))
+{
+  install.packages(packages[!installed_packages])
+}
+
+
+invisible(lapply(packages, library, character.only = TRUE))
+
+
+pacman::p_load(
+  rio,
+  openxlsx,
+  tidyxl,
+  here,        
+  purrr,
+  rlang,
+  plyr,
+  tidyselect,
+  tidyverse,
+  skimr,
+  lubridate,
+  dplyr,
+  readxl,
+  janitor,
+  fs,
+  distill,
+  postcards,
+  rmarkdown,
+  bookdown
+)
+```
+
+
+EN
+
+# Referanser
+
+
+

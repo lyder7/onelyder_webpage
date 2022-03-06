@@ -12,7 +12,15 @@
       <link>https://www.onelyder.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 19 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Function review 01</title>
+      <dc:creator>onelyder</dc:creator>
+      <link>https://www.onelyder.com/posts/function-review</link>
+      <description>Deler noen funksjoner jeg har laget.</description>
+      <guid>https://www.onelyder.com/posts/function-review</guid>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Docker - Linux Setup</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>

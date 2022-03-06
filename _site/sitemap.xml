@@ -2,54 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://www.onelyder.com/about.html</loc>
-    <lastmod>2022-02-17T21:10:04+01:00</lastmod>
+    <lastmod>2022-02-02T00:01:30+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/blog.html</loc>
-    <lastmod>2022-02-19T03:42:04+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:37+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/contact.html</loc>
-    <lastmod>2022-02-17T21:10:04+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:32+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/</loc>
-    <lastmod>2022-02-17T21:10:05+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:32+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/projects.html</loc>
-    <lastmod>2022-02-17T21:10:05+01:00</lastmod>
+    <lastmod>2022-02-02T00:01:30+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/refs_links.html</loc>
-    <lastmod>2022-02-17T21:10:05+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:32+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/research.html</loc>
-    <lastmod>2022-02-19T03:46:04+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:37+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.onelyder.com/posts/function-review/</loc>
+    <lastmod>2022-02-24T23:40:40+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/posts/docker-input /</loc>
-    <lastmod>2022-02-19T03:13:17+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:37+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/posts/git_devlab/</loc>
-    <lastmod>2022-02-19T03:20:05+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:37+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/posts/loops-purrr/</loc>
-    <lastmod>2022-02-19T03:11:38+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:37+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/posts/loops-r/</loc>
-    <lastmod>2022-02-19T03:14:34+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:37+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/posts/power-bi-r/</loc>
-    <lastmod>2022-02-19T03:10:24+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:37+01:00</lastmod>
   </url>
   <url>
     <loc>https://www.onelyder.com/posts/linker_mappe/</loc>
-    <lastmod>2022-02-19T03:18:48+01:00</lastmod>
+    <lastmod>2022-02-24T22:44:37+01:00</lastmod>
   </url>
 </urlset>

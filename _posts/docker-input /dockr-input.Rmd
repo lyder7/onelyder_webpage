@@ -1,8 +1,8 @@
 ---
 title: "Docker - Linux Setup"
-description: | 
-  Docker container config. Linux Kubuntu envir. 
-author: 
+description: |
+  Docker container config. Linux Kubuntu envir.
+author:
   - name: Lyder Aleksander Mathisen
     url: https://onelyder.com/posts/docker-input/
 date: "`r Sys.Date()`"
@@ -29,52 +29,44 @@ options(
 cat(sprintf("*Local `.Rprofile` detected at `%s`*", normalizePath(".Rprofile")))
 ```
 
-
-
 ```{r}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 ```
 
-
 # Docker
 
-**NB** *Artikkel ikke fullstendig versjon. Denne versjonen er kun utkast.*
+Hvordan jeg kom i gang med `Docker`.
+Fra en bra skrevet vignette som tar for seg installasjonen via terminalen med Linux Ubuntu.
+Resultatet er at `Docker` tilgjengelig, Jeg har laget en `Docker` Header bestående av en Ubuntu Distribusjon med `node.js` konfigurert i Dockeren.
 
-I dette dokumentet vil jeg fortelle om hvordan jeg kom i gang med `Docker`.
-Fra en utrolig bra skrevet vignette som tar for seg hele installasjonen via terminalen på en Linux Ubuntu maskin.
-Resultatet er at jeg nå har `Docker` tilgjengelig, jeg kan de aller mest nødvendige kommandoene og jeg har laget en `Docker` Header bestående av en Ubuntu Distribusjon med `node.js`.
-Alt dette har jeg også klart å pushe til repoen på min `Docker` Hub konto.
-
-Artikkelen jeg fulgte, [install configure docker ubuntu](https://linuxhint.com/install_configure_docker_ubuntu/), er skrevet av linuxhint.com som forøvrig har utrolig bra artikler og veiledninger.
-Ganske ofte foretrekker jeg lese disse enn å se en Youtube video.
-
+Artikkelen jeg fulgte, [install configure docker ubuntu](https://linuxhint.com/install_configure_docker_ubuntu/), skrevet av linuxhint.com som også har amdre bra artikler og veiledninger. Personlig foretrekker jeg ofte å lese disse, enn å se Youtube videoer.
 
 ```{r, eval = requireNamespace("tidyverse", quietly = TRUE)}
 library(tidyverse)
 library(fs)
 library(here)
 library(pacman)
-library(reprex)
+pacman::p_load(reprex,
+tidyverse,
+fs,
+here,
+pacman)
 ```
 
 ## Hvorfor Docker?
 
-Årsaken til at jeg lastet ned `Docker` er fordi jeg leser en bok hvor forfatteren eksplisitt ber alle som leser boka om å bruke `Docker`.
-Det er fordi `Docker` bringer noen helt unike egenskaper, som gjør miljøet man koder i, og alle elementene optimale. Som blant annet filer, programmer, mapper etc. Det virker på mange måter som en `viritual box machine`.
-
-Jeg skal ikke dra den for langt med å uttale meg om relativt komplekse temaer, vil jeg heller fokusere på hvordan jeg lastet `Docker` ned, hvilke fordeler jeg spesifikt vil ha nytte for med `Docker`, og påpeke hva jeg personlig oppfatter som viktig i installasjons prosessen.
-
+`Docker` bringer noen interessange egenskaper, som gjør miljøet man programmerer i mer optimalt.
 Min anbefaling er å bruke artikkelen til å gjennomføre de første stegene i starten.
-Det er i utgangspunktet rett frem og simpelt.
+I utgangspunktet rett frem og simpelt.
 
 ## Hva jeg mener er viktig
 
-Når du har lastet ned `Docker`, og den er tilgjengelig så er det et par ting du kan gjøre.
+Når du har lastet ned `Docker`, og den er tilgjengelig, er det et par ting du kan gjøre.
 
 ```{bash, eval = FALSE}
 
-sudo systemctl status docker 
+sudo systemctl status docker
 
 sudo usermod -aG docker ${USER}
 sudo usermod -aG docker {$USER} # fish
@@ -82,30 +74,31 @@ sudo usermod -aG docker {$USER} # fish
 ```
 
 Her viser jeg hvordan du kan få nyttig info om hvordan du skal bruke `Docker.`
-
 Det holder å skrive bare `Docker` i terminalen, men jeg har under skrevet den fullstendige.
 
-```{bash eval=FALSE}
+```{bash}
 
 docker COMMAND --help
+
 ```
 
-**Viktig presisering:** Etter man har lastet ned `Docker` og skal bruke det fremover, så må du logge den inn som admin i systemet.
+**Viktig presisering:** Etter man har lastet ned `Docker` og skal bruke det fremover, du må logge inn som admin i systemet ditt.
 
 Du må være/bli en `Sudu.` Du kan enkelt gjøre det med `su - {\$USER}` eller `su - \${USER}` avhengig om du bruker `fish` eller ikke som shell.
 
 Da vil kommandoer som dette fungere:
 
-```{bash, eval = FALSE}
-ducker search ubuntu 
+```{bash}
+ducker search ubuntu
+
 ```
 
 Det `Docker` gjør i koden ovenfor er å søke etter tilgjengelige Hubs som inneholder "ubuntu".
 Dette kan videre brukes til å søke etter andre ting også.
 Eksempelvis kan du skrive `docker search r-studio` og få en output med informasjon om hvilke som er tilgjengelig.
-Output i terminalen har en struktur hvor det er 5 kolonner;
+Outputen i terminalen har en struktur hvor det er 5 kolonner;
 
-**`NAME      DESCRIPTION   STARS     OFFICIAL   AUTOMATED`**
+**`NAME DESCRIPTION STARS OFFICIAL AUTOMATED`**
 
 <summary>
 
