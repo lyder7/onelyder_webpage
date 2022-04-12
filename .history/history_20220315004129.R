@@ -129,8 +129,4 @@ map(
   pacman::p_functions(package = (c("dplyr", "tidyr")))
   x <- pacman::p_functions(package = (c("dplyr", "tidyr"))) %>%
     as.data.frame()
-  library(tidyverse)
-
-
-
-print("hello world")
+  

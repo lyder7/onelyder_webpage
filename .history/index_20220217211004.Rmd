@@ -21,10 +21,9 @@ site: distill::distill_website
 
 `…the matrix?`
 
-In the meantime see [this section](https://onelyder.com/blog.html).
-
-## Contact?
-
-Click [here](https://onelyder.com/about.html)
 ![](images/png/programming.png)
 
+In the meantime see [this section](https://onelyder.com/blog.html).
+
+Contact?
+Click [here](https://onelyder.com/about.html)
