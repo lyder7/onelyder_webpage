@@ -7,5 +7,4 @@ output:
       - css/jhelvy.css
       - css/small-spacing.css
 base_url: https://www.onelyder.com
-preview: images/png/teori_finans.png
 ---

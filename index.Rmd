@@ -3,8 +3,6 @@ title: "onelyder"
 links:
 - label: <i class="fab fa-github"></i> GitHub
   url: https://www.github.com/lyder7
-- label: <i class="fab fa-twitter"></i> Twitter
-  url: https://twitter.com/Pier_Lyder
 - label: <i class="fab fa-linkedin"></i> LinkedIn
   url: https://www.linkedin.com/in/onelyder/
 base_url: https://www.onelyder.com
@@ -21,9 +19,6 @@ site: distill::distill_website
 
 `…the matrix?`
 
-![](images/png/programming.png)
-
 In the meantime see [this section](https://onelyder.com/blog.html).
 
-Contact?
-Click [here](https://onelyder.com/about.html)
+Contact? Click [here](https://onelyder.com/about.html)
