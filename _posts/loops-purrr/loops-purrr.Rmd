@@ -12,6 +12,9 @@ output:
     highlight: kate
     css: strapless.css
 #bibliography: bib/references.bib
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
 
 ```{r setup, include=FALSE}
@@ -108,7 +111,7 @@ Her er noen av de symbolene jeg personlig ønsker å lære mer om:
 
 do.call(function_name, object_name)
 
--   `%>%` --> margitrrr.
+-   `%>%` --\> margitrrr.
     Chain-operator.
 
 -   `%in%`
@@ -117,9 +120,9 @@ do.call(function_name, object_name)
 
 -   `\t`
 
--   `[[ ]]` --> vector
+-   `[[ ]]` --\> vector
 
--   `[ ]` --> list
+-   `[ ]` --\> list
 
 ## Logiske sjekk-punkter
 
@@ -130,7 +133,7 @@ do.call(function_name, object_name)
 `all()` base.
 Kan brukes på flere måter:
 
-alene all(logical0==)) if(all(0)) --> Hvis alle verdiene definert av funksjonenen så skjer:
+alene all(logical0==)) if(all(0)) --\> Hvis alle verdiene definert av funksjonenen så skjer:
 
 ```{r #if(all)}
 object_a = NULL

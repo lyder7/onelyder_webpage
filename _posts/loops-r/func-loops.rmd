@@ -12,9 +12,12 @@ output:
     toc_depth: 3
     toc_float: true
     css: strapless.css
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
 
-# Funksjonell programmering i R (?) 
+# Funksjonell programmering i R (?)
 
 Inspirert av Bruno Rodriguez sin video [Don't write loops in R](https://www.youtube.com/watch?v=3xIKZbZKCWQ&t=0s).
 
@@ -42,7 +45,7 @@ Altså `~/`.
 
 Noen "basis" ting som er nyttig:
 
-**`"."`** ---> betyr i "dette området".
+**`"."`** ---\> betyr i "dette området".
 Altså mappen PCen din befinner seg i.
 Arbeids mappen.
 
@@ -71,7 +74,7 @@ my_excel_workbook <- createWorkbook()
 Hva er forskjellen mellom `walk` og `map`?
 Og når skal man bruke dem?
 
-`walk` gjør noe utenfor sitt scope --> ikke noe objekt som blir lagret.
+`walk` gjør noe utenfor sitt scope --\> ikke noe objekt som blir lagret.
 Den gir altså ikke et objekt som man kan referer til senere.
 Slik man feks kan gjøre dersom man skriver for eksempel a \<- "objekt".
 Etter å ha kjørt igjennom den kommandoen, vil "objekt" bli printet ut i konsollen hvis jeg skriver bare a.
@@ -162,7 +165,7 @@ print(results)
 Loopen gjør det samme for alle xlsx filene.
 Den sjekker hvor mange celler er det som inneholder formler.
 Svarene lagres i results objektet.
-Og resultatet er at vi nå vet at det er \[3\] som har 2159, dem andre har ingen.
+Og resultatet er at vi nå vet at det er $$3$$ som har 2159, dem andre har ingen.
 
 Men vi vil også kanskje vite navnet på filene.
 Det kan vi fikse.
