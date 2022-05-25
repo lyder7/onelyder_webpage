@@ -51,8 +51,8 @@ Lær dem!
 
 [^1]: Brukes inne i funksjoner gjennom å printe feks navnet til en funksjon, opperasjon eller indeks som referanse.
 
-Brukes ofte i funksjoner til å printe feks navnet til en funksjon, operasjon eller indeks som referanse.
-Lek litt med disse og forstå hva slags type output paste og past0 lager.
+Printe feks navnet til en funksjon, operasjon eller indeks som referanse.
+Type output `paste` og `past0`.
 [^2]
 
 [^2]: String manipulator.
@@ -71,14 +71,11 @@ Lek litt med disse og forstå hva slags type output paste og past0 lager.
 
 ## Viktige basis konsepter
 
-Selv om `tidyverse` og alle dens fantastiske hjelpemidler til R brukere, er det alikevel etter min mening viktig å lære de fundamentale rammene.
-Dette kalles "**base R**".
+`tidyverse` og med alle data science verktøyee til R brukere, er det allikevel etter min mening viktig å lære de fundamentale rammene.
+"**base R**".
 
-Funksjonene er standard og tilgjengelig for alle som laster ned R.
-Det er ikke behov for å laste ned base R, slik man må gjøre med andre pakker.
-For base R er kommandoene allerede tilgjengelig og kan brukes.
-
-Det er forøvrig flere standard-pakker som følger med. `utils`, `stats`, `methods`, `grDevices`, `graphics` og `datasets`.
+Flere standard-pakker .
+`utils`, `stats`, `methods`, `grDevices`, `graphics` og `datasets`.
 
 Fra `R-studio` kan man få en oversikt over pakkene, og se hva dem inneholder.
 Hvis man går til vinduet og klikker på menyen som heter "Enviroment".
@@ -93,25 +90,25 @@ Personlig foretrekker jeg den første, fordi den viser informasjon over flere ko
 
 Fra oversikten kan du undersøke hvilke funksjoner som er tilgjengelig.
 Man kan også se kilde-koden.
-Muligheten til å se hvordan funksjonene er bygget opp er utrloig nyttig når man utvikler ferdighetene innenfor programmering.
-Kilde koden gir muligens svaret man trenger for å konkretisere eller gi en klar definisjon på hvordan funksjonen/kommandoen fungerer.
+Muligheten til å se hvordan funksjonene er bygget, nyttig når man utvikler ferdighetene innenfor programmering.
+Kilde koden gir muligens svaret man trenger for å konkretisere eller gi en klar definisjon på hvordan funksjoner fungerer.
 
 [Link Base R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html)
 
-Inne i R-studio, finn pakken `library`.
+Inne i R-studio, finn `library`.
 Åpne funksjonen.
 
 Det gir et perspektiv om hva som ligger bak funksjonene som brukes regelmessig.
 
 ## Symboler
 
-Dette er notasjoner og syboler det er nyttig å lære.
+Notasjoner & symboler nyttig å lære.
 Bruken av disse kan potensielt gjøre funksjonene du skriver enda mer dynamiske og sterke.
 Her er noen av de symbolene jeg personlig ønsker å lære mer om:
 
-do.call(function_name, object_name)
+`do.call(function_name, object_name)`
 
--   `%>%` --\> margitrrr.
+-   `%>%` --\> `margitrrr`.
     Chain-operator.
 
 -   `%in%`
@@ -124,13 +121,13 @@ do.call(function_name, object_name)
 
 -   `[ ]` --\> list
 
-## Logiske sjekk-punkter
+#### Logiske sjekk-punkter
 
-`ifelse` base
+`ifelse` **`base`**
 
-`if_else` dplyr
+`if_else` **`dplyr`**
 
-`all()` base.
+**`all()`** base.
 Kan brukes på flere måter:
 
 alene all(logical0==)) if(all(0)) --\> Hvis alle verdiene definert av funksjonenen så skjer:
@@ -152,25 +149,25 @@ Husk at vi kan tweake funksjonen ved
 object_a = NULL
 object_b = NULL
 if(!all(object_a == object_b)){
-print("hello worlf")
+print("hello worlt")
 } else {
  print("statemant not true")
 }
 ```
 
-Det er også mulig å gjøre flere essesnielle justeringer av funksjonen.
-Over skrev vi kun `else`, som vil si at hvis if-statementen først resulterer i `FALSE`, så vil den gå over til neste oppgave som er definert etter
+Det er også mulig å gjøre flere essensielle justeringer av funksjonen.
+Over skrev vi kun `else`, som vil si at hvis `if-statementen` først resulterer i `FALSE`, så vil den gå over til neste oppgave som er definert etter
 
-else {
+`else {`
 
-} \`\`
+`}`
 
-Hvis vi legger inn bare en liten endring og skriver `else if ()` gjør vi slik at programmet vurderer en ny logisk test før den utfører en spesiell type oppgave.
+Liten endring, skriver `else if ()` gjør vi slik at programmet vurderer en ny logisk test før den utfører en spesiell type oppgave.
 Dette er for å kontrollere funksjonens rute.
-Ofte er det nødvendig med avklaringer, og dersom noe aviker (som det testest for i if utsagnene) vil programmet rettet det opp.
+Ofte er det nødvendig med av klaringer, og dersom noe avviker (som det testes for i `if` utsagnene) vil programmet rettet det opp.
 
-Dette kalles control flow innenfor funksjonell programmering.
-Her er noen snipps som viser `else if` varianten:
+Dette kalles *control flow*.
+Noen chunks som viser `else if` varianten:
 
 ```{r else if, eval=FALSE}
 object_a = NULL
@@ -191,20 +188,17 @@ print("hello worlf")
 }
 ```
 
-NB else må vøre på samme linje som den siste brakken { for at R skal kunne avaluere den.
-Hvis du skriver
+NB `else` må være på lik linje med den siste brakken `{` for at R skal kunne evaluere den.
 
 [Logic checkpoints](https://stackoverflow.com/questions/25640161/r-how-to-test-for-character0-in-if-statement)
 
-Bygge funksjoner er alfa-omega med koding.
-Det å kunne lage- og bygge opp sine egne funksjoner er en superkraft.
 I utgangspunktet kan man fint bruke funksjoner som allerede finnes i pakker.
-Som regel er de aller fleste pakkene innenfor ulike fagfelt/emner store i omfang, slik at de dekker de fleste verktøyene man vil trenge for en analyse feks.
+Som regel er de aller fleste pakkene innenfor ulike fagfelt/emner store i omfang, slik at de dekker de fleste verktøyene man vil trenge for en analyse f.eks.
 
-Men sannsynligheten for at et problem som ikke helt kan løses med pakken du bruker, er funksjonsbygging løsningen!
+Sannsynligheten for at et problem som ikke helt kan løses med pakken du bruker, er funksjons bygging løsningen!
 
-Konseptet om at det er mulig å gi et obejekt `x` `<-` `"hva_som_helst"`.
-Altså, vi kan lagre tekst, tall eller funksjoner etc. inne i en sytste-variabel vi kaller `x`.
+Konseptet om at det er mulig å gi et objekt `x` `<-` `"hva_som_helst"`.
+Altså, vi kan lagre tekst, tall eller funksjoner etc. inne i en sytstem-variabel vi kaller `x`.
 Det som gjør det kanskje enda mer forvirrende er at hvis vi lagrer variabelen som en funksjon, så kan den funksjonen i prinsippet bestå av hva som helst.
 Det er dette som gjør det fantastisk.
 
@@ -238,8 +232,6 @@ For hvert element `i`, i antall sekvenser i vektoren $`navn`$, utfør funksjonen
 
 Resultatet er altså: vi får et objekt n_ord bestående av antall bokstaver (resultatet) for hvert navn.
 I dette tilfellet er det 3 navn, som bestyr 3 resultater.
-
-**OBS FEIL I EKSEMPLET**
 
 ### `purrr::map`
 

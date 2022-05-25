@@ -19,7 +19,7 @@ output:
 
 ## git kommandoer 
 
-Terminal kommandor for git. Under er nyttig kommandoer i forbindelse med `branching` av et prosjekt. Det vil si at det er en *developer* gren (branch) som parralelt med main (hoved) grenen av prosjektet foretar endringer til nye tilskudd/endringer.
+Terminal kommando for `git.` Under er nyttig kommandoer i forbindelse med `branching` av et prosjekt. Det vil si at det er en *developer* gren (branch) som parallelt med main (hoved) grenen av prosjektet foretar endringer til nye tilskudd/endringer.
 
 ```{bash eval=FALSE}
 # Lager ny branch 

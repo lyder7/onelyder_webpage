@@ -14,7 +14,7 @@ toc: true
 
 # Innledning
 
-Jeg har gått igjennom scripts fra prosjekter. Fra dem har jeg tatt ut det beste og skrevet om litt. Formålet med å skrive om er for å standarisere koden slik at det kan brukes som en funksjon. 
+Jeg har gått igjennom scripts fra prosjekter. Fra dem har jeg tatt ut det beste og skrevet om litt. Formålet med å skrive om er for å standardisere koden slik at det kan brukes som en funksjon. 
 
 I dette innlegget deler jeg noen av dem. 
 
@@ -55,7 +55,7 @@ pacman::p_load(
 ```
 
 
-EN
+
 
 # Referanser
 
