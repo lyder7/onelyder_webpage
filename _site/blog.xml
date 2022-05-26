@@ -7,7 +7,15 @@
     <description>The personal website of Lyder Aleksander Mathisen
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 25 May 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 May 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Funksjoner i R</title>
+      <dc:creator>Lyder ~ onelyder</dc:creator>
+      <link>https://www.onelyder.com/posts/loops-purrr</link>
+      <description>Vektorer, lister, loops og purrr. En oversikt over sentrale emner.</description>
+      <guid>https://www.onelyder.com/posts/loops-purrr</guid>
+      <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Function review 01</title>
       <dc:creator>onelyder</dc:creator>
@@ -22,14 +30,6 @@
       <link>https://www.onelyder.com/posts/git_devlab</link>
       <description>Bash scripting and commands.</description>
       <guid>https://www.onelyder.com/posts/git_devlab</guid>
-      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Funksjoner i R</title>
-      <dc:creator>Lyder ~ onelyder</dc:creator>
-      <link>https://www.onelyder.com/posts/loops-purrr</link>
-      <description>Vektorer, lister, loops og purrr. En oversikt over sentrale emner.</description>
-      <guid>https://www.onelyder.com/posts/loops-purrr</guid>
       <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
     </item>
     <item>

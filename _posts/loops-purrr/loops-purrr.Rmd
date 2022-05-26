@@ -71,7 +71,7 @@ Type output `paste` og `past0`.
 
 ## Viktige basis konsepter
 
-`tidyverse` og med alle data science verktøyee til R brukere, er det allikevel etter min mening viktig å lære de fundamentale rammene.
+`tidyverse` og med alle data science verktøyene til R brukere, er det allikevel etter min mening viktig å lære de fundamentale rammene.
 "**base R**".
 
 Flere standard-pakker .
@@ -81,7 +81,7 @@ Fra `R-studio` kan man få en oversikt over pakkene, og se hva dem inneholder.
 Hvis man går til vinduet og klikker på menyen som heter "Enviroment".
 Der vil det stå "*Global Enviorment*".
 Trykk på rull-gardinen og det vil komme frem en oversikt over pakkene jeg nevnte over.
-Velg feks `base`.
+Velg f.eks `base`.
 
 Det er mulig å redigere hvordan informasjonen vises.
 Helt til høyre i vinduet er det en ny rullegardin med en pil som peker ned, siden av oppdater-symbolet.
@@ -109,7 +109,7 @@ Her er noen av de symbolene jeg personlig ønsker å lære mer om:
 `do.call(function_name, object_name)`
 
 -   `%>%` --\> `margitrrr`.
-    Chain-operator.
+    Kjede-operator.
 
 -   `%in%`
 
@@ -117,20 +117,26 @@ Her er noen av de symbolene jeg personlig ønsker å lære mer om:
 
 -   `\t`
 
--   `[[ ]]` --\> vector
+-   `[[ ]]` --\> vektor
 
 -   `[ ]` --\> list
 
 #### Logiske sjekk-punkter
 
-`ifelse` **`base`**
+-   `ifelse` **`base`**
 
-`if_else` **`dplyr`**
+```{=html}
+<!-- -->
+```
+-   `if_else` **`dplyr`**
 
-**`all()`** base.
-Kan brukes på flere måter:
+```{=html}
+<!-- -->
+```
+-   **`all()`** base.
+    Kan brukes på flere måter:
 
-alene all(logical0==)) if(all(0)) --\> Hvis alle verdiene definert av funksjonenen så skjer:
+alene `all(logical0==)) if(all(0))` --\> Hvis alle verdiene definert av funksjonene så skjer:
 
 ```{r #if(all)}
 object_a = NULL
@@ -142,8 +148,7 @@ print("the objects are the same")
 }
 ```
 
-NB!!
-Husk at vi kan tweake funksjonen ved
+**NB!!** Husk at vi kan "tweake" funksjonen slik:
 
 ```{r if(!all}
 object_a = NULL
@@ -155,19 +160,21 @@ print("hello worlt")
 }
 ```
 
-Det er også mulig å gjøre flere essensielle justeringer av funksjonen.
+Det er også mulig å gjøre flere justeringer av funksjonen.
 Over skrev vi kun `else`, som vil si at hvis `if-statementen` først resulterer i `FALSE`, så vil den gå over til neste oppgave som er definert etter
 
 `else {`
 
 `}`
 
-Liten endring, skriver `else if ()` gjør vi slik at programmet vurderer en ny logisk test før den utfører en spesiell type oppgave.
+Liten endring:
+
+skriver `else if ()` gjør vi slik at programmet vurderer en ny logisk test før den utfører en spesiell type oppgave.
 Dette er for å kontrollere funksjonens rute.
 Ofte er det nødvendig med av klaringer, og dersom noe avviker (som det testes for i `if` utsagnene) vil programmet rettet det opp.
 
-Dette kalles *control flow*.
-Noen chunks som viser `else if` varianten:
+Dette kalles kontrollflyt.
+Noen blokker viser `else if` varianten:
 
 ```{r else if, eval=FALSE}
 object_a = NULL
@@ -188,9 +195,10 @@ print("hello worlf")
 }
 ```
 
-NB `else` må være på lik linje med den siste brakken `{` for at R skal kunne evaluere den.
+\*\*NB!!\*
+\* `else` må være på lik linje med den siste brakken `{` for at R skal kunne evaluere den.
 
-[Logic checkpoints](https://stackoverflow.com/questions/25640161/r-how-to-test-for-character0-in-if-statement)
+-   [Logic checkpoints](https://stackoverflow.com/questions/25640161/r-how-to-test-for-character0-in-if-statement)
 
 I utgangspunktet kan man fint bruke funksjoner som allerede finnes i pakker.
 Som regel er de aller fleste pakkene innenfor ulike fagfelt/emner store i omfang, slik at de dekker de fleste verktøyene man vil trenge for en analyse f.eks.
@@ -204,7 +212,7 @@ Det er dette som gjør det fantastisk.
 
 ## Loops
 
-[Eksempel purrr](https://www.r4epi.com/using-the-purrr-package.html)
+-   [Eksempel purrr](https://www.r4epi.com/using-the-purrr-package.html)
 
 Eksempelet under viser et vanlig scenario hvor loops vil være naturlig å bruke.
 Målet er å telle antall bokstaver i hvert navn i vektoren "names".\
@@ -216,8 +224,8 @@ navn <- c("Lyder", "Aleksander", "Mathisen")
 n_ord <- vector("double", length(navn)) # Expecting double
 ```
 
-Videre lager vi en loop som utfører opperasjonen i en bolk.
-Årsaken til at man bruker loops er fordi man ønsker å unngå repitasjon.
+Videre lager vi en loop som utfører operasjonen i en bolk.
+Årsaken til at man bruker loops er fordi man ønsker å unngå reputasjon.
 Det er ikke bra å gjenta seg selv.
 Derfor skriver man heller en loop som gjør alt vi ønsker i en bolk slik som under.
 
@@ -240,13 +248,13 @@ Dette er den tradisjonelle måten å gjøre det på.
 Man kaller det ofte "basis R forloops".
 
 Konseptet loops[^3] innenfor programmering generelt sett er et viktig og veletablert tema eller konsept.
-For språk som C, C# og C++ eller Python er loops spessielt "the way" og på mange måter en del av flowen i spåket for de som bruker det som deres nummer1 språk.
+For språk som C, C# og C++ eller Python er loops spesielt "*the way*" og på mange måter en del av flyten i språket for de som bruker det som deres nummer1 språk.
 
 [^3]: loops, foreloops, whileloops, nestetloops etc.
 
 C++ er feks kjent som det aller raskeste og effektive språket.
 Særlig for oppgaver hvor loops er nyttig.
-For R derimot er det spesielt for kritikere av R, et godt etablert sannhet at loops går treigt.
+For R derimot er det spesielt for kritikere av R, et godt etablert sannhet at loops går tregt.
 Sammenlignet med da feks C++.
 
 Så klart har det i realiteten ingenting å si for små prosjekter eller analyser.
@@ -273,9 +281,9 @@ Altså at noe skal utføres flere ganger på flere ulike elementer innenfor et o
 
 `i in seq_along(object)` erstattes med `.x`
 
-map utfører loopen med hensyn til hva slags class .x er.
+`map` utfører loopen med hensyn til hva slags `class` .x er.
 
--   Vektor, data.frame eller liste er derfor av betydning!
+-   Vektor, `data.frame` eller liste er derfor av betydning!
 
 `{ body }`erstattes med `.f`
 
@@ -339,11 +347,11 @@ Her er formålet å få et kjapt overblikk over hvordan datan ser ut.
 
 For å bli kjent med data er det fra `base R` vanlig å utføre funksjonen `class()`.
 Den gir tilbake informasjon om hvilke klasser datasettet består av.
-Dersom vi utfører `class(data_name)` får vi som output *data.frame*.
-Det er fordi class() funksjonen kjøres på objektet *data_name* som helhet.
+Dersom vi utfører `class(data_name)` får vi som output *`data.frame`*.
+Det er fordi `class()` funksjonen kjøres på objektet *`data_name`* som helhet.
 Noen ganger kan det være nyttig å få informasjon om hver variabel, som blir det samme som hver kolonne i et data sett.
 
-En løsning er å gjøre slik:
+**En løsning er å gjøre slik:**
 
 `class(class(data_name$Sepal.Length))` eller `class(data_name[,1])`.
 Ulempen med denne måten er at den er treg og lite effektiv.
@@ -351,15 +359,15 @@ For å sjekke neste kolonne må vi skrive `class(data_name[,2])` etc. helt frem 
 I praksis vil det være alle kolonnene i et datasett.
 
 Med purrr pakken kan vi sjekke alle kolonne med en funksjon og en linje med kode.
-Tilbake gir den oss en vektor med resultatet fra alle variablene/ kolonnene i datasettet som vi har lagret som "data_name".
+Tilbake gir den oss en vektor med resultatet fra alle variablene/ kolonnene i datasettet som vi har lagret som `data_name`.
 Se under:
 
 ```{r map_chr, echo=TRUE}
 map_chr(data_name, class)
 ```
 
-Årsaken til at vi bruker `map_chr` er fordi outputen blir fremvist i et objekt lagret som "character" class.
-Til vanlig og som defoult lagres output fra map() funksjoner i lister.
+Årsaken til at vi bruker `map_chr` er fordi konsollen blir fremvist i et objekt lagret som `character` `class`.
+Til vanlig og som defoult lagres output fra `map()` funksjoner i lister.
 Det vil si at vi kan gjøre akkurat det samme med denne syntaksen:
 
 ```{r map, echo=TRUE}
@@ -368,11 +376,11 @@ map(data_name, class)
 
 Men her får vi resultatet lagret i en liste.
 Lister er mer komplisert å jobbe med, og er generelt vanskeligere å referere til i etterkant.
-Derfor ønsker vi å gjøre det så enkelt som mulig, å dermed bruke `map_chr()` som lagrer det for oss i en `character` class.
+Derfor ønsker vi å gjøre det så enkelt som mulig, å dermed bruke `map_chr()` som lagrer det for oss i en `character` `class`.
 
-Vi kan også lagre outputen og referere til den i etterkant hvis vi trenger det. Under gjør vi eksakt samme operasjon, utfører *class()* funksjonen til alle variablene i datasettet *data_name*.
-Vi lagrer resultatet i *data_name_classes*.
-Videre bruker vi *pipe* fra *magrittr* til å utføre funksjonen `glimpse()` som gir oss en oppsummering-tabell av innholdet.
+Vi kan også lagre konsollen og referere til den i etterkant hvis vi trenger det. Under gjør vi eksakt samme operasjon, utfører `class()` funksjonen til alle variablene i datasettet `data_name`.
+Vi lagrer resultatet i `data_name_classes`.
+Videre bruker vi `pipe` fra `magrittr` til å utføre funksjonen `glimpse()` som gir oss en oppsummering-tabell av innholdet.
 Se under:
 
 ```{r data_name_classes, echo=TRUE}
@@ -384,22 +392,25 @@ data_name_classes %>%
 Logikken med `map` er at den tar inn noen viktige input i funksjonen.
 Den etterspør `.x` og `.f`
 
-**.x** = en vektor som en funksjon skal utføres på
+-    **.x** = en vektor funksjonen skal utføres på
 
-**.f** = funksjonen som skal utføres.
+```{=html}
+<!-- -->
+```
+-    **.f** = valgt funksjon.
 
-I vårt tilfelle er `.x = data_name` og `.f = class` .
+Vårt tilfelle er `.x = data_name` og `.f = class` .
 
-### imap, pmap
+### `imap`, `pmap`
 
 ### Funksjoner jeg har laget selv
 
 I denne delen tar jeg for meg egne funksjoner og skisser skrevet av meg selv.
-Målet er å videre uvikle dem og sette de til verks.
+Målet er å videre utvikle dem og sette de til verks.
 
 ```{r eval=FALSE}
 #Info om hvilken mappe data ligger i + navn p? sheets 
-path <- "data_raw/mussample_Hias_How2o_interim.xlsx"
+path <- "data_raw/transaksjoner.xlsx"
 sheets <- readxl::excel_sheets(path)
 ## Alle sheets i excelark er data.frames
 purrr::walk(
@@ -417,7 +428,7 @@ Bryte ned til flere deler er nok lurt å gjøre.\
 Det kan være et excel ark med flere sheets som er aktuelt.
 Fra mitt eksempel kan det være regnskapsdata bestående av kolonner med tall, tekst og dato.
 Ofte er disse filene store for selskaper i en visse størrelser.
-Vi ønsker derfor å laste inn data slik at hver flik blir ett data.frame objekt i R, som kan brukes videre.
+Vi ønsker derfor å laste inn data slik at hver flik blir ett `data.frame` objekt i R, som kan brukes videre.
 
 ```{r eval=FALSE}
 # nest kan være neste steg. HVer data.frame er ett element i samme liste. Bruke det til å refere til for en loop-opperasjon. 
@@ -463,7 +474,7 @@ for(i in seq(walk_object)){
       arrange(desc(.x)) %>% 
       
       ##lage kolonne med diff 
-      mutate(endring_periodeV = (sb2021 - sb2020))
+      mutate(endring_periodeV = (data2021 - data2020))
   }
       if(desc(.x)) {
         drop_na(NA %==% .x) %>%
@@ -487,18 +498,18 @@ for(i in seq(walk_object)){
 tidyr::nest()
 ```
 
-Neste steg er å generalisere opperasjonene som skal gjøres excell arkene.
-Første spørsmål: *er opperasjonen lik for alle data-sett og alle kolonner?*
+Neste steg er å generalisere operasjonene som skal gjøres excel arkene.
+Første spørsmål: *er operasjonen lik for alle data-sett og alle kolonner?*
 
-`purrr` ersatter loops laget selv
+`purrr` erstatter `loops` laget selv
 
 `dplyr` for manipulering
 
 `stringr` for tekst
 
-`tidyr` for modellering, spesseilt lister
+`tidyr` for modellering, spesielt lister
 
-## Sideeffetcs
+## `Sideeffetcs`
 
 Walk funksjonen til `purrr` er en variant som brukes når funksjonen implementert har/ikke en output type som kalles *sideeffekt.* Output generelt kan beskrives i form av utsende; tabell, tall og annen tekst som er resultatet fra en operasjon utført via en funksjon som i sum utfører en rekke betinget rekkefølge med kommandoer og andre underliggende funksjoner som skaper objekter eller resultater, som printes ut i sin form i konsollen.
 Det betyr at vi kan se hva resultatet er, i form av konsoll-tekst.
