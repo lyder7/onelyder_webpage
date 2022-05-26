@@ -1,25 +1,27 @@
 name: "onelyder.com"
 title: "onelyder.com"
-theme: css/jhelvy.css
+theme: css/newonleyder.css
 output_dir: _site
 description: |
   The personal website of Lyder Aleksander Mathisen
 base_url: https://www.onelyder.com
 #creative_commons: CC BY-SA
-favicon: images/favicon.ico
 collections:
   posts:
-    categories: false
+    categories: true
     categories_metadata: true
     authors_metadata: false
     feed_items_max: 20 # default
   talks:
-    categories: false
-    categories_metadata: false
-    authors_metadata: false
+    categories: true
+    categories_metadata: true
+    authors_metadata: true
     feed_iems_max: 20 # default
 navbar:
-  search: false
+  logo: 
+   image: images/logo.png
+   href: https://www.rstudio.com
+  search: true
   right:
     - text: "About"
       href: about.html
@@ -31,10 +33,16 @@ navbar:
       href: refs_links.html
     - text: "Contact"
       href: contact.html
+      menu:
+        - text: "Publiserte"
+          href: publish_article.html
+        - text: "Prosjekter"
+          href: publish_website.html
+        - text: "---"
+        - text: "Article Metadata"
+          href: metadata.html
     - icon: fab fa-github
       href: https://github.com/lyder7
-    - icon: fab fa-twitter
-      href: https://twitter.com/Pierre_Lyder
     - icon: fa fa-linkedin
       href: https://www.linkedin.com/in/lyderaleksander
 output:

@@ -6,11 +6,6 @@
     <atom:link href="https://www.onelyder.com/blog.xml" rel="self" type="application/rss+xml"/>
     <description>The personal website of Lyder Aleksander Mathisen
 </description>
-    <image>
-      <title>onelyder.com</title>
-      <url>https://www.onelyder.com/images/favicon.ico</url>
-      <link>https://www.onelyder.com</link>
-    </image>
     <generator>Distill</generator>
     <lastBuildDate>Wed, 25 May 2022 00:00:00 +0000</lastBuildDate>
     <item>
