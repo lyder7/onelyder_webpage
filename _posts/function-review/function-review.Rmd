@@ -12,6 +12,15 @@ output: distill::distill_article
 toc: true
 ---
 
+
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+
+
 # Innledning
 
 Jeg har gått igjennom scripts fra prosjekter. Fra dem har jeg tatt ut det beste og skrevet om litt. Formålet med å skrive om er for å standardisere koden slik at det kan brukes som en funksjon. 

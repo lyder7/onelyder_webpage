@@ -1,5 +1,6 @@
 ---
 title: "Funksjoner i R"
+date: "25/11/2021"
 description: |
   Vektorer, lister, loops og purrr. En oversikt over sentrale emner.  
 author:
@@ -12,30 +13,34 @@ output:
     highlight: kate
     css: strapless.css
 #bibliography: bib/references.bib
-editor_options: 
-  markdown: 
-    wrap: sentence
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE, 
-                      eval=FALSE)
+# Funksjoner i R {#sec-funksjoner-r}
+
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
 ```
 
 ## Oversikt over sentrale tidyverse pakker. Kartlegge bruksområder.
 
 ### Basis: Vektorer & strukturer i R
 
-Konsepter du må forstå eller akseptere for å beherske funksjoner, loops og representative opperasjoner med R kode.
+Konsepter du må forstå eller akseptere for å beherske funksjoner, `loops` og representative operasjoner med R kode.
 
-Uansett hvor kompleks en funksjon eller script fremstår, vil det i bunn og grunn bestå av mange sekvenser av relativt simple og "enkle" argumenter og funksjoner fra basisen.
+Uansett hvor kompleks en funksjon eller `script` fremstår, vil det i bunn og grunn bestå av mange sekvenser av relativt simple og "enkle" argumenter og funksjoner fra basisen.
 De absolutt viktigste og mest kritiske tar vi for oss nå.
 
 Lær dem!
 
-[jennybc.github.io/purrr-tutorial](https://jennybc.github.io/purrr-tutorial/)
+-   [jennybc.github.io/purrr-tutorial](https://jennybc.github.io/purrr-tutorial/)
 
--   **Vector**
+```{=html}
+<!-- -->
+```
+-   **Vektor**
 
     Samme klasse, en eller flere.
 

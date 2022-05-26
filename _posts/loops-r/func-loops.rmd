@@ -1,23 +1,28 @@
 ---
 title: "Loops i R"
 description: | 
-  Purrr::map(). 
+  Purrr::map(). Updated: `r Sys.time()`
 author: 
   - name: Lyder Aleksander Mathisen
     url: https://onelyder.com/posts/loops-in-r/
-date: "`r Sys.Date()`"
+date: "`11/24/2021`"
 output:
   distill::distill_article:
     toc: true
-    toc_depth: 3
-    toc_float: true
     css: strapless.css
-editor_options: 
-  markdown: 
-    wrap: sentence
+bibliography: references.bib
 ---
 
-# Funksjonell programmering i R (?)
+
+
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+
+# Funksjonell programmering i R (?) {#sec-loops-r}
 
 Inspirert av Bruno Rodriguez sin video [Don't write loops in R](https://www.youtube.com/watch?v=3xIKZbZKCWQ&t=0s).
 
@@ -67,7 +72,7 @@ list_sheets <- paste0("sheet_", seq(1, length(list_data)))
 my_excel_workbook <- createWorkbook()
 ```
 
-# Funksjonell programmering i R
+## Programmering i R
 
 ## `walk` og `map`
 
@@ -270,3 +275,6 @@ For eksempel hvis du jobber med en funksjon hvor det *n´e* element avhenger av 
 I tillegg er det flere verktøy rettet mot loops.
 I denne artikkelen har jeg fokusert på `purrrr`, men det er også `furrr`.
 [furrr](https://furrr.futureverse.org/)
+
+
+# Referanser

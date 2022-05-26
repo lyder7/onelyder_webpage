@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -114,8 +115,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2022-05-25" />
-  <meta property="article:created" itemprop="dateCreated" content="2022-05-25" />
+  <meta property="article:published" itemprop="datePublished" content="2022-05-27" />
+  <meta property="article:created" itemprop="dateCreated" content="2022-05-27" />
   <meta name="article:author" content="onelyder" />
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -136,7 +137,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output","toc"]}},"value":[{"type":"character","attributes":{},"value":["Power BI i R"]},{"type":"character","attributes":{},"value":["Hvilke muligheter åpner seg når R kode blir en del av Power BI? Dette dokumentet har som formål å undersøke hvordan powerbi oppgaver løses med R.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["onelyder"]},{"type":"character","attributes":{},"value":["https://onelyder.com"]},{"type":"character","attributes":{},"value":["Private"]}]}]},{"type":"character","attributes":{},"value":["2022-05-25"]},{"type":"character","attributes":{},"value":["powerbi-refs.bib"]},{"type":"character","attributes":{},"value":["distill::distill_article"]},{"type":"logical","attributes":{},"value":[true]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output","toc"]}},"value":[{"type":"character","attributes":{},"value":["Power BI i R"]},{"type":"character","attributes":{},"value":["Hvilke muligheter åpner seg når R kode blir en del av Power BI? Dette dokumentet har som formål å undersøke hvordan powerbi oppgaver løses med R.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["onelyder"]},{"type":"character","attributes":{},"value":["https://onelyder.com"]},{"type":"character","attributes":{},"value":["Private"]}]}]},{"type":"character","attributes":{},"value":["2022-05-27"]},{"type":"character","attributes":{},"value":["powerbi-refs.bib"]},{"type":"character","attributes":{},"value":["distill::distill_article"]},{"type":"logical","attributes":{},"value":[true]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -453,10 +454,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1288,6 +1285,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1302,6 +1305,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1401,6 +1429,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1423,7 +1453,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2498,7 +2528,7 @@ distill-header .nav a {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Power BI i R","description":"Hvilke muligheter åpner seg når R kode blir en del av Power BI? Dette dokumentet har som formål å undersøke hvordan powerbi oppgaver løses med R.","authors":[{"author":"onelyder","authorURL":"https://onelyder.com","affiliation":"Private","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-05-25T00:00:00.000+02:00","citationText":"onelyder, 2022"}
+{"title":"Power BI i R","description":"Hvilke muligheter åpner seg når R kode blir en del av Power BI? Dette dokumentet har som formål å undersøke hvordan powerbi oppgaver løses med R.","authors":[{"author":"onelyder","authorURL":"https://onelyder.com","affiliation":"Private","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-05-27T00:00:00.000+02:00","citationText":"onelyder, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2519,7 +2549,7 @@ løses med R.</p></p>
 <div class="d-byline">
   onelyder <a href="https://onelyder.com" class="uri">https://onelyder.com</a> (Private)
   
-<br />2022-05-25
+<br />2022-05-27
 </div>
 
 <div class="d-article">
@@ -2528,6 +2558,12 @@ løses med R.</p></p>
 <h3>Contents</h3>
 
 </nav>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="status">
+<p>Lyder Aleksander. <strong>This post status:</strong> is currently a
+dumping ground for ideas, and we don’t recommend reading it. <a href="https://onelyder.com" class="uri">https://onelyder.com</a>.</p>
+</div>
 </div>
 <h1 id="innledning">Innledning</h1>
 <p>Til å starte med laster jeg inn noen standard pakker jeg trenger for
@@ -2572,17 +2608,17 @@ and <span>Metadata</span> from ’<span>Microsoft</span>’
   <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span>
 </code></pre>
 </div>
-<pre><code> setting  value
- version  R version 4.2.0 (2022-04-22)
- os       Linux Mint 20.3
- system   x86_64, linux-gnu
- ui       X11
- language en_US
- collate  en_US.UTF-8
- ctype    en_US.UTF-8
- tz       Europe/Oslo
- date     2022-05-25
- pandoc   2.17.1.1 @ /usr/lib/rstudio/bin/quarto/bin/ (via rmarkdown)</code></pre>
+<pre><code>#&gt;  setting  value
+#&gt;  version  R version 4.2.0 (2022-04-22)
+#&gt;  os       Linux Mint 20.3
+#&gt;  system   x86_64, linux-gnu
+#&gt;  ui       X11
+#&gt;  language en_US
+#&gt;  collate  en_US.UTF-8
+#&gt;  ctype    en_US.UTF-8
+#&gt;  tz       Europe/Oslo
+#&gt;  date     2022-05-27
+#&gt;  pandoc   2.17.1.1 @ /usr/lib/rstudio/bin/quarto/bin/ (via rmarkdown)</code></pre>
 <p>|| || || ||</p>
 </div>
 <h3 id="cran">CRAN</h3>
@@ -2609,7 +2645,8 @@ for meg den i eksempelet. Prosessen vil være lik for andre pakker
 også.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_3.2.0.tar.gz</span>
+<pre class="sourceCode r"><code class="sourceCode r">
+<span class="co">#https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_3.2.0.tar.gz</span>
 <span class="co">#https://cran.r-project.org/src/contrib/Archive/magrittr/magrittr_1.5.tar.gz</span>
 <span class="co">#https://cran.r-project.org/src/contrib/Archive/PerformanceAnalytics/PerformanceAnalytics_1.5.2.tar.gz</span>
 <span class="co">#https://cran.r-project.org/src/contrib/Archive/purrr/purrr_0.2.4.tar.gz</span>
@@ -2621,6 +2658,7 @@ også.</p>
 <span class="va">url</span> <span class="op">&lt;-</span> <span class="st">&quot;https://cran.r-project.org/src/contrib/Archive/dplyr/dplyr_0.8.0.1.tar.gz&quot;</span>
 
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="va">dplyr</span>, <span class="va">url</span><span class="op">)</span>
+
 </code></pre>
 </div>
 </div>

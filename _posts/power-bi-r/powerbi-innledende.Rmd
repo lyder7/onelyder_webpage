@@ -13,6 +13,13 @@ toc: true
 ---
 
 
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+
 
 
 # Innledning
