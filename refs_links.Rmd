@@ -5,27 +5,23 @@ author:
 date: 10-21-2021
 output:
   distill::distill_article:
-    toc_depth: 3
-    toc_float: true
+    toc: true
 ---
 
-# myweblibrary 4later
+# `myweblibrary 4later`
 
 ## Linux Tools
 
 ### Docker
 
--   Et program som gjør det mulig å bruke- hente ande enviorments
-    relatert til prosjektet du jobber med.
--   Du kan fra terminalen laste inn IMAGES som består av filer, mappper
-    og alt du trenger for å kunne jobbe med alt du trenger af
-    funksjoner, pakker og anre sting rundt prosjektet som er nødvendig.
-    . Det har likhetstrekk med det som kalles "`Viritual Machines`".
--   Vi kjører økte i et området som består kun v
+-   Enviorments 
+-   IMAGES 
+- "`Viritual Machines`".
+
 
 ## Terminal Linux Bash
 
-## Cmd-line tools
+### Cmd-line tools
 
 -   [Bash Reference
     Manual](https://www.gnu.org/software/bash/manual/bash.html#Basic-Shell-Features)
