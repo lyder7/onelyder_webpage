@@ -10,7 +10,7 @@ collections:
   posts:
     categories: true
     categories_metadata: true
-    authors_metadata: false
+    authors_metadata: true
     feed_items_max: 20 # default
   talks:
     categories: true
@@ -25,22 +25,12 @@ navbar:
   right:
     - text: "About"
       href: about.html
-    - text: "Projects"
-      href: projects.html
-    - text: "Blog"
+    - text: "Posts"
       href: blog.html
     - text: "Refs"
       href: refs_links.html
     - text: "Contact"
       href: contact.html
-      menu:
-        - text: "Publiserte"
-          href: publish_article.html
-        - text: "Prosjekter"
-          href: publish_website.html
-        - text: "---"
-        - text: "Article Metadata"
-          href: metadata.html
     - icon: fab fa-github
       href: https://github.com/lyder7
     - icon: fa fa-linkedin
