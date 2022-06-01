@@ -86,6 +86,27 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
 
   <!--radix_placeholder_meta_tags-->
 <title>onelyder.com: Function review 01</title>
@@ -95,8 +116,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <link rel="canonical" href="https://www.onelyder.com/posts/function-review/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2022-05-27"/>
-<meta property="article:created" itemprop="dateCreated" content="2022-05-27"/>
+<meta property="article:published" itemprop="datePublished" content="2022-06-02"/>
+<meta property="article:created" itemprop="dateCreated" content="2022-06-02"/>
 <meta name="article:author" content="onelyder"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -116,16 +137,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
 <meta name="citation_title" content="onelyder.com: Function review 01"/>
 <meta name="citation_fulltext_html_url" content="https://www.onelyder.com/posts/function-review/"/>
-<meta name="citation_online_date" content="2022/05/27"/>
-<meta name="citation_publication_date" content="2022/05/27"/>
+<meta name="citation_online_date" content="2022/06/02"/>
+<meta name="citation_publication_date" content="2022/06/02"/>
 <meta name="citation_author" content="onelyder"/>
 <meta name="citation_author_institution" content="Private"/>
 <!--/radix_placeholder_meta_tags-->
   
+  <meta name="citation_reference" content="citation_title=R for data science;citation_publication_date=2017;citation_publisher=O’Reilly;citation_author=Hadley Wickham;citation_author=Grolemund Garrett" />
+  <meta name="citation_reference" content="citation_title=Introduction to stringr;citation_author=Hadley Wickham" />
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output","toc","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Function review 01"]},{"type":"character","attributes":{},"value":["Deler noen funksjoner jeg har laget."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["onelyder"]},{"type":"character","attributes":{},"value":["https://onelyder.com"]},{"type":"character","attributes":{},"value":["Private"]}]}]},{"type":"character","attributes":{},"value":["2022-05-27"]},{"type":"character","attributes":{},"value":["function-review.bib"]},{"type":"character","attributes":{},"value":["distill::distill_article"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["https://www.onelyder.com/posts/function-review/"]},{"type":"character","attributes":{},"value":["https://www.onelyder.com/posts/function-review/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output","toc","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Function review 01"]},{"type":"character","attributes":{},"value":["Deler noen funksjoner jeg har laget."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["onelyder"]},{"type":"character","attributes":{},"value":["https://onelyder.com"]},{"type":"character","attributes":{},"value":["Private"]}]}]},{"type":"character","attributes":{},"value":["2022-06-02"]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["distill::distill_article"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["https://www.onelyder.com/posts/function-review/"]},{"type":"character","attributes":{},"value":["https://www.onelyder.com/posts/function-review/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -3432,7 +3455,7 @@ distill-header .nav a {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Function review 01","description":"Deler noen funksjoner jeg har laget.","authors":[{"author":"onelyder","authorURL":"https://onelyder.com","affiliation":"Private","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-05-27T00:00:00.000+02:00","citationText":"onelyder, 2022"}
+{"title":"Function review 01","description":"Deler noen funksjoner jeg har laget.","authors":[{"author":"onelyder","authorURL":"https://onelyder.com","affiliation":"Private","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-06-02T00:00:00.000+02:00","citationText":"onelyder, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -3475,7 +3498,7 @@ distill-header .nav a {
 <div class="d-byline">
   onelyder <a href="https://onelyder.com" class="uri">https://onelyder.com</a> (Private)
   
-<br />2022-05-27
+<br />2022-06-02
 </div>
 
 <div class="d-article">
@@ -3487,15 +3510,76 @@ distill-header .nav a {
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="status">
-<p>Lyder Aleksander. This chapter is currently a dumping ground for
-ideas, and we don’t recommend reading it. <a href="https://onelyder.com/blog" class="uri">https://onelyder.com/blog</a>.</p>
+<p>—&gt; STATUS: <strong>NB!</strong> Fortsatt under utvikling.
+Innholdet er ikke klargjort. Anbefales ikke å leses da det kan være
+potensielle feil.. <a href="https://onelyder.com" class="uri">https://onelyder.com</a>.</p>
 </div>
 </div>
 <h1 id="innledning">Innledning</h1>
-<p>Jeg har gått igjennom scripts fra prosjekter. Fra dem har jeg tatt ut
-det beste og skrevet om litt. Formålet med å skrive om er for å
-standardisere koden slik at det kan brukes som en funksjon.</p>
-<p>I dette innlegget deler jeg noen av dem.</p>
+<p>Plukket ut det “beste” av kode jeg har skrevet i tidligere
+prosjekter. Skrevet om litt for å standardisere. Formålet med å
+standardisere koden er for å kunne bruke den til flere scenarioer.</p>
+<p>Deler noen her:</p>
+<h3 id="relaxhead"><code>relaxHead</code></h3>
+<p>Funksjonen er laget for dokument- tekst produksjon. Spesifikt er
+oppgave å lage tittel/ overskrifter. Mer spesifikt, foreløpig lager den
+tittelen hvor hvert ord i settingen har stor bokstav. Referanser er
+<span class="citation" data-cites="wickham_stringr">Wickham (<a href="#ref-wickham_stringr" role="doc-biblioref">n.d.</a>)</span> og
+<span class="citation" data-cites="wickham_r_2017 wickham_stringr wickham_r_2017">Wickham and
+Garrett (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>, <a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>; <a href="#ref-wickham_stringr" role="doc-biblioref">Wickham
+n.d.</a>)</span>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># ------------------------------------------------------</span>
+<span class="co">#</span>
+<span class="co"># Author: Lyder Aleksander Mathisen </span>
+<span class="co"># Date: &quot;06/01/2022</span>
+<span class="co"># `relaxHead()` source code original</span>
+<span class="co"># </span>
+<span class="co"># github: github.com/lyder7</span>
+<span class="co"># </span>
+<span class="co"># ------------------------------------------------------</span>
+<span class="co"># --------&gt; Start with listing up the packages this program needs in a vestor c() called &quot;packages&quot;:</span>
+<span class="va">packages</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;pacman&quot;</span>, <span class="st">&quot;magrittr&quot;</span><span class="op">)</span>
+<span class="co"># sjekker om bibliotekene er installert og tilgjenglige. </span>
+<span class="co"># Hvis noen av elemente i vektoren &quot;packages&quot; returnerer FALSE, installeres biblioteket lokalt i miljøet. Dersom teste returnerer TRUE lastes den ikke ned på nytt.  </span>
+<span class="va">installed_packages</span> <span class="op">&lt;-</span> <span class="va">packages</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
+<span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="va">installed_packages</span> <span class="op">==</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span>
+<span class="op">{</span>
+  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="va">packages</span><span class="op">[</span><span class="op">!</span><span class="va">installed_packages</span><span class="op">]</span><span class="op">)</span>
+<span class="op">}</span>
+
+
+<span class="fu"><a href="https://rdrr.io/r/base/invisible.html">invisible</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">packages</span>, <span class="va">library</span>, character.only <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>
+
+
+<span class="co">#------------------------------------------</span>
+
+
+<span class="co"># -----&gt; Function defines here:</span>
+  <span class="va">relaxHead</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">.x</span> <span class="op">=</span> <span class="st">&quot;...&quot;</span><span class="op">)</span> <span class="op">{</span>
+    <span class="va">title</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">.x</span><span class="op">)</span>
+    <span class="va">low</span> <span class="op">&lt;-</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/case.html">str_to_title</a></span><span class="op">(</span><span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_c.html">str_c</a></span><span class="op">(</span><span class="va">title</span><span class="op">)</span><span class="op">)</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/assign.html">assign</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/make.names.html">make.names</a></span><span class="op">(</span><span class="st">&quot;out&quot;</span><span class="op">)</span>,
+           value <span class="op">=</span> <span class="va">low</span>,
+           envir <span class="op">=</span> <span class="va">.GlobalEnv</span><span class="op">)</span>
+    <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span>
+  <span class="op">}</span>     
+<span class="co">#-------------------------------------</span>
+<span class="co"># ------&gt; Test the function here: </span>
+<span class="fu">relaxHead</span><span class="op">(</span><span class="st">&quot;dette SkAL bLi en fIN tiTTel&quot;</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+  <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="op">)</span>
+</code></pre>
+</div>
+<pre><code>#&gt; [1] &quot;Dette Skal Bli En Fin Tittel&quot;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r">
+<span class="co">#--------------------------------------</span>
+</code></pre>
+</div>
+</div>
+<h3 id="no-name-yet-biblotekar"><code>no name yet biblotekar</code></h3>
+<p>Last inn mange bibliotek raskt.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="va">packages</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">&quot;pacman&quot;</span><span class="op">)</span>
@@ -3534,8 +3618,17 @@ standardisere koden slik at det kan brukes som en funksjon.</p>
 </code></pre>
 </div>
 </div>
-<h1 id="referanser">Referanser</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-wickham_stringr" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley. n.d. <span>“Introduction to Stringr.”</span> Accessed
+June 1, 2022. <a href="https://stringr.tidyverse.org/articles/stringr.html">https://stringr.tidyverse.org/articles/stringr.html</a>.
+</div>
+<div id="ref-wickham_r_2017" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley, and Grolemund Garrett. 2017. <em>R for Data
+Science</em>. O’Reilly. <a href="https://r4ds.had.co.nz/">https://r4ds.had.co.nz/</a>.
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -3552,7 +3645,7 @@ standardisere koden slik at det kan brukes som en funksjon.</p>
   <div id="references-listing"></div>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">onelyder (2022, May 27). onelyder.com: Function review 01. Retrieved from https://www.onelyder.com/posts/function-review/</pre>
+  <pre class="citation-appendix short">onelyder (2022, June 2). onelyder.com: Function review 01. Retrieved from https://www.onelyder.com/posts/function-review/</pre>
   <p>BibTeX citation</p>
   <pre class="citation-appendix long">@misc{onelyder2022function,
   author = {onelyder, },

@@ -1,6 +1,7 @@
 set.seed(1014)
 
 knitr::opts_chunk$set(
+  echo = TRUE,
   comment = "#>",
   collapse = TRUE,
   # cache = TRUE,
@@ -25,16 +26,15 @@ status <- function(type) {
   status <- switch(type,
                    polishing = "should be readable but is currently undergoing final polishing",
                    restructuring = "is undergoing heavy restructuring and may be confusing or incomplete",
-                   drafting = "is currently a dumping ground for ideas, and we don't recommend reading it",
+                   drafting = "**NB!** Fortsatt under utvikling. Innholdet er ikke klargjort. Anbefales ikke å leses da det kan være potensielle feil.",
                    complete = "is largely complete and just needs final proof reading",
                    stop("Invalid `type`", call. = FALSE)
   )
   
   cat(paste0(
     "::: status\n",
-    "Lyder Aleksander. ",
-    "This chapter ", status, ". ",
-    "<https://onelyder.com/blog>.\n",
+    "---> STATUS: ", status, ". ",
+    "<https://onelyder.com>.\n",
     ":::\n"
   ))
 }

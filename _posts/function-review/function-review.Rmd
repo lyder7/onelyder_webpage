@@ -7,7 +7,7 @@ author:
     url: https://onelyder.com
     affiliation: Private
 date: "`r Sys.Date()`"
-bibliography: function-review.bib
+bibliography: references.bib
 output: distill::distill_article
 toc: true
 ---
@@ -23,11 +23,65 @@ status("drafting")
 
 # Innledning
 
-Jeg har gått igjennom scripts fra prosjekter. Fra dem har jeg tatt ut det beste og skrevet om litt. Formålet med å skrive om er for å standardisere koden slik at det kan brukes som en funksjon. 
 
-I dette innlegget deler jeg noen av dem. 
+Plukket ut det "beste" av kode jeg har skrevet i tidligere prosjekter. Skrevet om litt for å standardisere. Formålet med å standardisere koden er for å kunne bruke den til flere scenarioer. 
 
-```{r}
+Deler noen her:
+
+### `relaxHead`
+
+Funksjonen er laget for dokument- tekst produksjon. Spesifikt er oppgave å lage tittel/ overskrifter. Mer spesifikt, foreløpig lager den tittelen hvor hvert ord i settingen har stor bokstav. Referanser er @wickham_stringr og @wickham_r_2017 [@wickham_stringr; @wickham_r_2017]. 
+
+```{r relaxHead, warning=FALSE, message=FALSE}
+# ------------------------------------------------------
+#
+# Author: Lyder Aleksander Mathisen 
+# Date: "06/01/2022
+# `relaxHead()` source code original
+# 
+# github: github.com/lyder7
+# 
+# ------------------------------------------------------
+# --------> Start with listing up the packages this program needs in a vestor c() called "packages":
+packages <- c("stringr", "pacman", "magrittr")
+# sjekker om bibliotekene er installert og tilgjenglige. 
+# Hvis noen av elemente i vektoren "packages" returnerer FALSE, installeres biblioteket lokalt i miljøet. Dersom teste returnerer TRUE lastes den ikke ned på nytt.  
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE))
+{
+  install.packages(packages[!installed_packages])
+}
+
+
+invisible(lapply(packages, library, character.only = TRUE))
+
+
+#------------------------------------------
+
+
+# -----> Function defines here:
+  relaxHead <- function(.x = "...") {
+    title <- as.character(.x)
+    low <- stringr::str_to_title(stringr::str_c(title))
+    assign(x = make.names("out"),
+           value = low,
+           envir = .GlobalEnv)
+    return(out)
+  }     
+#-------------------------------------
+# ------> Test the function here: 
+relaxHead("dette SkAL bLi en fIN tiTTel") %>% 
+  print()
+
+#--------------------------------------
+
+```
+
+### `no name yet biblotekar`
+
+Last inn mange bibliotek raskt. 
+
+```{r loadit-fast}
 packages <- c("pacman")
 # checks if the package name is isntalled, if not it will be. ANd opsite. 
 installed_packages <- packages %in% rownames(installed.packages())
@@ -65,8 +119,6 @@ pacman::p_load(
 
 
 
-
-# Referanser
 
 
 

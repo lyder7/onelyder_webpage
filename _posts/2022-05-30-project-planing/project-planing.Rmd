@@ -1,0 +1,25 @@
+---
+title: "project-planing"
+description: |
+  Planlegging prosjekter. 
+author:
+  - name: Lyder Aleksander Mathisen   
+    url: https://onelyder.com
+date: 2022-05-30
+output:
+  distill::distill_article:
+    self_contained: false
+draft: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+
+
+
+
+

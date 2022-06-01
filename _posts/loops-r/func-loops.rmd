@@ -1,7 +1,7 @@
 ---
 title: "Loops i R"
 description: | 
-  Purrr::map(). Updated: `r Sys.time()`
+  Purrr::map(). Last Updated: `r Sys.time()`
 author: 
   - name: Lyder Aleksander Mathisen
     url: https://onelyder.com/posts/loops-in-r/
