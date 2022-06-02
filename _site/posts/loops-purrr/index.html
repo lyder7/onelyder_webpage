@@ -46,86 +46,108 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    background-color: #ffffff;
-    color: #a0a0a0;
+    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  { color: #1f1c1b; background-color: #ffffff; }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span { color: #1f1c1b; } /* Normal */
-code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
-code span.an { color: #ca60ca; } /* Annotation */
-code span.at { color: #0057ae; } /* Attribute */
-code span.bn { color: #b08000; } /* BaseN */
-code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
-code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #924c9d; } /* Char */
-code span.cn { color: #aa5500; } /* Constant */
-code span.co { color: #898887; } /* Comment */
-code span.cv { color: #0095ff; } /* CommentVar */
-code span.do { color: #607880; } /* Documentation */
-code span.dt { color: #0057ae; } /* DataType */
-code span.dv { color: #b08000; } /* DecVal */
-code span.er { color: #bf0303; text-decoration: underline; } /* Error */
-code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
-code span.fl { color: #b08000; } /* Float */
-code span.fu { color: #644a9b; } /* Function */
-code span.im { color: #ff5500; } /* Import */
-code span.in { color: #b08000; } /* Information */
-code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
-code span.op { color: #1f1c1b; } /* Operator */
-code span.ot { color: #006e28; } /* Other */
-code span.pp { color: #006e28; } /* Preprocessor */
-code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
-code span.sc { color: #3daee9; } /* SpecialChar */
-code span.ss { color: #ff5500; } /* SpecialString */
-code span.st { color: #bf0303; } /* String */
-code span.va { color: #0057ae; } /* Variable */
-code span.vs { color: #bf0303; } /* VerbatimString */
-code span.wa { color: #bf0303; } /* Warning */
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
 
   <!--radix_placeholder_meta_tags-->
-<title>onelyder.com: Funksjoner i R</title>
+<title>onelyder.com: R programmering</title>
 
-<meta property="description" itemprop="description" content="Vektorer, lister, loops og purrr. En oversikt over sentrale emner."/>
+<meta property="description" itemprop="description" content="Purrr::map(). Last Updated: 2022-06-02 04:39:07"/>
 
 <link rel="canonical" href="https://www.onelyder.com/posts/loops-purrr/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2022-05-27"/>
-<meta property="article:created" itemprop="dateCreated" content="2022-05-27"/>
-<meta name="article:author" content="Lyder ~ onelyder"/>
+<meta property="article:published" itemprop="datePublished" content="2021-11-24"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-11-24"/>
+<meta name="article:author" content="Lyder Aleksander Mathisen"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="onelyder.com: Funksjoner i R"/>
+<meta property="og:title" content="onelyder.com: R programmering"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Vektorer, lister, loops og purrr. En oversikt over sentrale emner."/>
+<meta property="og:description" content="Purrr::map(). Last Updated: 2022-06-02 04:39:07"/>
 <meta property="og:url" content="https://www.onelyder.com/posts/loops-purrr/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="onelyder.com"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="onelyder.com: Funksjoner i R"/>
-<meta property="twitter:description" content="Vektorer, lister, loops og purrr. En oversikt over sentrale emner."/>
+<meta property="twitter:title" content="onelyder.com: R programmering"/>
+<meta property="twitter:description" content="Purrr::map(). Last Updated: 2022-06-02 04:39:07"/>
 <meta property="twitter:url" content="https://www.onelyder.com/posts/loops-purrr/"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
-<meta name="citation_title" content="onelyder.com: Funksjoner i R"/>
+<meta name="citation_title" content="onelyder.com: R programmering"/>
 <meta name="citation_fulltext_html_url" content="https://www.onelyder.com/posts/loops-purrr/"/>
-<meta name="citation_online_date" content="2022/05/27"/>
-<meta name="citation_publication_date" content="2022/05/27"/>
-<meta name="citation_author" content="Lyder ~ onelyder"/>
+<meta name="citation_online_date" content="2021/11/24"/>
+<meta name="citation_publication_date" content="2021/11/24"/>
+<meta name="citation_author" content="Lyder Aleksander Mathisen"/>
 <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Tidyverse" />
+  <meta name="citation_reference" content="citation_title=R for data science: Import, tidy, transform, visualize, and model data;citation_publication_date=2016;citation_publisher=&quot; O’Reilly Media, Inc.&quot;;citation_author=Hadley Wickham;citation_author=Garrett Grolemund" />
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output","editor_options","date","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Funksjoner i R"]},{"type":"character","attributes":{},"value":["Vektorer, lister, loops og purrr. En oversikt over sentrale emner."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Lyder ~ onelyder"]}]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","highlight","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["kate"]},{"type":"character","attributes":{},"value":["strapless.css"]}]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["markdown"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["wrap"]}},"value":[{"type":"character","attributes":{},"value":["sentence"]}]}]},{"type":"character","attributes":{},"value":["05-27-2022"]},{"type":"character","attributes":{},"value":["https://www.onelyder.com/posts/loops-purrr/"]},{"type":"character","attributes":{},"value":["https://www.onelyder.com/posts/loops-purrr/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["R programmering"]},{"type":"character","attributes":{},"value":["Purrr::map(). Last Updated: 2022-06-02 04:39:07"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Lyder Aleksander Mathisen"]},{"type":"character","attributes":{},"value":["https://onelyder.com/posts/loops-in-r/"]}]}]},{"type":"character","attributes":{},"value":["`11/24/2021`"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["strapless.css"]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["https://www.onelyder.com/posts/loops-purrr/"]},{"type":"character","attributes":{},"value":["https://www.onelyder.com/posts/loops-purrr/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -7174,7 +7196,7 @@ margin-bottom: -1px;
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Funksjoner i R","description":"Vektorer, lister, loops og purrr. En oversikt over sentrale emner.","authors":[{"author":"Lyder ~ onelyder","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-05-27T00:00:00.000+02:00","citationText":"onelyder, 2022"}
+{"title":"R programmering","description":"Purrr::map(). Last Updated: 2022-06-02 04:39:07","authors":[{"author":"Lyder Aleksander Mathisen","authorURL":"https://onelyder.com/posts/loops-in-r/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-11-24T00:00:00.000+01:00","citationText":"Mathisen, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -7208,23 +7230,24 @@ margin-bottom: -1px;
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Funksjoner i R</h1>
+<h1>R programmering</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Vektorer, lister, loops og purrr. En oversikt over sentrale
-emner.</p></p>
+<p><p>Purrr::map(). Last Updated: 2022-06-02 04:39:07</p></p>
 </div>
 
 <div class="d-byline">
-  Lyder ~ onelyder  
+  Lyder Aleksander Mathisen <a href="https://onelyder.com/posts/loops-in-r/" class="uri">https://onelyder.com/posts/loops-in-r/</a> 
   
-<br />05-27-2022
+<br /><code>11/24/2021</code>
 </div>
 
 <div class="d-article">
 <div class="d-contents d-contents-float">
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
+<ul>
+<li><a href="#sec-funksjoner-r">Funksjoner i R</a>
 <ul>
 <li><a href="#oversikt-over-sentrale-tidyverse-pakker.-kartlegge-bruksområder.">Oversikt
 over sentrale tidyverse pakker. Kartlegge bruksområder.</a>
@@ -7242,6 +7265,7 @@ funksjoner sentrale</a></li>
 <li><a href="#purrrmap"><code>purrr::map</code></a></li>
 <li><a href="#purrrmap-forskjeller"><code>purrr::map</code>:
 <em>forskjeller</em></a></li>
+</ul></li>
 </ul></li>
 <li><a href="#funksjonell-programmering-i-r">Funksjonell programmering i
 R</a>
@@ -7276,20 +7300,32 @@ selv</a></li>
 </ul>
 </nav>
 </div>
+<h1 id="sec-funksjoner-r">Funksjoner i R</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="status">
+<p>Lyder Aleksander - <strong>Varsling</strong>: Under arbeid. Denne
+versjonen er ufullstendig og under utvikling. Denne versjonen kan
+potensielt inneha feil. Anbefales å ikke referere til denne utgaven av
+dokumentet.. <a href="https://onelyder.com/blog" class="uri">https://onelyder.com/blog</a>.</p>
+</div>
+</div>
 <h2 id="oversikt-over-sentrale-tidyverse-pakker.-kartlegge-bruksområder.">Oversikt
 over sentrale tidyverse pakker. Kartlegge bruksområder.</h2>
 <h3 id="basis-vektorer-strukturer-i-r">Basis: Vektorer &amp; strukturer
 i R</h3>
 <p>Konsepter du må forstå eller akseptere for å beherske funksjoner,
-loops og representative opperasjoner med R kode.</p>
-<p>Uansett hvor kompleks en funksjon eller script fremstår, vil det i
-bunn og grunn bestå av mange sekvenser av relativt simple og “enkle”
-argumenter og funksjoner fra basisen. De absolutt viktigste og mest
-kritiske tar vi for oss nå.</p>
+<code>loops</code> og representative operasjoner med R kode.</p>
+<p>Uansett hvor kompleks en funksjon eller <code>script</code> fremstår,
+vil det i bunn og grunn bestå av mange sekvenser av relativt simple og
+“enkle” argumenter og funksjoner fra basisen. De absolutt viktigste og
+mest kritiske tar vi for oss nå.</p>
 <p>Lær dem!</p>
-<p><a href="https://jennybc.github.io/purrr-tutorial/">jennybc.github.io/purrr-tutorial</a></p>
 <ul>
-<li><p><strong>Vector</strong></p>
+<li><a href="https://jennybc.github.io/purrr-tutorial/">jennybc.github.io/purrr-tutorial</a></li>
+</ul>
+<!-- -->
+<ul>
+<li><p><strong>Vektor</strong></p>
 <p>Samme klasse, en eller flere.</p></li>
 <li><p><strong>Data.frame</strong></p>
 <p>Samling av flere vektorer, som vi kaller kollonner, bestående av
@@ -7313,7 +7349,8 @@ referanse. Type output <code>paste</code> og <code>past0</code>. <a href="#fn2" 
 <h2 id="viktige-basis-konsepter">Viktige basis konsepter</h2>
 <p><code>tidyverse</code> og med alle data science verktøyene til R
 brukere, er det allikevel etter min mening viktig å lære de fundamentale
-rammene. “<strong>base R</strong>”.</p>
+rammene. “<strong>base R</strong>” <span class="citation" data-cites="wickham_r_2016 noauthor_tidyverse_nodate">(<a href="#ref-wickham_r_2016" role="doc-biblioref">Wickham and Grolemund
+2016</a>; <a href="#ref-noauthor_tidyverse_nodate" role="doc-biblioref"><span>“Tidyverse”</span> n.d.</a>)</span>.</p>
 <p>Flere standard-pakker . <code>utils</code>, <code>stats</code>,
 <code>methods</code>, <code>grDevices</code>, <code>graphics</code> og
 <code>datasets</code>.</p>
@@ -7377,6 +7414,7 @@ verdiene definert av funksjonene så skjer:</p>
 <span class="op">}</span>
 </code></pre>
 </div>
+<pre><code>#&gt; [1] &quot;the objects are the same&quot;</code></pre>
 </div>
 <p><strong>NB!!</strong> Husk at vi kan “tweake” funksjonen slik:</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -7390,6 +7428,7 @@ verdiene definert av funksjonene så skjer:</p>
 <span class="op">}</span>
 </code></pre>
 </div>
+<pre><code>#&gt; [1] &quot;statemant not true&quot;</code></pre>
 </div>
 <p>Det er også mulig å gjøre flere justeringer av funksjonen. Over skrev
 vi kun <code>else</code>, som vil si at hvis <code>if-statementen</code>
@@ -7406,22 +7445,22 @@ vil programmet rettet det opp.</p>
 <p>Dette kalles kontrollflyt. Noen blokker viser <code>else if</code>
 varianten:</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>object_a <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>object_b <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">all</span>(object_a <span class="sc">==</span> object_b)){</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;the objects are the same&quot;</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>{</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a> <span class="fu">print</span>(<span class="st">&quot;they are not true&quot;</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>object_a <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>object_b <span class="ot">=</span> <span class="cn">TRUE</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span>(<span class="sc">!</span><span class="fu">all</span>(object_a <span class="sc">==</span> object_b)){</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;hello worlf&quot;</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>( {</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a> <span class="fu">print</span>(<span class="st">&quot;statemant not true&quot;</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>object_a <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>object_b <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">all</span>(object_a <span class="sc">==</span> object_b)){</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;the objects are the same&quot;</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>{</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a> <span class="fu">print</span>(<span class="st">&quot;they are not true&quot;</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>object_a <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>object_b <span class="ot">=</span> <span class="cn">TRUE</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span>(<span class="sc">!</span><span class="fu">all</span>(object_a <span class="sc">==</span> object_b)){</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;hello worlf&quot;</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>( {</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a> <span class="fu">print</span>(<span class="st">&quot;statemant not true&quot;</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <p>**NB!!* * <code>else</code> må være på lik linje med den siste
 brakken <code>{</code> for at R skal kunne evaluere den.</p>
@@ -7561,6 +7600,16 @@ iris under navnet <code>data_iris</code>. Se kodesnipp under:</p>
 <span class="va">data_name</span> 
 </code></pre>
 </div>
+<pre><code>#&gt; # A tibble: 150 × 5
+#&gt;   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+#&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+#&gt; 1          5.1         3.5          1.4         0.2 setosa 
+#&gt; 2          4.9         3            1.4         0.2 setosa 
+#&gt; 3          4.7         3.2          1.3         0.2 setosa 
+#&gt; 4          4.6         3.1          1.5         0.2 setosa 
+#&gt; 5          5           3.6          1.4         0.2 setosa 
+#&gt; 6          5.4         3.9          1.7         0.4 setosa 
+#&gt; # … with 144 more rows</code></pre>
 </div>
 <p>Koden over viser hvordan data-settet “iris” kan refereres til etter
 at tidyverse er lastet inn. Videre ser vi at iris blir lagret i en
@@ -7595,6 +7644,8 @@ variablene/ kolonnene i datasettet som vi har lagret som
 <pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op">(</span><span class="va">data_name</span>, <span class="va">class</span><span class="op">)</span>
 </code></pre>
 </div>
+<pre><code>#&gt; Sepal.Length  Sepal.Width Petal.Length  Petal.Width      Species 
+#&gt;    &quot;numeric&quot;    &quot;numeric&quot;    &quot;numeric&quot;    &quot;numeric&quot;     &quot;factor&quot;</code></pre>
 </div>
 <p>Årsaken til at vi bruker <code>map_chr</code> er fordi konsollen blir
 fremvist i et objekt lagret som <code>character</code>
@@ -7606,6 +7657,20 @@ akkurat det samme med denne syntaksen:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">data_name</span>, <span class="va">class</span><span class="op">)</span>
 </code></pre>
 </div>
+<pre><code>#&gt; $Sepal.Length
+#&gt; [1] &quot;numeric&quot;
+#&gt; 
+#&gt; $Sepal.Width
+#&gt; [1] &quot;numeric&quot;
+#&gt; 
+#&gt; $Petal.Length
+#&gt; [1] &quot;numeric&quot;
+#&gt; 
+#&gt; $Petal.Width
+#&gt; [1] &quot;numeric&quot;
+#&gt; 
+#&gt; $Species
+#&gt; [1] &quot;factor&quot;</code></pre>
 </div>
 <p>Men her får vi resultatet lagret i en liste. Lister er mer komplisert
 å jobbe med, og er generelt vanskeligere å referere til i etterkant.
@@ -7626,6 +7691,8 @@ gir oss en oppsummering-tabell av innholdet. Se under:</p>
   <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
 </code></pre>
 </div>
+<pre><code>#&gt;  Named chr [1:5] &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;factor&quot;
+#&gt;  - attr(*, &quot;names&quot;)= chr [1:5] &quot;Sepal.Length&quot; &quot;Sepal.Width&quot; &quot;Petal.Length&quot; &quot;Petal.Width&quot; ...</code></pre>
 </div>
 <p>Logikken med <code>map</code> er at den tar inn noen viktige input i
 funksjonen. Den etterspør <code>.x</code> og <code>.f</code></p>
@@ -7668,71 +7735,71 @@ selskaper i en visse størrelser. Vi ønsker derfor å laste inn data slik
 at hver flik blir ett <code>data.frame</code> objekt i R, som kan brukes
 videre.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nest kan være neste steg. HVer data.frame er ett element i samme liste. Bruke det til å refere til for en loop-opperasjon. </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Her er hva jeg tenker vist med en for looop:</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq</span>(walk_object)){</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  df[[i]] <span class="ot">&lt;-</span> walk_object[[i]]</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">&lt;-</span> df</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="sc">!</span><span class="fu">class</span>(df)){</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Data formattering starter</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    a <span class="ot">&lt;-</span> a <span class="sc">%&gt;%</span> </span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Data frame class</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>      tidyr<span class="sc">::</span><span class="fu">as_tibble</span>()</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(<span class="fu">is.na</span>(<span class="cn">NA</span>) <span class="ot">=</span> <span class="cn">TRUE</span>){</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="fu">drop_na</span>(a)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>{</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(a)</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># freq antall varaibler/kolonner</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">count_</span>(<span class="fu">names</span>(a)) <span class="sc">==</span> freq){</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>      kolonne_nanv <span class="ot">&lt;-</span> <span class="fu">names</span>(a)</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Velg kolonner </span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(<span class="fu">all_of</span>(kolonne_navn)) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>      <span class="fu">arrange</span>(<span class="fu">desc</span>(.x)) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>      <span class="do">##lage kolonne med diff </span></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">endring_periodeV =</span> (data2021 <span class="sc">-</span> data2020))</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(<span class="fu">desc</span>(.x)) {</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        <span class="fu">drop_na</span>(<span class="cn">NA</span> <span class="sc">%==%</span> .x) <span class="sc">%&gt;%</span></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>          <span class="cf">else</span> {</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>            <span class="fu">return</span>(navn_her)</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>          }</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>          <span class="fu">mutate</span>()</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>      <span class="fu">drop_na</span>(<span class="cn">NA</span> <span class="sc">%==%</span> .x) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>      <span class="do">## Regnskapskontoer i SB</span></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="fu">str_glue</span>(konto_navn) <span class="sc">==</span> <span class="fu">filter</span>(vroom<span class="sc">::</span><span class="fu">starts_with</span>(kolonne_navn)))</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="er">}</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Dette kan gjøres med purrr og tidyr </span></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>tidyr<span class="sc">::</span><span class="fu">nest</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nest kan være neste steg. HVer data.frame er ett element i samme liste. Bruke det til å refere til for en loop-opperasjon. </span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Her er hva jeg tenker vist med en for looop:</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq</span>(walk_object)){</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  df[[i]] <span class="ot">&lt;-</span> walk_object[[i]]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">&lt;-</span> df</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="sc">!</span><span class="fu">class</span>(df)){</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Data formattering starter</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    a <span class="ot">&lt;-</span> a <span class="sc">%&gt;%</span> </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Data frame class</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>      tidyr<span class="sc">::</span><span class="fu">as_tibble</span>()</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(<span class="fu">is.na</span>(<span class="cn">NA</span>) <span class="ot">=</span> <span class="cn">TRUE</span>){</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        <span class="fu">drop_na</span>(a)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>{</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(a)</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># freq antall varaibler/kolonner</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">count_</span>(<span class="fu">names</span>(a)) <span class="sc">==</span> freq){</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>      kolonne_nanv <span class="ot">&lt;-</span> <span class="fu">names</span>(a)</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Velg kolonner </span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(<span class="fu">all_of</span>(kolonne_navn)) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>      <span class="fu">arrange</span>(<span class="fu">desc</span>(.x)) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>      <span class="do">##lage kolonne med diff </span></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">endring_periodeV =</span> (data2021 <span class="sc">-</span> data2020))</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(<span class="fu">desc</span>(.x)) {</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>        <span class="fu">drop_na</span>(<span class="cn">NA</span> <span class="sc">%==%</span> .x) <span class="sc">%&gt;%</span></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>          <span class="cf">else</span> {</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>            <span class="fu">return</span>(navn_her)</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>          <span class="fu">mutate</span>()</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>      <span class="fu">drop_na</span>(<span class="cn">NA</span> <span class="sc">%==%</span> .x) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>      <span class="do">## Regnskapskontoer i SB</span></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="fu">str_glue</span>(konto_navn) <span class="sc">==</span> <span class="fu">filter</span>(vroom<span class="sc">::</span><span class="fu">starts_with</span>(kolonne_navn)))</span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a><span class="er">}</span></span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Dette kan gjøres med purrr og tidyr </span></span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>tidyr<span class="sc">::</span><span class="fu">nest</span>()</span></code></pre></div>
 </div>
 <p>Neste steg er å generalisere operasjonene som skal gjøres excel
 arkene. Første spørsmål: <em>er operasjonen lik for alle data-sett og
@@ -7811,6 +7878,11 @@ et objekt, og sammenligner dem mot hverandre.</p>
   <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
 </code></pre>
 </div>
+<pre><code>#&gt; Rows: 434
+#&gt; Columns: 3
+#&gt; $ pac &lt;chr&gt; &quot;:=&quot;, &quot;!!&quot;, &quot;!!!&quot;, &quot;.data&quot;, &quot;.env&quot;, &quot;%@%&quot;, &quot;%@%&lt;-&quot;, &quot;%&lt;~…
+#&gt; $ pur &lt;chr&gt; &quot;%@%&quot;, &quot;%&gt;%&quot;, &quot;%||%&quot;, &quot;accumulate&quot;, &quot;accumulate_right&quot;, …
+#&gt; $ mag &lt;chr&gt; &quot;%!&gt;%&quot;, &quot;%&lt;&gt;%&quot;, &quot;%&gt;%&quot;, &quot;%$%&quot;, &quot;%T&gt;%&quot;, &quot;add&quot;, &quot;and&quot;, &quot;deb…</code></pre>
 </div>
 <p>Årsaken til denne sammenligningnen er for å indentifisere nyttige
 kontroll-funksjoner vi kan bruke når vi bygger opp våre egne. Logiske
@@ -7845,11 +7917,20 @@ betinget av if testen.</p>
 <span class="va">vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">&quot;Lyder&quot;</span>, <span class="st">&quot;Aleksander&quot;</span>, <span class="st">&quot;Mathisen&quot;</span><span class="op">)</span>
 <span class="co"># Lønsing 1 </span>
 <span class="st">&quot;Lyder&quot;</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">vector</span>
-<span class="co">#Løsning 2</span>
-<span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="va">vector</span> <span class="op">==</span> <span class="st">&quot;Lyder&quot;</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="va">vector</span> <span class="op">==</span> <span class="st">&quot;Henrik&quot;</span><span class="op">)</span>
 </code></pre>
 </div>
+<pre><code>#&gt; [1] TRUE</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Løsning 2</span>
+<span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="va">vector</span> <span class="op">==</span> <span class="st">&quot;Lyder&quot;</span><span class="op">)</span>
+</code></pre>
+</div>
+<pre><code>#&gt; [1] TRUE</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="va">vector</span> <span class="op">==</span> <span class="st">&quot;Henrik&quot;</span><span class="op">)</span>
+</code></pre>
+</div>
+<pre><code>#&gt; [1] FALSE</code></pre>
 </div>
 <p>Kode snippen viser et typisk scenario hvor vi ønsker å sjekke om en
 vector består av en spesifikk verdi. I tilfellet jeg skrev over laget
@@ -7872,12 +7953,44 @@ oss. Under trekker jeg ut funksjoner:</p>
 <span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_functions.html">p_functions</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">&quot;Rcpp&quot;</span><span class="op">)</span>
 </code></pre>
 </div>
+<pre><code>#&gt;  [1] &quot;.__C__C++Class&quot;             &quot;.__C__C++Constructor&quot;      
+#&gt;  [3] &quot;.__C__C++Field&quot;             &quot;.__C__C++Function&quot;         
+#&gt;  [5] &quot;.__C__C++Object&quot;            &quot;.__C__C++OverloadedMethods&quot;
+#&gt;  [7] &quot;.__C__Module&quot;               &quot;.__C__RcppClass&quot;           
+#&gt;  [9] &quot;.__T__.DollarNames:utils&quot;   &quot;.__T__[:base&quot;              
+#&gt; [11] &quot;.__T__[[&lt;-:base&quot;            &quot;.__T__[&lt;-:base&quot;            
+#&gt; [13] &quot;.__T__$:base&quot;               &quot;.__T__$&lt;-:base&quot;            
+#&gt; [15] &quot;.__T__formals&lt;-:base&quot;       &quot;.__T__initialize:methods&quot;  
+#&gt; [17] &quot;.__T__prompt:utils&quot;         &quot;.__T__show:methods&quot;        
+#&gt; [19] &quot;.DollarNames&quot;               &quot;compileAttributes&quot;         
+#&gt; [21] &quot;cpp_object_dummy&quot;           &quot;cpp_object_initializer&quot;    
+#&gt; [23] &quot;cppFunction&quot;                &quot;demangle&quot;                  
+#&gt; [25] &quot;evalCpp&quot;                    &quot;exposeClass&quot;               
+#&gt; [27] &quot;formals&lt;-&quot;                  &quot;getRcppVersion&quot;            
+#&gt; [29] &quot;initialize&quot;                 &quot;LdFlags&quot;                   
+#&gt; [31] &quot;loadModule&quot;                 &quot;loadRcppClass&quot;             
+#&gt; [33] &quot;loadRcppModules&quot;            &quot;Module&quot;                    
+#&gt; [35] &quot;populate&quot;                   &quot;prompt&quot;                    
+#&gt; [37] &quot;Rcpp.package.skeleton&quot;      &quot;Rcpp.plugin.maker&quot;         
+#&gt; [39] &quot;RcppLdFlags&quot;                &quot;registerPlugin&quot;            
+#&gt; [41] &quot;setRcppClass&quot;               &quot;show&quot;                      
+#&gt; [43] &quot;sizeof&quot;                     &quot;sourceCpp&quot;</code></pre>
 </div>
 <h3 id="nest">Nest</h3>
 <p>tidyr::nest()</p>
 <h1 id="appendix">Appendix</h1>
 <h1 id="refernaser">Refernaser</h1>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-noauthor_tidyverse_nodate" class="csl-entry" role="doc-biblioentry">
+<span>“Tidyverse.”</span> n.d. Accessed September 10, 2021. <a href="https://www.tidyverse.org/">https://www.tidyverse.org/</a>.
+</div>
+<div id="ref-wickham_r_2016" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley, and Garrett Grolemund. 2016. <em>R for Data Science:
+Import, Tidy, Transform, Visualize, and Model Data</em>. &quot; O’Reilly
+Media, Inc.&quot;.
+</div>
+</div>
 <section class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
@@ -7915,15 +8028,17 @@ flere ganger på forskjellige enheter.<a href="#fnref4" class="footnote-back" ro
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom">
+  <h3 id="references">References</h3>
+  <div id="references-listing"></div>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">onelyder (2022, May 27). onelyder.com: Funksjoner i R. Retrieved from https://www.onelyder.com/posts/loops-purrr/</pre>
+  <pre class="citation-appendix short">Mathisen (2021, Nov. 24). onelyder.com: R programmering. Retrieved from https://www.onelyder.com/posts/loops-purrr/</pre>
   <p>BibTeX citation</p>
-  <pre class="citation-appendix long">@misc{onelyder2022funksjoner,
-  author = {onelyder, Lyder ~},
-  title = {onelyder.com: Funksjoner i R},
+  <pre class="citation-appendix long">@misc{mathisen2021r,
+  author = {Mathisen, Lyder Aleksander},
+  title = {onelyder.com: R programmering},
   url = {https://www.onelyder.com/posts/loops-purrr/},
-  year = {2022}
+  year = {2021}
 }</pre>
 </div>
 <!--/radix_placeholder_appendices-->

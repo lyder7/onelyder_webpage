@@ -1,18 +1,16 @@
 ---
-title: "Funksjoner i R"
-date: "25/11/2021"
-description: |
-  Vektorer, lister, loops og purrr. En oversikt over sentrale emner.  
-author:
- - name: Lyder ~ onelyder
-output: 
+title: "R programmering"
+description: | 
+  Purrr::map(). Last Updated: `r Sys.time()`
+author: 
+  - name: Lyder Aleksander Mathisen
+    url: https://onelyder.com/posts/loops-in-r/
+date: "`11/24/2021`"
+output:
   distill::distill_article:
     toc: true
-    toc_depth: 3
-    toc_float: true
-    highlight: kate
     css: strapless.css
-#bibliography: bib/references.bib
+bibliography: references.bib
 ---
 
 # Funksjoner i R {#sec-funksjoner-r}
@@ -77,7 +75,7 @@ Type output `paste` og `past0`.
 ## Viktige basis konsepter
 
 `tidyverse` og med alle data science verktøyene til R brukere, er det allikevel etter min mening viktig å lære de fundamentale rammene.
-"**base R**".
+"**base R**" [@wickham_r_2016; @noauthor_tidyverse_nodate].
 
 Flere standard-pakker .
 `utils`, `stats`, `methods`, `grDevices`, `graphics` og `datasets`.

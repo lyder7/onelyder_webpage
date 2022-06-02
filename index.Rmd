@@ -9,8 +9,6 @@ base_url: https://www.onelyder.com
 site: distill::distill_website
 ---
 
-# Under construction. Coming Soon
-
 **Shhh... don't tell anyone.**
 
 `3,2,1... Loading...`
@@ -21,4 +19,4 @@ site: distill::distill_website
 
 In the meantime see [this section](https://onelyder.com/blog.html).
 
-Contact? Click [here](https://onelyder.com/about.html)
+Contact? Click [here](https://onelyder.com/contact.html)

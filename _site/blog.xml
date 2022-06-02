@@ -9,20 +9,20 @@
     <generator>Distill</generator>
     <lastBuildDate>Thu, 02 Jun 2022 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>Docker - Linux Setup</title>
+      <dc:creator>Lyder Aleksander Mathisen</dc:creator>
+      <link>https://www.onelyder.com/posts/docker-input </link>
+      <description>Docker container config. Linux Kubuntu envir.</description>
+      <guid>https://www.onelyder.com/posts/docker-input </guid>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Function review 01</title>
       <dc:creator>onelyder</dc:creator>
       <link>https://www.onelyder.com/posts/function-review</link>
       <description>Deler noen funksjoner jeg har laget.</description>
       <guid>https://www.onelyder.com/posts/function-review</guid>
       <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Funksjoner i R</title>
-      <dc:creator>Lyder ~ onelyder</dc:creator>
-      <link>https://www.onelyder.com/posts/loops-purrr</link>
-      <description>Vektorer, lister, loops og purrr. En oversikt over sentrale emner.</description>
-      <guid>https://www.onelyder.com/posts/loops-purrr</guid>
-      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Power BI i R</title>
@@ -41,18 +41,18 @@
       <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Docker - Linux Setup</title>
+      <title>R programmering</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
-      <link>https://www.onelyder.com/posts/docker-input </link>
-      <description>Docker container config. Linux Kubuntu envir.</description>
-      <guid>https://www.onelyder.com/posts/docker-input </guid>
-      <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+      <link>https://www.onelyder.com/posts/loops-purrr</link>
+      <description>Purrr::map(). Last Updated: 2022-06-02 04:39:07</description>
+      <guid>https://www.onelyder.com/posts/loops-purrr</guid>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Loops i R</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
       <link>https://www.onelyder.com/posts/loops-r</link>
-      <description>Purrr::map(). Updated: 2022-05-27 01:23:52</description>
+      <description>Purrr::map(). Last Updated: 2022-06-02 04:40:04</description>
       <guid>https://www.onelyder.com/posts/loops-r</guid>
       <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
     </item>

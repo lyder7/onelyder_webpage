@@ -33,10 +33,6 @@ options(
 cat(sprintf("*Local `.Rprofile` detected at `%s`*", normalizePath(".Rprofile")))
 ```
 
-```{r}
-knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
-
-```
 
 # Docker
 
@@ -44,7 +40,7 @@ Hvordan jeg kom i gang med `Docker`.
 Fra en bra skrevet vignette som tar for seg installasjonen via terminalen med Linux Ubuntu.
 Resultatet er at `Docker` tilgjengelig, Jeg har laget en `Docker` Header bestående av en Ubuntu Distribusjon med `node.js` konfigurert i Dockeren.
 
-Artikkelen jeg fulgte, [install configure docker ubuntu](https://linuxhint.com/install_configure_docker_ubuntu/), skrevet av linuxhint.com som også har amdre bra artikler og veiledninger.
+Artikkelen jeg fulgte, [install configure docker ubuntu](https://linuxhint.com/install_configure_docker_ubuntu/), skrevet av linuxhint.com som også har andre bra artikler og veiledninger.
 Personlig foretrekker jeg ofte å lese disse, enn å se Youtube videoer.
 [@hameed_how_nodate].
 
@@ -81,7 +77,7 @@ sudo usermod -aG docker {$USER} # fish
 
 Her viser jeg hvordan du kan få nyttig info om hvordan du skal bruke `Docker.` Det holder å skrive bare `Docker` i terminalen, men jeg har under skrevet den fullstendige.
 
-```{bash}
+```{bash, eval = FALSE}
 
 docker COMMAND --help
 
@@ -93,7 +89,7 @@ Du må være/bli en `Sudu.` Du kan enkelt gjøre det med `su - {\$USER}` eller `
 
 Da vil kommandoer som dette fungere:
 
-```{bash}
+```{bash, eval=FALSE}
 ducker search ubuntu
 
 ```

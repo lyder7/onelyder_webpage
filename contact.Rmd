@@ -8,3 +8,10 @@ output:
       - css/small-spacing.css
 base_url: https://www.onelyder.com
 ---
+
+
+* `LinkedIn`: [My Profile Here](https://www.linkedin.com/in/onelyder/)
+
+* `GitHub`: [My Profile Here](https://www.github.com/lyder7)
+
+* `Master thesis digital version`: [Link Master Thesis](https://lyder7.github.io/testing/)

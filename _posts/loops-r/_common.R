@@ -25,16 +25,17 @@ status <- function(type) {
   status <- switch(type,
                    polishing = "should be readable but is currently undergoing final polishing",
                    restructuring = "is undergoing heavy restructuring and may be confusing or incomplete",
-                   drafting = "is currently a dumping ground for ideas, and we don't recommend reading it",
+                   drafting = "Under arbeid. Denne versjonen er ufullstendig og under utvikling. Denne versjonen kan potensielt inneha feil. Anbefales å ikke referere til denne utgaven av dokumentet.",
                    complete = "is largely complete and just needs final proof reading",
                    stop("Invalid `type`", call. = FALSE)
   )
   
   cat(paste0(
     "::: status\n",
-    "Lyder Aleksander. ",
-    "This chapter ", status, ". ",
+    "Lyder Aleksander - ",
+    "**Varsling**: ", status, ". ",
     "<https://onelyder.com/blog>.\n",
     ":::\n"
   ))
 }
+
