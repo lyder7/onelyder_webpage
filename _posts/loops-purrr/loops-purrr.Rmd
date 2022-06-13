@@ -28,11 +28,6 @@ status("drafting")
 
 Konsepter du må forstå eller akseptere for å beherske funksjoner, `loops` og representative operasjoner med R kode.
 
-Uansett hvor kompleks en funksjon eller `script` fremstår, vil det i bunn og grunn bestå av mange sekvenser av relativt simple og "enkle" argumenter og funksjoner fra basisen.
-De absolutt viktigste og mest kritiske tar vi for oss nå.
-
-Lær dem!
-
 -   [jennybc.github.io/purrr-tutorial](https://jennybc.github.io/purrr-tutorial/)
 
 ```{=html}
@@ -52,14 +47,14 @@ Lær dem!
 
 ### Basis: String funksjoner sentrale[^1]
 
-[^1]: Brukes inne i funksjoner gjennom å printe feks navnet til en funksjon, opperasjon eller indeks som referanse.
+[^1]: Brukes inne i funksjoner gjennom å printe f.eks navnet til en funksjon, operasjon eller indeks som referanse.
 
-Printe feks navnet til en funksjon, operasjon eller indeks som referanse.
+Printe f.eks navnet til en funksjon, operasjon eller indeks som referanse.
 Type output `paste` og `past0`.
 [^2]
 
-[^2]: String manipulator.
-    Typiske oppgaver som slå sammen to navn, separere ett ord til to ord, skille to ord med en valgt symbol "\\ " etc. er eksempel på scenarioer disse brukes.
+[^2]: *String manipulator*.
+    Typiske oppgaver som slå sammen to navn, separere ett ord til to ord, skille to ord med en valgt symbol `"\\ "` etc. er eksempel på scenarioer disse brukes.
 
 `paste()`
 
@@ -81,9 +76,9 @@ Flere standard-pakker .
 `utils`, `stats`, `methods`, `grDevices`, `graphics` og `datasets`.
 
 Fra `R-studio` kan man få en oversikt over pakkene, og se hva dem inneholder.
-Hvis man går til vinduet og klikker på menyen som heter "Enviroment".
+Hvis man går til vinduet og klikker på menyen som heter "*Enviroment*".
 Der vil det stå "*Global Enviorment*".
-Trykk på rull-gardinen og det vil komme frem en oversikt over pakkene jeg nevnte over.
+Trykk på rull gardinen og det vil komme frem en oversikt over pakkene jeg nevnte over.
 Velg f.eks `base`.
 
 Det er mulig å redigere hvordan informasjonen vises.
@@ -170,13 +165,15 @@ Over skrev vi kun `else`, som vil si at hvis `if-statementen` først resulterer 
 
 `}`
 
-Liten endring:
+**Liten endring:**
 
-skriver `else if ()` gjør vi slik at programmet vurderer en ny logisk test før den utfører en spesiell type oppgave.
-Dette er for å kontrollere funksjonens rute.
-Ofte er det nødvendig med av klaringer, og dersom noe avviker (som det testes for i `if` utsagnene) vil programmet rettet det opp.
+Skriver `else if ()` fordi programmet vurderer en ny logisk test før den utfører en spesiell type oppgave.
+For å kontrollere funksjonens rute.
+Ofte nødvendig med av klaringer, om noe avviker (det testes for i `if` utsagnene) vil programmet håndtere.
 
-Dette kalles kontrollflyt.
+
+Også
+kontrollflyt.
 Noen blokker viser `else if` varianten:
 
 ```{r else if, eval=FALSE}
@@ -198,7 +195,8 @@ print("hello worlf")
 }
 ```
 
-\*\*NB!!\*
+**NB!!**
+
 \* `else` må være på lik linje med den siste brakken `{` for at R skal kunne evaluere den.
 
 -   [Logic checkpoints](https://stackoverflow.com/questions/25640161/r-how-to-test-for-character0-in-if-statement)
@@ -208,19 +206,18 @@ Som regel er de aller fleste pakkene innenfor ulike fagfelt/emner store i omfang
 
 Sannsynligheten for at et problem som ikke helt kan løses med pakken du bruker, er funksjons bygging løsningen!
 
-Konseptet om at det er mulig å gi et objekt `x` `<-` `"hva_som_helst"`.
-Altså, vi kan lagre tekst, tall eller funksjoner etc. inne i en sytstem-variabel vi kaller `x`.
-Det som gjør det kanskje enda mer forvirrende er at hvis vi lagrer variabelen som en funksjon, så kan den funksjonen i prinsippet bestå av hva som helst.
-Det er dette som gjør det fantastisk.
+Konseptet  `x` `<-` `"hva_som_helst"`.
+Tekst, tall, funksjoner etc. i en system-variabel vi kaller `x`.
+Lagreres variabelen som en funksjon,kan funksjonen i prinsippet bestå av hva som helst.
 
 ## Loops
 
 -   [Eksempel purrr](https://www.r4epi.com/using-the-purrr-package.html)
 
-Eksempelet under viser et vanlig scenario hvor loops vil være naturlig å bruke.
+Eksempelet under viser et vanlig scenario hvor *loops* er naturlig å bruke.
 Målet er å telle antall bokstaver i hvert navn i vektoren "names".\
-Videre følger vi god praksis ved å gjøre klar objektet resultatene skal lagres i.
-I dette tilfellet er det antall bokstaver i hvert navn.
+God praksis er å gjøre klart objektet resultatene skal lagres i.
+Her er det antall bokstaver i hvert navn.
 
 ```{r eval=FALSE}
 navn <- c("Lyder", "Aleksander", "Mathisen")
@@ -241,7 +238,7 @@ n_ord
 
 For hvert element `i`, i antall sekvenser i vektoren $`navn`$, utfør funksjonen `str_extraxt()` på objektet `navn[]`indeks `i`, lagre resultatet i objektet $`n_ord`$ indeks $`i`$.
 
-Resultatet er altså: vi får et objekt n_ord bestående av antall bokstaver (resultatet) for hvert navn.
+Resultatet er altså: vi får et objekt `n_ord` bestående av antall bokstaver (resultatet) for hvert navn.
 I dette tilfellet er det 3 navn, som bestyr 3 resultater.
 
 ### `purrr::map`
@@ -268,7 +265,7 @@ Men det har rot i hvordan syn-tak-strukturen i R er bygget opp, og antall linjer
 
 Løsningen på dette problemet er `purrr` fra `tidyverse` pakken for R.
 
-purrr er en pakke som tar for seg funksjonell programmering spesifikt med R-kode.
+`purrr` er en pakke som tar for seg funksjonell programmering spesifikt med R-kode.
 Pakken har utviklet konsepter og metoder som gjør at vi faktisk kan utføre oppgaver og operasjoner hvor loops i utgangspunktet hadde vært en del av løsningen.
 Du kan betrakte det som en måte å gjøre loops på, uten å skrive loops.
 Merkelig nok..
@@ -361,7 +358,7 @@ Ulempen med denne måten er at den er treg og lite effektiv.
 For å sjekke neste kolonne må vi skrive `class(data_name[,2])` etc. helt frem til vi har testet alle variablene vi er interessert i.
 I praksis vil det være alle kolonnene i et datasett.
 
-Med purrr pakken kan vi sjekke alle kolonne med en funksjon og en linje med kode.
+Med `purrr` pakken kan vi sjekke alle kolonne med en funksjon og en linje med kode.
 Tilbake gir den oss en vektor med resultatet fra alle variablene/ kolonnene i datasettet som vi har lagret som `data_name`.
 Se under:
 
@@ -501,7 +498,7 @@ for(i in seq(walk_object)){
 tidyr::nest()
 ```
 
-Neste steg er å generalisere operasjonene som skal gjøres excel arkene.
+Neste steg er å generalisere operasjonene som skal gjøres Excel arkene.
 Første spørsmål: *er operasjonen lik for alle data-sett og alle kolonner?*
 
 `purrr` erstatter `loops` laget selv
@@ -635,7 +632,7 @@ pacman::p_functions(package = "Rcpp")
 
 ### Nest
 
-tidyr::nest()
+`tidyr::nest()`
 
 # Appendix
 
