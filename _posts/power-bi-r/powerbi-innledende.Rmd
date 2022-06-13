@@ -1,7 +1,7 @@
 ---
 title: "Power BI i R"
 description: |
-  Hvilke muligheter åpner seg når R kode blir en del av Power BI? Dette dokumentet har som formål å undersøke hvordan powerbi oppgaver løses med R.
+     powerbi med R.
 author:
   - name: onelyder 
     url: https://onelyder.com
@@ -24,18 +24,16 @@ status("drafting")
 
 # Innledning
 
-Til å starte med laster jeg inn noen standard pakker jeg trenger for å generere rapporten i sin helhet. Alt fra hvordan rapporten skal se ut, til spesfikke funksjoner som brukes til f.eks analyse. Dette er fint å gjøre i starten av dokumentet, så de blir aktivert og er tilgjenglig gjennom genereringsfasen. 
-
 ```{r test, echo=TRUE, eval=FALSE}
 pacman::p_load(knitr, bibtex, tidyverse, pbixr, ggplot2, fs)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Koden ovenfor viser hvordan man enkelt kan sette rammene for økta. Ofte klarerer man her generelle strukturer her, som ofte vil være likt eller konstant. Spesfikke tilpassninger kan alikevell gjøre underveis, men da er det bedre å gjøre disse for dem det faktrisk gjelder. Derfor starter vi som her med det generelle. 
+Koden ovenfor viser hvordan man enkelt kan sette rammene for økta. Ofte klarerer man her generelle strukturer her, som ofte vil være likt eller konstant. Spesifikke tilpasninger kan allikevel gjøre underveis, men da er det bedre å gjøre disse for dem det faktisk gjelder. Derfor starter vi som her med det generelle. 
 
 ## R pakker som kan brukes med Power BI
 
-I skrivende stund er dagens versjon av R og R-studio 4.1.0. For å vise relevante delatjer kan jeg bruke R kode til å printe ut informasjon om miljøet jeg skriver i fra. @r-packages er microsoft sine egne sider med oversikt over hvilke pakker, samt hvilken versjon som kan brukes med Power BI [@r-packages].@r-powerbi blallb [@r-powerbi].
+I skrivende stund er dagens versjon av R og R-studio 4.1.0. For å vise relevante detaljer kan jeg bruke R kode til å printe ut informasjon om miljøet jeg skriver i fra. @r-packages er Microsoft sine egne sider med oversikt over hvilke pakker, samt hvilken versjon som kan brukes med Power BI [@r-packages].@r-powerbi[@r-powerbi].
 
 ```{r session, echo=TRUE}
 suppressMessages(library(knitr))

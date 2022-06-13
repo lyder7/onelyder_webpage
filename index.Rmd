@@ -15,8 +15,6 @@ site: distill::distill_website
 
 ![](images/png/analytics-g0e4d234f7_640.png)
 
-`…the matrix?`
-
 In the meantime see [this section](https://onelyder.com/blog.html).
 
 Contact? Click [here](https://onelyder.com/contact.html)
