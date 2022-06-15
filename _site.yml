@@ -19,7 +19,7 @@ collections:
     feed_iems_max: 20 # default
 navbar:
   logo: 
-   image: images/logo.png
+   image: favicon.ico
    href: https://www.rstudio.com
   search: true
   right:
