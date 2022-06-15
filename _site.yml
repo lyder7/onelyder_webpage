@@ -27,10 +27,8 @@ navbar:
       href: about.html
     - text: "Posts"
       href: blog.html
-    - text: "Refs"
+    - text: "Notes"
       href: refs_links.html
-    - text: "Contact"
-      href: contact.html
     - icon: fab fa-github
       href: https://github.com/lyder7
     - icon: fa fa-linkedin

@@ -6,12 +6,12 @@ output:
 twitter:
   creator: "@onelyder"
 base_url: https://www.onelyder.com
-#preview: images/png/programming.png
+#preview: favicon.ico
 ---
 
 Lyder - **`onelyder`**?
 
-
+![](favicon.ico)
 
 
 linkedin profile --> [here](https://www.linkedin.com/in/onelyder/)

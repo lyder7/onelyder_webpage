@@ -13,7 +13,8 @@ site: distill::distill_website
 
 `3,2,1... Loading...`
 
-![](images/png/analytics-g0e4d234f7_640.png)
+![](favicon.ico)
+
 
 In the meantime see [this section](https://onelyder.com/blog.html).
 
