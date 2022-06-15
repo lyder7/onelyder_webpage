@@ -20,7 +20,7 @@ collections:
 navbar:
   logo: 
    image: favicon.ico
-   href: https://www.rstudio.com
+   href: favicon.ico
   search: true
   right:
     - text: "About"
