@@ -10,8 +10,10 @@ output:
   distill::distill_article:
     toc: true
     css: strapless.css
-bibliography: coderefs.bib
+bibliography: references.bib
 ---
+
+# Funksjoner i R {#sec-funksjoner-r}
 
 ```{r}
 #| results: "asis"
@@ -20,7 +22,50 @@ source("_common.R")
 status("drafting")
 ```
 
-# Funksjonell programmering i R
+## Oversikt over sentrale tidyverse pakker. Kartlegge bruksområder.
+
+### Basis: Vektorer & strukturer i R
+
+Konsepter du må forstå eller akseptere for å beherske funksjoner, `loops` og representative operasjoner med R kode.
+
+-   [jennybc.github.io/purrr-tutorial](https://jennybc.github.io/purrr-tutorial/)
+
+```{=html}
+<!-- -->
+```
+-   **Vektor**
+
+    Samme klasse, en eller flere.
+
+-   **Data.frame**
+
+    Samling av flere vektorer, som vi kaller kollonner, bestående av samme eller ulike type klasser i hver vetkor/kolonne.
+
+-   **Liste**
+
+    Flere eller samme klasse i vektorene, kompleks.
+
+### Basis: String funksjoner sentrale[^1]
+
+[^1]: Brukes inne i funksjoner gjennom å printe f.eks navnet til en funksjon, operasjon eller indeks som referanse.
+
+Printe f.eks navnet til en funksjon, operasjon eller indeks som referanse.
+Type output `paste` og `past0`.
+[^2]
+
+[^2]: *String manipulator*.
+    Typiske oppgaver som slå sammen to navn, separere ett ord til to ord, skille to ord med en valgt symbol `"\\ "` etc. er eksempel på scenarioer disse brukes.
+
+`paste()`
+
+`paste0()`
+
+## Topics
+
+-   Basis Konsepter
+-   Viktige basis konsepter
+-   Symboler
+-   Logiske sjekk-punkter
 
 ## Viktige basis konsepter
 
@@ -34,7 +79,7 @@ Fra `R-studio` kan man få en oversikt over pakkene, og se hva dem inneholder.
 Hvis man går til vinduet og klikker på menyen som heter "*Enviroment*".
 Der vil det stå "*Global Enviorment*".
 Trykk på rull gardinen og det vil komme frem en oversikt over pakkene jeg nevnte over.
-Velg for eksempel `base`.
+Velg f.eks `base`.
 
 Det er mulig å redigere hvordan informasjonen vises.
 Helt til høyre i vinduet er det en ny rullegardin med en pil som peker ned, siden av oppdater-symbolet.
@@ -53,7 +98,7 @@ Inne i R-studio, finn `library`.
 
 Det gir et perspektiv om hva som ligger bak funksjonene som brukes regelmessig.
 
-### Symboler
+## Symboler
 
 Notasjoner & symboler nyttig å lære.
 Bruken av disse kan potensielt gjøre funksjonene du skriver enda mer dynamiske og sterke.
@@ -74,7 +119,7 @@ Her er noen av de symbolene jeg personlig ønsker å lære mer om:
 
 -   `[ ]` --\> list
 
-### Logiske sjekkpunkter
+#### Logiske sjekk-punkter
 
 -   `ifelse` **`base`**
 
@@ -162,32 +207,31 @@ Som regel er de aller fleste pakkene innenfor ulike fagfelt/emner store i omfang
 Sannsynligheten for at et problem som ikke helt kan løses med pakken du bruker, er funksjons bygging løsningen!
 
 Konseptet  `x` `<-` `"hva_som_helst"`.
-Tekst, tall, en funksjoner etc. i en "system variabel" `x`.
-Lagrer variabelen som en funksjon, og kan i prinsippet bestå av hva som helst.
+Tekst, tall, funksjoner etc. i en system-variabel vi kaller `x`.
+Lagreres variabelen som en funksjon,kan funksjonen i prinsippet bestå av hva som helst.
 
-
-
-### Loops
+## Loops
 
 -   [Eksempel purrr](https://www.r4epi.com/using-the-purrr-package.html)
 
 Eksempelet under viser et vanlig scenario hvor *loops* er naturlig å bruke.
-Målet er å telle antall bokstaver i hvert navn i vektoren `navn`.\
+Målet er å telle antall bokstaver i hvert navn i vektoren "names".\
 God praksis er å gjøre klart objektet resultatene skal lagres i.
-Her i eksempelet under er det antall bokstaver i hvert navn.
+Her er det antall bokstaver i hvert navn.
 
 ```{r eval=FALSE}
 navn <- c("Lyder", "Aleksander", "Mathisen")
 n_ord <- vector("double", length(navn)) # Expecting double
 ```
 
-Videre lager vi en *loop*, den utfører operasjonen i en og samme "kode blokk".
-Årsaken til at *loops** er nyttig her, er fordi man ønsker å unngå reputasjon. Loopen gjør oppgaven vi spesifiserer på alle elementene i vektoren. Vi trenger bare å skrive en "blokk" med kode. 
-
+Videre lager vi en loop som utfører operasjonen i en bolk.
+Årsaken til at man bruker loops er fordi man ønsker å unngå reputasjon.
+Det er ikke bra å gjenta seg selv.
+Derfor skriver man heller en loop som gjør alt vi ønsker i en bolk slik som under.
 
 ```{r eval=FALSE}
 for(i in seq_along(navn)) {
-  n_ord[[i]] <- stringr::str_extract(navn[[i]], "\\w") 
+  n_ord[[i]] <- stringr::str_extract(navn[[i]], "\\w") # Returns character
 }
 n_ord
 ```
@@ -197,7 +241,7 @@ For hvert element `i`, i antall sekvenser i vektoren $`navn`$, utfør funksjonen
 Resultatet er altså: vi får et objekt `n_ord` bestående av antall bokstaver (resultatet) for hvert navn.
 I dette tilfellet er det 3 navn, som bestyr 3 resultater.
 
-#### `purrr::map`
+### `purrr::map`
 
 Eksemplet over viser hvordan loops kan utføres.
 Dette er den tradisjonelle måten å gjøre det på.
@@ -230,10 +274,10 @@ Det du isteden burde gjøre for å forstå dette konseptet er å tenkte på repr
 Altså at noe skal utføres flere ganger på flere ulike elementer innenfor et objekt vi undersøker/analyserer.
 [^4]
 
-[^4]: Unngå missforståelser forbundet med "loops".
+[^4]: Prøv å unngå vrangforestillinger og missforståelser rundt ordet "loops".
     Tenk på det som noe vi skal utføre flere ganger på forskjellige enheter.
 
-#### `purrr::map`: *forskjeller*
+### `purrr::map`: *forskjeller*
 
 `i in seq_along(object)` erstattes med `.x`
 
@@ -259,18 +303,16 @@ Men det er noen hjelpere for å garantere/kontrollere output:
 
 `walk()`
 
+# Funksjonell programmering i R
 
 ## Tidyverse
 
-I dette kapittelet er formålet å bli bedre kjent med `purrr` og scenarioer hvor `purrr` kan være nyttig å bruke. Referanser til `tidy` og `purrr` se @wickham_r_2016 og @wickham_advanced_2019-4. 
-
-`Purrr` er en pakke fra Tidyverse paradigme som hjelper til med funksjonelle operasjoner [@wickham_advanced_2019-4].
-
-Prinsippene bak `tidy` filosofien og biblioteket `purrr` bistår oss med muligheter til å utføre operasjoner effektivt. Alternativet er å skrive egne funksjoner.
-
-Risikoen med egne funksjoner er at den kan bli for komplisert og spesifikk for prosjektet/settingen funksjonen lages for. I praksis betyr det at funksjonen ikke kan videreføres til andre prosjekter eller problemstillinger. Over tid og ved gjenbruk på andre data sett kan den gi resultater som muligens er feil [@@wickham_advanced_2019-4; @hadleywhickham_advr_6functions].
-
-
+Purrr er en pakke fra Tidyverse paradigme som hjelper til med funksjonelle operasjoner.
+Ved bruk av *tidy* prinsippene hjelper purrr oss med å utføre operasjoner på en effektiv måte.
+Alternativet er å skrive egne funksjoner.
+Risikoen ved egne funksjoner er at outputen er kanskje riktig for den spesifikke settingen funksjonen lages.
+Men over tid og ved gjenbruk på andre data sett kan den gi resultater som muligens er feil.
+I dette kapittelet er formålet å bli bedre kjent med purrr og se på scenarioer hvor purrr kan være et nyttig hjelpemiddel.
 
 ### Oppsett
 
@@ -297,11 +339,11 @@ Koden over viser hvordan data-settet "iris" kan refereres til etter at tidyverse
 Videre ser vi at iris blir lagret i en variabel vi kaller *data_name*.
 I prinsippet kunne vi valgt å "døpe" datasettet til noe annet.
 Og til slutt ser vi at de 10 første radene i datasettet kommer frem når vi skiver `data_name` til konsollen.
-Her er formålet å få et kjapt overblikk over hvordan data ser ut.
+Her er formålet å få et kjapt overblikk over hvordan datan ser ut.
 
-### `Purrr`
+## Purrr
 
-#### `purrr::map`
+### map
 
 For å bli kjent med data er det fra `base R` vanlig å utføre funksjonen `class()`.
 Den gir tilbake informasjon om hvilke klasser datasettet består av.
@@ -359,7 +401,7 @@ Den etterspør `.x` og `.f`
 
 Vårt tilfelle er `.x = data_name` og `.f = class` .
 
-#### `imap`, `pmap`
+### `imap`, `pmap`
 
 ### Funksjoner jeg har laget selv
 
@@ -493,8 +535,9 @@ I prinsippet er alle funksjoner mulig å lage.
 Funksjoner har en fast form som vi skal se nærmere på her.
 Hvis denne formen følges, er det som et utgangspunkt opp til deg som forfatteren av funksjonen, hva den skal bestå av.
 
-I de første kapitalene var vi innom det grunnleggende konseptet hvor man ved bruk av `<-` eller `=` kan "lagre" data i objektet som vi selv velger hva skal hete. `a <- 1` for eksempel.
-Det vil si `a` representerer tallet `1`, refererer vi til objektet `a`, vil R tolke dette som `1`. 
+I de første kapitalene var vi innom det grunnleggende konseptet hvor man ved bruk av `<-` eller `=` kan "lagre" data i objektet som vi selv velger hva skal hete.
+a \<- 1 feks.
+Det vil si at a representerer tallet 1, og hver gang vi bruker a, vil det bli lest og tolket som 1.
 
 ### Lage
 
@@ -502,15 +545,15 @@ I utgangspunktet er det flere tusen funksjoner tilgjengelig som kan brukes.
 Som regel vil man komme langt med disse.
 Men som regel er det noen særtrekk med akkurat ditt problem, som funksjonen i pakken ikke evaluerer slik du ønsker.
 Det kan være flere grunner til det, men en typisk årsak til å skrive egne funksjoner kontra bruke andre sine, er for å tilpasse funksjonaliteten til problemet som du skal løse.
-Det er mest sans behov for noen "tweaks" og små justeringer.
+Det er mest sans behov for noen tweaks og små justeringer.
 Men det kan også være tilfellet hvor det ikke finnes noe fra før, så man skriver hele funksjonen- og kanskje en hel pakke, for å løse problemet.
 
-Jeg tar derfor først for meg standardiserte funksjoner som er spesielle og egnet til å bruke i nye funksjoner også.
+Jeg tar derfor først for meg standariserte funksjoner som er spesielle og egnet til å bruke i nye funksjoner også.
 
 ## rlang
 
-For å gå litt dypere til verks for å forstå hva salgs hjelpemidler og funksjoner som er i pakkene jeg personlig bruker til funksjoner og funksjonell programmering i R.
-I kodesnippen under tar jeg å henter ut funksjonsnavnene i pakken rlang, `magrittr`, og `purrr` [@mailund_functional_2019; @wickham_advanced_2019; @wickham_r_2016].
+For å gå litt dybere til verks for å forstå hva salgs hjelpemiddler og funksjoner som er i pakkene jeg personlig bruker til funksjoner og funksjonell prgrammering i R.
+I kodesnippen under tar jeg å henter ut funksjonsnavnene i pakken rlang, margitr, og purrr.
 Jeg lagrer disse i et objekt, og sammenligner dem mot hverandre.
 
 ```{r}
@@ -593,44 +636,4 @@ pacman::p_functions(package = "Rcpp")
 
 # Appendix
 
-## Oversikt over sentrale tidyverse pakker. Kartlegge bruksområder.
-
-### Basis: Vektorer & strukturer i R
-
-Konsepter du må forstå eller akseptere for å beherske funksjoner, `loops` og representative operasjoner med R kode.
-
--   [jennybc.github.io/purrr-tutorial](https://jennybc.github.io/purrr-tutorial/)
-
-```{=html}
-<!-- -->
-```
--   **Vektor**
-
-    Samme klasse, en eller flere.
-
--   **`Data.frame`**
-
-    Samling av flere vektorer, som vi kaller kollonner, bestående av samme eller ulike type klasser i hver vetkor/kolonne.
-
--   **`List`**
-
-    Flere eller samme klasse i vektorene, kompleks.
-
-### Basis: String funksjoner sentrale[^1]
-
-[^1]: Brukes inne i funksjoner gjennom å printe f.eks navnet til en funksjon, operasjon eller indeks som referanse.
-
-Printe for eksempel navnet til en funksjon, en operasjon eller en indeks som referanse.
-Type output `paste` og `past0`.
-[^2]
-
-[^2]: *String manipulator*.
-    Typiske oppgaver som slå sammen to navn, separere ett ord til to ord, skille to ord med en valgt symbol `"\\ "` etc. er eksempel på scenarioer disse brukes.
-
-`paste()`
-
-`paste0()`
-
-
-
-
+# Refernaser
