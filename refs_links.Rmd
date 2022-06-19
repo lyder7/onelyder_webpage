@@ -1,5 +1,7 @@
 ---
 title: "Referanser til syke ting"
+description: | 
+  Last Updated: `r Sys.time()`
 author:
   - name: Lyder Aleksander Mathisen
 date: 10-21-2021

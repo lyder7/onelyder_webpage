@@ -7,62 +7,14 @@
     <description>The personal website of Lyder Aleksander Mathisen
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 13 Jun 2022 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>Power BI i R</title>
-      <dc:creator>onelyder</dc:creator>
-      <link>https://www.onelyder.com/posts/power-bi-r</link>
-      <description>powerbi med R.</description>
-      <guid>https://www.onelyder.com/posts/power-bi-r</guid>
-      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Docker - Linux Setup</title>
-      <dc:creator>Lyder Aleksander Mathisen</dc:creator>
-      <link>https://www.onelyder.com/posts/docker-input </link>
-      <description>Docker container config. Linux Kubuntu envir.</description>
-      <guid>https://www.onelyder.com/posts/docker-input </guid>
-      <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Function review 01</title>
-      <dc:creator>onelyder</dc:creator>
-      <link>https://www.onelyder.com/posts/function-review</link>
-      <description>Deler noen funksjoner jeg har laget.</description>
-      <guid>https://www.onelyder.com/posts/function-review</guid>
-      <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Git &amp; Github: Branching</title>
-      <dc:creator>Lyder Aleksander Mathisen</dc:creator>
-      <link>https://www.onelyder.com/posts/git_devlab</link>
-      <description>Bash scripting and commands.</description>
-      <guid>https://www.onelyder.com/posts/git_devlab</guid>
-      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Loops i R</title>
-      <dc:creator>Lyder Aleksander Mathisen</dc:creator>
-      <link>https://www.onelyder.com/posts/loops-r</link>
-      <description>Purrr::map(). Last Updated: 2022-06-02 04:40:04</description>
-      <guid>https://www.onelyder.com/posts/loops-r</guid>
-      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>R programmering</title>
       <dc:creator>Lyder Aleksander Mathisen</dc:creator>
-      <link>https://www.onelyder.com/posts/loops-purrr</link>
-      <description>Purrr::map(). Last Updated: 2022-06-19 00:47:56</description>
-      <guid>https://www.onelyder.com/posts/loops-purrr</guid>
-      <pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Sykt matriale</title>
-      <dc:creator>Lyder Aleksander Mathisen</dc:creator>
-      <link>https://www.onelyder.com/posts/linker_mappe</link>
-      <description>Samling og oppbevaring av ressurser oppdaget underveis.</description>
-      <guid>https://www.onelyder.com/posts/linker_mappe</guid>
-      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
+      <link>https://www.onelyder.com/posts/2022-06-19-rfunkskjoner</link>
+      <description>Purrr::map(). Last Updated: 2022-06-19 04:32:21</description>
+      <guid>https://www.onelyder.com/posts/2022-06-19-rfunkskjoner</guid>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

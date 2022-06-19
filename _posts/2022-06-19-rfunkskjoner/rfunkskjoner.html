@@ -86,11 +86,32 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Loops i R</title>
+  <title>R programmering</title>
 
-  <meta property="description" itemprop="description" content="Purrr::map(). Last Updated: 2022-06-19 05:00:26" />
+  <meta property="description" itemprop="description" content="Purrr::map(). Last Updated: 2022-06-19 04:32:21" />
 
 
   <!--  https://schema.org/Article -->
@@ -99,22 +120,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="article:author" content="Lyder Aleksander Mathisen" />
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Loops i R" />
+  <meta property="og:title" content="R programmering" />
   <meta property="og:type" content="article" />
-  <meta property="og:description" content="Purrr::map(). Last Updated: 2022-06-19 05:00:26" />
+  <meta property="og:description" content="Purrr::map(). Last Updated: 2022-06-19 04:32:21" />
   <meta property="og:locale" content="en_US" />
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary" />
-  <meta property="twitter:title" content="Loops i R" />
-  <meta property="twitter:description" content="Purrr::map(). Last Updated: 2022-06-19 05:00:26" />
+  <meta property="twitter:title" content="R programmering" />
+  <meta property="twitter:description" content="Purrr::map(). Last Updated: 2022-06-19 04:32:21" />
 
   <!--/radix_placeholder_meta_tags-->
   
+  <meta name="citation_reference" content="citation_title=6 Functions  Advanced R" />
+  <meta name="citation_reference" content="citation_title=R for data science: Import, tidy, transform, visualize, and model data;citation_publication_date=2016;citation_publisher=O’Reilly;citation_author=Hadley Wickham;citation_author=Garrett Grolemund" />
+  <meta name="citation_reference" content="citation_title=Tidyverse" />
+  <meta name="citation_reference" content="citation_title=Advanced r;citation_publication_date=2019;citation_publisher=chapman; hall/CRC;citation_author=Hadley Wickham" />
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","draft"]}},"value":[{"type":"character","attributes":{},"value":["Loops i R"]},{"type":"character","attributes":{},"value":["Purrr::map(). Last Updated: 2022-06-19 05:00:26\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Lyder Aleksander Mathisen"]},{"type":"character","attributes":{},"value":["https://onelyder.com/posts/loops-in-r/"]}]}]},{"type":"character","attributes":{},"value":["`11/24/2021`"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["strapless.css"]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"logical","attributes":{},"value":[true]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["R programmering"]},{"type":"character","attributes":{},"value":["Purrr::map(). Last Updated: 2022-06-19 04:32:21\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Lyder Aleksander Mathisen"]}]}]},{"type":"character","attributes":{},"value":["`11/24/2021`"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["rfunk.css"]}]}]},{"type":"character","attributes":{},"value":["coderefs.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2497,3746 +2522,65 @@ distill-header .nav a {
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
-  <style type="text/css">*,
-*::before,
-*::after {
-box-sizing: border-box;
-}
+  <style type="text/css">
+
+
+
+
 html {
-font-family: sans-serif;
-line-height: 1.15;
--webkit-text-size-adjust: 100%;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-display: block;
-}
-body {
-margin: 0;
-text-align: left;
-}
-[tabindex="-1"]:focus:not(:focus-visible) {
-outline: 0 !important;
-}
-hr {
-box-sizing: content-box;
-height: 0;
-overflow: visible;
-}
-h1, h2, h3, h4, h5, h6 {
-margin-top: 0;
-margin-bottom: 0.5rem;
-}
-p {
-margin-top: 0;
-margin-bottom: 1rem;
-}
-abbr[title],
-abbr[data-original-title] {
-text-decoration: underline;
-text-decoration: underline dotted;
-cursor: help;
-border-bottom: 0;
-text-decoration-skip-ink: none;
-}
-address {
-margin-bottom: 1rem;
-font-style: normal;
-line-height: inherit;
-}
-ol,
-ul,
-dl {
-margin-top: 0;
-margin-bottom: 1rem;
-}
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-margin-bottom: 0;
-}
-dd {
-margin-bottom: 0.5rem;
-margin-left: 0;
-}
-blockquote {
-margin: 0 0 1rem;
-}
-small {
-font-size: 80%;
-}
-sub,
-sup {
-position: relative;
-font-size: 75%;
-line-height: 0;
-vertical-align: baseline;
-}
-sub {
-bottom: -0.25em;
-}
-sup {
-top: -0.5em;
-}
-pre,
-code,
-kbd,
-samp {
-font-size: 1em;
-}
-pre {
-margin-top: 0;
-margin-bottom: 1rem;
-overflow: auto;
--ms-overflow-style: scrollbar;
-}
-figure {
-margin: 0 0 1rem;
-}
-img {
-vertical-align: middle;
-border-style: none;
-}
-svg {
-overflow: hidden;
-vertical-align: middle;
-}
-table {
-border-collapse: collapse;
-}
-caption {
-padding-top: 0.75rem;
-padding-bottom: 0.75rem;
-text-align: left;
-caption-side: bottom;
-}
-th {
-text-align: inherit;
-text-align: -webkit-match-parent;
-}
-label {
-display: inline-block;
-margin-bottom: 0.5rem;
-}
-button {
-border-radius: 0;
-}
-button:focus:not(:focus-visible) {
-outline: 0;
-}
-input,
-button,
-select,
-optgroup,
-textarea {
-margin: 0;
-font-family: inherit;
-font-size: inherit;
-line-height: inherit;
-}
-button,
-input {
-overflow: visible;
-}
-button,
-select {
-text-transform: none;
-}
-[role=button] {
-cursor: pointer;
-}
-select {
-word-wrap: normal;
-}
-button,
-[type=button],
-[type=reset],
-[type=submit] {
--webkit-appearance: button;
-}
-button:not(:disabled),
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled) {
-cursor: pointer;
-}
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-padding: 0;
-border-style: none;
-}
-input[type=radio],
-input[type=checkbox] {
-box-sizing: border-box;
-padding: 0;
-}
-textarea {
-overflow: auto;
-resize: vertical;
-}
-fieldset {
-min-width: 0;
-padding: 0;
-margin: 0;
-border: 0;
-}
-legend {
-display: block;
-width: 100%;
-max-width: 100%;
-padding: 0;
-margin-bottom: 0.5rem;
-font-size: 1.5rem;
-line-height: inherit;
-color: inherit;
-white-space: normal;
-}
-@media (max-width: 1200px) {
-legend {
-font-size: calc(1.275rem + 0.3vw);
-}
-}
-progress {
-vertical-align: baseline;
-}
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-height: auto;
-}
-[type=search] {
-outline-offset: -2px;
--webkit-appearance: none;
-}
-[type=search]::-webkit-search-decoration {
--webkit-appearance: none;
-}
-::-webkit-file-upload-button {
-font: inherit;
--webkit-appearance: button;
-}
-output {
-display: inline-block;
-}
-summary {
-display: list-item;
-cursor: pointer;
-}
-template {
-display: none;
-}
-[hidden] {
-display: none !important;
-}
-.container,
-.container-fluid,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
-width: 100%;
-padding-right: 15px;
-padding-left: 15px;
-margin-right: auto;
-margin-left: auto;
-}
-@media (min-width: 576px) {
-.container-sm, .container {
-max-width: 540px;
-}
-}
-@media (min-width: 768px) {
-.container-md, .container-sm, .container {
-max-width: 720px;
-}
-}
-@media (min-width: 992px) {
-.container-lg, .container-md, .container-sm, .container {
-max-width: 960px;
-}
-}
-@media (min-width: 1200px) {
-.container-xl, .container-lg, .container-md, .container-sm, .container {
-max-width: 1140px;
-}
-}
-.row {
-display: flex;
-flex-wrap: wrap;
-margin-right: -15px;
-margin-left: -15px;
-}
-.no-gutters {
-margin-right: 0;
-margin-left: 0;
-}
-.no-gutters > .col,
-.no-gutters > [class*=col-] {
-padding-right: 0;
-padding-left: 0;
-}
-.col-xl,
-.col-xl-auto, .col-xl-12, .col-xl-11, .col-xl-10, .col-xl-9, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg,
-.col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md,
-.col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm,
-.col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col,
-.col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
-position: relative;
-width: 100%;
-padding-right: 15px;
-padding-left: 15px;
-}
-.col {
-flex-basis: 0;
-flex-grow: 1;
-max-width: 100%;
-}
-.row-cols-1 > * {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.row-cols-2 > * {
-flex: 0 0 50%;
-max-width: 50%;
-}
-.row-cols-3 > * {
-flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-}
-.row-cols-4 > * {
-flex: 0 0 25%;
-max-width: 25%;
-}
-.row-cols-5 > * {
-flex: 0 0 20%;
-max-width: 20%;
-}
-.row-cols-6 > * {
-flex: 0 0 16.6666666667%;
-max-width: 16.6666666667%;
-}
-.col-auto {
-flex: 0 0 auto;
-width: auto;
-max-width: 100%;
-}
-.col-1 {
-flex: 0 0 8.3333333333%;
-max-width: 8.3333333333%;
-}
-.col-2 {
-flex: 0 0 16.6666666667%;
-max-width: 16.6666666667%;
-}
-.col-3 {
-flex: 0 0 25%;
-max-width: 25%;
-}
-.col-4 {
-flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-}
-.col-5 {
-flex: 0 0 41.6666666667%;
-max-width: 41.6666666667%;
-}
-.col-6 {
-flex: 0 0 50%;
-max-width: 50%;
-}
-.col-7 {
-flex: 0 0 58.3333333333%;
-max-width: 58.3333333333%;
-}
-.col-8 {
-flex: 0 0 66.6666666667%;
-max-width: 66.6666666667%;
-}
-.col-9 {
-flex: 0 0 75%;
-max-width: 75%;
-}
-.col-10 {
-flex: 0 0 83.3333333333%;
-max-width: 83.3333333333%;
-}
-.col-11 {
-flex: 0 0 91.6666666667%;
-max-width: 91.6666666667%;
-}
-.col-12 {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.order-first {
-order: -1;
-}
-.order-last {
-order: 13;
-}
-.order-0 {
-order: 0;
-}
-.order-1 {
-order: 1;
-}
-.order-2 {
-order: 2;
-}
-.order-3 {
-order: 3;
-}
-.order-4 {
-order: 4;
-}
-.order-5 {
-order: 5;
-}
-.order-6 {
-order: 6;
-}
-.order-7 {
-order: 7;
-}
-.order-8 {
-order: 8;
-}
-.order-9 {
-order: 9;
-}
-.order-10 {
-order: 10;
-}
-.order-11 {
-order: 11;
-}
-.order-12 {
-order: 12;
-}
-.offset-1 {
-margin-left: 8.3333333333%;
-}
-.offset-2 {
-margin-left: 16.6666666667%;
-}
-.offset-3 {
-margin-left: 25%;
-}
-.offset-4 {
-margin-left: 33.3333333333%;
-}
-.offset-5 {
-margin-left: 41.6666666667%;
-}
-.offset-6 {
-margin-left: 50%;
-}
-.offset-7 {
-margin-left: 58.3333333333%;
-}
-.offset-8 {
-margin-left: 66.6666666667%;
-}
-.offset-9 {
-margin-left: 75%;
-}
-.offset-10 {
-margin-left: 83.3333333333%;
-}
-.offset-11 {
-margin-left: 91.6666666667%;
-}
-@media (min-width: 576px) {
-.col-sm {
-flex-basis: 0;
-flex-grow: 1;
-max-width: 100%;
-}
-.row-cols-sm-1 > * {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.row-cols-sm-2 > * {
-flex: 0 0 50%;
-max-width: 50%;
-}
-.row-cols-sm-3 > * {
-flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-}
-.row-cols-sm-4 > * {
-flex: 0 0 25%;
-max-width: 25%;
-}
-.row-cols-sm-5 > * {
-flex: 0 0 20%;
-max-width: 20%;
-}
-.row-cols-sm-6 > * {
-flex: 0 0 16.6666666667%;
-max-width: 16.6666666667%;
-}
-.col-sm-auto {
-flex: 0 0 auto;
-width: auto;
-max-width: 100%;
-}
-.col-sm-1 {
-flex: 0 0 8.3333333333%;
-max-width: 8.3333333333%;
-}
-.col-sm-2 {
-flex: 0 0 16.6666666667%;
-max-width: 16.6666666667%;
-}
-.col-sm-3 {
-flex: 0 0 25%;
-max-width: 25%;
-}
-.col-sm-4 {
-flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-}
-.col-sm-5 {
-flex: 0 0 41.6666666667%;
-max-width: 41.6666666667%;
-}
-.col-sm-6 {
-flex: 0 0 50%;
-max-width: 50%;
-}
-.col-sm-7 {
-flex: 0 0 58.3333333333%;
-max-width: 58.3333333333%;
-}
-.col-sm-8 {
-flex: 0 0 66.6666666667%;
-max-width: 66.6666666667%;
-}
-.col-sm-9 {
-flex: 0 0 75%;
-max-width: 75%;
-}
-.col-sm-10 {
-flex: 0 0 83.3333333333%;
-max-width: 83.3333333333%;
-}
-.col-sm-11 {
-flex: 0 0 91.6666666667%;
-max-width: 91.6666666667%;
-}
-.col-sm-12 {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.order-sm-first {
-order: -1;
-}
-.order-sm-last {
-order: 13;
-}
-.order-sm-0 {
-order: 0;
-}
-.order-sm-1 {
-order: 1;
-}
-.order-sm-2 {
-order: 2;
-}
-.order-sm-3 {
-order: 3;
-}
-.order-sm-4 {
-order: 4;
-}
-.order-sm-5 {
-order: 5;
-}
-.order-sm-6 {
-order: 6;
-}
-.order-sm-7 {
-order: 7;
-}
-.order-sm-8 {
-order: 8;
-}
-.order-sm-9 {
-order: 9;
-}
-.order-sm-10 {
-order: 10;
-}
-.order-sm-11 {
-order: 11;
-}
-.order-sm-12 {
-order: 12;
-}
-.offset-sm-0 {
-margin-left: 0;
-}
-.offset-sm-1 {
-margin-left: 8.3333333333%;
-}
-.offset-sm-2 {
-margin-left: 16.6666666667%;
-}
-.offset-sm-3 {
-margin-left: 25%;
-}
-.offset-sm-4 {
-margin-left: 33.3333333333%;
-}
-.offset-sm-5 {
-margin-left: 41.6666666667%;
-}
-.offset-sm-6 {
-margin-left: 50%;
-}
-.offset-sm-7 {
-margin-left: 58.3333333333%;
-}
-.offset-sm-8 {
-margin-left: 66.6666666667%;
-}
-.offset-sm-9 {
-margin-left: 75%;
-}
-.offset-sm-10 {
-margin-left: 83.3333333333%;
-}
-.offset-sm-11 {
-margin-left: 91.6666666667%;
-}
-}
-@media (min-width: 768px) {
-.col-md {
-flex-basis: 0;
-flex-grow: 1;
-max-width: 100%;
-}
-.row-cols-md-1 > * {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.row-cols-md-2 > * {
-flex: 0 0 50%;
-max-width: 50%;
-}
-.row-cols-md-3 > * {
-flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-}
-.row-cols-md-4 > * {
-flex: 0 0 25%;
-max-width: 25%;
-}
-.row-cols-md-5 > * {
-flex: 0 0 20%;
-max-width: 20%;
-}
-.row-cols-md-6 > * {
-flex: 0 0 16.6666666667%;
-max-width: 16.6666666667%;
-}
-.col-md-auto {
-flex: 0 0 auto;
-width: auto;
-max-width: 100%;
-}
-.col-md-1 {
-flex: 0 0 8.3333333333%;
-max-width: 8.3333333333%;
-}
-.col-md-2 {
-flex: 0 0 16.6666666667%;
-max-width: 16.6666666667%;
-}
-.col-md-3 {
-flex: 0 0 25%;
-max-width: 25%;
-}
-.col-md-4 {
-flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-}
-.col-md-5 {
-flex: 0 0 41.6666666667%;
-max-width: 41.6666666667%;
-}
-.col-md-6 {
-flex: 0 0 50%;
-max-width: 50%;
-}
-.col-md-7 {
-flex: 0 0 58.3333333333%;
-max-width: 58.3333333333%;
-}
-.col-md-8 {
-flex: 0 0 66.6666666667%;
-max-width: 66.6666666667%;
-}
-.col-md-9 {
-flex: 0 0 75%;
-max-width: 75%;
-}
-.col-md-10 {
-flex: 0 0 83.3333333333%;
-max-width: 83.3333333333%;
-}
-.col-md-11 {
-flex: 0 0 91.6666666667%;
-max-width: 91.6666666667%;
-}
-.col-md-12 {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.order-md-first {
-order: -1;
-}
-.order-md-last {
-order: 13;
-}
-.order-md-0 {
-order: 0;
-}
-.order-md-1 {
-order: 1;
-}
-.order-md-2 {
-order: 2;
-}
-.order-md-3 {
-order: 3;
-}
-.order-md-4 {
-order: 4;
-}
-.order-md-5 {
-order: 5;
-}
-.order-md-6 {
-order: 6;
-}
-.order-md-7 {
-order: 7;
-}
-.order-md-8 {
-order: 8;
-}
-.order-md-9 {
-order: 9;
-}
-.order-md-10 {
-order: 10;
-}
-.order-md-11 {
-order: 11;
-}
-.order-md-12 {
-order: 12;
-}
-.offset-md-0 {
-margin-left: 0;
-}
-.offset-md-1 {
-margin-left: 8.3333333333%;
-}
-.offset-md-2 {
-margin-left: 16.6666666667%;
-}
-.offset-md-3 {
-margin-left: 25%;
-}
-.offset-md-4 {
-margin-left: 33.3333333333%;
-}
-.offset-md-5 {
-margin-left: 41.6666666667%;
-}
-.offset-md-6 {
-margin-left: 50%;
-}
-.offset-md-7 {
-margin-left: 58.3333333333%;
-}
-.offset-md-8 {
-margin-left: 66.6666666667%;
-}
-.offset-md-9 {
-margin-left: 75%;
-}
-.offset-md-10 {
-margin-left: 83.3333333333%;
-}
-.offset-md-11 {
-margin-left: 91.6666666667%;
-}
-}
-@media (min-width: 992px) {
-.col-lg {
-flex-basis: 0;
-flex-grow: 1;
-max-width: 100%;
-}
-.row-cols-lg-1 > * {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.row-cols-lg-2 > * {
-flex: 0 0 50%;
-max-width: 50%;
-}
-.row-cols-lg-3 > * {
-flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-}
-.row-cols-lg-4 > * {
-flex: 0 0 25%;
-max-width: 25%;
-}
-.row-cols-lg-5 > * {
-flex: 0 0 20%;
-max-width: 20%;
-}
-.row-cols-lg-6 > * {
-flex: 0 0 16.6666666667%;
-max-width: 16.6666666667%;
-}
-.col-lg-auto {
-flex: 0 0 auto;
-width: auto;
-max-width: 100%;
-}
-.col-lg-1 {
-flex: 0 0 8.3333333333%;
-max-width: 8.3333333333%;
-}
-.col-lg-2 {
-flex: 0 0 16.6666666667%;
-max-width: 16.6666666667%;
-}
-.col-lg-3 {
-flex: 0 0 25%;
-max-width: 25%;
-}
-.col-lg-4 {
-flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-}
-.col-lg-5 {
-flex: 0 0 41.6666666667%;
-max-width: 41.6666666667%;
-}
-.col-lg-6 {
-flex: 0 0 50%;
-max-width: 50%;
-}
-.col-lg-7 {
-flex: 0 0 58.3333333333%;
-max-width: 58.3333333333%;
-}
-.col-lg-8 {
-flex: 0 0 66.6666666667%;
-max-width: 66.6666666667%;
-}
-.col-lg-9 {
-flex: 0 0 75%;
-max-width: 75%;
-}
-.col-lg-10 {
-flex: 0 0 83.3333333333%;
-max-width: 83.3333333333%;
-}
-.col-lg-11 {
-flex: 0 0 91.6666666667%;
-max-width: 91.6666666667%;
-}
-.col-lg-12 {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.order-lg-first {
-order: -1;
-}
-.order-lg-last {
-order: 13;
-}
-.order-lg-0 {
-order: 0;
-}
-.order-lg-1 {
-order: 1;
-}
-.order-lg-2 {
-order: 2;
-}
-.order-lg-3 {
-order: 3;
-}
-.order-lg-4 {
-order: 4;
-}
-.order-lg-5 {
-order: 5;
-}
-.order-lg-6 {
-order: 6;
-}
-.order-lg-7 {
-order: 7;
-}
-.order-lg-8 {
-order: 8;
-}
-.order-lg-9 {
-order: 9;
-}
-.order-lg-10 {
-order: 10;
-}
-.order-lg-11 {
-order: 11;
-}
-.order-lg-12 {
-order: 12;
-}
-.offset-lg-0 {
-margin-left: 0;
-}
-.offset-lg-1 {
-margin-left: 8.3333333333%;
-}
-.offset-lg-2 {
-margin-left: 16.6666666667%;
-}
-.offset-lg-3 {
-margin-left: 25%;
-}
-.offset-lg-4 {
-margin-left: 33.3333333333%;
-}
-.offset-lg-5 {
-margin-left: 41.6666666667%;
-}
-.offset-lg-6 {
-margin-left: 50%;
-}
-.offset-lg-7 {
-margin-left: 58.3333333333%;
-}
-.offset-lg-8 {
-margin-left: 66.6666666667%;
-}
-.offset-lg-9 {
-margin-left: 75%;
-}
-.offset-lg-10 {
-margin-left: 83.3333333333%;
-}
-.offset-lg-11 {
-margin-left: 91.6666666667%;
-}
-}
-@media (min-width: 1200px) {
-.col-xl {
-flex-basis: 0;
-flex-grow: 1;
-max-width: 100%;
-}
-.row-cols-xl-1 > * {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.row-cols-xl-2 > * {
-flex: 0 0 50%;
-max-width: 50%;
-}
-.row-cols-xl-3 > * {
-flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-}
-.row-cols-xl-4 > * {
-flex: 0 0 25%;
-max-width: 25%;
-}
-.row-cols-xl-5 > * {
-flex: 0 0 20%;
-max-width: 20%;
-}
-.row-cols-xl-6 > * {
-flex: 0 0 16.6666666667%;
-max-width: 16.6666666667%;
-}
-.col-xl-auto {
-flex: 0 0 auto;
-width: auto;
-max-width: 100%;
-}
-.col-xl-1 {
-flex: 0 0 8.3333333333%;
-max-width: 8.3333333333%;
-}
-.col-xl-2 {
-flex: 0 0 16.6666666667%;
-max-width: 16.6666666667%;
-}
-.col-xl-3 {
-flex: 0 0 25%;
-max-width: 25%;
-}
-.col-xl-4 {
-flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-}
-.col-xl-5 {
-flex: 0 0 41.6666666667%;
-max-width: 41.6666666667%;
-}
-.col-xl-6 {
-flex: 0 0 50%;
-max-width: 50%;
-}
-.col-xl-7 {
-flex: 0 0 58.3333333333%;
-max-width: 58.3333333333%;
-}
-.col-xl-8 {
-flex: 0 0 66.6666666667%;
-max-width: 66.6666666667%;
-}
-.col-xl-9 {
-flex: 0 0 75%;
-max-width: 75%;
-}
-.col-xl-10 {
-flex: 0 0 83.3333333333%;
-max-width: 83.3333333333%;
-}
-.col-xl-11 {
-flex: 0 0 91.6666666667%;
-max-width: 91.6666666667%;
-}
-.col-xl-12 {
-flex: 0 0 100%;
-max-width: 100%;
-}
-.order-xl-first {
-order: -1;
-}
-.order-xl-last {
-order: 13;
-}
-.order-xl-0 {
-order: 0;
-}
-.order-xl-1 {
-order: 1;
-}
-.order-xl-2 {
-order: 2;
-}
-.order-xl-3 {
-order: 3;
-}
-.order-xl-4 {
-order: 4;
-}
-.order-xl-5 {
-order: 5;
-}
-.order-xl-6 {
-order: 6;
-}
-.order-xl-7 {
-order: 7;
-}
-.order-xl-8 {
-order: 8;
-}
-.order-xl-9 {
-order: 9;
-}
-.order-xl-10 {
-order: 10;
-}
-.order-xl-11 {
-order: 11;
-}
-.order-xl-12 {
-order: 12;
-}
-.offset-xl-0 {
-margin-left: 0;
-}
-.offset-xl-1 {
-margin-left: 8.3333333333%;
-}
-.offset-xl-2 {
-margin-left: 16.6666666667%;
-}
-.offset-xl-3 {
-margin-left: 25%;
-}
-.offset-xl-4 {
-margin-left: 33.3333333333%;
-}
-.offset-xl-5 {
-margin-left: 41.6666666667%;
-}
-.offset-xl-6 {
-margin-left: 50%;
-}
-.offset-xl-7 {
-margin-left: 58.3333333333%;
-}
-.offset-xl-8 {
-margin-left: 66.6666666667%;
-}
-.offset-xl-9 {
-margin-left: 75%;
-}
-.offset-xl-10 {
-margin-left: 83.3333333333%;
-}
-.offset-xl-11 {
-margin-left: 91.6666666667%;
-}
-}
-.img-fluid {
-max-width: 100%;
-height: auto;
-}
-.img-thumbnail {
-padding: 0.25rem;
-background-color: inherit;
-border: 1px solid #dee2e6;
-border-radius: 0.25rem;
-max-width: 100%;
-height: auto;
-}
-.figure {
-display: inline-block;
-}
-.figure-img {
-margin-bottom: 0.5rem;
-line-height: 1;
-}
-.figure-caption {
-font-size: 90%;
-color: #6c757d;
-}
-.d-none {
-display: none !important;
-}
-.d-inline {
-display: inline !important;
-}
-.d-inline-block {
-display: inline-block !important;
-}
-.d-block {
-display: block !important;
-}
-.d-table {
-display: table !important;
-}
-.d-table-row {
-display: table-row !important;
-}
-.d-table-cell {
-display: table-cell !important;
-}
-.d-flex {
-display: flex !important;
-}
-.d-inline-flex {
-display: inline-flex !important;
-}
-@media (min-width: 576px) {
-.d-sm-none {
-display: none !important;
-}
-.d-sm-inline {
-display: inline !important;
-}
-.d-sm-inline-block {
-display: inline-block !important;
-}
-.d-sm-block {
-display: block !important;
-}
-.d-sm-table {
-display: table !important;
-}
-.d-sm-table-row {
-display: table-row !important;
-}
-.d-sm-table-cell {
-display: table-cell !important;
-}
-.d-sm-flex {
-display: flex !important;
-}
-.d-sm-inline-flex {
-display: inline-flex !important;
-}
-}
-@media (min-width: 768px) {
-.d-md-none {
-display: none !important;
-}
-.d-md-inline {
-display: inline !important;
-}
-.d-md-inline-block {
-display: inline-block !important;
-}
-.d-md-block {
-display: block !important;
-}
-.d-md-table {
-display: table !important;
-}
-.d-md-table-row {
-display: table-row !important;
-}
-.d-md-table-cell {
-display: table-cell !important;
-}
-.d-md-flex {
-display: flex !important;
-}
-.d-md-inline-flex {
-display: inline-flex !important;
-}
-}
-@media (min-width: 992px) {
-.d-lg-none {
-display: none !important;
-}
-.d-lg-inline {
-display: inline !important;
-}
-.d-lg-inline-block {
-display: inline-block !important;
-}
-.d-lg-block {
-display: block !important;
-}
-.d-lg-table {
-display: table !important;
-}
-.d-lg-table-row {
-display: table-row !important;
-}
-.d-lg-table-cell {
-display: table-cell !important;
-}
-.d-lg-flex {
-display: flex !important;
-}
-.d-lg-inline-flex {
-display: inline-flex !important;
-}
-}
-@media (min-width: 1200px) {
-.d-xl-none {
-display: none !important;
-}
-.d-xl-inline {
-display: inline !important;
-}
-.d-xl-inline-block {
-display: inline-block !important;
-}
-.d-xl-block {
-display: block !important;
-}
-.d-xl-table {
-display: table !important;
-}
-.d-xl-table-row {
-display: table-row !important;
-}
-.d-xl-table-cell {
-display: table-cell !important;
-}
-.d-xl-flex {
-display: flex !important;
-}
-.d-xl-inline-flex {
-display: inline-flex !important;
-}
-}
-@media print {
-.d-print-none {
-display: none !important;
-}
-.d-print-inline {
-display: inline !important;
-}
-.d-print-inline-block {
-display: inline-block !important;
-}
-.d-print-block {
-display: block !important;
-}
-.d-print-table {
-display: table !important;
-}
-.d-print-table-row {
-display: table-row !important;
-}
-.d-print-table-cell {
-display: table-cell !important;
-}
-.d-print-flex {
-display: flex !important;
-}
-.d-print-inline-flex {
-display: inline-flex !important;
-}
-}
-.flex-row {
-flex-direction: row !important;
-}
-.flex-column {
-flex-direction: column !important;
-}
-.flex-row-reverse {
-flex-direction: row-reverse !important;
-}
-.flex-column-reverse {
-flex-direction: column-reverse !important;
-}
-.flex-wrap {
-flex-wrap: wrap !important;
-}
-.flex-nowrap {
-flex-wrap: nowrap !important;
-}
-.flex-wrap-reverse {
-flex-wrap: wrap-reverse !important;
-}
-.flex-fill {
-flex: 1 1 auto !important;
-}
-.flex-grow-0 {
-flex-grow: 0 !important;
-}
-.flex-grow-1 {
-flex-grow: 1 !important;
-}
-.flex-shrink-0 {
-flex-shrink: 0 !important;
-}
-.flex-shrink-1 {
-flex-shrink: 1 !important;
-}
-.justify-content-start {
-justify-content: flex-start !important;
-}
-.justify-content-end {
-justify-content: flex-end !important;
-}
-.justify-content-center {
-justify-content: center !important;
-}
-.justify-content-between {
-justify-content: space-between !important;
-}
-.justify-content-around {
-justify-content: space-around !important;
-}
-.align-items-start {
-align-items: flex-start !important;
-}
-.align-items-end {
-align-items: flex-end !important;
-}
-.align-items-center {
-align-items: center !important;
-}
-.align-items-baseline {
-align-items: baseline !important;
-}
-.align-items-stretch {
-align-items: stretch !important;
-}
-.align-content-start {
-align-content: flex-start !important;
-}
-.align-content-end {
-align-content: flex-end !important;
-}
-.align-content-center {
-align-content: center !important;
-}
-.align-content-between {
-align-content: space-between !important;
-}
-.align-content-around {
-align-content: space-around !important;
-}
-.align-content-stretch {
-align-content: stretch !important;
-}
-.align-self-auto {
-align-self: auto !important;
-}
-.align-self-start {
-align-self: flex-start !important;
-}
-.align-self-end {
-align-self: flex-end !important;
-}
-.align-self-center {
-align-self: center !important;
-}
-.align-self-baseline {
-align-self: baseline !important;
-}
-.align-self-stretch {
-align-self: stretch !important;
-}
-@media (min-width: 576px) {
-.flex-sm-row {
-flex-direction: row !important;
-}
-.flex-sm-column {
-flex-direction: column !important;
-}
-.flex-sm-row-reverse {
-flex-direction: row-reverse !important;
-}
-.flex-sm-column-reverse {
-flex-direction: column-reverse !important;
-}
-.flex-sm-wrap {
-flex-wrap: wrap !important;
-}
-.flex-sm-nowrap {
-flex-wrap: nowrap !important;
-}
-.flex-sm-wrap-reverse {
-flex-wrap: wrap-reverse !important;
-}
-.flex-sm-fill {
-flex: 1 1 auto !important;
-}
-.flex-sm-grow-0 {
-flex-grow: 0 !important;
-}
-.flex-sm-grow-1 {
-flex-grow: 1 !important;
-}
-.flex-sm-shrink-0 {
-flex-shrink: 0 !important;
-}
-.flex-sm-shrink-1 {
-flex-shrink: 1 !important;
-}
-.justify-content-sm-start {
-justify-content: flex-start !important;
-}
-.justify-content-sm-end {
-justify-content: flex-end !important;
-}
-.justify-content-sm-center {
-justify-content: center !important;
-}
-.justify-content-sm-between {
-justify-content: space-between !important;
-}
-.justify-content-sm-around {
-justify-content: space-around !important;
-}
-.align-items-sm-start {
-align-items: flex-start !important;
-}
-.align-items-sm-end {
-align-items: flex-end !important;
-}
-.align-items-sm-center {
-align-items: center !important;
-}
-.align-items-sm-baseline {
-align-items: baseline !important;
-}
-.align-items-sm-stretch {
-align-items: stretch !important;
-}
-.align-content-sm-start {
-align-content: flex-start !important;
-}
-.align-content-sm-end {
-align-content: flex-end !important;
-}
-.align-content-sm-center {
-align-content: center !important;
-}
-.align-content-sm-between {
-align-content: space-between !important;
-}
-.align-content-sm-around {
-align-content: space-around !important;
-}
-.align-content-sm-stretch {
-align-content: stretch !important;
-}
-.align-self-sm-auto {
-align-self: auto !important;
-}
-.align-self-sm-start {
-align-self: flex-start !important;
-}
-.align-self-sm-end {
-align-self: flex-end !important;
-}
-.align-self-sm-center {
-align-self: center !important;
-}
-.align-self-sm-baseline {
-align-self: baseline !important;
-}
-.align-self-sm-stretch {
-align-self: stretch !important;
-}
-}
-@media (min-width: 768px) {
-.flex-md-row {
-flex-direction: row !important;
-}
-.flex-md-column {
-flex-direction: column !important;
-}
-.flex-md-row-reverse {
-flex-direction: row-reverse !important;
-}
-.flex-md-column-reverse {
-flex-direction: column-reverse !important;
-}
-.flex-md-wrap {
-flex-wrap: wrap !important;
-}
-.flex-md-nowrap {
-flex-wrap: nowrap !important;
-}
-.flex-md-wrap-reverse {
-flex-wrap: wrap-reverse !important;
-}
-.flex-md-fill {
-flex: 1 1 auto !important;
-}
-.flex-md-grow-0 {
-flex-grow: 0 !important;
-}
-.flex-md-grow-1 {
-flex-grow: 1 !important;
-}
-.flex-md-shrink-0 {
-flex-shrink: 0 !important;
-}
-.flex-md-shrink-1 {
-flex-shrink: 1 !important;
-}
-.justify-content-md-start {
-justify-content: flex-start !important;
-}
-.justify-content-md-end {
-justify-content: flex-end !important;
-}
-.justify-content-md-center {
-justify-content: center !important;
-}
-.justify-content-md-between {
-justify-content: space-between !important;
-}
-.justify-content-md-around {
-justify-content: space-around !important;
-}
-.align-items-md-start {
-align-items: flex-start !important;
-}
-.align-items-md-end {
-align-items: flex-end !important;
-}
-.align-items-md-center {
-align-items: center !important;
-}
-.align-items-md-baseline {
-align-items: baseline !important;
-}
-.align-items-md-stretch {
-align-items: stretch !important;
-}
-.align-content-md-start {
-align-content: flex-start !important;
-}
-.align-content-md-end {
-align-content: flex-end !important;
-}
-.align-content-md-center {
-align-content: center !important;
-}
-.align-content-md-between {
-align-content: space-between !important;
-}
-.align-content-md-around {
-align-content: space-around !important;
-}
-.align-content-md-stretch {
-align-content: stretch !important;
-}
-.align-self-md-auto {
-align-self: auto !important;
-}
-.align-self-md-start {
-align-self: flex-start !important;
-}
-.align-self-md-end {
-align-self: flex-end !important;
-}
-.align-self-md-center {
-align-self: center !important;
-}
-.align-self-md-baseline {
-align-self: baseline !important;
-}
-.align-self-md-stretch {
-align-self: stretch !important;
-}
-}
-@media (min-width: 992px) {
-.flex-lg-row {
-flex-direction: row !important;
-}
-.flex-lg-column {
-flex-direction: column !important;
-}
-.flex-lg-row-reverse {
-flex-direction: row-reverse !important;
-}
-.flex-lg-column-reverse {
-flex-direction: column-reverse !important;
-}
-.flex-lg-wrap {
-flex-wrap: wrap !important;
-}
-.flex-lg-nowrap {
-flex-wrap: nowrap !important;
-}
-.flex-lg-wrap-reverse {
-flex-wrap: wrap-reverse !important;
-}
-.flex-lg-fill {
-flex: 1 1 auto !important;
-}
-.flex-lg-grow-0 {
-flex-grow: 0 !important;
-}
-.flex-lg-grow-1 {
-flex-grow: 1 !important;
-}
-.flex-lg-shrink-0 {
-flex-shrink: 0 !important;
-}
-.flex-lg-shrink-1 {
-flex-shrink: 1 !important;
-}
-.justify-content-lg-start {
-justify-content: flex-start !important;
-}
-.justify-content-lg-end {
-justify-content: flex-end !important;
-}
-.justify-content-lg-center {
-justify-content: center !important;
-}
-.justify-content-lg-between {
-justify-content: space-between !important;
-}
-.justify-content-lg-around {
-justify-content: space-around !important;
-}
-.align-items-lg-start {
-align-items: flex-start !important;
-}
-.align-items-lg-end {
-align-items: flex-end !important;
-}
-.align-items-lg-center {
-align-items: center !important;
-}
-.align-items-lg-baseline {
-align-items: baseline !important;
-}
-.align-items-lg-stretch {
-align-items: stretch !important;
-}
-.align-content-lg-start {
-align-content: flex-start !important;
-}
-.align-content-lg-end {
-align-content: flex-end !important;
-}
-.align-content-lg-center {
-align-content: center !important;
-}
-.align-content-lg-between {
-align-content: space-between !important;
-}
-.align-content-lg-around {
-align-content: space-around !important;
-}
-.align-content-lg-stretch {
-align-content: stretch !important;
-}
-.align-self-lg-auto {
-align-self: auto !important;
-}
-.align-self-lg-start {
-align-self: flex-start !important;
-}
-.align-self-lg-end {
-align-self: flex-end !important;
-}
-.align-self-lg-center {
-align-self: center !important;
-}
-.align-self-lg-baseline {
-align-self: baseline !important;
-}
-.align-self-lg-stretch {
-align-self: stretch !important;
-}
-}
-@media (min-width: 1200px) {
-.flex-xl-row {
-flex-direction: row !important;
-}
-.flex-xl-column {
-flex-direction: column !important;
-}
-.flex-xl-row-reverse {
-flex-direction: row-reverse !important;
-}
-.flex-xl-column-reverse {
-flex-direction: column-reverse !important;
-}
-.flex-xl-wrap {
-flex-wrap: wrap !important;
-}
-.flex-xl-nowrap {
-flex-wrap: nowrap !important;
-}
-.flex-xl-wrap-reverse {
-flex-wrap: wrap-reverse !important;
-}
-.flex-xl-fill {
-flex: 1 1 auto !important;
-}
-.flex-xl-grow-0 {
-flex-grow: 0 !important;
-}
-.flex-xl-grow-1 {
-flex-grow: 1 !important;
-}
-.flex-xl-shrink-0 {
-flex-shrink: 0 !important;
-}
-.flex-xl-shrink-1 {
-flex-shrink: 1 !important;
-}
-.justify-content-xl-start {
-justify-content: flex-start !important;
-}
-.justify-content-xl-end {
-justify-content: flex-end !important;
-}
-.justify-content-xl-center {
-justify-content: center !important;
-}
-.justify-content-xl-between {
-justify-content: space-between !important;
-}
-.justify-content-xl-around {
-justify-content: space-around !important;
-}
-.align-items-xl-start {
-align-items: flex-start !important;
-}
-.align-items-xl-end {
-align-items: flex-end !important;
-}
-.align-items-xl-center {
-align-items: center !important;
-}
-.align-items-xl-baseline {
-align-items: baseline !important;
-}
-.align-items-xl-stretch {
-align-items: stretch !important;
-}
-.align-content-xl-start {
-align-content: flex-start !important;
-}
-.align-content-xl-end {
-align-content: flex-end !important;
-}
-.align-content-xl-center {
-align-content: center !important;
-}
-.align-content-xl-between {
-align-content: space-between !important;
-}
-.align-content-xl-around {
-align-content: space-around !important;
-}
-.align-content-xl-stretch {
-align-content: stretch !important;
-}
-.align-self-xl-auto {
-align-self: auto !important;
-}
-.align-self-xl-start {
-align-self: flex-start !important;
-}
-.align-self-xl-end {
-align-self: flex-end !important;
-}
-.align-self-xl-center {
-align-self: center !important;
-}
-.align-self-xl-baseline {
-align-self: baseline !important;
-}
-.align-self-xl-stretch {
-align-self: stretch !important;
-}
-}
-.m-0 {
-margin: 0 !important;
-}
-.mt-0,
-.my-0 {
-margin-top: 0 !important;
-}
-.mr-0,
-.mx-0 {
-margin-right: 0 !important;
-}
-.mb-0,
-.my-0 {
-margin-bottom: 0 !important;
-}
-.ml-0,
-.mx-0 {
-margin-left: 0 !important;
-}
-.m-1 {
-margin: 0.25rem !important;
-}
-.mt-1,
-.my-1 {
-margin-top: 0.25rem !important;
-}
-.mr-1,
-.mx-1 {
-margin-right: 0.25rem !important;
-}
-.mb-1,
-.my-1 {
-margin-bottom: 0.25rem !important;
-}
-.ml-1,
-.mx-1 {
-margin-left: 0.25rem !important;
-}
-.m-2 {
-margin: 0.5rem !important;
-}
-.mt-2,
-.my-2 {
-margin-top: 0.5rem !important;
-}
-.mr-2,
-.mx-2 {
-margin-right: 0.5rem !important;
-}
-.mb-2,
-.my-2 {
-margin-bottom: 0.5rem !important;
-}
-.ml-2,
-.mx-2 {
-margin-left: 0.5rem !important;
-}
-.m-3 {
-margin: 1rem !important;
-}
-.mt-3,
-.my-3 {
-margin-top: 1rem !important;
-}
-.mr-3,
-.mx-3 {
-margin-right: 1rem !important;
-}
-.mb-3,
-.my-3 {
-margin-bottom: 1rem !important;
-}
-.ml-3,
-.mx-3 {
-margin-left: 1rem !important;
-}
-.m-4 {
-margin: 1.5rem !important;
-}
-.mt-4,
-.my-4 {
-margin-top: 1.5rem !important;
-}
-.mr-4,
-.mx-4 {
-margin-right: 1.5rem !important;
-}
-.mb-4,
-.my-4 {
-margin-bottom: 1.5rem !important;
-}
-.ml-4,
-.mx-4 {
-margin-left: 1.5rem !important;
-}
-.m-5 {
-margin: 3rem !important;
-}
-.mt-5,
-.my-5 {
-margin-top: 3rem !important;
-}
-.mr-5,
-.mx-5 {
-margin-right: 3rem !important;
-}
-.mb-5,
-.my-5 {
-margin-bottom: 3rem !important;
-}
-.ml-5,
-.mx-5 {
-margin-left: 3rem !important;
-}
-.p-0 {
-padding: 0 !important;
-}
-.pt-0,
-.py-0 {
-padding-top: 0 !important;
-}
-.pr-0,
-.px-0 {
-padding-right: 0 !important;
-}
-.pb-0,
-.py-0 {
-padding-bottom: 0 !important;
-}
-.pl-0,
-.px-0 {
-padding-left: 0 !important;
-}
-.p-1 {
-padding: 0.25rem !important;
-}
-.pt-1,
-.py-1 {
-padding-top: 0.25rem !important;
-}
-.pr-1,
-.px-1 {
-padding-right: 0.25rem !important;
-}
-.pb-1,
-.py-1 {
-padding-bottom: 0.25rem !important;
-}
-.pl-1,
-.px-1 {
-padding-left: 0.25rem !important;
-}
-.p-2 {
-padding: 0.5rem !important;
-}
-.pt-2,
-.py-2 {
-padding-top: 0.5rem !important;
-}
-.pr-2,
-.px-2 {
-padding-right: 0.5rem !important;
-}
-.pb-2,
-.py-2 {
-padding-bottom: 0.5rem !important;
-}
-.pl-2,
-.px-2 {
-padding-left: 0.5rem !important;
-}
-.p-3 {
-padding: 1rem !important;
-}
-.pt-3,
-.py-3 {
-padding-top: 1rem !important;
-}
-.pr-3,
-.px-3 {
-padding-right: 1rem !important;
-}
-.pb-3,
-.py-3 {
-padding-bottom: 1rem !important;
-}
-.pl-3,
-.px-3 {
-padding-left: 1rem !important;
-}
-.p-4 {
-padding: 1.5rem !important;
-}
-.pt-4,
-.py-4 {
-padding-top: 1.5rem !important;
-}
-.pr-4,
-.px-4 {
-padding-right: 1.5rem !important;
-}
-.pb-4,
-.py-4 {
-padding-bottom: 1.5rem !important;
-}
-.pl-4,
-.px-4 {
-padding-left: 1.5rem !important;
-}
-.p-5 {
-padding: 3rem !important;
-}
-.pt-5,
-.py-5 {
-padding-top: 3rem !important;
-}
-.pr-5,
-.px-5 {
-padding-right: 3rem !important;
-}
-.pb-5,
-.py-5 {
-padding-bottom: 3rem !important;
-}
-.pl-5,
-.px-5 {
-padding-left: 3rem !important;
-}
-.m-n1 {
-margin: -0.25rem !important;
-}
-.mt-n1,
-.my-n1 {
-margin-top: -0.25rem !important;
-}
-.mr-n1,
-.mx-n1 {
-margin-right: -0.25rem !important;
-}
-.mb-n1,
-.my-n1 {
-margin-bottom: -0.25rem !important;
-}
-.ml-n1,
-.mx-n1 {
-margin-left: -0.25rem !important;
-}
-.m-n2 {
-margin: -0.5rem !important;
-}
-.mt-n2,
-.my-n2 {
-margin-top: -0.5rem !important;
-}
-.mr-n2,
-.mx-n2 {
-margin-right: -0.5rem !important;
-}
-.mb-n2,
-.my-n2 {
-margin-bottom: -0.5rem !important;
-}
-.ml-n2,
-.mx-n2 {
-margin-left: -0.5rem !important;
-}
-.m-n3 {
-margin: -1rem !important;
-}
-.mt-n3,
-.my-n3 {
-margin-top: -1rem !important;
-}
-.mr-n3,
-.mx-n3 {
-margin-right: -1rem !important;
-}
-.mb-n3,
-.my-n3 {
-margin-bottom: -1rem !important;
-}
-.ml-n3,
-.mx-n3 {
-margin-left: -1rem !important;
-}
-.m-n4 {
-margin: -1.5rem !important;
-}
-.mt-n4,
-.my-n4 {
-margin-top: -1.5rem !important;
-}
-.mr-n4,
-.mx-n4 {
-margin-right: -1.5rem !important;
-}
-.mb-n4,
-.my-n4 {
-margin-bottom: -1.5rem !important;
-}
-.ml-n4,
-.mx-n4 {
-margin-left: -1.5rem !important;
-}
-.m-n5 {
-margin: -3rem !important;
-}
-.mt-n5,
-.my-n5 {
-margin-top: -3rem !important;
-}
-.mr-n5,
-.mx-n5 {
-margin-right: -3rem !important;
-}
-.mb-n5,
-.my-n5 {
-margin-bottom: -3rem !important;
-}
-.ml-n5,
-.mx-n5 {
-margin-left: -3rem !important;
-}
-.m-auto {
-margin: auto !important;
-}
-.mt-auto,
-.my-auto {
-margin-top: auto !important;
-}
-.mr-auto,
-.mx-auto {
-margin-right: auto !important;
-}
-.mb-auto,
-.my-auto {
-margin-bottom: auto !important;
-}
-.ml-auto,
-.mx-auto {
-margin-left: auto !important;
-}
-@media (min-width: 576px) {
-.m-sm-0 {
-margin: 0 !important;
-}
-.mt-sm-0,
-.my-sm-0 {
-margin-top: 0 !important;
-}
-.mr-sm-0,
-.mx-sm-0 {
-margin-right: 0 !important;
-}
-.mb-sm-0,
-.my-sm-0 {
-margin-bottom: 0 !important;
-}
-.ml-sm-0,
-.mx-sm-0 {
-margin-left: 0 !important;
-}
-.m-sm-1 {
-margin: 0.25rem !important;
-}
-.mt-sm-1,
-.my-sm-1 {
-margin-top: 0.25rem !important;
-}
-.mr-sm-1,
-.mx-sm-1 {
-margin-right: 0.25rem !important;
-}
-.mb-sm-1,
-.my-sm-1 {
-margin-bottom: 0.25rem !important;
-}
-.ml-sm-1,
-.mx-sm-1 {
-margin-left: 0.25rem !important;
-}
-.m-sm-2 {
-margin: 0.5rem !important;
-}
-.mt-sm-2,
-.my-sm-2 {
-margin-top: 0.5rem !important;
-}
-.mr-sm-2,
-.mx-sm-2 {
-margin-right: 0.5rem !important;
-}
-.mb-sm-2,
-.my-sm-2 {
-margin-bottom: 0.5rem !important;
-}
-.ml-sm-2,
-.mx-sm-2 {
-margin-left: 0.5rem !important;
-}
-.m-sm-3 {
-margin: 1rem !important;
-}
-.mt-sm-3,
-.my-sm-3 {
-margin-top: 1rem !important;
-}
-.mr-sm-3,
-.mx-sm-3 {
-margin-right: 1rem !important;
-}
-.mb-sm-3,
-.my-sm-3 {
-margin-bottom: 1rem !important;
-}
-.ml-sm-3,
-.mx-sm-3 {
-margin-left: 1rem !important;
-}
-.m-sm-4 {
-margin: 1.5rem !important;
-}
-.mt-sm-4,
-.my-sm-4 {
-margin-top: 1.5rem !important;
-}
-.mr-sm-4,
-.mx-sm-4 {
-margin-right: 1.5rem !important;
-}
-.mb-sm-4,
-.my-sm-4 {
-margin-bottom: 1.5rem !important;
-}
-.ml-sm-4,
-.mx-sm-4 {
-margin-left: 1.5rem !important;
-}
-.m-sm-5 {
-margin: 3rem !important;
-}
-.mt-sm-5,
-.my-sm-5 {
-margin-top: 3rem !important;
-}
-.mr-sm-5,
-.mx-sm-5 {
-margin-right: 3rem !important;
-}
-.mb-sm-5,
-.my-sm-5 {
-margin-bottom: 3rem !important;
-}
-.ml-sm-5,
-.mx-sm-5 {
-margin-left: 3rem !important;
-}
-.p-sm-0 {
-padding: 0 !important;
-}
-.pt-sm-0,
-.py-sm-0 {
-padding-top: 0 !important;
-}
-.pr-sm-0,
-.px-sm-0 {
-padding-right: 0 !important;
-}
-.pb-sm-0,
-.py-sm-0 {
-padding-bottom: 0 !important;
-}
-.pl-sm-0,
-.px-sm-0 {
-padding-left: 0 !important;
-}
-.p-sm-1 {
-padding: 0.25rem !important;
-}
-.pt-sm-1,
-.py-sm-1 {
-padding-top: 0.25rem !important;
-}
-.pr-sm-1,
-.px-sm-1 {
-padding-right: 0.25rem !important;
-}
-.pb-sm-1,
-.py-sm-1 {
-padding-bottom: 0.25rem !important;
-}
-.pl-sm-1,
-.px-sm-1 {
-padding-left: 0.25rem !important;
-}
-.p-sm-2 {
-padding: 0.5rem !important;
-}
-.pt-sm-2,
-.py-sm-2 {
-padding-top: 0.5rem !important;
-}
-.pr-sm-2,
-.px-sm-2 {
-padding-right: 0.5rem !important;
-}
-.pb-sm-2,
-.py-sm-2 {
-padding-bottom: 0.5rem !important;
-}
-.pl-sm-2,
-.px-sm-2 {
-padding-left: 0.5rem !important;
-}
-.p-sm-3 {
-padding: 1rem !important;
-}
-.pt-sm-3,
-.py-sm-3 {
-padding-top: 1rem !important;
-}
-.pr-sm-3,
-.px-sm-3 {
-padding-right: 1rem !important;
-}
-.pb-sm-3,
-.py-sm-3 {
-padding-bottom: 1rem !important;
-}
-.pl-sm-3,
-.px-sm-3 {
-padding-left: 1rem !important;
-}
-.p-sm-4 {
-padding: 1.5rem !important;
-}
-.pt-sm-4,
-.py-sm-4 {
-padding-top: 1.5rem !important;
-}
-.pr-sm-4,
-.px-sm-4 {
-padding-right: 1.5rem !important;
-}
-.pb-sm-4,
-.py-sm-4 {
-padding-bottom: 1.5rem !important;
-}
-.pl-sm-4,
-.px-sm-4 {
-padding-left: 1.5rem !important;
-}
-.p-sm-5 {
-padding: 3rem !important;
-}
-.pt-sm-5,
-.py-sm-5 {
-padding-top: 3rem !important;
-}
-.pr-sm-5,
-.px-sm-5 {
-padding-right: 3rem !important;
-}
-.pb-sm-5,
-.py-sm-5 {
-padding-bottom: 3rem !important;
-}
-.pl-sm-5,
-.px-sm-5 {
-padding-left: 3rem !important;
-}
-.m-sm-n1 {
-margin: -0.25rem !important;
-}
-.mt-sm-n1,
-.my-sm-n1 {
-margin-top: -0.25rem !important;
-}
-.mr-sm-n1,
-.mx-sm-n1 {
-margin-right: -0.25rem !important;
-}
-.mb-sm-n1,
-.my-sm-n1 {
-margin-bottom: -0.25rem !important;
-}
-.ml-sm-n1,
-.mx-sm-n1 {
-margin-left: -0.25rem !important;
-}
-.m-sm-n2 {
-margin: -0.5rem !important;
-}
-.mt-sm-n2,
-.my-sm-n2 {
-margin-top: -0.5rem !important;
-}
-.mr-sm-n2,
-.mx-sm-n2 {
-margin-right: -0.5rem !important;
-}
-.mb-sm-n2,
-.my-sm-n2 {
-margin-bottom: -0.5rem !important;
-}
-.ml-sm-n2,
-.mx-sm-n2 {
-margin-left: -0.5rem !important;
-}
-.m-sm-n3 {
-margin: -1rem !important;
-}
-.mt-sm-n3,
-.my-sm-n3 {
-margin-top: -1rem !important;
-}
-.mr-sm-n3,
-.mx-sm-n3 {
-margin-right: -1rem !important;
-}
-.mb-sm-n3,
-.my-sm-n3 {
-margin-bottom: -1rem !important;
-}
-.ml-sm-n3,
-.mx-sm-n3 {
-margin-left: -1rem !important;
-}
-.m-sm-n4 {
-margin: -1.5rem !important;
-}
-.mt-sm-n4,
-.my-sm-n4 {
-margin-top: -1.5rem !important;
-}
-.mr-sm-n4,
-.mx-sm-n4 {
-margin-right: -1.5rem !important;
-}
-.mb-sm-n4,
-.my-sm-n4 {
-margin-bottom: -1.5rem !important;
-}
-.ml-sm-n4,
-.mx-sm-n4 {
-margin-left: -1.5rem !important;
-}
-.m-sm-n5 {
-margin: -3rem !important;
-}
-.mt-sm-n5,
-.my-sm-n5 {
-margin-top: -3rem !important;
-}
-.mr-sm-n5,
-.mx-sm-n5 {
-margin-right: -3rem !important;
-}
-.mb-sm-n5,
-.my-sm-n5 {
-margin-bottom: -3rem !important;
-}
-.ml-sm-n5,
-.mx-sm-n5 {
-margin-left: -3rem !important;
-}
-.m-sm-auto {
-margin: auto !important;
-}
-.mt-sm-auto,
-.my-sm-auto {
-margin-top: auto !important;
-}
-.mr-sm-auto,
-.mx-sm-auto {
-margin-right: auto !important;
-}
-.mb-sm-auto,
-.my-sm-auto {
-margin-bottom: auto !important;
-}
-.ml-sm-auto,
-.mx-sm-auto {
-margin-left: auto !important;
-}
-}
-@media (min-width: 768px) {
-.m-md-0 {
-margin: 0 !important;
-}
-.mt-md-0,
-.my-md-0 {
-margin-top: 0 !important;
-}
-.mr-md-0,
-.mx-md-0 {
-margin-right: 0 !important;
-}
-.mb-md-0,
-.my-md-0 {
-margin-bottom: 0 !important;
-}
-.ml-md-0,
-.mx-md-0 {
-margin-left: 0 !important;
-}
-.m-md-1 {
-margin: 0.25rem !important;
-}
-.mt-md-1,
-.my-md-1 {
-margin-top: 0.25rem !important;
-}
-.mr-md-1,
-.mx-md-1 {
-margin-right: 0.25rem !important;
-}
-.mb-md-1,
-.my-md-1 {
-margin-bottom: 0.25rem !important;
-}
-.ml-md-1,
-.mx-md-1 {
-margin-left: 0.25rem !important;
-}
-.m-md-2 {
-margin: 0.5rem !important;
-}
-.mt-md-2,
-.my-md-2 {
-margin-top: 0.5rem !important;
-}
-.mr-md-2,
-.mx-md-2 {
-margin-right: 0.5rem !important;
-}
-.mb-md-2,
-.my-md-2 {
-margin-bottom: 0.5rem !important;
-}
-.ml-md-2,
-.mx-md-2 {
-margin-left: 0.5rem !important;
-}
-.m-md-3 {
-margin: 1rem !important;
-}
-.mt-md-3,
-.my-md-3 {
-margin-top: 1rem !important;
-}
-.mr-md-3,
-.mx-md-3 {
-margin-right: 1rem !important;
-}
-.mb-md-3,
-.my-md-3 {
-margin-bottom: 1rem !important;
-}
-.ml-md-3,
-.mx-md-3 {
-margin-left: 1rem !important;
-}
-.m-md-4 {
-margin: 1.5rem !important;
-}
-.mt-md-4,
-.my-md-4 {
-margin-top: 1.5rem !important;
-}
-.mr-md-4,
-.mx-md-4 {
-margin-right: 1.5rem !important;
-}
-.mb-md-4,
-.my-md-4 {
-margin-bottom: 1.5rem !important;
-}
-.ml-md-4,
-.mx-md-4 {
-margin-left: 1.5rem !important;
-}
-.m-md-5 {
-margin: 3rem !important;
-}
-.mt-md-5,
-.my-md-5 {
-margin-top: 3rem !important;
-}
-.mr-md-5,
-.mx-md-5 {
-margin-right: 3rem !important;
-}
-.mb-md-5,
-.my-md-5 {
-margin-bottom: 3rem !important;
-}
-.ml-md-5,
-.mx-md-5 {
-margin-left: 3rem !important;
-}
-.p-md-0 {
-padding: 0 !important;
-}
-.pt-md-0,
-.py-md-0 {
-padding-top: 0 !important;
-}
-.pr-md-0,
-.px-md-0 {
-padding-right: 0 !important;
-}
-.pb-md-0,
-.py-md-0 {
-padding-bottom: 0 !important;
-}
-.pl-md-0,
-.px-md-0 {
-padding-left: 0 !important;
-}
-.p-md-1 {
-padding: 0.25rem !important;
-}
-.pt-md-1,
-.py-md-1 {
-padding-top: 0.25rem !important;
-}
-.pr-md-1,
-.px-md-1 {
-padding-right: 0.25rem !important;
-}
-.pb-md-1,
-.py-md-1 {
-padding-bottom: 0.25rem !important;
-}
-.pl-md-1,
-.px-md-1 {
-padding-left: 0.25rem !important;
-}
-.p-md-2 {
-padding: 0.5rem !important;
-}
-.pt-md-2,
-.py-md-2 {
-padding-top: 0.5rem !important;
-}
-.pr-md-2,
-.px-md-2 {
-padding-right: 0.5rem !important;
-}
-.pb-md-2,
-.py-md-2 {
-padding-bottom: 0.5rem !important;
-}
-.pl-md-2,
-.px-md-2 {
-padding-left: 0.5rem !important;
-}
-.p-md-3 {
-padding: 1rem !important;
-}
-.pt-md-3,
-.py-md-3 {
-padding-top: 1rem !important;
-}
-.pr-md-3,
-.px-md-3 {
-padding-right: 1rem !important;
-}
-.pb-md-3,
-.py-md-3 {
-padding-bottom: 1rem !important;
-}
-.pl-md-3,
-.px-md-3 {
-padding-left: 1rem !important;
-}
-.p-md-4 {
-padding: 1.5rem !important;
-}
-.pt-md-4,
-.py-md-4 {
-padding-top: 1.5rem !important;
-}
-.pr-md-4,
-.px-md-4 {
-padding-right: 1.5rem !important;
-}
-.pb-md-4,
-.py-md-4 {
-padding-bottom: 1.5rem !important;
-}
-.pl-md-4,
-.px-md-4 {
-padding-left: 1.5rem !important;
-}
-.p-md-5 {
-padding: 3rem !important;
-}
-.pt-md-5,
-.py-md-5 {
-padding-top: 3rem !important;
-}
-.pr-md-5,
-.px-md-5 {
-padding-right: 3rem !important;
-}
-.pb-md-5,
-.py-md-5 {
-padding-bottom: 3rem !important;
-}
-.pl-md-5,
-.px-md-5 {
-padding-left: 3rem !important;
-}
-.m-md-n1 {
-margin: -0.25rem !important;
-}
-.mt-md-n1,
-.my-md-n1 {
-margin-top: -0.25rem !important;
-}
-.mr-md-n1,
-.mx-md-n1 {
-margin-right: -0.25rem !important;
-}
-.mb-md-n1,
-.my-md-n1 {
-margin-bottom: -0.25rem !important;
-}
-.ml-md-n1,
-.mx-md-n1 {
-margin-left: -0.25rem !important;
-}
-.m-md-n2 {
-margin: -0.5rem !important;
-}
-.mt-md-n2,
-.my-md-n2 {
-margin-top: -0.5rem !important;
-}
-.mr-md-n2,
-.mx-md-n2 {
-margin-right: -0.5rem !important;
-}
-.mb-md-n2,
-.my-md-n2 {
-margin-bottom: -0.5rem !important;
-}
-.ml-md-n2,
-.mx-md-n2 {
-margin-left: -0.5rem !important;
-}
-.m-md-n3 {
-margin: -1rem !important;
-}
-.mt-md-n3,
-.my-md-n3 {
-margin-top: -1rem !important;
-}
-.mr-md-n3,
-.mx-md-n3 {
-margin-right: -1rem !important;
-}
-.mb-md-n3,
-.my-md-n3 {
-margin-bottom: -1rem !important;
-}
-.ml-md-n3,
-.mx-md-n3 {
-margin-left: -1rem !important;
-}
-.m-md-n4 {
-margin: -1.5rem !important;
-}
-.mt-md-n4,
-.my-md-n4 {
-margin-top: -1.5rem !important;
-}
-.mr-md-n4,
-.mx-md-n4 {
-margin-right: -1.5rem !important;
-}
-.mb-md-n4,
-.my-md-n4 {
-margin-bottom: -1.5rem !important;
-}
-.ml-md-n4,
-.mx-md-n4 {
-margin-left: -1.5rem !important;
-}
-.m-md-n5 {
-margin: -3rem !important;
-}
-.mt-md-n5,
-.my-md-n5 {
-margin-top: -3rem !important;
-}
-.mr-md-n5,
-.mx-md-n5 {
-margin-right: -3rem !important;
-}
-.mb-md-n5,
-.my-md-n5 {
-margin-bottom: -3rem !important;
-}
-.ml-md-n5,
-.mx-md-n5 {
-margin-left: -3rem !important;
-}
-.m-md-auto {
-margin: auto !important;
-}
-.mt-md-auto,
-.my-md-auto {
-margin-top: auto !important;
-}
-.mr-md-auto,
-.mx-md-auto {
-margin-right: auto !important;
-}
-.mb-md-auto,
-.my-md-auto {
-margin-bottom: auto !important;
-}
-.ml-md-auto,
-.mx-md-auto {
-margin-left: auto !important;
-}
-}
-@media (min-width: 992px) {
-.m-lg-0 {
-margin: 0 !important;
-}
-.mt-lg-0,
-.my-lg-0 {
-margin-top: 0 !important;
-}
-.mr-lg-0,
-.mx-lg-0 {
-margin-right: 0 !important;
-}
-.mb-lg-0,
-.my-lg-0 {
-margin-bottom: 0 !important;
-}
-.ml-lg-0,
-.mx-lg-0 {
-margin-left: 0 !important;
-}
-.m-lg-1 {
-margin: 0.25rem !important;
-}
-.mt-lg-1,
-.my-lg-1 {
-margin-top: 0.25rem !important;
-}
-.mr-lg-1,
-.mx-lg-1 {
-margin-right: 0.25rem !important;
-}
-.mb-lg-1,
-.my-lg-1 {
-margin-bottom: 0.25rem !important;
-}
-.ml-lg-1,
-.mx-lg-1 {
-margin-left: 0.25rem !important;
-}
-.m-lg-2 {
-margin: 0.5rem !important;
-}
-.mt-lg-2,
-.my-lg-2 {
-margin-top: 0.5rem !important;
-}
-.mr-lg-2,
-.mx-lg-2 {
-margin-right: 0.5rem !important;
-}
-.mb-lg-2,
-.my-lg-2 {
-margin-bottom: 0.5rem !important;
-}
-.ml-lg-2,
-.mx-lg-2 {
-margin-left: 0.5rem !important;
-}
-.m-lg-3 {
-margin: 1rem !important;
-}
-.mt-lg-3,
-.my-lg-3 {
-margin-top: 1rem !important;
-}
-.mr-lg-3,
-.mx-lg-3 {
-margin-right: 1rem !important;
-}
-.mb-lg-3,
-.my-lg-3 {
-margin-bottom: 1rem !important;
-}
-.ml-lg-3,
-.mx-lg-3 {
-margin-left: 1rem !important;
-}
-.m-lg-4 {
-margin: 1.5rem !important;
-}
-.mt-lg-4,
-.my-lg-4 {
-margin-top: 1.5rem !important;
-}
-.mr-lg-4,
-.mx-lg-4 {
-margin-right: 1.5rem !important;
-}
-.mb-lg-4,
-.my-lg-4 {
-margin-bottom: 1.5rem !important;
-}
-.ml-lg-4,
-.mx-lg-4 {
-margin-left: 1.5rem !important;
-}
-.m-lg-5 {
-margin: 3rem !important;
-}
-.mt-lg-5,
-.my-lg-5 {
-margin-top: 3rem !important;
-}
-.mr-lg-5,
-.mx-lg-5 {
-margin-right: 3rem !important;
-}
-.mb-lg-5,
-.my-lg-5 {
-margin-bottom: 3rem !important;
-}
-.ml-lg-5,
-.mx-lg-5 {
-margin-left: 3rem !important;
-}
-.p-lg-0 {
-padding: 0 !important;
-}
-.pt-lg-0,
-.py-lg-0 {
-padding-top: 0 !important;
-}
-.pr-lg-0,
-.px-lg-0 {
-padding-right: 0 !important;
-}
-.pb-lg-0,
-.py-lg-0 {
-padding-bottom: 0 !important;
-}
-.pl-lg-0,
-.px-lg-0 {
-padding-left: 0 !important;
-}
-.p-lg-1 {
-padding: 0.25rem !important;
-}
-.pt-lg-1,
-.py-lg-1 {
-padding-top: 0.25rem !important;
-}
-.pr-lg-1,
-.px-lg-1 {
-padding-right: 0.25rem !important;
-}
-.pb-lg-1,
-.py-lg-1 {
-padding-bottom: 0.25rem !important;
-}
-.pl-lg-1,
-.px-lg-1 {
-padding-left: 0.25rem !important;
-}
-.p-lg-2 {
-padding: 0.5rem !important;
-}
-.pt-lg-2,
-.py-lg-2 {
-padding-top: 0.5rem !important;
-}
-.pr-lg-2,
-.px-lg-2 {
-padding-right: 0.5rem !important;
-}
-.pb-lg-2,
-.py-lg-2 {
-padding-bottom: 0.5rem !important;
-}
-.pl-lg-2,
-.px-lg-2 {
-padding-left: 0.5rem !important;
-}
-.p-lg-3 {
-padding: 1rem !important;
-}
-.pt-lg-3,
-.py-lg-3 {
-padding-top: 1rem !important;
-}
-.pr-lg-3,
-.px-lg-3 {
-padding-right: 1rem !important;
-}
-.pb-lg-3,
-.py-lg-3 {
-padding-bottom: 1rem !important;
-}
-.pl-lg-3,
-.px-lg-3 {
-padding-left: 1rem !important;
-}
-.p-lg-4 {
-padding: 1.5rem !important;
-}
-.pt-lg-4,
-.py-lg-4 {
-padding-top: 1.5rem !important;
-}
-.pr-lg-4,
-.px-lg-4 {
-padding-right: 1.5rem !important;
-}
-.pb-lg-4,
-.py-lg-4 {
-padding-bottom: 1.5rem !important;
-}
-.pl-lg-4,
-.px-lg-4 {
-padding-left: 1.5rem !important;
-}
-.p-lg-5 {
-padding: 3rem !important;
-}
-.pt-lg-5,
-.py-lg-5 {
-padding-top: 3rem !important;
-}
-.pr-lg-5,
-.px-lg-5 {
-padding-right: 3rem !important;
-}
-.pb-lg-5,
-.py-lg-5 {
-padding-bottom: 3rem !important;
-}
-.pl-lg-5,
-.px-lg-5 {
-padding-left: 3rem !important;
-}
-.m-lg-n1 {
-margin: -0.25rem !important;
-}
-.mt-lg-n1,
-.my-lg-n1 {
-margin-top: -0.25rem !important;
-}
-.mr-lg-n1,
-.mx-lg-n1 {
-margin-right: -0.25rem !important;
-}
-.mb-lg-n1,
-.my-lg-n1 {
-margin-bottom: -0.25rem !important;
-}
-.ml-lg-n1,
-.mx-lg-n1 {
-margin-left: -0.25rem !important;
-}
-.m-lg-n2 {
-margin: -0.5rem !important;
-}
-.mt-lg-n2,
-.my-lg-n2 {
-margin-top: -0.5rem !important;
-}
-.mr-lg-n2,
-.mx-lg-n2 {
-margin-right: -0.5rem !important;
-}
-.mb-lg-n2,
-.my-lg-n2 {
-margin-bottom: -0.5rem !important;
-}
-.ml-lg-n2,
-.mx-lg-n2 {
-margin-left: -0.5rem !important;
-}
-.m-lg-n3 {
-margin: -1rem !important;
-}
-.mt-lg-n3,
-.my-lg-n3 {
-margin-top: -1rem !important;
-}
-.mr-lg-n3,
-.mx-lg-n3 {
-margin-right: -1rem !important;
-}
-.mb-lg-n3,
-.my-lg-n3 {
-margin-bottom: -1rem !important;
-}
-.ml-lg-n3,
-.mx-lg-n3 {
-margin-left: -1rem !important;
-}
-.m-lg-n4 {
-margin: -1.5rem !important;
-}
-.mt-lg-n4,
-.my-lg-n4 {
-margin-top: -1.5rem !important;
-}
-.mr-lg-n4,
-.mx-lg-n4 {
-margin-right: -1.5rem !important;
-}
-.mb-lg-n4,
-.my-lg-n4 {
-margin-bottom: -1.5rem !important;
-}
-.ml-lg-n4,
-.mx-lg-n4 {
-margin-left: -1.5rem !important;
-}
-.m-lg-n5 {
-margin: -3rem !important;
-}
-.mt-lg-n5,
-.my-lg-n5 {
-margin-top: -3rem !important;
-}
-.mr-lg-n5,
-.mx-lg-n5 {
-margin-right: -3rem !important;
-}
-.mb-lg-n5,
-.my-lg-n5 {
-margin-bottom: -3rem !important;
-}
-.ml-lg-n5,
-.mx-lg-n5 {
-margin-left: -3rem !important;
-}
-.m-lg-auto {
-margin: auto !important;
-}
-.mt-lg-auto,
-.my-lg-auto {
-margin-top: auto !important;
-}
-.mr-lg-auto,
-.mx-lg-auto {
-margin-right: auto !important;
-}
-.mb-lg-auto,
-.my-lg-auto {
-margin-bottom: auto !important;
-}
-.ml-lg-auto,
-.mx-lg-auto {
-margin-left: auto !important;
-}
-}
-@media (min-width: 1200px) {
-.m-xl-0 {
-margin: 0 !important;
-}
-.mt-xl-0,
-.my-xl-0 {
-margin-top: 0 !important;
-}
-.mr-xl-0,
-.mx-xl-0 {
-margin-right: 0 !important;
-}
-.mb-xl-0,
-.my-xl-0 {
-margin-bottom: 0 !important;
-}
-.ml-xl-0,
-.mx-xl-0 {
-margin-left: 0 !important;
-}
-.m-xl-1 {
-margin: 0.25rem !important;
-}
-.mt-xl-1,
-.my-xl-1 {
-margin-top: 0.25rem !important;
-}
-.mr-xl-1,
-.mx-xl-1 {
-margin-right: 0.25rem !important;
-}
-.mb-xl-1,
-.my-xl-1 {
-margin-bottom: 0.25rem !important;
-}
-.ml-xl-1,
-.mx-xl-1 {
-margin-left: 0.25rem !important;
-}
-.m-xl-2 {
-margin: 0.5rem !important;
-}
-.mt-xl-2,
-.my-xl-2 {
-margin-top: 0.5rem !important;
-}
-.mr-xl-2,
-.mx-xl-2 {
-margin-right: 0.5rem !important;
-}
-.mb-xl-2,
-.my-xl-2 {
-margin-bottom: 0.5rem !important;
-}
-.ml-xl-2,
-.mx-xl-2 {
-margin-left: 0.5rem !important;
-}
-.m-xl-3 {
-margin: 1rem !important;
-}
-.mt-xl-3,
-.my-xl-3 {
-margin-top: 1rem !important;
-}
-.mr-xl-3,
-.mx-xl-3 {
-margin-right: 1rem !important;
-}
-.mb-xl-3,
-.my-xl-3 {
-margin-bottom: 1rem !important;
-}
-.ml-xl-3,
-.mx-xl-3 {
-margin-left: 1rem !important;
-}
-.m-xl-4 {
-margin: 1.5rem !important;
-}
-.mt-xl-4,
-.my-xl-4 {
-margin-top: 1.5rem !important;
-}
-.mr-xl-4,
-.mx-xl-4 {
-margin-right: 1.5rem !important;
-}
-.mb-xl-4,
-.my-xl-4 {
-margin-bottom: 1.5rem !important;
-}
-.ml-xl-4,
-.mx-xl-4 {
-margin-left: 1.5rem !important;
-}
-.m-xl-5 {
-margin: 3rem !important;
-}
-.mt-xl-5,
-.my-xl-5 {
-margin-top: 3rem !important;
-}
-.mr-xl-5,
-.mx-xl-5 {
-margin-right: 3rem !important;
-}
-.mb-xl-5,
-.my-xl-5 {
-margin-bottom: 3rem !important;
-}
-.ml-xl-5,
-.mx-xl-5 {
-margin-left: 3rem !important;
-}
-.p-xl-0 {
-padding: 0 !important;
-}
-.pt-xl-0,
-.py-xl-0 {
-padding-top: 0 !important;
-}
-.pr-xl-0,
-.px-xl-0 {
-padding-right: 0 !important;
-}
-.pb-xl-0,
-.py-xl-0 {
-padding-bottom: 0 !important;
-}
-.pl-xl-0,
-.px-xl-0 {
-padding-left: 0 !important;
-}
-.p-xl-1 {
-padding: 0.25rem !important;
-}
-.pt-xl-1,
-.py-xl-1 {
-padding-top: 0.25rem !important;
-}
-.pr-xl-1,
-.px-xl-1 {
-padding-right: 0.25rem !important;
-}
-.pb-xl-1,
-.py-xl-1 {
-padding-bottom: 0.25rem !important;
-}
-.pl-xl-1,
-.px-xl-1 {
-padding-left: 0.25rem !important;
-}
-.p-xl-2 {
-padding: 0.5rem !important;
-}
-.pt-xl-2,
-.py-xl-2 {
-padding-top: 0.5rem !important;
-}
-.pr-xl-2,
-.px-xl-2 {
-padding-right: 0.5rem !important;
-}
-.pb-xl-2,
-.py-xl-2 {
-padding-bottom: 0.5rem !important;
-}
-.pl-xl-2,
-.px-xl-2 {
-padding-left: 0.5rem !important;
-}
-.p-xl-3 {
-padding: 1rem !important;
-}
-.pt-xl-3,
-.py-xl-3 {
-padding-top: 1rem !important;
-}
-.pr-xl-3,
-.px-xl-3 {
-padding-right: 1rem !important;
-}
-.pb-xl-3,
-.py-xl-3 {
-padding-bottom: 1rem !important;
-}
-.pl-xl-3,
-.px-xl-3 {
-padding-left: 1rem !important;
-}
-.p-xl-4 {
-padding: 1.5rem !important;
-}
-.pt-xl-4,
-.py-xl-4 {
-padding-top: 1.5rem !important;
-}
-.pr-xl-4,
-.px-xl-4 {
-padding-right: 1.5rem !important;
-}
-.pb-xl-4,
-.py-xl-4 {
-padding-bottom: 1.5rem !important;
-}
-.pl-xl-4,
-.px-xl-4 {
-padding-left: 1.5rem !important;
-}
-.p-xl-5 {
-padding: 3rem !important;
-}
-.pt-xl-5,
-.py-xl-5 {
-padding-top: 3rem !important;
-}
-.pr-xl-5,
-.px-xl-5 {
-padding-right: 3rem !important;
-}
-.pb-xl-5,
-.py-xl-5 {
-padding-bottom: 3rem !important;
-}
-.pl-xl-5,
-.px-xl-5 {
-padding-left: 3rem !important;
-}
-.m-xl-n1 {
-margin: -0.25rem !important;
-}
-.mt-xl-n1,
-.my-xl-n1 {
-margin-top: -0.25rem !important;
-}
-.mr-xl-n1,
-.mx-xl-n1 {
-margin-right: -0.25rem !important;
-}
-.mb-xl-n1,
-.my-xl-n1 {
-margin-bottom: -0.25rem !important;
-}
-.ml-xl-n1,
-.mx-xl-n1 {
-margin-left: -0.25rem !important;
-}
-.m-xl-n2 {
-margin: -0.5rem !important;
-}
-.mt-xl-n2,
-.my-xl-n2 {
-margin-top: -0.5rem !important;
-}
-.mr-xl-n2,
-.mx-xl-n2 {
-margin-right: -0.5rem !important;
-}
-.mb-xl-n2,
-.my-xl-n2 {
-margin-bottom: -0.5rem !important;
-}
-.ml-xl-n2,
-.mx-xl-n2 {
-margin-left: -0.5rem !important;
-}
-.m-xl-n3 {
-margin: -1rem !important;
-}
-.mt-xl-n3,
-.my-xl-n3 {
-margin-top: -1rem !important;
-}
-.mr-xl-n3,
-.mx-xl-n3 {
-margin-right: -1rem !important;
-}
-.mb-xl-n3,
-.my-xl-n3 {
-margin-bottom: -1rem !important;
-}
-.ml-xl-n3,
-.mx-xl-n3 {
-margin-left: -1rem !important;
-}
-.m-xl-n4 {
-margin: -1.5rem !important;
-}
-.mt-xl-n4,
-.my-xl-n4 {
-margin-top: -1.5rem !important;
-}
-.mr-xl-n4,
-.mx-xl-n4 {
-margin-right: -1.5rem !important;
-}
-.mb-xl-n4,
-.my-xl-n4 {
-margin-bottom: -1.5rem !important;
-}
-.ml-xl-n4,
-.mx-xl-n4 {
-margin-left: -1.5rem !important;
-}
-.m-xl-n5 {
-margin: -3rem !important;
-}
-.mt-xl-n5,
-.my-xl-n5 {
-margin-top: -3rem !important;
-}
-.mr-xl-n5,
-.mx-xl-n5 {
-margin-right: -3rem !important;
-}
-.mb-xl-n5,
-.my-xl-n5 {
-margin-bottom: -3rem !important;
-}
-.ml-xl-n5,
-.mx-xl-n5 {
-margin-left: -3rem !important;
-}
-.m-xl-auto {
-margin: auto !important;
-}
-.mt-xl-auto,
-.my-xl-auto {
-margin-top: auto !important;
-}
-.mr-xl-auto,
-.mx-xl-auto {
-margin-right: auto !important;
-}
-.mb-xl-auto,
-.my-xl-auto {
-margin-bottom: auto !important;
-}
-.ml-xl-auto,
-.mx-xl-auto {
-margin-left: auto !important;
-}
-}
-.card {
-position: relative;
-display: flex;
-flex-direction: column;
-min-width: 0;
-word-wrap: break-word;
-background-color: inherit;
-background-clip: border-box;
-border: 1px solid rgba(0, 0, 0, 0.125);
-border-radius: 0.25rem;
-}
-.card > hr {
-margin-right: 0;
-margin-left: 0;
-}
-.card > .list-group {
-border-top: inherit;
-border-bottom: inherit;
-}
-.card > .list-group:first-child {
-border-top-width: 0;
-border-top-left-radius: subtract(0.25rem, 1px);
-border-top-right-radius: subtract(0.25rem, 1px);
-}
-.card > .list-group:last-child {
-border-bottom-width: 0;
-border-bottom-right-radius: subtract(0.25rem, 1px);
-border-bottom-left-radius: subtract(0.25rem, 1px);
-}
-.card > .card-header + .list-group,
-.card > .list-group + .card-footer {
-border-top: 0;
-}
-.card-body {
-flex: 1 1 auto;
-min-height: 1px;
-padding: 1.25rem;
-}
-.card-title {
-margin-bottom: 0.75rem;
-}
-.card-subtitle {
-margin-top: -0.375rem;
-margin-bottom: 0;
-}
-.card-text:last-child {
-margin-bottom: 0;
-}
-.card-link:hover {
-text-decoration: none;
-}
-.card-link + .card-link {
-margin-left: 1.25rem;
-}
-.card-header {
-padding: 0.75rem 1.25rem;
-margin-bottom: 0;
-background-color: rgba(0, 0, 0, 0.03);
-border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-}
-.card-header:first-child {
-border-radius: subtract(0.25rem, 1px) subtract(0.25rem, 1px) 0 0;
-}
-.card-footer {
-padding: 0.75rem 1.25rem;
-background-color: rgba(0, 0, 0, 0.03);
-border-top: 1px solid rgba(0, 0, 0, 0.125);
-}
-.card-footer:last-child {
-border-radius: 0 0 subtract(0.25rem, 1px) subtract(0.25rem, 1px);
-}
-.card-header-tabs {
-margin-right: -0.625rem;
-margin-bottom: -0.75rem;
-margin-left: -0.625rem;
-border-bottom: 0;
-}
-.card-header-pills {
-margin-right: -0.625rem;
-margin-left: -0.625rem;
-}
-.card-img-overlay {
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-padding: 1.25rem;
-border-radius: subtract(0.25rem, 1px);
-}
-.card-img,
-.card-img-top,
-.card-img-bottom {
-flex-shrink: 0;
-width: 100%;
-}
-.card-img,
-.card-img-top {
-border-top-left-radius: subtract(0.25rem, 1px);
-border-top-right-radius: subtract(0.25rem, 1px);
-}
-.card-img,
-.card-img-bottom {
-border-bottom-right-radius: subtract(0.25rem, 1px);
-border-bottom-left-radius: subtract(0.25rem, 1px);
-}
-.card-deck .card {
-margin-bottom: 15px;
-}
-@media (min-width: 576px) {
-.card-deck {
-display: flex;
-flex-flow: row wrap;
-margin-right: -15px;
-margin-left: -15px;
-}
-.card-deck .card {
-flex: 1 0 0%;
-margin-right: 15px;
-margin-bottom: 0;
-margin-left: 15px;
-}
-}
-.card-group > .card {
-margin-bottom: 15px;
-}
-@media (min-width: 576px) {
-.card-group {
-display: flex;
-flex-flow: row wrap;
-}
-.card-group > .card {
-flex: 1 0 0%;
-margin-bottom: 0;
-}
-.card-group > .card + .card {
-margin-left: 0;
-border-left: 0;
-}
-.card-group > .card:not(:last-child) {
-border-top-right-radius: 0;
-border-bottom-right-radius: 0;
-}
-.card-group > .card:not(:last-child) .card-img-top,
-.card-group > .card:not(:last-child) .card-header {
-border-top-right-radius: 0;
-}
-.card-group > .card:not(:last-child) .card-img-bottom,
-.card-group > .card:not(:last-child) .card-footer {
-border-bottom-right-radius: 0;
-}
-.card-group > .card:not(:first-child) {
-border-top-left-radius: 0;
-border-bottom-left-radius: 0;
-}
-.card-group > .card:not(:first-child) .card-img-top,
-.card-group > .card:not(:first-child) .card-header {
-border-top-left-radius: 0;
-}
-.card-group > .card:not(:first-child) .card-img-bottom,
-.card-group > .card:not(:first-child) .card-footer {
-border-bottom-left-radius: 0;
-}
-}
-.card-columns .card {
-margin-bottom: 0.75rem;
-}
-@media (min-width: 576px) {
-.card-columns {
-column-count: 3;
-column-gap: 1.25rem;
-orphans: 1;
-widows: 1;
-}
-.card-columns .card {
-display: inline-block;
-width: 100%;
-}
-}
-.accordion {
-overflow-anchor: none;
-}
-.accordion > .card {
-overflow: hidden;
-}
-.accordion > .card:not(:last-of-type) {
-border-bottom: 0;
-border-bottom-right-radius: 0;
-border-bottom-left-radius: 0;
-}
-.accordion > .card:not(:first-of-type) {
-border-top-left-radius: 0;
-border-top-right-radius: 0;
-}
-.accordion > .card > .card-header {
-border-radius: 0;
-margin-bottom: -1px;
-}
+
+--title-size: 50px;
+--body-size: 1.06rem;
+--code-size: 14px;
+--aside-size: 12px;
+--fig-cap-size: 13px;
+
+--title-color: #000000;
+--header-color: rgba(0, 0, 0, 0.8);
+--body-color: rgba(0, 0, 0, 0.8);
+--aside-color: rgba(0, 0, 0, 0.6);
+--fig-cap-color: rgba(0, 0, 0, 0.6);
+
+--heading-font: sans-serif;
+--mono-font: monospace;
+--body-font: sans-serif;
+--navbar-font: sans-serif; 
+}
+
+d-byline {
+--heading-size: 0.6rem;
+--heading-color: rgba(0, 0, 0, 0.5);
+--body-size: 0.8rem;
+--body-color: rgba(0, 0, 0, 0.8);
+}
+
+.d-contents {
+--heading-size: 18px;
+--contents-size: 13px;
+}
+
+d-appendix {
+--heading-size: 15px;
+--heading-color: rgba(0, 0, 0, 0.65);
+--text-size: 0.8em;
+--text-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.distill-site-header {
+--title-size: 18px;
+--text-color: rgba(255, 255, 255, 0.8);
+--text-size: 15px;
+--hover-color: white;
+--bkgd-color: #0F2E3D;
+}
+.distill-site-footer {
+--text-color: rgba(255, 255, 255, 0.8);
+--text-size: 15px;
+--hover-color: white;
+--bkgd-color: #0F2E3D;
+}
+
 
 </style>
 
@@ -6247,7 +2591,7 @@ margin-bottom: -1px;
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Loops i R","description":"Purrr::map(). Last Updated: 2022-06-19 05:00:26","authors":[{"author":"Lyder Aleksander Mathisen","authorURL":"https://onelyder.com/posts/loops-in-r/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-11-24T00:00:00.000+01:00","citationText":"Mathisen, 2021"}
+{"title":"R programmering","description":"Purrr::map(). Last Updated: 2022-06-19 04:32:21","authors":[{"author":"Lyder Aleksander Mathisen","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-11-24T00:00:00.000+01:00","citationText":"Mathisen, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -6257,14 +2601,14 @@ margin-bottom: -1px;
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Loops i R</h1>
+<h1>R programmering</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Purrr::map(). Last Updated: 2022-06-19 05:00:26</p></p>
+<p><p>Purrr::map(). Last Updated: 2022-06-19 04:32:21</p></p>
 </div>
 
 <div class="d-byline">
-  Lyder Aleksander Mathisen <a href="https://onelyder.com/posts/loops-in-r/" class="uri">https://onelyder.com/posts/loops-in-r/</a> 
+  Lyder Aleksander Mathisen  
   
 <br /><code>11/24/2021</code>
 </div>
@@ -6274,383 +2618,768 @@ margin-bottom: -1px;
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#sec-loops-r">Funksjonell programmering i R (?)</a>
+<li><a href="#funksjonell-programmering-i-r">Funksjonell programmering i
+R</a>
 <ul>
-<li><a href="#noen-basis-ting-først">Noen basis ting først</a></li>
-<li><a href="#programmering-i-r">Programmering i R</a></li>
-<li><a href="#walk-og-map"><code>walk</code> og
-<code>map</code></a></li>
-<li><a href="#generelt-om-loops">Generelt om loops</a>
+<li><a href="#viktige-basis-konsepter">Viktige basis konsepter</a>
 <ul>
-<li><a href="#map-istedenfor-loops">Map istedenfor loops</a></li>
+<li><a href="#symboler">Symboler</a></li>
+<li><a href="#logiske-sjekkpunkter">Logiske sjekkpunkter</a></li>
+<li><a href="#loops">Loops</a></li>
+</ul></li>
+<li><a href="#tidyverse">Tidyverse</a>
+<ul>
+<li><a href="#oppsett">Oppsett</a></li>
+<li><a href="#purrr"><code>Purrr</code></a></li>
+<li><a href="#funksjoner-jeg-har-laget-selv">Funksjoner jeg har laget
+selv</a></li>
+</ul></li>
+<li><a href="#sideeffetcs"><code>Sideeffetcs</code></a></li>
+<li><a href="#egne-funksjoner">Egne funksjoner</a>
+<ul>
+<li><a href="#lage">Lage</a></li>
+</ul></li>
+<li><a href="#rlang">rlang</a>
+<ul>
+<li><a href="#noen-tips">Noen tips</a></li>
+</ul></li>
+<li><a href="#c-og-r">C++ og R?</a>
+<ul>
+<li><a href="#nest">Nest</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#referanser">Referanser</a></li>
+<li><a href="#appendix">Appendix</a>
+<ul>
+<li><a href="#oversikt-over-sentrale-tidyverse-pakker.-kartlegge-bruksområder.">Oversikt
+over sentrale tidyverse pakker. Kartlegge bruksområder.</a>
+<ul>
+<li><a href="#basis-vektorer-strukturer-i-r">Basis: Vektorer &amp;
+strukturer i R</a></li>
+<li><a href="#basis-string-funksjoner-sentrale1">Basis: String
+funksjoner sentrale</a></li>
+</ul></li>
+</ul></li>
 </ul>
 </nav>
 </div>
+<h1 id="funksjonell-programmering-i-r">Funksjonell programmering i
+R</h1>
+<h2 id="viktige-basis-konsepter">Viktige basis konsepter</h2>
+<p><code>tidyverse</code> og med alle data science verktøyene til R
+brukere, er det allikevel etter min mening viktig å lære de fundamentale
+rammene. “<strong>base R</strong>” <span class="citation" data-cites="wickham_r_2016 noauthor_tidyverse_nodate">(<a href="#ref-wickham_r_2016" role="doc-biblioref">Wickham and Grolemund
+2016</a>; <a href="#ref-noauthor_tidyverse_nodate" role="doc-biblioref"><span>“Tidyverse”</span> n.d.</a>)</span>.</p>
+<p>Flere standard-pakker . <code>utils</code>, <code>stats</code>,
+<code>methods</code>, <code>grDevices</code>, <code>graphics</code> og
+<code>datasets</code>.</p>
+<p>Fra <code>R-studio</code> kan man få en oversikt over pakkene, og se
+hva dem inneholder. Hvis man går til vinduet og klikker på menyen som
+heter “<em>Enviroment</em>”. Der vil det stå “<em>Global
+Enviorment</em>”. Trykk på rull gardinen og det vil komme frem en
+oversikt over pakkene jeg nevnte over. Velg for eksempel
+<code>base</code>.</p>
+<p>Det er mulig å redigere hvordan informasjonen vises. Helt til høyre i
+vinduet er det en ny rullegardin med en pil som peker ned, siden av
+oppdater-symbolet. Grid og List er alternativene. Personlig foretrekker
+jeg den første, fordi den viser informasjon over flere kolonner.</p>
+<p>Fra oversikten kan du undersøke hvilke funksjoner som er
+tilgjengelig. Man kan også se kilde-koden. Muligheten til å se hvordan
+funksjonene er bygget, nyttig når man utvikler ferdighetene innenfor
+programmering. Kilde koden gir muligens svaret man trenger for å
+konkretisere eller gi en klar definisjon på hvordan funksjoner
+fungerer.</p>
+<p><a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html">Link
+Base R</a></p>
+<p>Inne i R-studio, finn <code>library</code>. Åpne funksjonen.</p>
+<p>Det gir et perspektiv om hva som ligger bak funksjonene som brukes
+regelmessig.</p>
+<h3 id="symboler">Symboler</h3>
+<p>Notasjoner &amp; symboler nyttig å lære. Bruken av disse kan
+potensielt gjøre funksjonene du skriver enda mer dynamiske og sterke.
+Her er noen av de symbolene jeg personlig ønsker å lære mer om:</p>
+<p><code>do.call(function_name, object_name)</code></p>
+<ul>
+<li><p><code>%&gt;%</code> –&gt; <code>margitrrr</code>.
+Kjede-operator.</p></li>
+<li><p><code>%in%</code></p></li>
+<li><p><code>\n</code></p></li>
+<li><p><code>\t</code></p></li>
+<li><p><code>[[ ]]</code> –&gt; vektor</p></li>
+<li><p><code>[ ]</code> –&gt; list</p></li>
+</ul>
+<h3 id="logiske-sjekkpunkter">Logiske sjekkpunkter</h3>
+<ul>
+<li><code>ifelse</code> <strong><code>base</code></strong></li>
+</ul>
+<!-- -->
+<ul>
+<li><code>if_else</code> <strong><code>dplyr</code></strong></li>
+</ul>
+<!-- -->
+<ul>
+<li><strong><code>all()</code></strong> base. Kan brukes på flere
+måter:</li>
+</ul>
+<p>alene <code>all(logical0==)) if(all(0))</code> –&gt; Hvis alle
+verdiene definert av funksjonene så skjer:</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="status">
-<p>Lyder Aleksander - <strong>Varsling</strong>: Under arbeid. Denne
-versjonen er ufullstendig og under utvikling. Denne versjonen kan
-potensielt inneha feil. Anbefales å ikke referere til denne utgaven av
-dokumentet.. <a href="https://onelyder.com/blog" class="uri">https://onelyder.com/blog</a>.</p>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="va">object_a</span> <span class="op">=</span> <span class="cn">NULL</span>
+<span class="va">object_b</span> <span class="op">=</span> <span class="cn">NULL</span>
+<span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/all.html">all</a></span><span class="op">(</span><span class="va">object_a</span> <span class="op">==</span> <span class="va">object_b</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
+<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">&quot;the objects are the same&quot;</span><span class="op">)</span>
+<span class="op">}</span> <span class="kw">else</span> <span class="op">{</span>
+ <span class="fu">peint</span><span class="op">(</span><span class="st">&quot;they are not true&quot;</span><span class="op">)</span>
+<span class="op">}</span>
+</code></pre>
+</div>
+<pre><code>#&gt; [1] &quot;the objects are the same&quot;</code></pre>
+</div>
+<p><strong>NB!!</strong> Husk at vi kan “tweake” funksjonen slik:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="va">object_a</span> <span class="op">=</span> <span class="cn">NULL</span>
+<span class="va">object_b</span> <span class="op">=</span> <span class="cn">NULL</span>
+<span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/all.html">all</a></span><span class="op">(</span><span class="va">object_a</span> <span class="op">==</span> <span class="va">object_b</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
+<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">&quot;hello worlt&quot;</span><span class="op">)</span>
+<span class="op">}</span> <span class="kw">else</span> <span class="op">{</span>
+ <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">&quot;statemant not true&quot;</span><span class="op">)</span>
+<span class="op">}</span>
+</code></pre>
+</div>
+<pre><code>#&gt; [1] &quot;statemant not true&quot;</code></pre>
+</div>
+<p>Det er også mulig å gjøre flere justeringer av funksjonen. Over skrev
+vi kun <code>else</code>, som vil si at hvis <code>if-statementen</code>
+først resulterer i <code>FALSE</code>, så vil den gå over til neste
+oppgave som er definert etter</p>
+<p><code>else {</code></p>
+<p><code>}</code></p>
+<p><strong>Liten endring:</strong></p>
+<p>Skriver <code>else if ()</code> fordi programmet vurderer en ny
+logisk test før den utfører en spesiell type oppgave. For å kontrollere
+funksjonens rute. Ofte nødvendig med av klaringer, om noe avviker (det
+testes for i <code>if</code> utsagnene) vil programmet håndtere.</p>
+<p>Også kontrollflyt. Noen blokker viser <code>else if</code>
+varianten:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>object_a <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>object_b <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">all</span>(object_a <span class="sc">==</span> object_b)){</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;the objects are the same&quot;</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>{</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a> <span class="fu">print</span>(<span class="st">&quot;they are not true&quot;</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>object_a <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>object_b <span class="ot">=</span> <span class="cn">TRUE</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span>(<span class="sc">!</span><span class="fu">all</span>(object_a <span class="sc">==</span> object_b)){</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;hello worlf&quot;</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>( {</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a> <span class="fu">print</span>(<span class="st">&quot;statemant not true&quot;</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<p><strong>NB!!</strong></p>
+<p>* <code>else</code> må være på lik linje med den siste brakken
+<code>{</code> for at R skal kunne evaluere den.</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/25640161/r-how-to-test-for-character0-in-if-statement">Logic
+checkpoints</a></li>
+</ul>
+<p>I utgangspunktet kan man fint bruke funksjoner som allerede finnes i
+pakker. Som regel er de aller fleste pakkene innenfor ulike
+fagfelt/emner store i omfang, slik at de dekker de fleste verktøyene man
+vil trenge for en analyse f.eks.</p>
+<p>Sannsynligheten for at et problem som ikke helt kan løses med pakken
+du bruker, er funksjons bygging løsningen!</p>
+<p>Konseptet <code>x</code> <code>&lt;-</code>
+<code>&quot;hva_som_helst&quot;</code>. Tekst, tall, en funksjoner etc. i en
+“system variabel” <code>x</code>. Lagrer variabelen som en funksjon, og
+kan i prinsippet bestå av hva som helst.</p>
+<h3 id="loops">Loops</h3>
+<ul>
+<li><a href="https://www.r4epi.com/using-the-purrr-package.html">Eksempel
+purrr</a></li>
+</ul>
+<p>Eksempelet under viser et vanlig scenario hvor <em>loops</em> er
+naturlig å bruke. Målet er å telle antall bokstaver i hvert navn i
+vektoren <code>navn</code>.<br />
+God praksis er å gjøre klart objektet resultatene skal lagres i. Her i
+eksempelet under er det antall bokstaver i hvert navn.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="va">navn</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">&quot;Lyder&quot;</span>, <span class="st">&quot;Aleksander&quot;</span>, <span class="st">&quot;Mathisen&quot;</span><span class="op">)</span>
+<span class="va">n_ord</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/vector.html">vector</a></span><span class="op">(</span><span class="st">&quot;double&quot;</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">navn</span><span class="op">)</span><span class="op">)</span> <span class="co"># Expecting double</span>
+</code></pre>
 </div>
 </div>
-<h1 id="sec-loops-r">Funksjonell programmering i R (?)</h1>
-<p>Inspirert av Bruno Rodriguez sin video <a href="https://www.youtube.com/watch?v=3xIKZbZKCWQ&amp;t=0s">Don’t write
-loops in R</a>.</p>
-<p>Videre har jeg fylt på med noen ideer og tanker jeg har om temaet.
-Men først laster jeg inn pakkene som trengs for å kjøre igjennom det jeg
-har tenkt å vise frem. Kode-snippen under laster inn det som trengs,
-hvor spesielt <code>tidyxl</code>, <code>openxlsx</code> og
-<code>readxl</code> har unike funksjoner tilpasset for Excel.</p>
+<p>Videre lager vi en <em>loop</em>, den utfører operasjonen i en og
+samme “kode blokk”. Årsaken til at *loops** er nyttig her, er fordi man
+ønsker å unngå reputasjon. Loopen gjør oppgaven vi spesifiserer på alle
+elementene i vektoren. Vi trenger bare å skrive en “blokk” med kode.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_along</a></span><span class="op">(</span><span class="va">navn</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
+  <span class="va">n_ord</span><span class="op">[[</span><span class="va">i</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_extract.html">str_extract</a></span><span class="op">(</span><span class="va">navn</span><span class="op">[[</span><span class="va">i</span><span class="op">]</span><span class="op">]</span>, <span class="st">&quot;\\w&quot;</span><span class="op">)</span> 
+<span class="op">}</span>
+<span class="va">n_ord</span>
+</code></pre>
+</div>
+</div>
+<p>For hvert element <code>i</code>, i antall sekvenser i vektoren <span class="math inline">\(`navn`\)</span>, utfør funksjonen
+<code>str_extraxt()</code> på objektet <code>navn[]</code>indeks
+<code>i</code>, lagre resultatet i objektet <span class="math inline">\(`n_ord`\)</span> indeks <span class="math inline">\(`i`\)</span>.</p>
+<p>Resultatet er altså: vi får et objekt <code>n_ord</code> bestående av
+antall bokstaver (resultatet) for hvert navn. I dette tilfellet er det 3
+navn, som bestyr 3 resultater.</p>
+<h4 id="purrrmap"><code>purrr::map</code></h4>
+<p>Eksemplet over viser hvordan loops kan utføres. Dette er den
+tradisjonelle måten å gjøre det på. Man kaller det ofte “basis R
+forloops”.</p>
+<p>Konseptet loops<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> innenfor programmering generelt sett
+er et viktig og veletablert tema eller konsept. For språk som C, C# og
+C++ eller Python er loops spesielt “<em>the way</em>” og på mange måter
+en del av flyten i språket for de som bruker det som deres nummer1
+språk.</p>
+<p>C++ er feks kjent som det aller raskeste og effektive språket. Særlig
+for oppgaver hvor loops er nyttig. For R derimot er det spesielt for
+kritikere av R, et godt etablert sannhet at loops går tregt.
+Sammenlignet med da feks C++.</p>
+<p>Så klart har det i realiteten ingenting å si for små prosjekter eller
+analyser. Men satt i perspektiv; det er ikke effektivt å skrive loops i
+R.</p>
+<p>Årsaken er kompleks og mer sammensatt til å forklare det enkelt og
+intuitivt. Men det har rot i hvordan syn-tak-strukturen i R er bygget
+opp, og antall linjer/bokstaver, samt objekter som er nødvendig å skrive
+for å utføre funksjoner eller representative operasjoner.</p>
+<p>Løsningen på dette problemet er <code>purrr</code> fra
+<code>tidyverse</code> pakken for R.</p>
+<p><code>purrr</code> er en pakke som tar for seg funksjonell
+programmering spesifikt med R-kode. Pakken har utviklet konsepter og
+metoder som gjør at vi faktisk kan utføre oppgaver og operasjoner hvor
+loops i utgangspunktet hadde vært en del av løsningen. Du kan betrakte
+det som en måte å gjøre loops på, uten å skrive loops. Merkelig
+nok..</p>
+<p>Det du isteden burde gjøre for å forstå dette konseptet er å tenkte
+på representative operasjoner som skal gjøres for alle elementene i
+objektet. Altså at noe skal utføres flere ganger på flere ulike
+elementer innenfor et objekt vi undersøker/analyserer. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<h4 id="purrrmap-forskjeller"><code>purrr::map</code>:
+<em>forskjeller</em></h4>
+<p><code>i in seq_along(object)</code> erstattes med <code>.x</code></p>
+<p><code>map</code> utfører loopen med hensyn til hva slags
+<code>class</code> .x er.</p>
+<ul>
+<li>Vektor, <code>data.frame</code> eller liste er derfor av
+betydning!</li>
+</ul>
+<p><code>{ body }</code>erstattes med <code>.f</code></p>
+<ul>
+<li>funksjonen eller oppgaven som skal utføres</li>
+</ul>
+<p><code>map()</code>er hovedfunksjonen.</p>
+<p>Men det er noen hjelpere for å garantere/kontrollere output:</p>
+<p><code>map_dbl()</code></p>
+<p><code>map_chr()</code></p>
+<p><code>map_int()</code></p>
+<p><code>map_dfr()</code></p>
+<p><code>walk()</code></p>
+<h2 id="tidyverse">Tidyverse</h2>
+<p>I dette kapittelet er formålet å bli bedre kjent med
+<code>purrr</code> og scenarioer hvor <code>purrr</code> kan være nyttig
+å bruke. Referanser til <code>tidy</code> og <code>purrr</code> se <span class="citation" data-cites="wickham_r_2016">Wickham and Grolemund (<a href="#ref-wickham_r_2016" role="doc-biblioref">2016</a>)</span> og
+<span class="citation" data-cites="wickham_advanced_2019-4">Wickham (<a href="#ref-wickham_advanced_2019-4" role="doc-biblioref">2019a</a>)</span>.</p>
+<p><code>Purrr</code> er en pakke fra Tidyverse paradigme som hjelper
+til med funksjonelle operasjoner <span class="citation" data-cites="wickham_advanced_2019-4">(<a href="#ref-wickham_advanced_2019-4" role="doc-biblioref">Wickham
+2019a</a>)</span>.</p>
+<p>Prinsippene bak <code>tidy</code> filosofien og biblioteket
+<code>purrr</code> bistår oss med muligheter til å utføre operasjoner
+effektivt. Alternativet er å skrive egne funksjoner.</p>
+<p>Risikoen med egne funksjoner er at den kan bli for komplisert og
+spesifikk for prosjektet/settingen funksjonen lages for. I praksis betyr
+det at funksjonen ikke kan videreføres til andre prosjekter eller
+problemstillinger. Over tid og ved gjenbruk på andre data sett kan den
+gi resultater som muligens er feil <span class="citation" data-cites="wickham_advanced_2019-4 hadleywhickham_advr_6functions">(@
+<a href="#ref-wickham_advanced_2019-4" role="doc-biblioref">Wickham
+2019a</a>; <a href="#ref-hadleywhickham_advr_6functions" role="doc-biblioref"><span>“6 <span>Functions</span> <span></span>
+<span>Advanced</span> <span>R</span>”</span> n.d.</a>)</span>.</p>
+<h3 id="oppsett">Oppsett</h3>
+<p>Til å starte med laster vi inn tidyverse. Alternativ er det også
+mulig å laste inn purrr ved <code>library(purrr)</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/nacnudus/tidyxl">tidyxl</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ycphs.github.io/openxlsx/index.html">openxlsx</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://purrr.tidyverse.org">purrr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span>
 </code></pre>
 </div>
 </div>
-<p>De andre pakkene som <code>purrr</code> og <code>dplyr</code> er
-spesielt egnet for det funksjonelle operasjonene som skal foretas, etter
-data-filene er lastet inn og formatert. Den siste pakken
-<code>here</code> er alltid kjekk, fordi den hjelper til med å si ifra
-til konsollen hvor arbeids mappen vår er, slik at vi kan bruke relative
-referanser underveis. Altså <code>~/</code>. <code>Tidyverse</code> gir
-totalen, den laster inn alle pakkene, som består av totalt 30 pakker
-utviklet av <em>Hadley Wickham</em>. <a href="https://tidyverse.tidyverse.org/articles/paper.html">Se mer om
-tidyverse her</a></p>
-<h2 id="noen-basis-ting-først">Noen basis ting først</h2>
-<p>Noen “basis” ting som er nyttig:</p>
-<p><strong><code>&quot;.&quot;</code></strong> —&gt; betyr i “dette området”.
-Altså mappen PCen din befinner seg i. Arbeids mappen.</p>
-<p>Her ser dere et eksempel hvor jeg bruker en funksjon
-<code>list.files</code> og bruker “.” som argument for hvilken path den
-skal lete i. I tillegg spesifiserer jeg hvilken filtype jeg ønsker å
-lete etter.</p>
+<p>Videre trenger vi et datasett som vi kan bruke underveis. I
+<code>tidyverse</code> pakken finnes et datasett som heter
+<em>iris</em>. Dersom tidyverse er lastet inn er det mulig å referere
+til datasettet. Det har vi allerede gjort, og av den grunn lagrer jeg
+iris under navnet <code>data_iris</code>. Se kodesnipp under:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="st">&quot;.&quot;</span>, pattern <span class="op">=</span> <span class="st">&quot;.xlsx&quot;</span><span class="op">)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="va">data_name</span> <span class="op">&lt;-</span> <span class="va">iris</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="op">)</span>
+<span class="va">data_name</span> 
 </code></pre>
 </div>
-<pre><code>#&gt; [1] &quot;demo_workbook.xlsx&quot;                          
-#&gt; [2] &quot;top2000.xlsx&quot;                                
-#&gt; [3] &quot;UK Labour Market - Sickness and Absence.xlsx&quot;
-#&gt; [4] &quot;Uk Labour Productivity - Time Series.xlsx&quot;   
-#&gt; [5] &quot;UK Public Service Productivity.xlsx&quot;</code></pre>
+<pre><code>#&gt; # A tibble: 150 × 5
+#&gt;   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+#&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+#&gt; 1          5.1         3.5          1.4         0.2 setosa 
+#&gt; 2          4.9         3            1.4         0.2 setosa 
+#&gt; 3          4.7         3.2          1.3         0.2 setosa 
+#&gt; 4          4.6         3.1          1.5         0.2 setosa 
+#&gt; 5          5           3.6          1.4         0.2 setosa 
+#&gt; 6          5.4         3.9          1.7         0.4 setosa 
+#&gt; # … with 144 more rows</code></pre>
 </div>
-<p>Men jeg kunne også spesifisert at jeg vil lete i et spesifikt område
-i arbeidsmappen min. For eksempel hvis jeg har en mappe som heter “data”
-hvor jeg har alle data-filene mine inne i. For eksempel excel ark.</p>
+<p>Koden over viser hvordan data-settet “iris” kan refereres til etter
+at tidyverse er lastet inn. Videre ser vi at iris blir lagret i en
+variabel vi kaller <em>data_name</em>. I prinsippet kunne vi valgt å
+“døpe” datasettet til noe annet. Og til slutt ser vi at de 10 første
+radene i datasettet kommer frem når vi skiver <code>data_name</code> til
+konsollen. Her er formålet å få et kjapt overblikk over hvordan data ser
+ut.</p>
+<h3 id="purrr"><code>Purrr</code></h3>
+<h4 id="purrrmap-1"><code>purrr::map</code></h4>
+<p>For å bli kjent med data er det fra <code>base R</code> vanlig å
+utføre funksjonen <code>class()</code>. Den gir tilbake informasjon om
+hvilke klasser datasettet består av. Dersom vi utfører
+<code>class(data_name)</code> får vi som output
+<em><code>data.frame</code></em>. Det er fordi <code>class()</code>
+funksjonen kjøres på objektet <em><code>data_name</code></em> som
+helhet. Noen ganger kan det være nyttig å få informasjon om hver
+variabel, som blir det samme som hver kolonne i et data sett.</p>
+<p><strong>En løsning er å gjøre slik:</strong></p>
+<p><code>class(class(data_name$Sepal.Length))</code> eller
+<code>class(data_name[,1])</code>. Ulempen med denne måten er at den er
+treg og lite effektiv. For å sjekke neste kolonne må vi skrive
+<code>class(data_name[,2])</code> etc. helt frem til vi har testet alle
+variablene vi er interessert i. I praksis vil det være alle kolonnene i
+et datasett.</p>
+<p>Med <code>purrr</code> pakken kan vi sjekke alle kolonne med en
+funksjon og en linje med kode. Tilbake gir den oss en vektor med
+resultatet fra alle variablene/ kolonnene i datasettet som vi har lagret
+som <code>data_name</code>. Se under:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="va">list_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="st">&quot;.&quot;</span>, pattern <span class="op">=</span> <span class="st">&quot;.xlsx&quot;</span><span class="op">)</span>
-<span class="va">list_sheets</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">&quot;sheet_&quot;</span>, <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">list_data</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
-
-<span class="va">my_excel_workbook</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/openxlsx/man/createWorkbook.html">createWorkbook</a></span><span class="op">(</span><span class="op">)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op">(</span><span class="va">data_name</span>, <span class="va">class</span><span class="op">)</span>
 </code></pre>
 </div>
+<pre><code>#&gt; Sepal.Length  Sepal.Width Petal.Length  Petal.Width      Species 
+#&gt;    &quot;numeric&quot;    &quot;numeric&quot;    &quot;numeric&quot;    &quot;numeric&quot;     &quot;factor&quot;</code></pre>
 </div>
-<h2 id="programmering-i-r">Programmering i R</h2>
-<h2 id="walk-og-map"><code>walk</code> og <code>map</code></h2>
-<p>Hva er forskjellen mellom <code>walk</code> og <code>map</code>? Og
-når skal man bruke dem?</p>
-<p><code>walk</code> gjør noe utenfor sitt scope –&gt; ikke noe objekt
-som blir lagret. Den gir altså ikke et objekt som man kan referer til
-senere. Slik man feks kan gjøre dersom man skriver for eksempel a &lt;-
-“objekt”. Etter å ha kjørt igjennom den kommandoen, vil “objekt” bli
-printet ut i konsollen hvis jeg skriver bare a.</p>
-<p>Slik er det altså ikke med <code>walk.</code> Den utfører operasjoner
-som resulterer i typiske outputs som vil vise noe. Ett plot eller som
-under ett excel ark, som vi senere kan skrive ut som en
-<code>.xlsx</code>fil for eksmepel. Men før vi gjør noe med det, kan vi
-ikke “se” det nødvendigvis.</p>
+<p>Årsaken til at vi bruker <code>map_chr</code> er fordi konsollen blir
+fremvist i et objekt lagret som <code>character</code>
+<code>class</code>. Til vanlig og som defoult lagres output fra
+<code>map()</code> funksjoner i lister. Det vil si at vi kan gjøre
+akkurat det samme med denne syntaksen:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r">
-<span class="va">list_sheets</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">walk</a></span><span class="op">(</span><span class="op">~</span><span class="fu"><a href="https://rdrr.io/pkg/openxlsx/man/addWorksheet.html">addWorksheet</a></span><span class="op">(</span><span class="va">my_excel_workbook</span>, sheetName <span class="op">=</span> <span class="va">.</span><span class="op">)</span><span class="op">)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">data_name</span>, <span class="va">class</span><span class="op">)</span>
 </code></pre>
 </div>
-</div>
-<p>Det er flere utgaver av denne funksjonen, som når det er 2 objekter
-vi trenger å utføre funksjonen med. Den kalles <code>walk2</code>, og er
-fra samme pakke <code>purrr.</code></p>
-<p><code>walk2</code> brukes når vi trenger ta inn flere objekter.</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://purrr.tidyverse.org/reference/map2.html">walk2</a></span><span class="op">(</span>.x <span class="op">=</span> <span class="va">list_sheets</span>,
-      .y <span class="op">=</span> <span class="va">list_data</span>,
-      <span class="op">~</span><span class="fu"><a href="https://rdrr.io/pkg/openxlsx/man/writeData.html">writeData</a></span><span class="op">(</span><span class="va">my_excel_workbook</span>,
-                sheet <span class="op">=</span> <span class="va">.x</span>,
-                x <span class="op">=</span> <span class="va">.y</span> <span class="op">)</span><span class="op">)</span>
-</code></pre>
-</div>
-</div>
-<h2 id="generelt-om-loops">Generelt om loops</h2>
-<p>Et nytt eksempel er for å undersøke antall formler som finnes i et
-excel dokument, eller dokumenter vi ønsker å jobbe med. Det kan være
-jobb/skole relaterte Excel-filer.</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="va">list_xlsx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="st">&quot;.&quot;</span>, pattern <span class="op">=</span> <span class="st">&quot;.xlsx&quot;</span><span class="op">)</span>
-</code></pre>
-</div>
-</div>
-<p>Først kan jeg sjekke en spesifikk Excel ark. Da spesifiserer i
-kommandoen under at det er fra <code>list_xlsx[3]</code> det er info jeg
-vil ha. Og <code>list_xlsx[3]</code> vil være det samme som navnet til
-Excel fila.</p>
-<p>Det som videre skjer er at vi tar i bruk noen nyttige funksjoner fra
-<code>tidyxl</code> pakken. <code>xlsx_cells</code> sammen med filter,
-og !i s.na gjør at denne kodenippen gir oss tilbake formler.</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://rdrr.io/pkg/tidyxl/man/xlsx_cells.html">xlsx_cells</a></span><span class="op">(</span><span class="va">list_xlsx</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">formula</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">formula</span><span class="op">)</span>
-</code></pre>
-</div>
-<pre><code>#&gt; character(0)</code></pre>
-</div>
-<p>Over ser dere hvile former som er aktuelle. Nå har jeg brukt head(),
-så da vises bare de første elementene. Men her får vi et eksempel på
-hvilke formler. I denne går det i <code>VLOOKUP</code> som dere ser
-over.</p>
-<p>Noe annet nyttig er å finne ut hvor mange formler det er snakk om.
-Altså hvor mange celler i Excel arket vi jobber med består av formler.
-Kodesnippen under er bare en listen justering fra den forrige, ved at vi
-nå sier <code>nrow()</code> som gir antall rader.</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://rdrr.io/pkg/tidyxl/man/xlsx_cells.html">xlsx_cells</a></span><span class="op">(</span><span class="va">list_xlsx</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">formula</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
- <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span>
-</code></pre>
-</div>
-<pre><code>#&gt; [1] 0</code></pre>
-</div>
-<p>Men vi kan generalisere dette i en så kalt “fore loop”. Det betyr at
-i istedenfor å skrive inn hvilken vil vi ønsker, altså
-<code>list_xlsx[3]</code>.. osv, kan vi heller loope over alle og lagre
-svarene i et objekt. Med andre ord, vi kan få resultatene fra alle
-arkene i ett objekt, i en operasjon.</p>
-<p>Når man skal lage loops på den <em>klassiske måten</em>, er det
-viktig å først huske å lage et objekt som vi kan <em>lagre resultatene
-i</em>. Her lager jeg objektet <code>results</code> som er en numerisk
-vektor bestående av 0, og har samme lenge som objektet vi tar inn
-<code>list_xlsx.</code> Som forøvrig i dette tilfellet er 7. Altså 7
-filnavn.</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">list_xlsx</span><span class="op">)</span><span class="op">)</span>
-
-
-<span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_along</a></span><span class="op">(</span><span class="va">list_xlsx</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
-  <span class="va">results</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tidyxl/man/xlsx_cells.html">xlsx_cells</a></span><span class="op">(</span><span class="va">list_xlsx</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">formula</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-    <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span>
-<span class="op">}</span>
-<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">results</span><span class="op">)</span>
-</code></pre>
-</div>
-<pre><code>#&gt; [1] 0 0 0 0 0</code></pre>
-</div>
-<p>Loopen gjør det samme for alle xlsx filene. Den sjekker hvor mange
-celler er det som inneholder formler. Svarene lagres i results objektet.
-Og resultatet er at vi nå vet at det er <span class="math display">\[3\]</span> som har 2159, dem andre har ingen.</p>
-<p>Men vi vil også kanskje vite navnet på filene. Det kan vi fikse. Vi
-må bare gjøre en liten justering, trikse og mikse litt. Se under</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">list_xlsx</span><span class="op">)</span><span class="op">)</span>, <span class="fl">0</span><span class="op">)</span>
-
-<span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_along</a></span><span class="op">(</span><span class="va">list_xlsx</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
-  <span class="va">results</span><span class="op">[</span><span class="va">i</span>, <span class="fl">1</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">list_xlsx</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>
-  <span class="va">results</span><span class="op">[</span><span class="va">i</span>, <span class="fl">2</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tidyxl/man/xlsx_cells.html">xlsx_cells</a></span><span class="op">(</span><span class="va">list_xlsx</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">formula</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-    <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span>
-<span class="op">}</span>
-
-<span class="va">results</span>
-</code></pre>
-</div>
-<pre><code>#&gt;      [,1]                                           [,2]
-#&gt; [1,] &quot;demo_workbook.xlsx&quot;                           &quot;0&quot; 
-#&gt; [2,] &quot;top2000.xlsx&quot;                                 &quot;0&quot; 
-#&gt; [3,] &quot;UK Labour Market - Sickness and Absence.xlsx&quot; &quot;0&quot; 
-#&gt; [4,] &quot;Uk Labour Productivity - Time Series.xlsx&quot;    &quot;0&quot; 
-#&gt; [5,] &quot;UK Public Service Productivity.xlsx&quot;          &quot;0&quot;</code></pre>
-</div>
-<p>Nå fikk jeg et svar som består av 2 kolonner. Nå vet jeg hvilken
-Excel fil det gjelder, og jeg vet også hvor mange formler det er i den
-gitte filen.</p>
-<p>Videre kan man justere dette enda mer for å gjøre det mer
-oversiktigling og ordentlig. Her konverterer jeg bare svarene vi fikk om
-til en <code>data.frame</code>, fordi det opprinnelig var en matrix.
-Videre tar jeg bare å bruker funksjonen <code>rename</code> for å endre
-kolonnenavn. Det er akkurat samme svar, bare presentert på en annen
-måte. Mer ryddig og ordentlig.</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">results</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span><span class="st">&quot;Excel fil&quot;</span><span class="op">=</span><span class="va">X1</span>,
-         <span class="st">&quot;Antall formler&quot;</span><span class="op">=</span><span class="va">X2</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="op">)</span>
-</code></pre>
-</div>
-<pre><code>#&gt;                                      Excel fil Antall formler
-#&gt; 1                           demo_workbook.xlsx              0
-#&gt; 2                                 top2000.xlsx              0
-#&gt; 3 UK Labour Market - Sickness and Absence.xlsx              0
-#&gt; 4    Uk Labour Productivity - Time Series.xlsx              0
-#&gt; 5          UK Public Service Productivity.xlsx              0</code></pre>
-</div>
-<h3 id="map-istedenfor-loops">Map istedenfor loops</h3>
-<p>Jeg skal nå viser dere hvordan alt det vi har gjort over kan gjøres
-på en enda mer effektiv og enklere måte. Vi utnytter <code>purrr</code>
-sine funksjonelle verktøy som tillater oss å gjøre eksakt det samme som
-vi ville gjort ved bruk av en loop, bare at vi trenger å skrive mye
-mindre kode.</p>
-<p>Først vil jeg kjapt vise hva <code>map</code> gjør. Under tar jeg
-kvadratroten av alle tallene i sekvensen 1 til 10. Så den tar inn
-<code>seq(1,10)</code>, som er det samme som et int-objekt. Det ville
-sett slik ut: <code>int [1:10] 1 2 3 4 5 6 7 8 9 10</code> Videre
-utfører den funksjonen <code>sqrt</code>, som er en innebygget funksjon
-for kvadratrot. <code>x, √{x}.</code></p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">10</span><span class="op">)</span>, <span class="va">sqrt</span><span class="op">)</span>
-</code></pre>
-</div>
-<pre><code>#&gt; [[1]]
-#&gt; [1] 1
+<pre><code>#&gt; $Sepal.Length
+#&gt; [1] &quot;numeric&quot;
 #&gt; 
-#&gt; [[2]]
-#&gt; [1] 1.414214
+#&gt; $Sepal.Width
+#&gt; [1] &quot;numeric&quot;
 #&gt; 
-#&gt; [[3]]
-#&gt; [1] 1.732051
+#&gt; $Petal.Length
+#&gt; [1] &quot;numeric&quot;
 #&gt; 
-#&gt; [[4]]
-#&gt; [1] 2
+#&gt; $Petal.Width
+#&gt; [1] &quot;numeric&quot;
 #&gt; 
-#&gt; [[5]]
-#&gt; [1] 2.236068
-#&gt; 
-#&gt; [[6]]
-#&gt; [1] 2.44949
-#&gt; 
-#&gt; [[7]]
-#&gt; [1] 2.645751
-#&gt; 
-#&gt; [[8]]
-#&gt; [1] 2.828427
-#&gt; 
-#&gt; [[9]]
-#&gt; [1] 3
-#&gt; 
-#&gt; [[10]]
-#&gt; [1] 3.162278</code></pre>
+#&gt; $Species
+#&gt; [1] &quot;factor&quot;</code></pre>
 </div>
-<p><strong>steg 1</strong></p>
-<p>Vi må definere en formel. Dette er en generell formel, og kan brukes
-i realiteten for alle Excel ark videre. Den lagrer vi globalt i systemet
-våres.</p>
+<p>Men her får vi resultatet lagret i en liste. Lister er mer komplisert
+å jobbe med, og er generelt vanskeligere å referere til i etterkant.
+Derfor ønsker vi å gjøre det så enkelt som mulig, å dermed bruke
+<code>map_chr()</code> som lagrer det for oss i en
+<code>character</code> <code>class</code>.</p>
+<p>Vi kan også lagre konsollen og referere til den i etterkant hvis vi
+trenger det. Under gjør vi eksakt samme operasjon, utfører
+<code>class()</code> funksjonen til alle variablene i datasettet
+<code>data_name</code>. Vi lagrer resultatet i
+<code>data_name_classes</code>. Videre bruker vi <code>pipe</code> fra
+<code>magrittr</code> til å utføre funksjonen <code>glimpse()</code> som
+gir oss en oppsummering-tabell av innholdet. Se under:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="va">count_formulas</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">workbook_name</span><span class="op">)</span><span class="op">{</span>
-  <span class="va">n_formulas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tidyxl/man/xlsx_cells.html">xlsx_cells</a></span><span class="op">(</span><span class="va">workbook_name</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">formula</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-    <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="va">data_name_classes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op">(</span><span class="va">data_name</span>, <span class="va">class</span><span class="op">)</span>
+<span class="va">data_name_classes</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
+</code></pre>
+</div>
+<pre><code>#&gt;  Named chr [1:5] &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;factor&quot;
+#&gt;  - attr(*, &quot;names&quot;)= chr [1:5] &quot;Sepal.Length&quot; &quot;Sepal.Width&quot; &quot;Petal.Length&quot; &quot;Petal.Width&quot; ...</code></pre>
+</div>
+<p>Logikken med <code>map</code> er at den tar inn noen viktige input i
+funksjonen. Den etterspør <code>.x</code> og <code>.f</code></p>
+<ul>
+<li><strong>.x</strong> = en vektor funksjonen skal utføres på</li>
+</ul>
+<!-- -->
+<ul>
+<li><strong>.f</strong> = valgt funksjon.</li>
+</ul>
+<p>Vårt tilfelle er <code>.x = data_name</code> og
+<code>.f = class</code> .</p>
+<h4 id="imap-pmap"><code>imap</code>, <code>pmap</code></h4>
+<h3 id="funksjoner-jeg-har-laget-selv">Funksjoner jeg har laget
+selv</h3>
+<p>I denne delen tar jeg for meg egne funksjoner og skisser skrevet av
+meg selv. Målet er å videre utvikle dem og sette de til verks.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Info om hvilken mappe data ligger i + navn p? sheets </span>
+<span class="va">path</span> <span class="op">&lt;-</span> <span class="st">&quot;data_raw/transaksjoner.xlsx&quot;</span>
+<span class="va">sheets</span> <span class="op">&lt;-</span> <span class="fu">readxl</span><span class="fu">::</span><span class="fu"><a href="https://readxl.tidyverse.org/reference/excel_sheets.html">excel_sheets</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span>
+<span class="co">## Alle sheets i excelark er data.frames</span>
+<span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">walk</a></span><span class="op">(</span>
+  .x <span class="op">=</span> <span class="fu">excel_sheets</span><span class="op">(</span><span class="va">path</span><span class="op">)</span>,
+  .f <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span>
+    <span class="va">new_nm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/chartr.html">tolower</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/assign.html">assign</a></span><span class="op">(</span><span class="va">new_nm</span>, <span class="fu">read_excel</span><span class="op">(</span><span class="va">path</span>, sheet <span class="op">=</span> <span class="va">x</span><span class="op">)</span>, envir <span class="op">=</span> <span class="va">.GlobalEnv</span><span class="op">)</span>
+  <span class="op">}</span>
+<span class="op">)</span>
+</code></pre>
+</div>
+</div>
+<p>Bryte ned til flere deler er nok lurt å gjøre.<br />
+<br />
+1 består av data inn. Det kan være et excel ark med flere sheets som er
+aktuelt. Fra mitt eksempel kan det være regnskapsdata bestående av
+kolonner med tall, tekst og dato. Ofte er disse filene store for
+selskaper i en visse størrelser. Vi ønsker derfor å laste inn data slik
+at hver flik blir ett <code>data.frame</code> objekt i R, som kan brukes
+videre.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nest kan være neste steg. HVer data.frame er ett element i samme liste. Bruke det til å refere til for en loop-opperasjon. </span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Her er hva jeg tenker vist med en for looop:</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq</span>(walk_object)){</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  df[[i]] <span class="ot">&lt;-</span> walk_object[[i]]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">&lt;-</span> df</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="sc">!</span><span class="fu">class</span>(df)){</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Data formattering starter</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    a <span class="ot">&lt;-</span> a <span class="sc">%&gt;%</span> </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Data frame class</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>      tidyr<span class="sc">::</span><span class="fu">as_tibble</span>()</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(<span class="fu">is.na</span>(<span class="cn">NA</span>) <span class="ot">=</span> <span class="cn">TRUE</span>){</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        <span class="fu">drop_na</span>(a)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>{</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(a)</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># freq antall varaibler/kolonner</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">count_</span>(<span class="fu">names</span>(a)) <span class="sc">==</span> freq){</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>      kolonne_nanv <span class="ot">&lt;-</span> <span class="fu">names</span>(a)</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Velg kolonner </span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(<span class="fu">all_of</span>(kolonne_navn)) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>      <span class="fu">arrange</span>(<span class="fu">desc</span>(.x)) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>      <span class="do">##lage kolonne med diff </span></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">endring_periodeV =</span> (data2021 <span class="sc">-</span> data2020))</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(<span class="fu">desc</span>(.x)) {</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>        <span class="fu">drop_na</span>(<span class="cn">NA</span> <span class="sc">%==%</span> .x) <span class="sc">%&gt;%</span></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>          <span class="cf">else</span> {</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>            <span class="fu">return</span>(navn_her)</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>          <span class="fu">mutate</span>()</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>      <span class="fu">drop_na</span>(<span class="cn">NA</span> <span class="sc">%==%</span> .x) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>      <span class="do">## Regnskapskontoer i SB</span></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="fu">str_glue</span>(konto_navn) <span class="sc">==</span> <span class="fu">filter</span>(vroom<span class="sc">::</span><span class="fu">starts_with</span>(kolonne_navn)))</span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a><span class="er">}</span></span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Dette kan gjøres med purrr og tidyr </span></span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>tidyr<span class="sc">::</span><span class="fu">nest</span>()</span></code></pre></div>
+</div>
+<p>Neste steg er å generalisere operasjonene som skal gjøres Excel
+arkene. Første spørsmål: <em>er operasjonen lik for alle data-sett og
+alle kolonner?</em></p>
+<p><code>purrr</code> erstatter <code>loops</code> laget selv</p>
+<p><code>dplyr</code> for manipulering</p>
+<p><code>stringr</code> for tekst</p>
+<p><code>tidyr</code> for modellering, spesielt lister</p>
+<h2 id="sideeffetcs"><code>Sideeffetcs</code></h2>
+<p>Walk funksjonen til <code>purrr</code> er en variant som brukes når
+funksjonen implementert har/ikke en output type som kalles
+<em>sideeffekt.</em> Output generelt kan beskrives i form av utsende;
+tabell, tall og annen tekst som er resultatet fra en operasjon utført
+via en funksjon som i sum utfører en rekke betinget rekkefølge med
+kommandoer og andre underliggende funksjoner som skaper objekter eller
+resultater, som printes ut i sin form i konsollen. Det betyr at vi kan
+se hva resultatet er, i form av konsoll-tekst.</p>
+<p>Motsetningen er at vi har funksjoner som gir output uten side
+effekter. Her gjør funksjon operasjoner som er utenfor dens “scope”.
+Eksempler er ploter eller genereringen av <em>excel-sheets</em> til en
+ny arbeidsbok som lages i R.</p>
+<p>Disse resultatene, fra ikke siden-effekt funksjons typer er at man
+ikke kan lagre resultatet i et objekt som kan refereres til i etterkant.
+Output er til motsetning slik at den vises frem i konsollen i en mer
+fysisk form. Enten som en graf, plot.</p>
+<p>Årsaken til at dette er viktig å få med seg, er fordi output og hva
+funksjoner vi faktisk bruker, er utrolig viktig for å programmere
+effektivt.</p>
+<p>F.eks med funksjonen <code>addWorksheet</code> funksjonen, så gir den
+ingenting av output. Den endrer noe “utenfor scopet”.</p>
+<h2 id="egne-funksjoner">Egne funksjoner</h2>
+<p>I dette kapittelet tar vi et steg videre. Jeg vil forsøke å vise- og
+lære hvordan man kan lage sine helt egne funksjoner. I prinsippet er
+alle funksjoner mulig å lage. Funksjoner har en fast form som vi skal se
+nærmere på her. Hvis denne formen følges, er det som et utgangspunkt opp
+til deg som forfatteren av funksjonen, hva den skal bestå av.</p>
+<p>I de første kapitalene var vi innom det grunnleggende konseptet hvor
+man ved bruk av <code>&lt;-</code> eller <code>=</code> kan “lagre” data
+i objektet som vi selv velger hva skal hete. <code>a &lt;- 1</code> for
+eksempel. Det vil si <code>a</code> representerer tallet <code>1</code>,
+refererer vi til objektet <code>a</code>, vil R tolke dette som
+<code>1</code>.</p>
+<h3 id="lage">Lage</h3>
+<p>I utgangspunktet er det flere tusen funksjoner tilgjengelig som kan
+brukes. Som regel vil man komme langt med disse. Men som regel er det
+noen særtrekk med akkurat ditt problem, som funksjonen i pakken ikke
+evaluerer slik du ønsker. Det kan være flere grunner til det, men en
+typisk årsak til å skrive egne funksjoner kontra bruke andre sine, er
+for å tilpasse funksjonaliteten til problemet som du skal løse. Det er
+mest sans behov for noen “tweaks” og små justeringer. Men det kan også
+være tilfellet hvor det ikke finnes noe fra før, så man skriver hele
+funksjonen- og kanskje en hel pakke, for å løse problemet.</p>
+<p>Jeg tar derfor først for meg standardiserte funksjoner som er
+spesielle og egnet til å bruke i nye funksjoner også.</p>
+<h2 id="rlang">rlang</h2>
+<p>For å gå litt dypere til verks for å forstå hva salgs hjelpemidler og
+funksjoner som er i pakkene jeg personlig bruker til funksjoner og
+funksjonell programmering i R. I kodesnippen under tar jeg å henter ut
+funksjonsnavnene i pakken rlang, <code>magrittr</code>, og
+<code>purrr</code> <span class="citation" data-cites="mailund_functional_2019 wickham_advanced_2019 wickham_r_2016">(<a href="#ref-mailund_functional_2019" role="doc-biblioref">Mailund
+2019</a>; <a href="#ref-wickham_advanced_2019" role="doc-biblioref">Wickham 2019b</a>; <a href="#ref-wickham_r_2016" role="doc-biblioref">Wickham and Grolemund 2016</a>)</span>. Jeg lagrer
+disse i et objekt, og sammenligner dem mot hverandre.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="va">pac</span> <span class="op">&lt;-</span> <span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_functions.html">p_functions</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">&quot;rlang&quot;</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://purrr.tidyverse.org/reference/as_vector.html">as_vector</a></span><span class="op">(</span><span class="op">)</span> 
+ 
+<span class="va">pur</span> <span class="op">&lt;-</span> <span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_functions.html">p_functions</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">&quot;purrr&quot;</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://purrr.tidyverse.org/reference/as_vector.html">as_vector</a></span><span class="op">(</span><span class="op">)</span>
+<span class="va">mag</span> <span class="op">&lt;-</span> <span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_functions.html">p_functions</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">&quot;magrittr&quot;</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://purrr.tidyverse.org/reference/as_vector.html">as_vector</a></span><span class="op">(</span><span class="op">)</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">pac</span>, <span class="va">pur</span>, <span class="va">mag</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
+</code></pre>
+</div>
+<pre><code>#&gt; Rows: 434
+#&gt; Columns: 3
+#&gt; $ pac &lt;chr&gt; &quot;:=&quot;, &quot;!!&quot;, &quot;!!!&quot;, &quot;.data&quot;, &quot;.env&quot;, &quot;%@%&quot;, &quot;%@%&lt;-&quot;, &quot;%&lt;~…
+#&gt; $ pur &lt;chr&gt; &quot;%@%&quot;, &quot;%&gt;%&quot;, &quot;%||%&quot;, &quot;accumulate&quot;, &quot;accumulate_right&quot;, …
+#&gt; $ mag &lt;chr&gt; &quot;%!&gt;%&quot;, &quot;%&lt;&gt;%&quot;, &quot;%&gt;%&quot;, &quot;%$%&quot;, &quot;%T&gt;%&quot;, &quot;add&quot;, &quot;and&quot;, &quot;deb…</code></pre>
+</div>
+<p>Årsaken til denne sammenligningnen er for å indentifisere nyttige
+kontroll-funksjoner vi kan bruke når vi bygger opp våre egne. Logiske
+funksjoner som er TRUE eller FALSE er et velkjent konsept for
+programmerere. Det brukes til å kontrollere flownen og det som skjer
+inne i {}.</p>
+<p>Som nevnt tidligere er R og andre språk avhengig av rekkefølgen på
+hvordan ting gjøres. Resultatet av noe, vil påvirke et objekt, som vil
+ha konsekvenser for videre flyt. For å hindre at feil objekter, eller
+data typer taes inn videre, gjør man derfor
+<code>if statement</code>.</p>
+<p>Det vil si at inne i funksjonen vil det være en egen if evaluering.
+Dersom den logiske testen = TRUE vil den slippe inn i brakke t4egenne.
+Dersom FALSE hopper den over denne delen.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">{</span>
+  <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">is.character</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
   
-  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="st">&quot;workbook&quot;</span> <span class="op">=</span> <span class="va">workbook_name</span>,
-             <span class="st">&quot;n_formulas&quot;</span> <span class="op">=</span> <span class="va">n_formulas</span><span class="op">)</span>
+  <span class="op">}</span>
+  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 <span class="op">}</span>
 </code></pre>
 </div>
 </div>
-<p><strong>steg 2</strong></p>
-<p>Det neste vi gjør er å bruke <code>map</code>. Jeg skal vise dere to
-måter. Den første er standard, men den gir en liste tilbake, som noen
-ganger er konrglete å jobbe med.</p>
+<p>Som kode snippen viser over, er det altså en egen seksjon som er
+betinget av if testen.</p>
+<h3 id="noen-tips">Noen tips</h3>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">list_xlsx</span>, <span class="va">count_formulas</span><span class="op">)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Lager en vektor med elemtener</span>
+<span class="va">vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">&quot;Lyder&quot;</span>, <span class="st">&quot;Aleksander&quot;</span>, <span class="st">&quot;Mathisen&quot;</span><span class="op">)</span>
+<span class="co"># Lønsing 1 </span>
+<span class="st">&quot;Lyder&quot;</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">vector</span>
 </code></pre>
 </div>
-<pre><code>#&gt; [[1]]
-#&gt;             workbook n_formulas
-#&gt; 1 demo_workbook.xlsx          0
-#&gt; 
-#&gt; [[2]]
-#&gt;       workbook n_formulas
-#&gt; 1 top2000.xlsx          0
-#&gt; 
-#&gt; [[3]]
-#&gt;                                       workbook n_formulas
-#&gt; 1 UK Labour Market - Sickness and Absence.xlsx          0
-#&gt; 
-#&gt; [[4]]
-#&gt;                                    workbook n_formulas
-#&gt; 1 Uk Labour Productivity - Time Series.xlsx          0
-#&gt; 
-#&gt; [[5]]
-#&gt;                              workbook n_formulas
-#&gt; 1 UK Public Service Productivity.xlsx          0</code></pre>
+<pre><code>#&gt; [1] TRUE</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Løsning 2</span>
+<span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="va">vector</span> <span class="op">==</span> <span class="st">&quot;Lyder&quot;</span><span class="op">)</span>
+</code></pre>
 </div>
-<p>Derfor finnes det en utgave av <code>map</code> som heter
-<code>map_dfr</code>. Den gir oss eksakt det samme svaret som vi gjorde
-over, til og med har den fiksa kolonnenavnene for oss. Det er fordi jeg
-spesifiserte i funksjonen vi lagde over at kallenavnene skal være
-<em>workbook</em> og <em>n_formules.</em> Det kan endres til hva enn som
-passer hvis man ønsker det.</p>
+<pre><code>#&gt; [1] TRUE</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="va">vector</span> <span class="op">==</span> <span class="st">&quot;Henrik&quot;</span><span class="op">)</span>
+</code></pre>
+</div>
+<pre><code>#&gt; [1] FALSE</code></pre>
+</div>
+<p>Kode snippen viser et typisk scenario hvor vi ønsker å sjekke om en
+vector består av en spesifikk verdi. I tilfellet jeg skrev over laget
+jeg bare en vektor bestående av navnet mitt. Det vil si det er tre
+separate elementer i vektoren. Under, løsning 1, tester jeg om “Lyder”
+er i vektor. Svaret er TRUE. Men et tips er å bruke løsning 2. Den gjør
+det samme, men er mer effektiv og standardisert. Det er derfor best
+practice å ta i bruk denne. Resultatet blir TRUE her også. Nederst tok
+jeg med evaluering av et element som ikke er en del, bare for å vise at
+denne resulterer FALSE.</p>
+<h2 id="c-og-r">C++ og R?</h2>
+<p>Noen spesifikke operasjoner er mer effektivt å gjøre med C++. R har
+gode løsninger som kobler språkene sammen, slik at det mest nødvendige
+oppgavene kan kjøres i C++ program, men hvor det allikevel skrives i R
+studio slik du er vant til. Pakken <code>Rcpp</code>fikser dette for
+oss. Under trekker jeg ut funksjoner:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="va">list_xlsx</span>, <span class="va">count_formulas</span><span class="op">)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.rcpp.org">Rcpp</a></span><span class="op">)</span>
+<span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_functions.html">p_functions</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">&quot;Rcpp&quot;</span><span class="op">)</span>
 </code></pre>
 </div>
-<pre><code>#&gt;                                       workbook n_formulas
-#&gt; 1                           demo_workbook.xlsx          0
-#&gt; 2                                 top2000.xlsx          0
-#&gt; 3 UK Labour Market - Sickness and Absence.xlsx          0
-#&gt; 4    Uk Labour Productivity - Time Series.xlsx          0
-#&gt; 5          UK Public Service Productivity.xlsx          0</code></pre>
+<pre><code>#&gt;  [1] &quot;.__C__C++Class&quot;             &quot;.__C__C++Constructor&quot;      
+#&gt;  [3] &quot;.__C__C++Field&quot;             &quot;.__C__C++Function&quot;         
+#&gt;  [5] &quot;.__C__C++Object&quot;            &quot;.__C__C++OverloadedMethods&quot;
+#&gt;  [7] &quot;.__C__Module&quot;               &quot;.__C__RcppClass&quot;           
+#&gt;  [9] &quot;.__T__.DollarNames:utils&quot;   &quot;.__T__[:base&quot;              
+#&gt; [11] &quot;.__T__[[&lt;-:base&quot;            &quot;.__T__[&lt;-:base&quot;            
+#&gt; [13] &quot;.__T__$:base&quot;               &quot;.__T__$&lt;-:base&quot;            
+#&gt; [15] &quot;.__T__formals&lt;-:base&quot;       &quot;.__T__initialize:methods&quot;  
+#&gt; [17] &quot;.__T__prompt:utils&quot;         &quot;.__T__show:methods&quot;        
+#&gt; [19] &quot;.DollarNames&quot;               &quot;compileAttributes&quot;         
+#&gt; [21] &quot;cpp_object_dummy&quot;           &quot;cpp_object_initializer&quot;    
+#&gt; [23] &quot;cppFunction&quot;                &quot;demangle&quot;                  
+#&gt; [25] &quot;evalCpp&quot;                    &quot;exposeClass&quot;               
+#&gt; [27] &quot;formals&lt;-&quot;                  &quot;getRcppVersion&quot;            
+#&gt; [29] &quot;initialize&quot;                 &quot;LdFlags&quot;                   
+#&gt; [31] &quot;loadModule&quot;                 &quot;loadRcppClass&quot;             
+#&gt; [33] &quot;loadRcppModules&quot;            &quot;Module&quot;                    
+#&gt; [35] &quot;populate&quot;                   &quot;prompt&quot;                    
+#&gt; [37] &quot;Rcpp.package.skeleton&quot;      &quot;Rcpp.plugin.maker&quot;         
+#&gt; [39] &quot;RcppLdFlags&quot;                &quot;registerPlugin&quot;            
+#&gt; [41] &quot;setRcppClass&quot;               &quot;show&quot;                      
+#&gt; [43] &quot;sizeof&quot;                     &quot;sourceCpp&quot;</code></pre>
 </div>
-<p>Videre kan man være mer interessert å finne ut av egenskaper. Feks
-ønsker vi å vite hvilke filer har null formler i seg. Under legger jeg
-til en liten ekstra linje. Og sier gi meg svarer hvor det er null
-formler.</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="va">list_xlsx</span>, <span class="va">count_formulas</span><span class="op">)</span> <span class="op"><a href="https://purrr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">n_formulas</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span>
-</code></pre>
+<h3 id="nest">Nest</h3>
+<p><code>tidyr::nest()</code></p>
+<h1 id="appendix">Appendix</h1>
+<h2 id="oversikt-over-sentrale-tidyverse-pakker.-kartlegge-bruksområder.">Oversikt
+over sentrale tidyverse pakker. Kartlegge bruksområder.</h2>
+<h3 id="basis-vektorer-strukturer-i-r">Basis: Vektorer &amp; strukturer
+i R</h3>
+<p>Konsepter du må forstå eller akseptere for å beherske funksjoner,
+<code>loops</code> og representative operasjoner med R kode.</p>
+<ul>
+<li><a href="https://jennybc.github.io/purrr-tutorial/">jennybc.github.io/purrr-tutorial</a></li>
+</ul>
+<!-- -->
+<ul>
+<li><p><strong>Vektor</strong></p>
+<p>Samme klasse, en eller flere.</p></li>
+<li><p><strong><code>Data.frame</code></strong></p>
+<p>Samling av flere vektorer, som vi kaller kollonner, bestående av
+samme eller ulike type klasser i hver vetkor/kolonne.</p></li>
+<li><p><strong><code>List</code></strong></p>
+<p>Flere eller samme klasse i vektorene, kompleks.</p></li>
+</ul>
+<h3 id="basis-string-funksjoner-sentrale1">Basis: String funksjoner
+sentrale<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></h3>
+<p>Printe for eksempel navnet til en funksjon, en operasjon eller en
+indeks som referanse. Type output <code>paste</code> og
+<code>past0</code>. <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p><code>paste()</code></p>
+<p><code>paste0()</code></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-hadleywhickham_advr_6functions" class="csl-entry" role="doc-biblioentry">
+<span>“6 <span>Functions</span> <span></span> <span>Advanced</span>
+<span>R</span>.”</span> n.d. Accessed June 18, 2022. <a href="https://adv-r.hadley.nz/functions.html">https://adv-r.hadley.nz/functions.html</a>.
 </div>
-<pre><code>#&gt;                                       workbook n_formulas
-#&gt; 1                           demo_workbook.xlsx          0
-#&gt; 2                                 top2000.xlsx          0
-#&gt; 3 UK Labour Market - Sickness and Absence.xlsx          0
-#&gt; 4    Uk Labour Productivity - Time Series.xlsx          0
-#&gt; 5          UK Public Service Productivity.xlsx          0</code></pre>
+<div id="ref-mailund_functional_2019" class="csl-entry" role="doc-biblioentry">
+Mailund, Thomas. 2019. <span>“Functional <span>Programming</span>:
+Purrr.”</span> In <em>R <span>Data</span> <span>Science</span>
+<span>Quick</span> <span>Reference</span>: <span>A</span>
+<span>Pocket</span> <span>Guide</span> to <span>APIs</span>,
+<span>Libraries</span>, and <span>Packages</span></em>, 83–107.
+Berkeley, CA: Apress. <a href="https://doi.org/10.1007/978-1-4842-4894-2_6">https://doi.org/10.1007/978-1-4842-4894-2_6</a>.
 </div>
-<h4 id="angående-loops">Angående loops</h4>
-<p>Det er også scenario hvor det å faktisk skrive en klassisk loop er
-den beste løsningen. For eksempel hvis du jobber med en funksjon hvor
-det <em>n´e</em> element avhenger av den <em>n´e.</em> <a href="https://www.youtube.com/watch?v=3xIKZbZKCWQ&amp;t=0s">Referanse
-klikk her</a></p>
-<p>I tillegg er det flere verktøy rettet mot loops. I denne artikkelen
-har jeg fokusert på <code>purrrr</code>, men det er også
-<code>furrr</code>. <a href="https://furrr.futureverse.org/">furrr</a></p>
-<h1 id="referanser">Referanser</h1>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="ref-noauthor_tidyverse_nodate" class="csl-entry" role="doc-biblioentry">
+<span>“Tidyverse.”</span> n.d. Accessed September 10, 2021. <a href="https://www.tidyverse.org/">https://www.tidyverse.org/</a>.
+</div>
+<div id="ref-wickham_advanced_2019" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley. 2019b. <em>Advanced <span>R</span></em>. Second
+edition. Boca Raton: CRC Press/Taylor &amp; Francis Group.
+</div>
+<div id="ref-wickham_advanced_2019-4" class="csl-entry" role="doc-biblioentry">
+———. 2019a. <em>Advanced r</em>. chapman; hall/CRC.
+</div>
+<div id="ref-wickham_r_2016" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley, and Garrett Grolemund. 2016. <em>R for Data Science:
+Import, Tidy, Transform, Visualize, and Model Data</em>. First edition.
+Sebastopol, CA: O’Reilly.
+</div>
+</div>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>loops, foreloops, whileloops,
+nestetloops etc.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Unngå missforståelser forbundet med
+“loops”. Tenk på det som noe vi skal utføre flere ganger på forskjellige
+enheter.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>Brukes inne i funksjoner gjennom å
+printe f.eks navnet til en funksjon, operasjon eller indeks som
+referanse.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p><em>String manipulator</em>. Typiske
+oppgaver som slå sammen to navn, separere ett ord til to ord, skille to
+ord med en valgt symbol <code>&quot;\\ &quot;</code> etc. er eksempel på
+scenarioer disse brukes.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

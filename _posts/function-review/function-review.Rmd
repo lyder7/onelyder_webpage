@@ -7,9 +7,12 @@ author:
     url: https://onelyder.com
     affiliation: Private
 date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    css: strapless.css
 bibliography: references.bib
-output: distill::distill_article
-toc: true
+draft: true
 ---
 
 

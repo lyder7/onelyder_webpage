@@ -13,6 +13,7 @@ output:
     toc_float: true
     css: small-spacing.css
   bibliography: references.bib
+draft: true
 editor_options: 
   markdown: 
     wrap: sentence
